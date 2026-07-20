@@ -1,26 +1,97 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f4f2ec;
+  --surface: #fdfcfa;
+  --surface-2: #efece4;
+  --foreground: #1d1c19;
+  --muted: #8a877e;
+  --line: #e6e2d8;
+  --accent: #e08d4f;
+  --accent-soft: #f5dfc9;
+  --green: #4c9a6a;
+  --green-soft: #e3f0e7;
+  --red: #cc5f52;
+  --red-soft: #f8e4e1;
+  --blue: #6a9ec2;
+  --blue-soft: #e2edf5;
+  --lav: #a99ac9;
+  --lav-soft: #ece7f4;
+  --gold: #c9a648;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-green: var(--green);
+  --color-green-soft: var(--green-soft);
+  --color-red: var(--red);
+  --color-red-soft: var(--red-soft);
+  --color-blue: var(--blue);
+  --color-blue-soft: var(--blue-soft);
+  --color-lav: var(--lav);
+  --color-lav-soft: var(--lav-soft);
+  --color-gold: var(--gold);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
+  overscroll-behavior-y: none;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+/* App shell: mobile-first, capped like a phone on wide screens */
+.app-shell {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  position: relative;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  animation: fade-up 0.35s ease both;
+}
+
+/* iOS PWA safe areas */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top);
 }
