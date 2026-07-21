@@ -78,6 +78,25 @@ export default async function HomePage() {
             <PlusIcon className="w-5 h-5 text-accent" strokeWidth={2.2} />
           </span>
         </Link>
+
+        <div className="mt-3 grid grid-cols-2 gap-3">
+          <Link
+            href="/planner"
+            className="rounded-2xl px-4 py-4 bg-surface border border-line"
+          >
+            <p className="text-xl">🗓️</p>
+            <p className="font-semibold mt-1.5">Planner</p>
+            <p className="text-xs text-muted mt-0.5">Road to September</p>
+          </Link>
+          <Link
+            href="/changes"
+            className="rounded-2xl px-4 py-4 bg-surface border border-line"
+          >
+            <p className="text-xl">🔁</p>
+            <p className="font-semibold mt-1.5">What changed</p>
+            <p className="text-xs text-muted mt-0.5">2025 vs your attempt</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mt-8 px-5">

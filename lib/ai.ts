@@ -15,7 +15,12 @@ export type GeneratedQuestion = {
   chapterName: string;
 };
 
-const MCQ_SYSTEM = `You are an expert CA Intermediate (ICAI, India) exam question setter. You write exam-realistic MCQs matching ICAI style and difficulty, including numericals where the chapter calls for them. Always respond with ONLY a valid JSON array, no markdown fences, no commentary.`;
+import { AMENDMENTS_BRIEF } from "@/lib/changes";
+
+const MCQ_SYSTEM = `You are an expert CA Intermediate (ICAI, India) exam question setter. You write exam-realistic MCQs matching ICAI style and difficulty, including numericals where the chapter calls for them. Always respond with ONLY a valid JSON array, no markdown fences, no commentary.
+
+Use CURRENT law as applicable to the September 2026 attempt:
+${AMENDMENTS_BRIEF}`;
 
 function extractJsonArray<T>(text: string): T {
   const start = text.indexOf("[");

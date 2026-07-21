@@ -20,6 +20,7 @@
     "openai": "^6.48.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "react-markdown": "^10.1.0",
     "recharts": "^3.9.2",
     "web-push": "^3.6.7"
   },

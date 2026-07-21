@@ -168,14 +168,45 @@ export const activityLog = pgTable(
   (t) => [uniqueIndex("activity_user_date_kind").on(t.userId, t.onDate, t.kind)]
 );
 
+export const chatThreads = pgTable("chat_threads", {
+  id: serial("id").primaryKey(),
+  userId: integer("user_id")
+    .notNull()
+    .references(() => users.id),
+  title: text("title").notNull().default("New chat"),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+});
+
 export const chatMessages = pgTable("chat_messages", {
   id: serial("id").primaryKey(),
   userId: integer("user_id")
     .notNull()
     .references(() => users.id),
+  threadId: integer("thread_id").references(() => chatThreads.id, {
+    onDelete: "cascade",
+  }),
   role: text("role", { enum: ["user", "assistant"] }).notNull(),
   content: text("content").notNull(),
   createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+// day-by-day exam prep plan, checkable
+export const planItems = pgTable("plan_items", {
+  id: serial("id").primaryKey(),
+  userId: integer("user_id")
+    .notNull()
+    .references(() => users.id),
+  onDate: date("on_date").notNull(),
+  title: text("title").notNull(),
+  subtitle: text("subtitle"),
+  kind: text("kind", {
+    enum: ["study", "revise", "practice", "test", "exam"],
+  })
+    .notNull()
+    .default("study"),
+  done: boolean("done").notNull().default(false),
+  sort: integer("sort").notNull().default(0),
 });
 
 export const flashcards = pgTable("flashcards", {
