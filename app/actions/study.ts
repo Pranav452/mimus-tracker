@@ -13,6 +13,7 @@ import {
 import { requireUser, logActivity, todayIST } from "@/lib/auth";
 import { and, eq } from "drizzle-orm";
 import { getAllChapters, getTestWithQuestions } from "@/lib/queries";
+import { syncPlanProgress } from "@/lib/plan-sync";
 import { generateFlashcards } from "@/lib/ai";
 
 export async function addDailyTopic(chapterId: number, note?: string) {
@@ -31,7 +32,9 @@ export async function addDailyTopic(chapterId: number, note?: string) {
     .onConflictDoNothing({
       target: [chapterProgress.userId, chapterProgress.chapterId],
     });
+  await syncPlanProgress(user.id);
   revalidatePath("/topics");
+  revalidatePath("/planner");
   revalidatePath("/");
 }
 
@@ -40,7 +43,10 @@ export async function removeDailyTopic(topicId: number) {
   await db
     .delete(dailyTopics)
     .where(and(eq(dailyTopics.id, topicId), eq(dailyTopics.userId, user.id)));
+  // recompute so any item this topic had ticked is released
+  await syncPlanProgress(user.id);
   revalidatePath("/topics");
+  revalidatePath("/planner");
 }
 
 export async function setChapterStatus(

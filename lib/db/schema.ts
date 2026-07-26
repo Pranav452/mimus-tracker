@@ -206,6 +206,12 @@ export const planItems = pgTable("plan_items", {
     .notNull()
     .default("study"),
   done: boolean("done").notNull().default(false),
+  // chapters this item covers — drives auto-ticking when she logs a topic
+  chapterIds: jsonb("chapter_ids").$type<number[]>().notNull().default([]),
+  // true once she ticks/unticks by hand; auto-sync then leaves it alone
+  manual: boolean("manual").notNull().default(false),
+  // logged topics that satisfied this item (audit trail for the auto-tick)
+  sourceTopicIds: jsonb("source_topic_ids").$type<number[]>().notNull().default([]),
   sort: integer("sort").notNull().default(0),
 });
 

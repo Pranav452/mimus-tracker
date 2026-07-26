@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { db } from "@/lib/db";
-import { tests, questions, papers, pushSubscriptions } from "@/lib/db/schema";
+import { tests, questions, papers, pushSubscriptions, users } from "@/lib/db/schema";
 import { requireAdmin } from "@/lib/auth";
 import { eq } from "drizzle-orm";
 import { generateMCQs, type GeneratedQuestion } from "@/lib/ai";
@@ -102,7 +102,7 @@ export async function getPapersForAdmin() {
   return db.select().from(papers).orderBy(papers.number);
 }
 
-export async function sendNudge(message: string) {
+export async function sendNudge(message: string, title = "Here for you, Always") {
   await requireAdmin();
   const webpush = (await import("web-push")).default;
   webpush.setVapidDetails(
@@ -110,7 +110,18 @@ export async function sendNudge(message: string) {
     process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!,
     process.env.VAPID_PRIVATE_KEY!
   );
-  const subs = await db.select().from(pushSubscriptions);
+  // students only — never nudge your own device
+  const subs = await db
+    .select({
+      id: pushSubscriptions.id,
+      endpoint: pushSubscriptions.endpoint,
+      p256dh: pushSubscriptions.p256dh,
+      auth: pushSubscriptions.auth,
+    })
+    .from(pushSubscriptions)
+    .innerJoin(users, eq(pushSubscriptions.userId, users.id))
+    .where(eq(users.role, "student"));
+
   let sent = 0;
   for (const sub of subs) {
     try {
@@ -119,14 +130,15 @@ export async function sendNudge(message: string) {
           endpoint: sub.endpoint,
           keys: { p256dh: sub.p256dh, auth: sub.auth },
         },
-        JSON.stringify({
-          title: "Here for you, Always",
-          body: message,
-        })
+        JSON.stringify({ title, body: message })
       );
       sent++;
-    } catch {
-      await db.delete(pushSubscriptions).where(eq(pushSubscriptions.id, sub.id));
+    } catch (e) {
+      // only drop the subscription if the device is truly gone
+      const status = (e as { statusCode?: number }).statusCode;
+      if (status === 404 || status === 410) {
+        await db.delete(pushSubscriptions).where(eq(pushSubscriptions.id, sub.id));
+      }
     }
   }
   return sent;

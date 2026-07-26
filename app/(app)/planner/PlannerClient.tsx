@@ -12,6 +12,7 @@ type Item = {
   subtitle: string | null;
   kind: "study" | "revise" | "practice" | "test" | "exam";
   done: boolean;
+  auto: boolean;
 };
 
 const kindStyle: Record<Item["kind"], { label: string; cls: string }> = {
@@ -88,6 +89,10 @@ export default function PlannerClient({
             style={{ width: `${pct}%` }}
           />
         </div>
+        <p className="mt-3 text-xs text-muted leading-relaxed">
+          Items tick themselves when you log the matching topic — tap any one to
+          override.
+        </p>
       </div>
 
       {pastDates.length > 0 && (
@@ -144,10 +149,16 @@ export default function PlannerClient({
                         >
                           {item.title}
                         </span>
-                        {item.subtitle && (
-                          <span className="block text-xs text-muted mt-0.5">
-                            {item.subtitle}
+                        {item.auto ? (
+                          <span className="block text-xs text-green mt-0.5">
+                            ✓ ticked from your logged topics
                           </span>
+                        ) : (
+                          item.subtitle && (
+                            <span className="block text-xs text-muted mt-0.5">
+                              {item.subtitle}
+                            </span>
+                          )
                         )}
                       </span>
                       <span

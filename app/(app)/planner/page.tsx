@@ -86,6 +86,7 @@ export default async function PlannerPage() {
           subtitle: i.subtitle,
           kind: i.kind,
           done: i.done,
+          auto: !i.manual && (i.sourceTopicIds?.length ?? 0) > 0,
         }))}
       />
     </main>
