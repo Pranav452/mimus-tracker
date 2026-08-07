@@ -2,6 +2,7 @@
 // given day (IST, defaults to today), using current-law amendments.
 // Same logic as /admin/create.
 // Usage: npx tsx scripts/nightly-test.ts [--count=10] [--duration=25] [--date=2026-07-25]
+//                                        [--notes="mix direct + case-based"]
 import { config } from "dotenv";
 config({ path: ".env.local" });
 
@@ -18,11 +19,14 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-5-mini";
 const ADMIN_ID = 2;
 
-const flag = (name: string) =>
-  process.argv.find((a) => a.startsWith(`--${name}=`))?.split("=")[1];
+const flag = (name: string) => {
+  const arg = process.argv.find((a) => a.startsWith(`--${name}=`));
+  return arg?.slice(name.length + 3);
+};
 
 const COUNT = Number(flag("count")) || 10;
 const DURATION = Number(flag("duration")) || 25;
+const NOTES = flag("notes");
 const DATE =
   flag("date") ?? new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" });
 
@@ -51,7 +55,9 @@ async function main() {
 Topics to cover (spread questions roughly evenly): ${unique
     .map((t) => `${t.chapterName} [paper: ${t.paperName}]${t.note ? ` (her note: ${t.note})` : ""}`)
     .join("; ")}.
-Difficulty: exam-level, matching actual recent ICAI CA Intermediate exam style.
+Difficulty: exam-level, matching actual recent ICAI CA Intermediate exam style.${
+    NOTES ? `\nExtra instructions from the mentor: ${NOTES}` : ""
+  }
 
 Each question must be a JSON object:
 {"text": "...", "options": ["A...", "B...", "C...", "D..."], "correctIndex": 0-3, "explanation": "why the answer is correct, briefly", "chapterName": "exact topic name from the list above"}
