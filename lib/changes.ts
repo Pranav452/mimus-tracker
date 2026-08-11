@@ -188,5 +188,6 @@ export const AMENDMENTS_BRIEF = `Applicable law for her Sept 2026 CA Inter attem
 - TDS thresholds raised: 194A interest ₹50k (₹1L senior), 194 dividend ₹10k, 194I rent ₹6L/yr, 194J professional fees ₹50k. Updated return 139(8A): 48 months.
 - 80CCD(1B): NPS Vatsalya (minor child) now eligible within ₹50k limit.
 - GST 2.0 effective 22-Sep-2025 and examinable: slabs now 5% / 18% / 40% only (12% & 28% abolished); individual health/life insurance exempted/nil.
-- Corporate Laws (Amendment) Bill 2026 is NOT examinable (still a bill).
+- Corporate Laws (Amendment) Bill 2026 is NOT examinable (still a bill). In particular its proposed small-company limits of ₹20cr/₹200cr are NOT law.
+- Companies Act figures currently in force (use these, they are commonly got wrong): small company u/s 2(85) = paid-up capital up to ₹4 CRORE and turnover up to ₹40 CRORE (raised w.e.f. 15-Sep-2022; the older ₹2cr/₹20cr and ₹50L/₹2cr figures are stale). Registered office u/s 12 = within 30 DAYS of incorporation (not the pre-2017 figure of 15 days), verified in Form INC-22. Declaration of commencement of business u/s 10A = Form INC-20A within 180 days. One Person Company: no paid-up capital or turnover ceiling since the 2021 rules, and a nominee/member must be a natural person who is an Indian citizen resident in India for 120 days.
 Always use these amended figures in answers and questions. If she references old figures (₹7L rebate, 12%/28% GST), gently correct with the new ones.`;
