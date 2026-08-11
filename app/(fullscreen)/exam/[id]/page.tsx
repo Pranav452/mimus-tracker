@@ -37,6 +37,7 @@ export default async function TakeTestPage(props: PageProps<"/exam/[id]">) {
       questions={data.questions.map((q) => ({
         id: q.id,
         section: q.section,
+        kind: q.kind,
         text: q.text,
         options: q.options,
         marks: q.marks,

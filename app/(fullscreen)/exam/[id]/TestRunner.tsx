@@ -8,6 +8,7 @@ import { BookmarkIcon } from "@/components/icons";
 type Q = {
   id: number;
   section: string | null;
+  kind: "mcq" | "descriptive";
   text: string;
   options: string[];
   marks: number;
@@ -33,6 +34,7 @@ export default function TestRunner({
 
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number | null>>({});
+  const [written, setWritten] = useState<Record<number, string>>({});
   const [bookmarks, setBookmarks] = useState<Record<number, boolean>>({});
   const [secondsLeft, setSecondsLeft] = useState(durationMinutes * 60);
   const [submitting, setSubmitting] = useState(false);
@@ -54,6 +56,7 @@ export default function TestRunner({
         answers: questions.map((qq) => ({
           questionId: qq.id,
           selectedIndex: answers[qq.id] ?? null,
+          textAnswer: written[qq.id] ?? null,
           bookmarked: !!bookmarks[qq.id],
         })),
       });
@@ -89,7 +92,11 @@ export default function TestRunner({
     if (idx >= 0) setCurrent(idx);
   }
 
-  const attemptedCount = Object.values(answers).filter((v) => v !== null).length;
+  const isAnswered = (qq: Q) =>
+    qq.kind === "descriptive"
+      ? !!written[qq.id]?.trim()
+      : answers[qq.id] != null;
+  const attemptedCount = questions.filter(isAnswered).length;
 
   return (
     <main className="min-h-dvh flex flex-col">
@@ -154,7 +161,7 @@ export default function TestRunner({
                 className={`h-9 rounded-lg text-sm font-semibold border ${
                   i === current
                     ? "bg-foreground text-background border-foreground"
-                    : answers[qq.id] != null
+                    : isAnswered(qq)
                       ? "bg-green-soft border-green/40"
                       : bookmarks[qq.id]
                         ? "bg-accent-soft border-accent/40"
@@ -196,6 +203,26 @@ export default function TestRunner({
           {q.text}
         </p>
 
+        {q.kind === "descriptive" ? (
+          <div className="mt-6">
+            <p className="text-xs text-muted">
+              Write the full answer in your book. Type the points you made here —
+              section, provision, conclusion — so it can be marked.
+            </p>
+            <textarea
+              value={written[q.id] ?? ""}
+              onChange={(e) =>
+                setWritten((w) => ({ ...w, [q.id]: e.target.value }))
+              }
+              rows={9}
+              placeholder="e.g. S.42 — private placement, max 200 persons in a FY excluding QIBs and ESOP employees. 240 breaches it → deemed public offer…"
+              className="mt-3 w-full rounded-2xl border border-line bg-surface p-4 text-[15px] leading-relaxed outline-none focus:border-foreground"
+            />
+            <p className="mt-2 text-xs text-muted tabular-nums">
+              {(written[q.id] ?? "").trim().split(/\s+/).filter(Boolean).length} words
+            </p>
+          </div>
+        ) : (
         <div className="mt-6 divide-y divide-line border-t border-b border-line">
           {q.options.map((opt, i) => {
             const selected = answers[q.id] === i;
@@ -223,6 +250,7 @@ export default function TestRunner({
             );
           })}
         </div>
+        )}
       </section>
 
       <div className="fixed bottom-0 inset-x-0 z-30">

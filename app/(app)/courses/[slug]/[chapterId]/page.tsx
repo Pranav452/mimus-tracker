@@ -54,13 +54,16 @@ export default async function ChapterPage(
         chapterId={id}
         chapterName={chapter.name}
         status={progress.get(id) ?? "not_started"}
-        quiz={quiz.map((q) => ({
-          id: q.id,
-          text: q.text,
-          options: q.options,
-          correctIndex: q.correctIndex,
-          explanation: q.explanation,
-        }))}
+        quiz={quiz
+          // chapter quizzes are always MCQs; a descriptive row has no key to grade against
+          .filter((q) => q.correctIndex !== null)
+          .map((q) => ({
+            id: q.id,
+            text: q.text,
+            options: q.options,
+            correctIndex: q.correctIndex as number,
+            explanation: q.explanation,
+          }))}
         cards={cards.map((c) => ({ id: c.id, front: c.front, back: c.back }))}
       />
     </main>

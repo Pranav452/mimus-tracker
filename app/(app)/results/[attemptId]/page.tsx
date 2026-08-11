@@ -14,6 +14,13 @@ export default async function ResultsPage(props: PageProps<"/results/[attemptId]
   if (!data) notFound();
 
   const { attempt, test, questions, answers } = data;
+  // written answers are marked after submission, so the headline score is
+  // provisional until every one of them has been marked
+  const pending = answers.filter((a) => !a.scored);
+  const pendingMarks = pending.reduce(
+    (s, a) => s + (questions.find((q) => q.id === a.questionId)?.marks ?? 0),
+    0
+  );
   const secs = attempt.timeTakenSeconds ?? 0;
   const time = [
     String(Math.floor(secs / 3600)).padStart(2, "0"),
@@ -53,6 +60,12 @@ export default async function ResultsPage(props: PageProps<"/results/[attemptId]
             /{questions.length} Attempted )
           </p>
         </div>
+        {pending.length > 0 && (
+          <p className="mt-3 text-xs bg-accent-soft text-accent font-semibold rounded-xl px-3 py-2">
+            {pending.length} written {pending.length === 1 ? "answer" : "answers"} still
+            to mark — {pendingMarks} marks not counted yet. Open them below.
+          </p>
+        )}
         <div className="my-4 border-t border-dashed border-line" />
         <p className="text-sm font-semibold flex items-center gap-2">◎ Your Accuracy</p>
         <div className="mt-1 flex items-end justify-between">
@@ -71,20 +84,27 @@ export default async function ResultsPage(props: PageProps<"/results/[attemptId]
       </div>
 
       <ResultsClient
+        attemptId={attempt.id}
         questions={questions.map((q) => ({
           id: q.id,
           section: q.section,
+          kind: q.kind,
           text: q.text,
           options: q.options,
           correctIndex: q.correctIndex,
           marks: q.marks,
           explanation: q.explanation,
+          modelAnswer: q.modelAnswer,
+          keyPoints: q.keyPoints,
         }))}
         answers={answers.map((a) => ({
           questionId: a.questionId,
           selectedIndex: a.selectedIndex,
           isCorrect: a.isCorrect,
           marksAwarded: a.marksAwarded,
+          textAnswer: a.textAnswer,
+          aiFeedback: a.aiFeedback,
+          scored: a.scored,
         }))}
       />
     </main>

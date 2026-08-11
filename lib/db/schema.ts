@@ -107,12 +107,21 @@ export const questions = pgTable("questions", {
   chapterId: integer("chapter_id").references(() => chapters.id),
   section: text("section"), // e.g. "Part A", shown as section tabs
   seq: integer("seq").notNull().default(0),
+  // "mcq" auto-grades against correctIndex; "descriptive" is written by hand and
+  // scored afterwards against modelAnswer — see evaluateWritten() in actions/study.
+  kind: text("kind", { enum: ["mcq", "descriptive"] })
+    .notNull()
+    .default("mcq"),
   text: text("text").notNull(),
-  options: jsonb("options").$type<string[]>().notNull(),
-  correctIndex: integer("correct_index").notNull(),
+  options: jsonb("options").$type<string[]>().notNull(), // [] for descriptive
+  correctIndex: integer("correct_index"), // null for descriptive
   marks: real("marks").notNull().default(4),
   negativeMarks: real("negative_marks").notNull().default(1),
   explanation: text("explanation"),
+  // descriptive only: the model answer she is marked against, and the point-wise
+  // breakdown the examiner would award on
+  modelAnswer: text("model_answer"),
+  keyPoints: jsonb("key_points").$type<string[]>(),
 });
 
 export const attempts = pgTable("attempts", {
@@ -148,6 +157,12 @@ export const attemptAnswers = pgTable(
     isCorrect: boolean("is_correct"),
     marksAwarded: real("marks_awarded"),
     bookmarked: boolean("bookmarked").notNull().default(false),
+    // descriptive answers: what she wrote, and the evaluation of it. `scored`
+    // stays false until it is marked, so a written paper shows a pending score
+    // rather than a silent zero.
+    textAnswer: text("text_answer"),
+    aiFeedback: text("ai_feedback"),
+    scored: boolean("scored").notNull().default(true),
   },
   (t) => [uniqueIndex("attempt_answers_attempt_question").on(t.attemptId, t.questionId)]
 );
