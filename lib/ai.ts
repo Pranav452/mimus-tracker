@@ -26,7 +26,10 @@ function extractJsonArray<T>(text: string): T {
   const start = text.indexOf("[");
   const end = text.lastIndexOf("]");
   if (start === -1 || end === -1) throw new Error("Model did not return JSON");
-  return JSON.parse(text.slice(start, end + 1)) as T;
+  // strip stray backslashes that aren't valid JSON escapes — the model emits
+  // things like "\(44AD\)" and one of them would otherwise fail the whole batch
+  const json = text.slice(start, end + 1).replace(/\\(?!["\\/bfnrtu])/g, "");
+  return JSON.parse(json) as T;
 }
 
 export async function generateMCQs(opts: {

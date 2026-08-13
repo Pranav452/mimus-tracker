@@ -3,6 +3,9 @@
 // Same logic as /admin/create.
 // Usage: npx tsx scripts/nightly-test.ts [--count=10] [--duration=25] [--date=2026-07-25]
 //                                        [--notes="mix direct + case-based"]
+//                                        [--only="Residential,Return of Income"]
+// --only narrows the day's logged topics to those matching the given fragments,
+// for days where she logged two separate batches and each wants its own test.
 import { config } from "dotenv";
 config({ path: ".env.local" });
 
@@ -27,6 +30,10 @@ const flag = (name: string) => {
 const COUNT = Number(flag("count")) || 10;
 const DURATION = Number(flag("duration")) || 25;
 const NOTES = flag("notes");
+const ONLY = flag("only")
+  ?.split(",")
+  .map((s) => s.trim().toLowerCase())
+  .filter(Boolean);
 const DATE =
   flag("date") ?? new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" });
 
@@ -46,7 +53,25 @@ async function main() {
     .where(eq(schema.dailyTopics.forDate, today));
   if (topics.length === 0) throw new Error(`No topics logged for ${today}`);
 
-  const unique = [...new Map(topics.map((t) => [t.chapterId, t])).values()];
+  let unique = [...new Map(topics.map((t) => [t.chapterId, t])).values()];
+  if (ONLY?.length) {
+    const matched = unique.filter((t) =>
+      ONLY.some((frag) => t.chapterName.toLowerCase().includes(frag))
+    );
+    const unmatched = ONLY.filter(
+      (frag) => !unique.some((t) => t.chapterName.toLowerCase().includes(frag))
+    );
+    if (unmatched.length)
+      throw new Error(
+        `--only matched nothing for: ${unmatched.join(", ")}\nLogged that day: ${unique
+          .map((t) => t.chapterName)
+          .join("; ")}`
+      );
+    console.log(
+      `--only skipped ${unique.length - matched.length} of ${unique.length} logged topics`
+    );
+    unique = matched;
+  }
   console.log(
     `Topics for ${today}: ${unique.map((t) => t.chapterName).join("; ")}`
   );
@@ -80,9 +105,13 @@ Rules:
     ],
   });
   const raw = res.choices[0]?.message?.content ?? "";
-  const parsed = JSON.parse(
-    raw.slice(raw.indexOf("["), raw.lastIndexOf("]") + 1)
-  ) as {
+  // The model occasionally emits a stray backslash — "\(44AD\)", "\%" — which is
+  // not a legal JSON escape and blows up the whole batch. Drop backslashes that
+  // are not part of a valid escape sequence before parsing.
+  const json = raw
+    .slice(raw.indexOf("["), raw.lastIndexOf("]") + 1)
+    .replace(/\\(?!["\\/bfnrtu])/g, "");
+  const parsed = JSON.parse(json) as {
     text: string;
     options: string[];
     correctIndex: number;
