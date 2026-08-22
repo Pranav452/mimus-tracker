@@ -185,6 +185,72 @@ const BRANCH: NoteBlock[] = [
   },
 ];
 
+const INTERPRETATION: NoteBlock[] = [
+  {
+    type: "layman",
+    title: "The one idea",
+    text: "A statute is a message Parliament wrote years ago; the court is the reader trying to work out what it meant. This chapter is just **four reading styles plus a toolkit** — four rules for when words are unclear, and a list of clues (aids) inside and outside the Act. That's the whole chapter.",
+  },
+  {
+    type: "table",
+    caption: "The four rules — when and how",
+    headers: ["Rule", "When it kicks in", "What it does"],
+    rows: [
+      ["Literal rule", "Words are plain", "Follow the plain, ordinary meaning — even if the result feels harsh. Court can't rewrite what's clear."],
+      ["Golden rule", "Plain meaning \u2192 absurdity", "Modify the meaning **just enough** to avoid the absurd or repugnant result — and no further."],
+      ["Mischief rule", "Words ambiguous; purpose helps", "Ask what defect the Act was passed to cure, then read it to **suppress the mischief and advance the remedy** (Heydon's Case)."],
+      ["Harmonious construction", "Two provisions clash", "Read both so that **each survives** — a construction that makes one provision dead is wrong."],
+    ],
+  },
+  {
+    type: "example",
+    title: "Feel each rule once",
+    lines: [
+      "**Literal** — 'No vehicles in the park.' A car is a vehicle. Banned. End of enquiry — no asking whether the driver had a good reason.",
+      "**Golden** — a rule that read literally would let a murderer inherit from the person he killed produces an absurdity; the court bends the words just enough to shut that door.",
+      "**Mischief** — Smith v. Hughes: a law banned soliciting 'in a street'. Women solicited from balconies overlooking the street. Literally not 'in' the street — but the mischief aimed at was harassment of people ON the street, so the Act caught them.",
+      "**Harmonious** — one section says a committee 'shall' be consulted, another gives the Chairman emergency powers. Read together: emergencies aside, consult the committee. Both live.",
+    ],
+    punch: "Order of thinking in the exam: plain words first \u2192 absurd? golden \u2192 still unclear? purpose (mischief) \u2192 two sections fighting? harmony.",
+  },
+  {
+    type: "mnemonic",
+    text: "**L-G-M-H** \u2014 read **L**iterally \u00b7 **G**olden fixes absurd \u00b7 **M**ischief asks why the law was made \u00b7 **H**armony keeps both sections alive",
+  },
+  { type: "heading", text: "Internal aids — clues inside the Act", emoji: "\ud83d\udd0d" },
+  {
+    type: "table",
+    caption: "What each aid is worth",
+    headers: ["Aid", "Use", "Weight"],
+    rows: [
+      ["Long title & preamble", "Show the object and reason of the Act", "Aid when ambiguous; can **never override clear words**"],
+      ["Headings & marginal notes", "Signposts to a group of sections", "Weak — drafted by the draftsman, not enacted"],
+      ["Definition clause", "Fixes meaning through the Act", "**'Means' = exhaustive** (closed list) \u00b7 **'includes' = extensive** (enlarges ordinary meaning)"],
+      ["Proviso", "Carves an **exception** out of its own section", "Confined to the section it hangs on"],
+      ["Explanation", "Clarifies or removes doubt in the main provision", "Explains — doesn't ordinarily enlarge"],
+      ["Schedules & illustrations", "Working detail and worked examples", "Part of the Act, but the **enacting section wins** on conflict"],
+    ],
+  },
+  {
+    type: "example",
+    title: "'Means' vs 'includes' — the favourite MCQ",
+    lines: [
+      "**'Fruit means apple, banana and mango'** \u2192 closed list. An orange is NOT a fruit for this Act.",
+      "**'Fruit includes apple, banana and mango'** \u2192 open list. An orange still qualifies if it's a fruit in the ordinary sense.",
+      "**'Means and includes'** \u2192 exhaustive again — the 'includes' just itemises the closed list.",
+    ],
+    punch: "Means = wall. Includes = door left open.",
+  },
+  {
+    type: "para",
+    text: "**External aids** — clues from outside the Act, allowed only when the words are ambiguous: dictionaries, the statement of objects and reasons, parliamentary history, earlier statutes on the same subject (in pari materia), and judicial decisions. **Presumptions** worth one line each: a statute speaks prospectively unless it clearly says otherwise; Parliament wastes no words (every word must be given meaning); and a construction that makes the provision workable beats one that makes it futile (ut res magis valeat quam pereat).",
+  },
+  {
+    type: "trap",
+    text: "The three marks-losers: (1) using the preamble or long title to **cut down clear words** — internal aids only resolve ambiguity, never create it; (2) stretching a **proviso** beyond the section it's attached to; (3) writing 'means' when the definition said 'includes' — the openness of the list is exactly what the examiner is testing.",
+  },
+];
+
 const NOTES: {
   chapter: string;
   title: string;
@@ -216,6 +282,20 @@ const NOTES: {
       "Branch P&L",
     ],
     blocks: BRANCH,
+  },
+  {
+    chapter: "Interpretation of Statutes",
+    title: "Interpretation of Statutes — four rules and a toolkit",
+    concepts: [
+      "Literal rule",
+      "Golden rule",
+      "Mischief rule (Heydon's Case)",
+      "Harmonious construction",
+      "Internal aids (proviso, explanation, preamble)",
+      "'Means' vs 'includes'",
+      "External aids & presumptions",
+    ],
+    blocks: INTERPRETATION,
   },
 ];
 
