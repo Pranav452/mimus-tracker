@@ -44,11 +44,22 @@ export default async function HomePage() {
         </h1>
 
         <Link
-          href="/courses"
+          href="/explanations"
           className="mt-6 flex items-center justify-center gap-2 h-14 rounded-full bg-foreground text-background font-semibold text-[15px]"
         >
           <BookIcon className="w-5 h-5" strokeWidth={2} />
-          Start new course
+          Explanations
+        </Link>
+
+        <Link
+          href="/courses"
+          className="mt-3 flex items-center justify-between rounded-2xl px-5 py-4 bg-surface border border-line"
+        >
+          <div>
+            <p className="font-semibold">Your courses</p>
+            <p className="text-sm text-muted">Chapters, quizzes &amp; flashcards</p>
+          </div>
+          <ChevronRightIcon className="w-5 h-5 text-muted" />
         </Link>
 
         <Link

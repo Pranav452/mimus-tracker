@@ -185,15 +185,36 @@ const BRANCH: NoteBlock[] = [
   },
 ];
 
-const NOTES: { chapter: string; title: string; blocks: NoteBlock[] }[] = [
+const NOTES: {
+  chapter: string;
+  title: string;
+  concepts: string[];
+  blocks: NoteBlock[];
+}[] = [
   {
     chapter: "Amalgamation",
     title: "Amalgamation vs Absorption vs External Reconstruction",
+    concepts: [
+      "Amalgamation",
+      "Absorption",
+      "External reconstruction",
+      "Net payment method",
+      "Net assets method",
+      "AS 14 — merger vs purchase",
+    ],
     blocks: AMALGAMATION,
   },
   {
     chapter: "Branch Accounts",
     title: "Branch Accounts — Stock & Debtors method",
+    concepts: [
+      "Stock & Debtors method",
+      "Loading (invoice price)",
+      "Branch Stock A/c & shortage",
+      "Branch Adjustment A/c",
+      "Branch Debtors A/c",
+      "Branch P&L",
+    ],
     blocks: BRANCH,
   },
 ];
@@ -216,7 +237,12 @@ async function main() {
     if (existing) {
       await db
         .update(schema.chapterNotes)
-        .set({ title: note.title, content: note.blocks, updatedAt: new Date() })
+        .set({
+          title: note.title,
+          content: note.blocks,
+          concepts: note.concepts,
+          updatedAt: new Date(),
+        })
         .where(eq(schema.chapterNotes.id, existing.id));
       console.log(`updated notes for "${note.chapter}" (${note.blocks.length} blocks)`);
     } else {
@@ -224,6 +250,7 @@ async function main() {
         chapterId: ch.id,
         title: note.title,
         content: note.blocks,
+        concepts: note.concepts,
       });
       console.log(`created notes for "${note.chapter}" (${note.blocks.length} blocks)`);
     }

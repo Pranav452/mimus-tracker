@@ -262,5 +262,8 @@ export const chapterNotes = pgTable("chapter_notes", {
     .references(() => chapters.id),
   title: text("title").notNull(),
   content: jsonb("content").$type<unknown[]>().notNull(),
+  // the concepts this note explains, shown as chips on /explanations — one note
+  // often covers several of the things she asked about by name
+  concepts: jsonb("concepts").$type<string[]>().notNull().default([]),
   updatedAt: timestamp("updated_at").notNull().defaultNow(),
 });
