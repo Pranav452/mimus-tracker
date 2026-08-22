@@ -251,6 +251,153 @@ const INTERPRETATION: NoteBlock[] = [
   },
 ];
 
+
+const INTERNAL_RECON: NoteBlock[] = [
+  {
+    type: "layman",
+    title: "The one idea",
+    text: "The company is sick but **nobody dies**. Same company, same legal entity — but everyone who has money stuck in it (shareholders, debentureholders, creditors) agrees to **sacrifice something**, and every sacrifice goes into ONE pot. That pot is then used to scrub the balance sheet clean of losses and fake assets. The pot is the **Capital Reduction A/c** — the whole chapter is just filling it and emptying it.",
+  },
+  {
+    type: "para",
+    text: "Don't confuse it with **external** reconstruction (that's in the Amalgamation note): external = a NEW company is born and the old one dies. **Internal = plastic surgery, external = rebirth.** In internal reconstruction no business is transferred anywhere — the same balance sheet is repaired in place.",
+  },
+  {
+    type: "mnemonic",
+    text: "**Fill the pot, then clean the house** — every sacrifice is a CREDIT into Capital Reduction A/c, every write-off is a DEBIT out of it",
+  },
+  {
+    type: "steps",
+    title: "How to attack ANY internal reconstruction sum",
+    items: [
+      {
+        title: "Read the scheme once and sort every line into two buckets",
+        text: "Bucket 1 — who is **giving something up** (share capital reduced, creditors waiving, debentureholders settling for less, undervalued assets written UP). Bucket 2 — what must be **written off** (P&L debit balance, goodwill, preliminary expenses, overvalued assets written DOWN). Do this before touching a single journal entry.",
+      },
+      {
+        title: "Fill the pot — journal each sacrifice as a CREDIT to Capital Reduction A/c",
+        text: "Capital reduction: old Share Capital A/c Dr → new Share Capital A/c + Capital Reduction A/c (the sacrificed part). Creditors' waiver: Creditors Dr → Capital Reduction. Asset appreciation: Asset Dr → Capital Reduction.",
+      },
+      {
+        title: "Empty the pot — one combined entry DEBITING Capital Reduction A/c",
+        text: "Capital Reduction A/c Dr → P&L A/c (accumulated loss), Goodwill, Preliminary Expenses, each overvalued asset, provision for doubtful debts. One clean compound entry — examiners love this far more than ten scattered ones.",
+      },
+      {
+        title: "Whatever survives in the pot → Capital Reserve",
+        text: "The pot must end at zero. A leftover credit goes to **Capital Reserve** (never to P&L — the gain came from capital sacrifices, not trading). If the pot falls SHORT, the scheme itself is inadequate — recheck your buckets.",
+      },
+      {
+        title: "Redraft the balance sheet",
+        text: "New capital figures, cleaned assets, no fictitious assets left, Capital Reserve if any. If the court's order requires it, the company adds 'And Reduced' to its name. This closing balance sheet is where the presentation marks live.",
+      },
+    ],
+  },
+  { type: "heading", text: "One full sum, solved step by step", emoji: "\ud83c\udfd7\ufe0f" },
+  {
+    type: "example",
+    title: "The patient — Sick Ltd's balance sheet (₹)",
+    lines: [
+      "**Liabilities:** 1,00,000 equity shares of ₹10 fully paid = 10,00,000 · 8% Debentures 3,00,000 · Creditors 2,00,000 — total 15,00,000",
+      "**Assets:** Goodwill 1,00,000 · Land & Building 4,00,000 · Plant 3,00,000 · Stock 1,50,000 · Debtors 1,00,000 · **P&L A/c (Dr balance) 4,50,000** — total 15,00,000",
+      "That ₹4,50,000 loss and the goodwill are dead weight — the company earns nothing until they're gone.",
+    ],
+  },
+  {
+    type: "example",
+    title: "The scheme (as approved)",
+    lines: [
+      "1. Equity shares to be reduced to **₹4 paid** (face value stays ₹10... paid-up cut by ₹6 per share).",
+      "2. Debentureholders waive **10%** of their claim.",
+      "3. Creditors waive **₹20,000**.",
+      "4. Land & Building to be revalued UP by **₹1,00,000**; Plant written DOWN by ₹1,00,000; Stock written down ₹50,000; 20% provision on Debtors.",
+      "5. Goodwill and the P&L debit balance to be written off entirely.",
+    ],
+  },
+  {
+    type: "example",
+    title: "Step 1 · Fill the pot (credits to Capital Reduction A/c)",
+    lines: [
+      "Shareholders: 1,00,000 shares × ₹6 sacrificed = **6,00,000**",
+      "Debentureholders: 10% × 3,00,000 = **30,000**",
+      "Creditors: **20,000**",
+      "Land & Building appreciation: **1,00,000**",
+      "**Pot = ₹7,50,000**",
+      "Journal for the big one: Share Capital (₹10) A/c Dr 10,00,000 → To Share Capital (₹4 paid) 4,00,000, To Capital Reduction A/c 6,00,000",
+    ],
+  },
+  {
+    type: "example",
+    title: "Step 2 · Empty the pot (one compound debit)",
+    lines: [
+      "P&L A/c (accumulated loss) **4,50,000**",
+      "Goodwill **1,00,000**",
+      "Plant written down **1,00,000**",
+      "Stock written down **50,000**",
+      "Provision for doubtful debts: 20% × 1,00,000 = **20,000**",
+      "**Total write-offs = ₹7,20,000**",
+      "Journal: Capital Reduction A/c Dr 7,20,000 → To P&L 4,50,000, To Goodwill 1,00,000, To Plant 1,00,000, To Stock 50,000, To Provision for Doubtful Debts 20,000",
+    ],
+  },
+  {
+    type: "example",
+    title: "Step 3 · Close the pot + redraft",
+    lines: [
+      "Pot 7,50,000 − write-offs 7,20,000 = **₹30,000 → Capital Reserve**",
+      "New balance sheet: Share Capital 4,00,000 · Capital Reserve 30,000 · Debentures 2,70,000 · Creditors 1,80,000 = **8,80,000**",
+      "Assets: Land & Building 5,00,000 · Plant 2,00,000 · Stock 1,00,000 · Debtors 1,00,000 − provision 20,000 = 80,000 = **8,80,000**",
+      "No goodwill, no P&L loss, both sides tie — the company starts clean.",
+    ],
+    punch: "Tally check that saves you in the exam: pot IN must equal write-offs OUT plus capital reserve. 7,50,000 = 7,20,000 + 30,000 ✓",
+  },
+  {
+    type: "trap",
+    text: "The mark-losers: (1) **spending before filling** — always total the sacrifices first, so you know the pot; (2) crediting the leftover to P&L instead of **Capital Reserve**; (3) forgetting that reducing paid-up value does NOT reduce the **number** of shares; (4) writing off the appreciation of Land & Building instead of crediting it — an asset written UP fills the pot, an asset written DOWN empties it; (5) missing the 'And Reduced' name note when the question mentions a court order.",
+  },
+  {
+    type: "para",
+    text: "**Why examiners love the one-account layout:** the Capital Reduction A/c doubles as your working note AND your proof. Present it as a ledger — sacrifices on the credit side, write-offs on the debit side, balance to Capital Reserve — and the marker can verify your whole solution in ten seconds. Scattered journal entries with no account force the marker to rebuild your logic, and part-marks die there.",
+  },
+];
+
+const ACCOUNTS_OF_COS: NoteBlock[] = [
+  {
+    type: "layman",
+    title: "The one idea",
+    text: "This chapter is Parliament telling companies: **keep honest books, show them honestly, and if you're big — give some back**. Sections 128 to 138, and almost every mark is a number: how many years, what threshold, which percent.",
+  },
+  {
+    type: "table",
+    caption: "The chapter on one screen",
+    headers: ["Section", "What it says", "The number to remember"],
+    rows: [
+      ["128 — Books of account", "Kept at registered office (or another place the Board notifies to ROC); electronic form allowed", "Preserve **8 years**"],
+      ["129 — Financial statements", "Must give a **true and fair** view, comply with AS, in Schedule III form; consolidated FS if the company has subsidiaries", "FS includes cash flow statement — **except** OPC, small & dormant companies"],
+      ["130 vs 131", "**130**: court/Tribunal-ordered re-opening (fraud or mismanagement) · **131**: voluntary revision with Tribunal approval", "130 reaches back **8 years** · 131 only **3 years**, once per FY"],
+      ["134 — Board's report", "Annual report card: directors' responsibility statement, loans/guarantees, related party contracts, CSR disclosure", "Signed by Chairperson (if authorised) or 2 directors incl. MD"],
+      ["135 — CSR", "Big companies must spend on social causes", "Trigger: net worth **₹500 cr** OR turnover **₹1,000 cr** OR net profit **₹5 cr** — **any ONE**. Spend **2%** of 3-yr average net profit. No committee needed if obligation ≤ **₹50 lakh**"],
+      ["138 — Internal audit", "Compulsory self-checking for large companies", "Unlisted public: capital **₹50 cr** / turnover **₹200 cr** / borrowings **₹100 cr** / deposits **₹25 cr**"],
+    ],
+  },
+  {
+    type: "example",
+    title: "CSR in 30 seconds — the exam favourite",
+    lines: [
+      "Company: net worth ₹520 cr, turnover ₹300 cr, net profit ₹4 cr. CSR applicable?",
+      "**Yes** — net worth crosses ₹500 cr, and any ONE trigger is enough. The low profit is a decoy.",
+      "Spend: 2% × average net profit of the **three immediately preceding** years (say ₹6 cr) = **₹12 lakh**.",
+      "₹12 lakh ≤ ₹50 lakh → **no CSR committee needed**; the Board handles it (s.135(9)).",
+    ],
+    punch: "Three triggers, ANY one fires. The examiners' trap is always a company that fails two tests and passes one.",
+  },
+  {
+    type: "trap",
+    text: "(1) CSR spend is 2% of the **3-year average** net profit — not the current year's; (2) books preserve for **8** years, but a s.130 fraud investigation can order longer; (3) re-opening u/s 130 needs a court/Tribunal ORDER — the company can never re-open on its own (that's voluntary revision u/s 131, max 3 years back, once a year); (4) NFRA (s.132) oversees auditing standards — one-line answer, don't over-write it.",
+  },
+  {
+    type: "mnemonic",
+    text: "**128 keep · 129 show · 130/131 fix · 134 report · 135 give back · 138 self-check**",
+  },
+];
 const NOTES: {
   chapter: string;
   title: string;
@@ -296,6 +443,32 @@ const NOTES: {
       "External aids & presumptions",
     ],
     blocks: INTERPRETATION,
+  },
+  {
+    chapter: "Internal Reconstruction",
+    title: "Internal Reconstruction — fill the pot, clean the house",
+    concepts: [
+      "Capital Reduction A/c",
+      "Internal vs external reconstruction",
+      "Full worked sum, step by step",
+      "Compound write-off entry",
+      "Capital Reserve balance",
+      "Redrafted balance sheet",
+    ],
+    blocks: INTERNAL_RECON,
+  },
+  {
+    chapter: "Accounts of Companies",
+    title: "Accounts of Companies — Ss.128\u2013138 in brief",
+    concepts: [
+      "Books of account (s.128)",
+      "True & fair FS (s.129)",
+      "Re-opening vs revision (130/131)",
+      "Board's report (s.134)",
+      "CSR (s.135)",
+      "Internal audit (s.138)",
+    ],
+    blocks: ACCOUNTS_OF_COS,
   },
 ];
 
