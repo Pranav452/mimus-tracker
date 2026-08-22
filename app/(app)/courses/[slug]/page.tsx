@@ -2,6 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { requireUser } from "@/lib/auth";
 import { getAllChapters, getPapers, getUserProgressMap } from "@/lib/queries";
+import { db } from "@/lib/db";
+import { chapterNotes } from "@/lib/db/schema";
 import { ArrowLeftIcon, ChevronRightIcon } from "@/components/icons";
 
 const statusPill: Record<string, { label: string; cls: string }> = {
@@ -17,10 +19,12 @@ export default async function PaperPage(props: PageProps<"/courses/[slug]">) {
   const paper = papers.find((p) => p.slug === slug);
   if (!paper) notFound();
 
-  const [chapters, progress] = await Promise.all([
+  const [chapters, progress, notes] = await Promise.all([
     getAllChapters(),
     getUserProgressMap(user.id),
+    db.select({ chapterId: chapterNotes.chapterId }).from(chapterNotes),
   ]);
+  const hasNotes = new Set(notes.map((n) => n.chapterId));
   const mine = chapters.filter((c) => c.paperSlug === slug);
   const parts = [...new Set(mine.map((c) => c.partId))].map((pid) => {
     const chs = mine.filter((c) => c.partId === pid);
@@ -76,6 +80,11 @@ export default async function PaperPage(props: PageProps<"/courses/[slug]">) {
                   >
                     <p className="flex-1 text-[15px] font-medium leading-snug">
                       {c.name}
+                      {hasNotes.has(c.id) && (
+                        <span className="ml-2 text-[10px] font-bold align-middle bg-accent-soft text-accent rounded-full px-2 py-0.5">
+                          NOTES ✦
+                        </span>
+                      )}
                     </p>
                     <span className={`shrink-0 text-[11px] font-bold rounded-full px-2.5 py-1 ${pill.cls}`}>
                       {pill.label}

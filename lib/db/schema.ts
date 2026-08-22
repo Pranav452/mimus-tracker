@@ -250,3 +250,17 @@ export const pushSubscriptions = pgTable("push_subscriptions", {
   auth: text("auth").notNull(),
   createdAt: timestamp("created_at").notNull().defaultNow(),
 });
+
+// Hand-authored study notes for a chapter — rendered in the chapter's Learn tab.
+// Content is structured blocks (see components/NotesView.tsx), not free markdown,
+// so the UI can style comparisons, worked examples and traps distinctly.
+export const chapterNotes = pgTable("chapter_notes", {
+  id: serial("id").primaryKey(),
+  chapterId: integer("chapter_id")
+    .notNull()
+    .unique()
+    .references(() => chapters.id),
+  title: text("title").notNull(),
+  content: jsonb("content").$type<unknown[]>().notNull(),
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+});

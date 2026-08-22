@@ -17,6 +17,7 @@ import {
   ArrowLeftIcon,
   ArrowRightIcon,
 } from "@/components/icons";
+import NotesView, { type NoteBlock } from "@/components/NotesView";
 
 type Quiz = {
   id: number;
@@ -31,12 +32,14 @@ type Status = "not_started" | "in_progress" | "done";
 export default function ChapterClient({
   chapterId,
   chapterName,
+  note,
   status: initialStatus,
   quiz,
   cards: initialCards,
 }: {
   chapterId: number;
   chapterName: string;
+  note: { title: string; blocks: NoteBlock[] } | null;
   status: Status;
   quiz: Quiz[];
   cards: Card[];
@@ -84,6 +87,18 @@ export default function ChapterClient({
 
       {tab === "learn" && (
         <section className="mt-5 pb-8 space-y-4">
+          {note && (
+            <div className="pb-2">
+              <p className="text-xs font-bold uppercase tracking-wide text-muted mb-1">
+                Study notes
+              </p>
+              <h2 className="font-display text-2xl leading-tight mb-3">
+                {note.title}
+              </h2>
+              <NotesView blocks={note.blocks} />
+              <div className="my-6 border-t border-dashed border-line" />
+            </div>
+          )}
           <div className="rounded-3xl bg-surface border border-line p-5">
             <p className="font-bold mb-1">Where are you with this chapter?</p>
             <p className="text-sm text-muted mb-4">

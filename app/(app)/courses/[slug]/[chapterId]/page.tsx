@@ -7,6 +7,8 @@ import {
   getUserProgressMap,
 } from "@/lib/queries";
 import { db, flashcards } from "@/lib/db";
+import { chapterNotes } from "@/lib/db/schema";
+import type { NoteBlock } from "@/components/NotesView";
 import { eq } from "drizzle-orm";
 import { ArrowLeftIcon } from "@/components/icons";
 import ChapterClient from "./ChapterClient";
@@ -23,10 +25,11 @@ export default async function ChapterPage(
   const chapter = chapters.find((c) => c.id === id && c.paperSlug === slug);
   if (!chapter) notFound();
 
-  const [quiz, cards, progress] = await Promise.all([
+  const [quiz, cards, progress, [note]] = await Promise.all([
     getChapterQuiz(id),
     db.select().from(flashcards).where(eq(flashcards.chapterId, id)),
     getUserProgressMap(user.id),
+    db.select().from(chapterNotes).where(eq(chapterNotes.chapterId, id)),
   ]);
 
   return (
@@ -53,6 +56,11 @@ export default async function ChapterPage(
       <ChapterClient
         chapterId={id}
         chapterName={chapter.name}
+        note={
+          note
+            ? { title: note.title, blocks: note.content as NoteBlock[] }
+            : null
+        }
         status={progress.get(id) ?? "not_started"}
         quiz={quiz
           // chapter quizzes are always MCQs; a descriptive row has no key to grade against
