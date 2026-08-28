@@ -398,6 +398,59 @@ const ACCOUNTS_OF_COS: NoteBlock[] = [
     text: "**128 keep · 129 show · 130/131 fix · 134 report · 135 give back · 138 self-check**",
   },
 ];
+const FORFEITURE: NoteBlock[] = [
+  {
+    type: "layman",
+    title: "The one idea",
+    text: "Think of booking a flat. You pay the token and an instalment, but you fail to pay the **final instalment** — the builder cancels your booking, **keeps everything you already paid**, and resells the flat to someone else. If he resells it a little cheaper, the discount comes out of the money he kept from you; whatever is still left over is his pure gain. Replace flat with share, builder with company, and 'money kept' with the **Forfeited Shares A/c** — that is this entire concept.",
+  },
+  {
+    type: "para",
+    text: "A share of ₹10 is rarely paid in one shot — it is collected in slices: **application** (say ₹3), **allotment** (₹3), **first call** (₹2) and **final call** (₹2). A 'call' is the company literally calling for the next slice. A shareholder who stops paying leaves his unpaid slice sitting in **Calls in Arrears** — and the company may then **forfeit** (cancel) his shares.",
+  },
+  {
+    type: "steps",
+    title: "The three moves",
+    items: [
+      {
+        title: "Forfeiture — cancel the shares, keep the money",
+        text: "Reverse the share capital to the extent CALLED UP, knock off what he never paid, and park what he DID pay in Forfeited Shares A/c: **Share Capital A/c Dr (called-up amount) → To Calls in Arrears (unpaid), To Forfeited Shares A/c (received)**.",
+      },
+      {
+        title: "Reissue — sell the cancelled shares to someone new",
+        text: "The new buyer can be given a discount, but the discount on reissue **cannot exceed the amount forfeited on those very shares** — the old owner's money absorbs it: **Bank A/c Dr (amount received) + Forfeited Shares A/c Dr (discount) → To Share Capital A/c**.",
+      },
+      {
+        title: "Close the account — leftover is a capital profit",
+        text: "After reissue, whatever remains in Forfeited Shares A/c for the reissued shares is transferred to **Capital Reserve**. It is a capital gain squeezed out of the defaulter, not trading profit — so it never touches P&L.",
+      },
+    ],
+  },
+  {
+    type: "example",
+    title: "Micro-sum — 100 shares, final call unpaid",
+    lines: [
+      "100 shares of ₹10, fully called. Holder paid application ₹3 + allotment ₹3 + first call ₹2 = **₹8 per share**, but not the final call of ₹2.",
+      "**Forfeiture:** Share Capital Dr 1,000 → To Calls in Arrears 200, To Forfeited Shares 800.",
+      "**Reissue** of all 100 shares at ₹9, fully paid: Bank Dr 900 + Forfeited Shares Dr 100 → To Share Capital 1,000. (Discount ₹100 ≤ ₹800 kept — allowed.)",
+      "**Close:** Forfeited Shares balance 800 − 100 = **₹700 → Capital Reserve**.",
+    ],
+    punch: "Received stays, unpaid dies, reissue discount eats from the kept money, and the leftover is Capital Reserve.",
+  },
+  {
+    type: "trap",
+    text: "(1) Forfeiture reverses capital at the **called-up** amount — not the face value, if some call was never made. (2) Reissue discount is capped at the forfeited amount **of those shares alone**. (3) If only SOME forfeited shares are reissued, transfer only the **proportionate** forfeited money to Capital Reserve — the rest stays in Forfeited Shares A/c until those shares are reissued too. (4) Capital Reserve arises only **after** reissue, never at forfeiture.",
+  },
+  {
+    type: "mnemonic",
+    text: "**Cancel · Keep · Resell · Leftover to Capital Reserve** — the whole topic in four words",
+  },
+  {
+    type: "para",
+    text: "**Where you'll meet it in the exam:** as the share-capital notes in a Company Final Accounts question (Schedule III shows 'Forfeited Shares' added to Subscribed Capital until reissue), and as the opening step of some Buyback sums. The journal set above is Foundation-level machinery, but examiners assume it without warning.",
+  },
+];
+
 const NOTES: {
   chapter: string;
   title: string;
@@ -469,6 +522,18 @@ const NOTES: {
       "Internal audit (s.138)",
     ],
     blocks: ACCOUNTS_OF_COS,
+  },
+  {
+    chapter: "Company Final Accounts",
+    title: "Share Forfeiture, Reissue & Call Money",
+    concepts: [
+      "Calls in arrears & final call",
+      "Forfeiture entry",
+      "Reissue at a discount",
+      "Forfeited Shares A/c",
+      "Capital Reserve on reissue",
+    ],
+    blocks: FORFEITURE,
   },
 ];
 
