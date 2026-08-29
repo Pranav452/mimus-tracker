@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { requireUser } from "@/lib/auth";
-import { getAttemptDetail } from "@/lib/queries";
+import { getAttemptDetail, getAllChapters } from "@/lib/queries";
 import { ArrowLeftIcon } from "@/components/icons";
 import ResultsClient from "./ResultsClient";
 
@@ -12,6 +12,9 @@ export default async function ResultsPage(props: PageProps<"/results/[attemptId]
   if (!Number.isFinite(id)) notFound();
   const data = await getAttemptDetail(id, user.id);
   if (!data) notFound();
+  const chapterName = new Map(
+    (await getAllChapters()).map((c) => [c.id, c.name])
+  );
 
   const { attempt, test, questions, answers } = data;
   // written answers are marked after submission, so the headline score is
@@ -96,6 +99,7 @@ export default async function ResultsPage(props: PageProps<"/results/[attemptId]
           explanation: q.explanation,
           modelAnswer: q.modelAnswer,
           keyPoints: q.keyPoints,
+          chapterName: q.chapterId ? (chapterName.get(q.chapterId) ?? null) : null,
         }))}
         answers={answers.map((a) => ({
           questionId: a.questionId,
@@ -105,6 +109,7 @@ export default async function ResultsPage(props: PageProps<"/results/[attemptId]
           textAnswer: a.textAnswer,
           aiFeedback: a.aiFeedback,
           scored: a.scored,
+          timeSpentSeconds: a.timeSpentSeconds,
         }))}
       />
     </main>

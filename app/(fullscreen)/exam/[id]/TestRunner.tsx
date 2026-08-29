@@ -42,6 +42,24 @@ export default function TestRunner({
   const startRef = useRef(Date.now());
   const submittedRef = useRef(false);
 
+  // per-question stopwatch: accumulate seconds against whichever question is
+  // on screen — revisits keep adding to the same question's total
+  const timesRef = useRef<Record<number, number>>({});
+  const shownAtRef = useRef(Date.now());
+  const [qElapsed, setQElapsed] = useState(0);
+  function bankTime() {
+    const qq = questions[current];
+    if (!qq) return;
+    const secs = (Date.now() - shownAtRef.current) / 1000;
+    timesRef.current[qq.id] = (timesRef.current[qq.id] ?? 0) + secs;
+    shownAtRef.current = Date.now();
+  }
+  function goTo(idx: number) {
+    bankTime();
+    setCurrent(idx);
+    setQElapsed(0);
+  }
+
   const q = questions[current];
   const activeSection = q?.section ?? "Questions";
 
@@ -49,6 +67,7 @@ export default function TestRunner({
     if (submittedRef.current) return;
     submittedRef.current = true;
     setSubmitting(true);
+    bankTime();
     try {
       const attemptId = await submitAttempt({
         testId,
@@ -58,6 +77,7 @@ export default function TestRunner({
           selectedIndex: answers[qq.id] ?? null,
           textAnswer: written[qq.id] ?? null,
           bookmarked: !!bookmarks[qq.id],
+          timeSpentSeconds: Math.round(timesRef.current[qq.id] ?? 0),
         })),
       });
       router.replace(`/results/${attemptId}`);
@@ -78,10 +98,20 @@ export default function TestRunner({
         }
         return s - 1;
       });
+      // stopwatch for the question on screen = time already banked on it
+      // (earlier visits) + time since it was brought back up
+      const qq = questions[current];
+      if (qq)
+        setQElapsed(
+          Math.floor(
+            (timesRef.current[qq.id] ?? 0) +
+              (Date.now() - shownAtRef.current) / 1000
+          )
+        );
     }, 1000);
     return () => clearInterval(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [current]);
 
   const hh = String(Math.floor(secondsLeft / 3600)).padStart(2, "0");
   const mm = String(Math.floor((secondsLeft % 3600) / 60)).padStart(2, "0");
@@ -89,7 +119,7 @@ export default function TestRunner({
 
   function jumpToSection(s: string) {
     const idx = questions.findIndex((qq) => (qq.section ?? "Questions") === s);
-    if (idx >= 0) setCurrent(idx);
+    if (idx >= 0) goTo(idx);
   }
 
   const isAnswered = (qq: Q) =>
@@ -155,7 +185,7 @@ export default function TestRunner({
               <button
                 key={qq.id}
                 onClick={() => {
-                  setCurrent(i);
+                  goTo(i);
                   setShowGrid(false);
                 }}
                 className={`h-9 rounded-lg text-sm font-semibold border ${
@@ -189,6 +219,17 @@ export default function TestRunner({
                 −{q.negativeMarks}
               </span>
             )}
+            <span
+              className={`text-xs font-semibold rounded-full px-2.5 py-1 tabular-nums ${
+                qElapsed > 60
+                  ? "bg-red-soft text-red"
+                  : qElapsed > 45
+                    ? "bg-accent-soft text-accent"
+                    : "bg-surface-2 text-muted"
+              }`}
+            >
+              ⏱ {Math.floor(qElapsed / 60)}:{String(qElapsed % 60).padStart(2, "0")}
+            </span>
           </div>
           <button
             onClick={() => setBookmarks((b) => ({ ...b, [q.id]: !b[q.id] }))}
@@ -257,7 +298,7 @@ export default function TestRunner({
         <div className="app-shell !min-h-0 px-5 pb-safe">
           <div className="flex gap-3 py-4 bg-background">
             <button
-              onClick={() => setCurrent((c) => Math.max(0, c - 1))}
+              onClick={() => goTo(Math.max(0, current - 1))}
               disabled={current === 0}
               className="flex-1 h-14 rounded-full bg-surface-2 font-semibold disabled:opacity-40"
             >
@@ -265,7 +306,7 @@ export default function TestRunner({
             </button>
             {current < questions.length - 1 ? (
               <button
-                onClick={() => setCurrent((c) => Math.min(questions.length - 1, c + 1))}
+                onClick={() => goTo(Math.min(questions.length - 1, current + 1))}
                 className="flex-1 h-14 rounded-full bg-foreground text-background font-semibold"
               >
                 Next

@@ -47,6 +47,7 @@ type Q = {
   explanation: string | null;
   modelAnswer: string | null;
   keyPoints: string[] | null;
+  chapterName: string | null;
 };
 type A = {
   questionId: number;
@@ -56,6 +57,7 @@ type A = {
   textAnswer: string | null;
   aiFeedback: string | null;
   scored: boolean;
+  timeSpentSeconds: number | null;
 };
 
 export default function ResultsClient({
@@ -124,6 +126,56 @@ export default function ResultsClient({
   const [open, setOpen] = useState<number | null>(null);
 
   const ansFor = (id: number) => answers.find((a) => a.questionId === id);
+
+  // Pace report for her 1-minute-per-MCQ practice: which topics ran over, and
+  // where slow met wrong. Only rendered when the attempt carries timing data.
+  const PACE_LIMIT = 60;
+  const paceReport = useMemo(() => {
+    const timed = questions.filter((q) => {
+      const a = ansFor(q.id);
+      return q.kind === "mcq" && a?.timeSpentSeconds != null;
+    });
+    if (timed.length === 0) return null;
+    const byTopic = new Map<
+      string,
+      { qs: number; secs: number; over: number; wrong: number; slowWrong: number }
+    >();
+    for (const q of timed) {
+      const a = ansFor(q.id)!;
+      const t = a.timeSpentSeconds ?? 0;
+      const key = q.chapterName ?? q.section ?? "Other";
+      const row =
+        byTopic.get(key) ?? { qs: 0, secs: 0, over: 0, wrong: 0, slowWrong: 0 };
+      row.qs++;
+      row.secs += t;
+      if (t > PACE_LIMIT) row.over++;
+      if (a.isCorrect === false) row.wrong++;
+      if (t > PACE_LIMIT && a.isCorrect !== true) row.slowWrong++;
+      byTopic.set(key, row);
+    }
+    const topics = [...byTopic.entries()]
+      .map(([topic, r]) => ({ topic, ...r, avg: r.secs / r.qs }))
+      .sort((x, y) => y.slowWrong - x.slowWrong || y.avg - x.avg);
+    const overCount = timed.reduce(
+      (n, q) => n + ((ansFor(q.id)?.timeSpentSeconds ?? 0) > PACE_LIMIT ? 1 : 0),
+      0
+    );
+    const totalSecs = timed.reduce(
+      (n, q) => n + (ansFor(q.id)?.timeSpentSeconds ?? 0),
+      0
+    );
+    return {
+      topics,
+      overCount,
+      total: timed.length,
+      avg: totalSecs / timed.length,
+      revise: topics.filter((t) => t.slowWrong > 0 || t.avg > PACE_LIMIT),
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [questions, answers]);
+
+  const fmtSecs = (t: number) =>
+    `${Math.floor(t / 60)}:${String(Math.round(t) % 60).padStart(2, "0")}`;
   const sectionQs = questions.filter(
     (q) => (q.section ?? "Questions") === activeSection
   );
@@ -165,6 +217,74 @@ export default function ResultsClient({
 
   return (
     <>
+      {paceReport && (
+        <section className="px-5 mt-7">
+          <h2 className="font-bold text-lg">Pace — the 1-minute drill</h2>
+          <div className="mt-3 rounded-3xl bg-surface border border-line p-5">
+            <div className="flex items-end justify-between">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wide text-muted">
+                  Average per question
+                </p>
+                <p
+                  className={`font-display text-4xl tabular-nums ${
+                    paceReport.avg > PACE_LIMIT ? "text-red" : "text-green"
+                  }`}
+                >
+                  {fmtSecs(paceReport.avg)}
+                </p>
+              </div>
+              <p className="text-sm text-muted text-right">
+                <b
+                  className={
+                    paceReport.overCount > 0 ? "text-red" : "text-green"
+                  }
+                >
+                  {paceReport.overCount}
+                </b>
+                /{paceReport.total} questions
+                <br />
+                over 1 minute
+              </p>
+            </div>
+
+            {paceReport.revise.length > 0 ? (
+              <div className="mt-4 pt-4 border-t border-dashed border-line">
+                <p className="text-xs font-bold uppercase tracking-wide text-red mb-2">
+                  Revise these first
+                </p>
+                <div className="space-y-2">
+                  {paceReport.revise.map((t) => (
+                    <div
+                      key={t.topic}
+                      className="flex items-center justify-between gap-3 rounded-2xl bg-red-soft border border-red/25 px-4 py-2.5"
+                    >
+                      <p className="text-sm font-semibold leading-snug">{t.topic}</p>
+                      <p className="text-xs text-right tabular-nums whitespace-nowrap text-muted">
+                        avg {fmtSecs(t.avg)}
+                        {t.wrong > 0 && (
+                          <>
+                            {" "}· <span className="text-red font-semibold">{t.wrong} wrong</span>
+                          </>
+                        )}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-2.5 text-xs text-muted leading-relaxed">
+                  Slow AND wrong is a concept gap — reread that chapter's notes or
+                  quiz it. Slow but right is just drilling speed.
+                </p>
+              </div>
+            ) : (
+              <p className="mt-4 pt-4 border-t border-dashed border-line text-sm font-semibold text-green">
+                Every topic inside a minute — exam pace. 🔥
+              </p>
+            )}
+          </div>
+        </section>
+      )}
+
       <section className="px-5 mt-7">
         <h2 className="font-bold text-lg">Section-wise Performance</h2>
         {sections.length > 1 && (
@@ -274,6 +394,17 @@ export default function ResultsClient({
                   <span className="text-sm font-semibold flex-1">
                     Question {i + 1}.
                   </span>
+                  {a?.timeSpentSeconds != null && (
+                    <span
+                      className={`text-[11px] font-bold rounded-full px-2 py-0.5 tabular-nums ${
+                        a.timeSpentSeconds > 60
+                          ? "bg-red-soft text-red"
+                          : "bg-surface-2 text-muted"
+                      }`}
+                    >
+                      ⏱ {fmtSecs(a.timeSpentSeconds)}
+                    </span>
+                  )}
                   {written && (
                     <span
                       className={`text-[11px] font-bold rounded-full px-2 py-0.5 tabular-nums ${

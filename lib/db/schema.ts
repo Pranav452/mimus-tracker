@@ -163,6 +163,9 @@ export const attemptAnswers = pgTable(
     textAnswer: text("text_answer"),
     aiFeedback: text("ai_feedback"),
     scored: boolean("scored").notNull().default(true),
+    // seconds spent looking at this question during the attempt — powers the
+    // pace report (her 1-minute-per-MCQ practice) on the results screen
+    timeSpentSeconds: real("time_spent_seconds"),
   },
   (t) => [uniqueIndex("attempt_answers_attempt_question").on(t.attemptId, t.questionId)]
 );

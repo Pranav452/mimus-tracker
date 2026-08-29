@@ -68,17 +68,20 @@ ${mock.notes}
 
 ${section.notes}
 
-Each question must be a JSON object:
+Return a JSON object of the form {"questions": [...]} where each element is:
 {"text": "...", "options": ["...", "...", "...", "..."], "correctIndex": 0-3, "explanation": "the provision, the reasoning, and why the distractors fail", "chapterName": "exact chapter name from the list above"}
 
 Rules:
 - Exactly 4 options each, exactly one defensible answer. If a provision is a slab, a percentage, a threshold or has conditions, put EVERY qualifying fact in the stem so no other option can be argued.
 - Amounts in ₹. Plain text only — no backslashes, no LaTeX, no markdown.
 - Cite the governing section in the explanation.
-- Return ONLY the JSON array of ${section.count} objects.`;
+- Return ONLY the JSON object with the "questions" array of ${section.count} objects.`;
 
   const res = await openai.chat.completions.create({
     model: MODEL,
+    // json_object mode guarantees parseable output — free-text mode kept
+    // producing stray escapes and unescaped quotes that killed whole batches
+    response_format: { type: "json_object" },
     messages: [
       {
         role: "system",
@@ -92,11 +95,8 @@ ${AMENDMENTS_BRIEF}`,
   });
 
   const raw = res.choices[0]?.message?.content ?? "";
-  // stray backslashes are not valid JSON escapes and would kill the whole batch
-  const json = raw
-    .slice(raw.indexOf("["), raw.lastIndexOf("]") + 1)
-    .replace(/\\(?!["\\/bfnrtu])/g, "");
-  const parsed = JSON.parse(json) as Generated[];
+  const obj = JSON.parse(raw) as { questions?: Generated[] } | Generated[];
+  const parsed = Array.isArray(obj) ? obj : (obj.questions ?? []);
   return parsed.filter(
     (q) =>
       q.text &&

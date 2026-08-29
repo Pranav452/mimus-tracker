@@ -77,6 +77,7 @@ export type SubmitPayload = {
     selectedIndex: number | null;
     textAnswer?: string | null;
     bookmarked: boolean;
+    timeSpentSeconds?: number | null;
   }[];
 };
 
@@ -109,6 +110,7 @@ export async function submitAttempt(payload: SubmitPayload) {
         bookmarked: ans?.bookmarked ?? false,
         textAnswer: written,
         scored: false,
+        timeSpentSeconds: ans?.timeSpentSeconds ?? null,
       };
     }
 
@@ -135,6 +137,7 @@ export async function submitAttempt(payload: SubmitPayload) {
       bookmarked: ans?.bookmarked ?? false,
       textAnswer: null,
       scored: true,
+      timeSpentSeconds: ans?.timeSpentSeconds ?? null,
     };
   });
 
