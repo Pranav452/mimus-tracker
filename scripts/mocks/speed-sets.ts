@@ -3,23 +3,29 @@
 // Chapter mixes rotate so the six sets cover the paper without repeating.
 import type { Mock } from "../mock-test";
 
-const NOTES = `This is Paper 1 — ADVANCED ACCOUNTING (CA Intermediate, new scheme). Use ICAI's Accounting Standards framework (AS 1 to AS 29) — NOT Ind AS, which is a Final topic. Buyback follows sections 68-70 of the Companies Act, 2013 (both 25% ceilings, 2:1 debt-equity, CRR at nominal value). Amalgamation follows AS 14 (merger vs purchase; pooling vs purchase method). Cash flow follows AS 3.
+const NOTES = `This is Paper 1 — ADVANCED ACCOUNTING (CA Intermediate, new scheme). Use ICAI's Accounting Standards framework (AS 1 to AS 29) — NOT Ind AS, which is a Final topic. Where AS and Ind AS diverge (AS 5 policy changes have no retrospective restatement; AS 22 works on timing differences; AS 24 is a disclosure standard), the AS treatment is the correct answer and an Ind-AS-style option makes an excellent distractor. Buyback follows sections 68-70 of the Companies Act, 2013 (both 25% ceilings, 2:1 debt-equity, CRR at nominal value). Amalgamation follows AS 14. Cash flow follows AS 3.
 
-Style: mirror recent ICAI Part I MCQs — mostly SHORT NUMERICALS and case-lines (2-3 sentences, amounts in ₹), some direct conceptual one-liners. Every question must be solvable by a prepared student in about ONE MINUTE: numericals need at most 2-3 quick steps, never a full ledger. Put every qualifying fact in the stem so exactly one option is defensible. Distractors must be the standard wrong-step answers (e.g. forgetting the CRR, using face value instead of issue price), not random numbers.`;
+DIFFICULTY — this matters most: the student found plain single-step questions too easy and scored full marks at speed. Set the difficulty at the HARDEST end of genuine ICAI Part I MCQs:
+- Numericals must need THREE OR FOUR chained steps, not one formula (e.g. compute purchase consideration THEN goodwill; strip loading THEN find shortage THEN split it; compute CRR when the buyback is financed partly from a fresh issue).
+- Combine two concepts in one stem where natural (buyback + its cash flow classification; revaluation + subsequent depreciation; post-acquisition profit + unrealised stock profit).
+- Include one deliberately EXCESS fact per numerical — data the solver must recognise as irrelevant.
+- Every distractor must be the exact result of a SPECIFIC wrong method (skipping a step, using face instead of issue price, forgetting the exclusion) — never a random number.
+- Direct recall questions are allowed only for genuinely fine distinctions (exceptions, provisos, AS-vs-Ind-AS divergences), never for definitions.
+A very well-prepared student should still finish in about a minute a question but should have to THINK on every single one; a mediocre student should get 8/15.`;
 
 const partA = (chapters: string[], count: number) => ({
   name: "Company Accounts",
   count,
   chapters,
   notes:
-    "Numerical bias: computations of purchase consideration, CRR, capital reduction pots, loading, goodwill/capital reserve, minority interest, cash flows by activity.",
+    "All numerical, multi-step: purchase consideration then goodwill/capital reserve; CRR with a partial fresh issue; capital reduction pots with both fills and write-offs; loading, shortage and its split; minority interest with post-acquisition profits and unrealised stock profit; cash flow with misclassification traps.",
 });
 const partB = (chapters: string[], count: number) => ({
   name: "Accounting Standards",
   count,
   chapters,
   notes:
-    "Test recognition/measurement rules with tiny numericals or one-line cases; include the classic AS traps (prior period vs change in estimate, borrowing cost eligibility, segment thresholds, contingency vs provision).",
+    "Two-to-three-step numericals and judgment cases on recognition and measurement: prior period vs change in estimate vs change in policy; borrowing cost with investment income offset and cessation; NRV with completion and selling costs; segment 10% and 75% tests combined; provision vs contingency with probability shifts; deferred tax where the timing/permanent distinction decides; lease classification at the boundary. Include an Ind-AS-style treatment as a distractor where AS diverges.",
 });
 
 export function buildSet(
