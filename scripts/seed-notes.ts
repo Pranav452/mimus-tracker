@@ -451,6 +451,117 @@ const FORFEITURE: NoteBlock[] = [
   },
 ];
 
+const SHARES_RAPID: NoteBlock[] = [
+  {
+    type: "layman",
+    title: "How to use this",
+    text: "This is a 5-minute sweep of the whole chapter, section by section — every keyword and every number, nothing skipped. Read a row, close your eyes, say the number. If it comes back instantly, next row. If it doesn't, that row is tonight's work.",
+  },
+  {
+    type: "table",
+    caption: "Sections 43-56 — capital and its rules",
+    headers: ["Sec", "Keywords", "The number / rule"],
+    rows: [
+      ["43", "Kinds of capital", "Equity (incl. DVR shares) + Preference. Private co may issue other kinds if articles permit"],
+      ["46", "Share certificate", "Prima facie evidence of title"],
+      ["49", "Calls", "Uniform on all shares of the same class"],
+      ["50", "Calls in advance", "Allowed if articles permit — but **no voting rights** on the advance till called"],
+      ["52", "Securities premium — 5 uses ONLY", "Fully paid **bonus** · **preliminary** expenses · **commission/discount** on issue of securities · **premium on redemption** of pref shares or debentures · **buyback** u/s 68"],
+      ["53", "Issue at discount", "**VOID** + penalty. Only exception: sweat equity u/s 54"],
+      ["54", "Sweat equity", "SR valid **12 months** · lock-in **3 years** · per year max **15%** of paid-up equity or **₹5 crore**, whichever HIGHER · overall cap **25%** of paid-up equity"],
+      ["55", "Preference shares", "Max **20 years** (infrastructure: 30, with 10% p.a. redemption option after 20) · redeem out of profits or fresh issue · premium on redemption via SP/profits · redemption out of profits needs **CRR = nominal**"],
+      ["56", "Transfer & certificates", "Instrument (SH-4) to company within **60 days** of execution · certificates: incorporation **2 m** · allotment **2 m** · transfer **1 m** · debentures **6 m**"],
+    ],
+  },
+  {
+    type: "table",
+    caption: "Sections 61-72 — altering, issuing, buying back",
+    headers: ["Sec", "Keywords", "The number / rule"],
+    rows: [
+      ["61 + 64", "Alteration of capital", "Ordinary resolution (if articles authorise) · notify ROC within **30 days**"],
+      ["62(1)(a)", "Rights issue", "Offer open **15-30 days** (private cos may agree shorter) · right of **renunciation** · not accepted = **deemed declined** · Board then disposes non-disadvantageously"],
+      ["62(1)(b)", "ESOP", "Special resolution (private co: OR) + prescribed conditions"],
+      ["62(1)(c)", "Preferential allotment", "SR + price by **registered valuer**"],
+      ["63", "Bonus shares", "Out of **free reserves, SP, CRR** only — **NEVER revaluation reserve** · no bonus in lieu of dividend · once announced, **cannot be withdrawn** · partly paid shares: make fully paid first"],
+      ["66", "Reduction of capital", "SR + **NCLT confirmation** (contrast buyback = no NCLT)"],
+      ["67", "Own shares", "A company cannot buy its own shares — except u/s 68"],
+      ["68", "Buyback — the big one", "Sources: FR / SP / proceeds of a DIFFERENT kind of issue · **25%** of capital+FR (resources) · **25%** of paid-up equity per FY (nominal) · debt-equity **2:1** post · board route alone: **10%** · **1-year gap** between buybacks · complete within **1 year** of resolution · solvency declaration **SH-9** · destroy certificates in **7 days** · no fresh issue of same kind for **6 months** (bonus/conversions OK) · register SH-10 · return **SH-11 in 30 days**"],
+      ["69", "CRR", "= **nominal value** bought back out of FR/SP · usable ONLY for fully paid bonus shares"],
+      ["70", "Buyback prohibited", "Through subsidiary or investment company · while in default of deposits, dividend, or term-loan repayment — bar lifts **3 years after** the default is remedied"],
+      ["71", "Debentures", "**No voting rights** ever · DRR out of dividend-available profits (where applicable) · debenture trustee for public issue / >500 persons · conversion into shares needs SR"],
+      ["72", "Nomination", "Any holder may nominate; nominee overrides will on death"],
+    ],
+  },
+  {
+    type: "mnemonic",
+    text: "Buyback in five numbers: **25 (resources) · 25 (equity) · 2:1 (debt) · 10% (board alone) · 1 year (gap and completion)**",
+  },
+  {
+    type: "mnemonic",
+    text: "Securities premium spends on **B-P-C-P-B** — Bonus · Preliminary · Commission-discount · Premium-on-redemption · Buyback. Anything else = wrong option",
+  },
+  {
+    type: "trap",
+    text: "The four they always test: (1) bonus from **revaluation reserve — never**; (2) CRR spends on **bonus only**; (3) buyback needs **both** 25% ceilings — resources AND nominal equity, the lower bites; (4) reduction u/s 66 needs NCLT, buyback u/s 68 does not. And s.53: discount issue is **void**, not merely irregular.",
+  },
+];
+
+const MGMT_RAPID: NoteBlock[] = [
+  {
+    type: "layman",
+    title: "How to use this",
+    text: "Same drill — one row per section, keyword then number. This chapter is 80% timelines and thresholds, which is exactly what MCQs and 4-markers pull from. Say the number before you read it.",
+  },
+  {
+    type: "table",
+    caption: "Sections 88-99 — registers, return, AGM",
+    headers: ["Sec", "Keywords", "The number / rule"],
+    rows: [
+      ["88", "Registers", "Members / debenture-holders / other security holders · foreign register if authorised"],
+      ["89", "Beneficial interest", "Declaration to company; company files MGT-6 in **30 days**"],
+      ["90", "Significant Beneficial Owner", "**10%+** shares/voting/dividend or control · BEN-1 to company, BEN-2 to ROC"],
+      ["91", "Closing the register", "Notice **7 days** before · closed max **30 days** at a stretch, **45 days** a year"],
+      ["92", "Annual return", "MGT-7 (7A for OPC/small) within **60 days of AGM** · certified MGT-8 if listed OR capital ≥ **₹10 cr** OR turnover ≥ **₹50 cr** · preserved **8 years** · extract no longer required in Board's report (web link instead)"],
+      ["94", "Registers kept elsewhere", "SR needed (place where >1/10th members reside), advance copy to ROC"],
+      ["96", "AGM", "First AGM: within **9 months** of close of first FY (no ROC extension) · later: within **6 months** of FY close · gap ≤ **15 months** · ROC may extend by **3 months** (not first) · 9 AM-6 PM, not a **national holiday**, at registered office or same city"],
+      ["97-98", "Tribunal", "NCLT may call AGM (s.97) or any meeting (s.98) on application"],
+      ["99", "Default in AGM", "Fine up to ₹1 lakh + **₹5,000/day** continuing"],
+    ],
+  },
+  {
+    type: "table",
+    caption: "Sections 100-122 — meetings, votes, minutes",
+    headers: ["Sec", "Keywords", "The number / rule"],
+    rows: [
+      ["100", "EGM", "Requisition: **1/10th** paid-up voting capital · Board must move in **21 days**, hold in **45 days** · else requisitionists hold within **3 months** of deposit · expenses recovered from defaulting directors' fees"],
+      ["101", "Notice", "**21 CLEAR days** (exclude date of service and date of meeting; post adds 2) · shorter with consent of **95%** of members entitled to vote"],
+      ["102", "Explanatory statement", "For every special business; material interests of directors/KMP disclosed"],
+      ["103", "Quorum", "Public: **5 / 15 / 30** (≤1000 / 1001-5000 / >5000 members) · Private: **2** · **personally present** — proxies never count · no quorum in 30 min → adjourned to same day next week (requisitioned meeting → cancelled)"],
+      ["105", "Proxy", "Need not be a member · **cannot speak** · votes only on a **poll** · one person max **50 members** and 10% capital · deposit **48 hours** before · inspect 24 hours before"],
+      ["108-109", "Voting", "E-voting for listed/1000+ members · Poll: chairman on own, or demand by **1/10th voting power or ₹5 lakh** paid-up capital"],
+      ["110", "Postal ballot", "Mandatory for prescribed items (OPC and ≤200-member cos exempt)"],
+      ["113", "Corporate representative", "Board resolution; representative votes as the company — counts for quorum, unlike a proxy"],
+      ["114", "OR vs SR", "OR: simple majority · SR: **3× against**, intention stated in notice"],
+      ["115", "Special notice", "By members holding **1%** voting power or **₹5 lakh** paid-up capital (auditor removal, director removal)"],
+      ["117", "Filing resolutions", "MGT-14 to ROC within **30 days** (all SRs + prescribed Board resolutions)"],
+      ["118", "Minutes", "Entered within **30 days** · consecutively numbered pages · chairman signs · secretarial standards SS-1/SS-2 apply"],
+      ["121", "Report on AGM", "LISTED public co only — MGT-15 within **30 days** of AGM"],
+    ],
+  },
+  {
+    type: "mnemonic",
+    text: "AGM clock: **9-6-15-3** — first in 9 months, later in 6, gap 15, extension 3. EGM clock: **10-21-45-90** — tenth requisitions, board calls in 21, holds in 45, else members in 90 days",
+  },
+  {
+    type: "mnemonic",
+    text: "Proxy in four beats: **no speak · poll only · 50 cap · 48 hours**",
+  },
+  {
+    type: "trap",
+    text: "The confusion pairs: (1) **poll demand** = 1/10th voting power or ₹5 lakh CAPITAL vs **special notice** = 1% or ₹5 lakh — different fractions, same ₹5 lakh; (2) quorum counts members **personally present** — a proxy never counts, a corporate representative u/s 113 DOES; (3) 21 clear days means dispatch ~25 days ahead if by post; (4) the 3-month ROC extension is **never** available for the FIRST AGM; (5) MGT-7 is due 60 days from the AGM **actually held or due** — not from FY end.",
+  },
+];
+
 const NOTES: {
   chapter: string;
   title: string;
@@ -534,6 +645,36 @@ const NOTES: {
       "Capital Reserve on reissue",
     ],
     blocks: FORFEITURE,
+  },
+  {
+    chapter: "Shares and Debentures",
+    title: "Ch 4 rapid revision — Shares & Debentures in numbers",
+    concepts: [
+      "Securities premium — 5 uses",
+      "Sweat equity limits",
+      "Rights, ESOP, preferential (s.62)",
+      "Bonus shares rules",
+      "Buyback 25-25-2-10-1",
+      "CRR & s.70 prohibitions",
+      "Debentures & DRR",
+    ],
+    blocks: SHARES_RAPID,
+  },
+  {
+    chapter: "Management and Administration",
+    title: "Ch 7 rapid revision — M&A in numbers",
+    concepts: [
+      "Registers & SBO (10%)",
+      "Annual return (60 days, MGT-7/8)",
+      "AGM 9-6-15-3",
+      "EGM 10-21-45-90",
+      "Notice 21 clear days",
+      "Quorum 5/15/30",
+      "Proxy rules",
+      "Poll vs special notice",
+      "MGT-14 & minutes",
+    ],
+    blocks: MGMT_RAPID,
   },
 ];
 
