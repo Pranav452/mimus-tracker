@@ -230,6 +230,11 @@ export const planItems = pgTable("plan_items", {
   done: boolean("done").notNull().default(false),
   // chapters this item covers — drives auto-ticking when she logs a topic
   chapterIds: jsonb("chapter_ids").$type<number[]>().notNull().default([]),
+  // chapters whose notes / flashcards / quiz are shown beside this item on the
+  // home screen. A superset of chapterIds; never used for auto-ticking.
+  refChapterIds: jsonb("ref_chapter_ids").$type<number[]>().notNull().default([]),
+  // an in-app test this item points at ("App mock: GST full syllabus")
+  testId: integer("test_id"),
   // true once she ticks/unticks by hand; auto-sync then leaves it alone
   manual: boolean("manual").notNull().default(false),
   // logged topics that satisfied this item (audit trail for the auto-tick)

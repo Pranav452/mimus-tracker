@@ -22,7 +22,7 @@ export default async function TopicsPage() {
         >
           <ArrowLeftIcon className="w-5 h-5" />
         </Link>
-        <h1 className="font-bold text-lg">Today&apos;s study plan</h1>
+        <h1 className="font-bold text-lg">Log what you studied</h1>
       </header>
 
       <TopicsClient

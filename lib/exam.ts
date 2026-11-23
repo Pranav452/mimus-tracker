@@ -9,7 +9,10 @@ export const EXAMS = [
   { key: "tax", paper: "Tax", date: "2027-01-06" },
 ] as const;
 
-export const DAILY_HABIT_TITLE = "Daily 5 + today's flashcards";
+// the row that closes every study day: log what was done, then the night test
+export const DAILY_HABIT_TITLE = "Log the day + night test";
+export const NIGHT_TEST_PREFIX = "Night test";
+export const NIGHT_TEST_SIZE = 10;
 
 /** The next paper still ahead of `today` (YYYY-MM-DD, IST), with days to go. */
 export function nextExam(today: string) {

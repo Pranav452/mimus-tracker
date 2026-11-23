@@ -12,7 +12,12 @@ import {
   dailyTopics,
   activityLog,
   users,
+  flashcards,
+  chapterNotes,
 } from "@/lib/db/schema";
+import { memo } from "@/lib/cache";
+
+const SYLLABUS_TTL = 10 * 60_000;
 import { and, desc, eq, inArray, isNotNull, sql } from "drizzle-orm";
 
 export type ChapterRow = {
@@ -27,7 +32,11 @@ export type ChapterRow = {
   paperSlug: string;
 };
 
-export async function getAllChapters(): Promise<ChapterRow[]> {
+export function getAllChapters(): Promise<ChapterRow[]> {
+  return memo("chapters", SYLLABUS_TTL, loadAllChapters);
+}
+
+async function loadAllChapters(): Promise<ChapterRow[]> {
   return db
     .select({
       id: chapters.id,
@@ -46,17 +55,47 @@ export async function getAllChapters(): Promise<ChapterRow[]> {
     .orderBy(papers.number, parts.sort, chapters.number);
 }
 
-export async function getPapers() {
-  return db.select().from(papers).orderBy(papers.number);
+export function getPapers() {
+  return memo("papers", SYLLABUS_TTL, () =>
+    db.select().from(papers).orderBy(papers.number)
+  );
+}
+
+/** What exists to study from, per chapter: flashcards, quiz questions, notes. */
+export function getReferenceCounts() {
+  return memo("reference-counts", 5 * 60_000, async () => {
+    const [cards, quiz, notes] = await Promise.all([
+      db
+        .select({ chapterId: flashcards.chapterId, n: sql<number>`count(*)::int` })
+        .from(flashcards)
+        .groupBy(flashcards.chapterId),
+      db
+        .select({ chapterId: questions.chapterId, n: sql<number>`count(*)::int` })
+        .from(questions)
+        .where(
+          and(
+            sql`${questions.testId} is null`,
+            isNotNull(questions.chapterId),
+            isNotNull(questions.correctIndex)
+          )
+        )
+        .groupBy(questions.chapterId),
+      db.select({ chapterId: chapterNotes.chapterId }).from(chapterNotes),
+    ]);
+    return {
+      cards: new Map(cards.map((r) => [r.chapterId, r.n])),
+      quiz: new Map(quiz.map((r) => [r.chapterId as number, r.n])),
+      notes: new Set(notes.map((r) => r.chapterId)),
+    };
+  });
 }
 
 export async function getPapersWithProgress(userId: number) {
-  const allPapers = await getPapers();
-  const chapterRows = await getAllChapters();
-  const progress = await db
-    .select()
-    .from(chapterProgress)
-    .where(eq(chapterProgress.userId, userId));
+  const [allPapers, chapterRows, progress] = await Promise.all([
+    getPapers(),
+    getAllChapters(),
+    db.select().from(chapterProgress).where(eq(chapterProgress.userId, userId)),
+  ]);
   return allPapers.map((p) => {
     const chs = chapterRows.filter((c) => c.paperId === p.id);
     const done = chs.filter((c) =>
@@ -67,27 +106,28 @@ export async function getPapersWithProgress(userId: number) {
 }
 
 export async function getPublishedTests(userId: number) {
-  const rows = await db
-    .select({
-      id: tests.id,
-      title: tests.title,
-      scheduledFor: tests.scheduledFor,
-      durationMinutes: tests.durationMinutes,
-      paperId: tests.paperId,
-      paperName: papers.name,
-      paperSlug: papers.slug,
-      createdAt: tests.createdAt,
-    })
-    .from(tests)
-    .leftJoin(papers, eq(tests.paperId, papers.id))
-    .where(eq(tests.status, "published"))
-    .orderBy(desc(tests.createdAt));
-
-  const myAttempts = await db
-    .select()
-    .from(attempts)
-    .where(and(eq(attempts.userId, userId), isNotNull(attempts.submittedAt)))
-    .orderBy(desc(attempts.submittedAt));
+  const [rows, myAttempts] = await Promise.all([
+    db
+      .select({
+        id: tests.id,
+        title: tests.title,
+        scheduledFor: tests.scheduledFor,
+        durationMinutes: tests.durationMinutes,
+        paperId: tests.paperId,
+        paperName: papers.name,
+        paperSlug: papers.slug,
+        createdAt: tests.createdAt,
+      })
+      .from(tests)
+      .leftJoin(papers, eq(tests.paperId, papers.id))
+      .where(eq(tests.status, "published"))
+      .orderBy(desc(tests.createdAt)),
+    db
+      .select()
+      .from(attempts)
+      .where(and(eq(attempts.userId, userId), isNotNull(attempts.submittedAt)))
+      .orderBy(desc(attempts.submittedAt)),
+  ]);
 
   return rows.map((t) => ({
     ...t,
@@ -117,32 +157,35 @@ export async function getRecentAttempts(userId: number, limit = 10) {
 }
 
 export async function getTestWithQuestions(testId: number) {
-  const [test] = await db.select().from(tests).where(eq(tests.id, testId));
+  const [[test], qs] = await Promise.all([
+    db.select().from(tests).where(eq(tests.id, testId)),
+    db
+      .select()
+      .from(questions)
+      .where(eq(questions.testId, testId))
+      .orderBy(questions.seq, questions.id),
+  ]);
   if (!test) return null;
-  const qs = await db
-    .select()
-    .from(questions)
-    .where(eq(questions.testId, testId))
-    .orderBy(questions.seq, questions.id);
   return { test, questions: qs };
 }
 
 export async function getAttemptDetail(attemptId: number, userId: number) {
-  const [attempt] = await db
-    .select()
-    .from(attempts)
-    .where(and(eq(attempts.id, attemptId), eq(attempts.userId, userId)));
-  if (!attempt) return null;
-  const [test] = await db.select().from(tests).where(eq(tests.id, attempt.testId));
-  const qs = await db
-    .select()
-    .from(questions)
-    .where(eq(questions.testId, attempt.testId))
-    .orderBy(questions.seq, questions.id);
-  const answers = await db
-    .select()
-    .from(attemptAnswers)
-    .where(eq(attemptAnswers.attemptId, attemptId));
+  const [[attempt], answers] = await Promise.all([
+    db
+      .select()
+      .from(attempts)
+      .where(and(eq(attempts.id, attemptId), eq(attempts.userId, userId))),
+    db.select().from(attemptAnswers).where(eq(attemptAnswers.attemptId, attemptId)),
+  ]);
+  if (!attempt) return null; // not hers: the answers fetched alongside are discarded
+  const [[test], qs] = await Promise.all([
+    db.select().from(tests).where(eq(tests.id, attempt.testId)),
+    db
+      .select()
+      .from(questions)
+      .where(eq(questions.testId, attempt.testId))
+      .orderBy(questions.seq, questions.id),
+  ]);
   return { attempt, test, questions: qs, answers };
 }
 

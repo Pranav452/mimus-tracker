@@ -5,22 +5,42 @@ import { requireUser, todayIST } from "@/lib/auth";
 import {
   getPapersWithProgress,
   getRecentAttempts,
-  getTopicsForDate,
   getAllChapters,
+  getReferenceCounts,
 } from "@/lib/queries";
 import { db } from "@/lib/db";
-import { attempts as attemptsTable, planItems } from "@/lib/db/schema";
-import { and, asc, eq, isNotNull } from "drizzle-orm";
-import { findDailyFive } from "@/lib/daily-five";
-import { nextExam, DAILY_HABIT_TITLE } from "@/lib/exam";
-import DailyFiveButton from "@/components/DailyFiveButton";
-import { BookIcon, ChevronRightIcon, SparkleIcon, PlusIcon } from "@/components/icons";
+import { dailyTopics, planItems } from "@/lib/db/schema";
+import { and, asc, eq } from "drizzle-orm";
+import { findNightTest } from "@/lib/night-test";
+import { nextExam, DAILY_HABIT_TITLE, NIGHT_TEST_SIZE } from "@/lib/exam";
+import NightTestButton from "@/components/NightTestButton";
+import TodayLog from "@/components/TodayLog";
+import { ChevronRightIcon, SparkleIcon } from "@/components/icons";
 
 const soft: Record<string, string> = {
   green: "bg-green-soft",
   blue: "bg-blue-soft",
   lav: "bg-lav-soft",
 };
+
+const kindTag: Record<string, { label: string; cls: string }> = {
+  study: { label: "Study", cls: "bg-blue-soft text-blue" },
+  revise: { label: "Revise", cls: "bg-lav-soft text-lav" },
+  practice: { label: "Practice", cls: "bg-green-soft text-green" },
+  test: { label: "Test", cls: "bg-accent-soft text-accent" },
+  exam: { label: "EXAM", cls: "bg-red-soft text-red" },
+};
+
+// plan rows with no chapter of their own ("DT rapid revision: all 13 chapters")
+// still deserve somewhere to study from: the paper they belong to
+function paperOf(title: string): { slug: string; label: string } | null {
+  if (/^(DT|GST|Tax)\b/.test(title)) return { slug: "tax", label: "Taxation" };
+  if (/^Law\b/.test(title)) return { slug: "law", label: "Law" };
+  if (/^Accounts\b/.test(title)) return { slug: "accounts", label: "Accounts" };
+  return null;
+}
+
+const short = (name: string) => name.split("—")[0].trim();
 
 function fmtDate(d: string | Date | null) {
   if (!d) return "";
@@ -31,42 +51,59 @@ function fmtDate(d: string | Date | null) {
   });
 }
 
+const chip =
+  "text-[12px] font-semibold rounded-full px-2.5 py-1 bg-surface border border-line";
+
 export default async function HomePage() {
   const user = await requireUser();
   const today = todayIST();
-  const [papers, attempts, topics, todaysPlan, dailyId, chapters] = await Promise.all([
-    getPapersWithProgress(user.id),
-    getRecentAttempts(user.id, 3),
-    getTopicsForDate(user.id, today),
-    db
-      .select()
-      .from(planItems)
-      .where(and(eq(planItems.userId, user.id), eq(planItems.onDate, today)))
-      .orderBy(asc(planItems.sort)),
-    findDailyFive(today),
-    getAllChapters(),
-  ]);
-
-  // has she already taken today's five?
-  const [dailyAttempt] = dailyId
-    ? await db
+  // one round of queries, all in parallel — the syllabus and the per-chapter
+  // counts come from the in-process cache
+  const [papers, allAttempts, loggedRows, todaysPlan, nightId, chapters, refs] =
+    await Promise.all([
+      getPapersWithProgress(user.id),
+      getRecentAttempts(user.id, 100),
+      db
+        .select({ id: dailyTopics.id, chapterId: dailyTopics.chapterId })
+        .from(dailyTopics)
+        .where(and(eq(dailyTopics.userId, user.id), eq(dailyTopics.forDate, today)))
+        .orderBy(asc(dailyTopics.id)),
+      db
         .select()
-        .from(attemptsTable)
-        .where(
-          and(
-            eq(attemptsTable.testId, dailyId),
-            eq(attemptsTable.userId, user.id),
-            isNotNull(attemptsTable.submittedAt)
-          )
-        )
-        .limit(1)
-    : [];
+        .from(planItems)
+        .where(and(eq(planItems.userId, user.id), eq(planItems.onDate, today)))
+        .orderBy(asc(planItems.sort)),
+      findNightTest(today),
+      getAllChapters(),
+      getReferenceCounts(),
+    ]);
+
+  const chapterById = new Map(chapters.map((c) => [c.id, c]));
+  const attemptByTest = new Map<number, (typeof allAttempts)[number]>();
+  for (const a of allAttempts) if (!attemptByTest.has(a.testId)) attemptByTest.set(a.testId, a);
+  const attempts = allAttempts.slice(0, 3);
+  const nightAttempt = nightId ? attemptByTest.get(nightId) : undefined;
 
   const exam = nextExam(today);
-  const planRows = todaysPlan.filter((i) => i.title !== DAILY_HABIT_TITLE);
-  const todaysChapters = [...new Set(todaysPlan.flatMap((i) => i.chapterIds ?? []))]
-    .map((id) => chapters.find((c) => c.id === id))
-    .filter((c): c is NonNullable<typeof c> => !!c);
+  const planRows = todaysPlan
+    .filter((i) => i.title !== DAILY_HABIT_TITLE)
+    .map((i) => ({
+      ...i,
+      refs: [...new Set([...(i.chapterIds ?? []), ...(i.refChapterIds ?? [])])]
+        .map((id) => chapterById.get(id))
+        .filter((c): c is NonNullable<typeof c> => !!c),
+    }));
+  const plannedChapters = [
+    ...new Map(planRows.flatMap((r) => r.refs).map((c) => [c.id, c])).values(),
+  ];
+  const logged = loggedRows
+    .map((l) => ({ ...l, chapter: chapterById.get(l.chapterId) }))
+    .filter((l) => l.chapter)
+    .map((l) => ({ id: l.id, chapterId: l.chapterId, name: short(l.chapter!.name) }));
+  const loggedCount = new Set(logged.map((l) => l.chapterId)).size;
+  const lawChanged = plannedChapters.some(
+    (c) => c.paperSlug === "tax" || c.paperSlug === "law"
+  );
   const todayLabel = new Date(`${today}T00:00:00+05:30`).toLocaleDateString("en-IN", {
     weekday: "short",
     day: "numeric",
@@ -78,166 +115,195 @@ export default async function HomePage() {
     <main className="fade-up">
       <TopBar />
 
-      <section className="px-5 pt-2">
-        <h1 className="font-display text-[44px] leading-[1.05]">
-          Hello
-          <br />
-          <span className="italic text-muted">{user.name}</span>
-        </h1>
+      <section className="px-5">
+        <div className="flex items-end justify-between gap-3">
+          <h1 className="font-display text-[30px] leading-tight">
+            Hello, <span className="italic text-muted">{user.name}</span>
+          </h1>
+          {exam && (
+            <span className="mb-1.5 text-[11px] font-bold bg-accent-soft text-accent rounded-full px-2.5 py-1 whitespace-nowrap">
+              {exam.days === 0
+                ? `${exam.paper} today`
+                : `${exam.days} day${exam.days === 1 ? "" : "s"} to ${exam.paper}`}
+            </span>
+          )}
+        </div>
 
-        <div className="mt-6 rounded-3xl bg-surface border border-line p-5">
-          <div className="flex items-center justify-between gap-3">
-            <p className="text-xs font-bold uppercase tracking-wide text-muted">
-              Today · {todayLabel}
-            </p>
-            {exam && (
-              <span className="text-[11px] font-bold bg-accent-soft text-accent rounded-full px-2.5 py-1 whitespace-nowrap">
-                {exam.days === 0
-                  ? `${exam.paper} today`
-                  : `${exam.days} day${exam.days === 1 ? "" : "s"} to ${exam.paper}`}
-              </span>
-            )}
-          </div>
+        {/* 1 — what to study today, with something to study it from */}
+        <div className="mt-4 rounded-3xl bg-surface border border-line p-5">
+          <p className="text-xs font-bold uppercase tracking-wide text-muted">
+            Today&apos;s plan · {todayLabel}
+          </p>
 
           {planRows.length > 0 ? (
-            <ul className="mt-3 space-y-2.5">
-              {planRows.map((i) => (
-                <li key={i.id} className="flex gap-2.5">
-                  <span
-                    className={`mt-[7px] w-2 h-2 rounded-full shrink-0 ${
-                      i.done ? "bg-green" : "bg-line"
-                    }`}
-                  />
-                  <div className="min-w-0">
-                    <p
-                      className={`text-[15px] font-semibold leading-snug ${
-                        i.done ? "line-through text-muted" : ""
-                      }`}
-                    >
-                      {i.title}
-                    </p>
-                    {i.subtitle && !i.done && (
-                      <p className="text-xs text-muted leading-snug mt-0.5">
-                        {i.subtitle}
-                      </p>
+            <ul className="mt-3 space-y-5">
+              {planRows.map((i) => {
+                const tag = kindTag[i.kind];
+                const testAttempt = i.testId ? attemptByTest.get(i.testId) : undefined;
+                const paper = i.refs.length === 0 && !i.testId ? paperOf(i.title) : null;
+                return (
+                  <li key={i.id}>
+                    <div className="flex items-start gap-2.5">
+                      <span
+                        className={`mt-[7px] w-2 h-2 rounded-full shrink-0 ${
+                          i.done ? "bg-green" : "bg-line"
+                        }`}
+                      />
+                      <div className="min-w-0 flex-1">
+                        <p
+                          className={`text-[15px] font-semibold leading-snug ${
+                            i.done ? "line-through text-muted" : ""
+                          }`}
+                        >
+                          {i.title}
+                        </p>
+                        {i.subtitle && (
+                          <p className="text-xs text-muted leading-snug mt-0.5">
+                            {i.subtitle}
+                          </p>
+                        )}
+                      </div>
+                      {tag && (
+                        <span
+                          className={`shrink-0 text-[10px] font-bold rounded-full px-2 py-0.5 ${tag.cls}`}
+                        >
+                          {tag.label}
+                        </span>
+                      )}
+                    </div>
+
+                    {i.refs.length > 0 && (
+                      <div className="mt-2.5 ml-[18px] space-y-2">
+                        {i.refs.map((c) => {
+                          const base = `/courses/${c.paperSlug}/${c.id}`;
+                          const nCards = refs.cards.get(c.id) ?? 0;
+                          const nQuiz = refs.quiz.get(c.id) ?? 0;
+                          return (
+                            <div key={c.id} className="rounded-2xl bg-surface-2 px-3.5 py-3">
+                              <p className="text-[13px] font-semibold leading-snug">
+                                {c.name}
+                              </p>
+                              <div className="mt-2 flex flex-wrap gap-1.5">
+                                {refs.notes.has(c.id) && (
+                                  <Link href={base} className={chip}>
+                                    Notes
+                                  </Link>
+                                )}
+                                {nCards > 0 && (
+                                  <Link href={`${base}?tab=cards`} className={chip}>
+                                    Flashcards · {nCards}
+                                  </Link>
+                                )}
+                                {nQuiz > 0 && (
+                                  <Link href={`${base}?tab=quiz`} className={chip}>
+                                    Practice Qs · {nQuiz}
+                                  </Link>
+                                )}
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
                     )}
-                  </div>
-                </li>
-              ))}
+
+                    {i.testId && (
+                      <Link
+                        href={testAttempt ? `/results/${testAttempt.id}` : `/exam/${i.testId}`}
+                        className="mt-2.5 ml-[18px] flex items-center justify-between rounded-2xl bg-surface-2 px-3.5 py-3 text-[13px] font-semibold"
+                      >
+                        {testAttempt
+                          ? `Done — ${testAttempt.score}/${testAttempt.maxScore} · Review`
+                          : "Open this test"}
+                        <ChevronRightIcon className="w-4 h-4 text-muted" />
+                      </Link>
+                    )}
+
+                    {paper && (
+                      <Link
+                        href={`/courses/${paper.slug}`}
+                        className="mt-2.5 ml-[18px] flex items-center justify-between rounded-2xl bg-surface-2 px-3.5 py-3 text-[13px] font-semibold"
+                      >
+                        {paper.label} chapters — notes, flashcards, practice
+                        <ChevronRightIcon className="w-4 h-4 text-muted" />
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           ) : (
             <p className="mt-3 text-sm text-muted">Nothing planned for today.</p>
           )}
 
-          <div className="mt-4">
-            {dailyAttempt ? (
-              <Link
-                href={`/results/${dailyAttempt.id}`}
-                className="flex items-center justify-between rounded-2xl bg-green-soft border border-green/30 px-4 py-3.5"
-              >
-                <span className="font-semibold text-[15px]">
-                  Daily 5 done — {dailyAttempt.score}/{dailyAttempt.maxScore}
-                </span>
-                <span className="text-sm font-semibold underline underline-offset-4">
-                  Review
-                </span>
+          <div className="mt-4 flex items-center justify-between text-sm font-semibold text-muted">
+            <Link href="/planner" className="underline underline-offset-4">
+              Full plan
+            </Link>
+            {lawChanged && (
+              <Link href="/changes" className="underline underline-offset-4">
+                What changed for January
               </Link>
-            ) : (
-              <DailyFiveButton />
             )}
           </div>
-
-          {todaysChapters.length > 0 && (
-            <div className="mt-4">
-              <p className="text-xs font-bold uppercase tracking-wide text-muted mb-2">
-                Flashcards for today
-              </p>
-              <div className="flex flex-wrap gap-1.5">
-                {todaysChapters.map((c) => (
-                  <Link
-                    key={c.id}
-                    href={`/courses/${c.paperSlug}/${c.id}?tab=cards`}
-                    className="text-xs font-semibold bg-lav-soft text-lav rounded-full px-3 py-1.5"
-                  >
-                    {c.name.split("—")[0].trim()}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
-
-          <Link
-            href="/planner"
-            className="mt-4 block text-center text-sm font-semibold text-muted underline underline-offset-4"
-          >
-            Open the full plan
-          </Link>
         </div>
 
-        <Link
-          href="/explanations"
-          className="mt-3 flex items-center justify-center gap-2 h-14 rounded-full bg-surface-2 border border-line font-semibold text-[15px]"
-        >
-          <BookIcon className="w-5 h-5" strokeWidth={2} />
-          Explanations
-        </Link>
+        {/* 2 — tonight: log the day, then the test on it */}
+        <div className="mt-3 rounded-3xl bg-surface border border-line p-5">
+          <p className="text-xs font-bold uppercase tracking-wide text-muted">Tonight</p>
 
-        <Link
-          href="/courses"
-          className="mt-3 flex items-center justify-between rounded-2xl px-5 py-4 bg-surface border border-line"
-        >
-          <div>
-            <p className="font-semibold">Your courses</p>
-            <p className="text-sm text-muted">Chapters, quizzes &amp; flashcards</p>
-          </div>
-          <ChevronRightIcon className="w-5 h-5 text-muted" />
-        </Link>
+          <p className="mt-3 font-semibold text-[15px]">1 · Log what you studied</p>
+          <p className="text-xs text-muted mt-0.5 mb-3">
+            Tap what you actually did — it ticks your plan and decides tonight&apos;s test.
+          </p>
+          <TodayLog
+            suggestions={plannedChapters.map((c) => ({ chapterId: c.id, name: short(c.name) }))}
+            logged={logged}
+          />
 
-        <Link
-          href="/analytics"
-          className="mt-3 flex items-center justify-between rounded-2xl px-5 py-4 bg-gradient-to-r from-[#f6e6d8] via-[#e7e3f0] to-[#dcebf3] border border-line"
-        >
-          <div>
-            <p className="font-semibold">See your Analytics</p>
-            <p className="text-sm text-muted">Check how&apos;s your performance</p>
-          </div>
-          <ChevronRightIcon className="w-5 h-5 text-muted" />
-        </Link>
-
-        <Link
-          href="/topics"
-          className="mt-3 flex items-center justify-between rounded-2xl px-5 py-4 bg-surface border border-line"
-        >
-          <div>
-            <p className="font-semibold">Today&apos;s study plan</p>
-            <p className="text-sm text-muted">
-              {topics.length > 0
-                ? `${topics.length} topic${topics.length > 1 ? "s" : ""} logged — nice!`
-                : "Tell Mimus what you're studying today"}
-            </p>
-          </div>
-          <span className="w-9 h-9 rounded-full bg-accent-soft flex items-center justify-center">
-            <PlusIcon className="w-5 h-5 text-accent" strokeWidth={2.2} />
-          </span>
-        </Link>
+          <p className="mt-5 font-semibold text-[15px]">2 · Night test</p>
+          <p className="text-xs text-muted mt-0.5 mb-3">
+            {nightAttempt
+              ? "Done for today. Go through the ones you missed."
+              : loggedCount > 0
+                ? `${NIGHT_TEST_SIZE} questions on the ${loggedCount} chapter${
+                    loggedCount === 1 ? "" : "s"
+                  } you logged, plus one you got wrong before.`
+                : "Log first — otherwise it is built from today's plan."}
+          </p>
+          {nightAttempt ? (
+            <Link
+              href={`/results/${nightAttempt.id}`}
+              className="flex items-center justify-between rounded-2xl bg-green-soft border border-green/30 px-4 py-3.5"
+            >
+              <span className="font-semibold text-[15px]">
+                Night test — {nightAttempt.score}/{nightAttempt.maxScore}
+              </span>
+              <span className="text-sm font-semibold underline underline-offset-4">
+                Review
+              </span>
+            </Link>
+          ) : (
+            <NightTestButton size={NIGHT_TEST_SIZE} />
+          )}
+        </div>
 
         <div className="mt-3 grid grid-cols-2 gap-3">
-          <Link
-            href="/planner"
-            className="rounded-2xl px-4 py-4 bg-surface border border-line"
-          >
-            <p className="text-xl">🗓️</p>
-            <p className="font-semibold mt-1.5">Planner</p>
-            <p className="text-xs text-muted mt-0.5">Road to January</p>
-          </Link>
-          <Link
-            href="/changes"
-            className="rounded-2xl px-4 py-4 bg-surface border border-line"
-          >
-            <p className="text-xl">🔁</p>
-            <p className="font-semibold mt-1.5">What changed</p>
-            <p className="text-xs text-muted mt-0.5">The law for January</p>
-          </Link>
+          {[
+            { href: "/explanations", icon: "📖", title: "Explanations", sub: "Notes with worked sums" },
+            { href: "/courses", icon: "🗂️", title: "Courses", sub: "Every chapter" },
+            { href: "/planner", icon: "🗓️", title: "Planner", sub: "Road to January" },
+            { href: "/analytics", icon: "📈", title: "Analytics", sub: "Weak and strong chapters" },
+          ].map((t) => (
+            <Link
+              key={t.href}
+              href={t.href}
+              className="rounded-2xl px-4 py-4 bg-surface border border-line"
+            >
+              <p className="text-xl">{t.icon}</p>
+              <p className="font-semibold mt-1.5">{t.title}</p>
+              <p className="text-xs text-muted mt-0.5">{t.sub}</p>
+            </Link>
+          ))}
         </div>
       </section>
 

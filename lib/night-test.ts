@@ -1,47 +1,58 @@
-// "Daily 5" — five questions, five minutes, built from the chapters on today's
-// plan. It draws ONLY from questions already in the bank (hand-reviewed tests,
+// The night test — ten questions, ten minutes, on what she actually studied.
+//
+// She logs the day's chapters on the home screen; this builds the test from
+// them. It draws ONLY from questions already in the bank (hand-reviewed tests,
 // mocks and the authored chapter bank) and never generates new ones on the fly:
 // an unreviewed question with a wrong key teaches wrong law, and she is resitting
 // a paper she missed by five marks.
 //
-// What gets picked, in order of preference:
-//   1. questions from today's chapters she got wrong or skipped last time
-//   2. ones she has never seen
-//   3. ones she got right but took over a minute on
-// One slot is always held for a "comeback" — her most recent wrong answer from
-// any chapter — so mistakes return until they stop being mistakes.
+// Which chapters, nearest first:
+//   0. chapters she logged today
+//   1. today's plan (in case she has not logged yet)
+//   2. anything logged or planned in the last week
+//   3. earlier in this plan      4. everything else
+// Within a chapter: wrong or skipped last time, then never seen, then right but
+// slow. One slot is always held for a "comeback" — her most recent wrong answer
+// from any chapter — so mistakes return until they stop being mistakes.
+//
+// NOT server-only: scripts import this too.
 import { db } from "./db";
 import {
   attemptAnswers,
   attempts,
+  dailyTopics,
   planItems,
   questions,
   tests,
 } from "./db/schema";
 import { and, asc, eq, isNotNull, isNull, like } from "drizzle-orm";
+import { NIGHT_TEST_PREFIX, NIGHT_TEST_SIZE } from "./exam";
 
-const SIZE = 5;
-const TITLE_PREFIX = "Daily 5";
+const SIZE = NIGHT_TEST_SIZE;
 
 type History = { correct: boolean; skipped: boolean; secs: number | null; at: number };
 
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 160);
 
-export async function findDailyFive(today: string) {
+export async function findNightTest(today: string) {
   const [existing] = await db
     .select({ id: tests.id })
     .from(tests)
-    .where(and(eq(tests.scheduledFor, today), like(tests.title, `${TITLE_PREFIX}%`)))
+    .where(and(eq(tests.scheduledFor, today), like(tests.title, `${NIGHT_TEST_PREFIX}%`)))
     .limit(1);
   return existing?.id ?? null;
 }
 
-export async function getOrCreateDailyFive(userId: number, today: string) {
-  const existing = await findDailyFive(today);
+export async function getOrCreateNightTest(userId: number, today: string) {
+  const existing = await findNightTest(today);
   if (existing) return existing;
 
-  const [items, bank, answered] = await Promise.all([
+  const [items, topics, bank, answered] = await Promise.all([
     db.select().from(planItems).where(eq(planItems.userId, userId)),
+    db
+      .select({ chapterId: dailyTopics.chapterId, forDate: dailyTopics.forDate })
+      .from(dailyTopics)
+      .where(eq(dailyTopics.userId, userId)),
     db
       .select()
       .from(questions)
@@ -80,17 +91,24 @@ export async function getOrCreateDailyFive(userId: number, today: string) {
     });
   }
 
-  // which chapters matter today, nearest first
   const dayMs = 86_400_000;
   const t0 = Date.parse(`${today}T00:00:00+05:30`);
+  const ageOf = (d: unknown) =>
+    Math.round((t0 - Date.parse(`${String(d)}T00:00:00+05:30`)) / dayMs);
   const tier = new Map<number, number>();
+  const rank = (chapterId: number, r: number) => {
+    if (!tier.has(chapterId) || tier.get(chapterId)! > r) tier.set(chapterId, r);
+  };
+  for (const t of topics) {
+    const age = ageOf(t.forDate);
+    if (age < 0) continue;
+    rank(t.chapterId, age === 0 ? 0 : age <= 7 ? 2 : 3);
+  }
   for (const it of items) {
-    const age = Math.round((t0 - Date.parse(`${String(it.onDate)}T00:00:00+05:30`)) / dayMs);
-    if (age < 0) continue; // not studied yet
-    const rank = age === 0 ? 0 : age <= 7 ? 1 : 2;
-    for (const c of it.chapterIds ?? []) {
-      if (!tier.has(c) || tier.get(c)! > rank) tier.set(c, rank);
-    }
+    const age = ageOf(it.onDate);
+    if (age < 0) continue; // not reached yet
+    const r = age === 0 ? 1 : age <= 7 ? 2 : 3;
+    for (const c of [...(it.chapterIds ?? []), ...(it.refChapterIds ?? [])]) rank(c, r);
   }
 
   const weight = (id: number) => {
@@ -112,7 +130,7 @@ export async function getOrCreateDailyFive(userId: number, today: string) {
     })
     .map((q) => ({
       q,
-      tier: tier.get(q.chapterId!) ?? 3,
+      tier: tier.get(q.chapterId!) ?? 4,
       w: weight(q.id),
       r: Math.random(),
     }))
@@ -132,11 +150,15 @@ export async function getOrCreateDailyFive(userId: number, today: string) {
       return h && !h.correct;
     })
     .sort((a, b) => history.get(b.q.id)!.at - history.get(a.q.id)!.at)[0];
+  const slots = SIZE - (comeback ? 1 : 0);
 
-  // spread across chapters first (max 2 each), then relax if the bank is thin
-  for (const cap of [2, SIZE]) {
+  // share the test evenly between tonight's chapters, then relax if the bank
+  // for them is thin (some AS chapters have only one or two questions)
+  const tonight = [...tier.values()].filter((r) => r === Math.min(...tier.values())).length;
+  const fair = Math.max(2, Math.ceil(slots / Math.max(1, tonight)));
+  for (const cap of [fair, SIZE]) {
     for (const c of pool) {
-      if (picked.length >= SIZE - (comeback ? 1 : 0)) break;
+      if (picked.length >= slots) break;
       if (picked.includes(c) || c === comeback) continue;
       if ((perChapter.get(c.q.chapterId!) ?? 0) >= cap) continue;
       take(c);
@@ -156,7 +178,7 @@ export async function getOrCreateDailyFive(userId: number, today: string) {
   const [test] = await db
     .insert(tests)
     .values({
-      title: `${TITLE_PREFIX} — ${label}`,
+      title: `${NIGHT_TEST_PREFIX} — ${label}`,
       paperId: null,
       scheduledFor: today,
       durationMinutes: SIZE,
@@ -169,7 +191,7 @@ export async function getOrCreateDailyFive(userId: number, today: string) {
     picked.map((c, i) => ({
       testId: test.id,
       chapterId: c.q.chapterId,
-      section: TITLE_PREFIX,
+      section: NIGHT_TEST_PREFIX,
       seq: i,
       kind: "mcq" as const,
       text: c.q.text,

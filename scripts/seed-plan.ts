@@ -37,7 +37,15 @@ const EXAM_DATES = Object.fromEntries(EXAMS.map((e) => [e.key, e.date])) as Reco
 const PLAN_START = "2026-11-23";
 
 type Kind = "study" | "revise" | "practice" | "test" | "exam";
-type Item = { d: string; t: string; s?: string; k: Kind; ch?: string[] };
+type Item = {
+  d: string;
+  t: string;
+  s?: string;
+  k: Kind;
+  ch?: string[]; // drives auto-ticking
+  ref?: string[]; // extra chapters shown as reference material on the home screen
+  test?: number; // an in-app test this row points at
+};
 const P: Item[] = [];
 const add = (d: string, t: string, k: Kind, s?: string, ch?: string[]) =>
   P.push({ d, t, k, s, ch });
@@ -277,8 +285,88 @@ const ROWS: Row[] = [
 
 for (const [d, t, k, s, ch] of ROWS) add(D(d), t, k, s ?? undefined, ch);
 
-// The daily habit: five questions, five minutes, from that day's chapters —
-// plus the flashcards for the same chapters. Every study day, no exceptions.
+// ── Reference material ──────────────────────────────────────────────────────
+// Every row should open onto something to study from. Rows that own a chapter
+// already do; practice and second-pass rows ("DT pass 2: Salary + House
+// Property") name their chapters in the title, so read them from there instead
+// of annotating ninety rows by hand. These never drive auto-ticking.
+type Key = keyof typeof C;
+const TAX: [RegExp, Key[]][] = [
+  [/Basics/, ["basics"]],
+  [/Residential/, ["residential"]],
+  [/Salary/, ["salary"]],
+  [/House Property|\bHP\b/, ["houseProp"]],
+  [/PGBP/, ["pgbp"]],
+  [/Capital Gains/, ["capGains"]],
+  [/Other Sources|IFOS/, ["otherSources"]],
+  [/five heads/, ["salary", "houseProp", "pgbp", "capGains", "otherSources"]],
+  [/Deductions/, ["deductions"]],
+  [/\bTDS\b/, ["advanceTax"]],
+  [/Set-off/, ["setOff"]],
+  [/Clubbing/, ["clubbing"]],
+  [/\bReturn\b/, ["returnOfIncome"]],
+  [/computation/i, ["computation"]],
+  [/\bITC\b/, ["itc"]],
+  [/Registration/, ["registration"]],
+  [/\bSupply\b/, ["supply"]],
+  [/\bCharge\b/, ["charge2"]],
+  [/Exemptions/, ["exemptions"]],
+  [/Time \/ Place \/ Value/, ["timeOfSupply", "placeOfSupply", "valueOfSupply"]],
+  [/Invoice/, ["invoice"]],
+  [/\bReturns\b/, ["returns"]],
+  [/Payment/, ["payment"]],
+  [/E-way/, ["eway"]],
+];
+const ACCOUNTS: [RegExp, Key[]][] = [
+  [/Consolidation/, ["consolidation"]],
+  [/Amalgamation/, ["amalgamation"]],
+  [/Internal Reconstruction/, ["reconstruction"]],
+  [/Branch/, ["branch"]],
+  [/Buyback/, ["buyback"]],
+  [/Cash Flow/, ["cashFlow"]],
+  [/Final Accounts/, ["finalAccounts"]],
+  [/Investment/, ["investment"]],
+];
+const LAW: [RegExp, Key[]][] = [
+  [/chapters 1 to 4/, ["prelim", "incorp", "prospectus", "shares"]],
+  [/chapters 5 to 8/, ["deposits", "charge", "mgmt", "dividends"]],
+  [/chapters 9 to 12/, ["accountsOfCo", "audit", "foreignCo", "llp"]],
+  [/FEMA/, ["fema"]],
+  [/General Clauses/, ["genClauses"]],
+  [/Interpretation/, ["interpretation"]],
+];
+for (const p of P) {
+  if ((p.ch ?? []).length > 0 || p.k === "exam") continue;
+  const table = /^(DT|GST|Tax|Written test)\b/.test(p.t)
+    ? TAX
+    : /^Accounts:/.test(p.t)
+      ? ACCOUNTS
+      : /^Law:/.test(p.t)
+        ? LAW
+        : null;
+  if (!table) continue;
+  const keys = [...new Set(table.filter(([re]) => re.test(p.t)).flatMap(([, k]) => k))];
+  if (keys.length > 0) p.ref = keys.map((k) => C[k]);
+}
+
+// rows that are an in-app test get a button straight to it
+const TEST_LINKS: [string, number][] = [
+  ["App test: Residential, Set-off, Return", 14],
+  ["App mock: Income Tax Part 1 & 2", 17],
+  ["App mock: GST full syllabus", 16],
+  ["App: Speed Set 2", 25],
+  ["App: Speed Set 3", 26],
+  ["App: Speed Set 5", 28],
+  ["the 100-mark paper in the app", 13],
+];
+for (const [needle, id] of TEST_LINKS) {
+  const row = P.find((p) => p.t.includes(needle));
+  if (!row) throw new Error(`No plan row matches test link "${needle}"`);
+  row.test = id;
+}
+
+// The daily habit that closes every study day: log what was actually done, then
+// the night test built from it. Both live on the home screen.
 {
   const end = Date.parse("2027-01-01T00:00:00+05:30");
   for (
@@ -287,7 +375,7 @@ for (const [d, t, k, s, ch] of ROWS) add(D(d), t, k, s ?? undefined, ch);
     t += 86_400_000
   ) {
     const d = new Date(t).toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" });
-    add(d, DAILY_HABIT_TITLE, "practice", "5 questions, 5 minutes — the button is on the home screen");
+    add(d, DAILY_HABIT_TITLE, "practice", "Tap what you studied, then 10 questions on it — both are on the home screen");
   }
 }
 
@@ -296,7 +384,7 @@ async function main() {
   const idByName = new Map(chapters.map((c) => [c.name, c.id]));
 
   // fail loudly on a typo rather than silently dropping the link
-  const unknown = [...new Set(P.flatMap((p) => p.ch ?? []))].filter(
+  const unknown = [...new Set(P.flatMap((p) => [...(p.ch ?? []), ...(p.ref ?? [])]))].filter(
     (n) => !idByName.has(n)
   );
   if (unknown.length > 0) {
@@ -314,6 +402,17 @@ async function main() {
   const order = new Map(P.map((p, i) => [p, i]));
   P.sort((x, y) => x.d.localeCompare(y.d) || order.get(x)! - order.get(y)!);
 
+  // a linked test that has since been deleted would be a dead button
+  const testIds = new Set((await db.select({ id: schema.tests.id }).from(schema.tests)).map((t) => t.id));
+  const dead = P.filter((p) => p.test && !testIds.has(p.test));
+  if (dead.length > 0) throw new Error(`Linked test missing: ${dead.map((p) => `${p.t} → #${p.test}`).join("; ")}`);
+  if (process.argv.includes("--show-refs")) {
+    for (const p of P.filter((p) => p.ref || p.test))
+      console.log(`  ${p.d.slice(5)} ${p.t}\n        → ${p.test ? `test #${p.test}` : p.ref!.join(" · ")}`);
+  }
+  const bare = P.filter((p) => !(p.ch ?? []).length && !p.ref && !p.test && p.k !== "exam" && p.t !== DAILY_HABIT_TITLE);
+  console.log(`${bare.length} row(s) have no chapter or test attached (papers, reviews, sheets).`);
+
   await db.delete(schema.planItems).where(eq(schema.planItems.userId, STUDENT_ID));
   await db.insert(schema.planItems).values(
     P.map((p, i) => ({
@@ -323,6 +422,8 @@ async function main() {
       subtitle: p.s ?? null,
       kind: p.k,
       chapterIds: (p.ch ?? []).map((n) => idByName.get(n)!),
+      refChapterIds: (p.ref ?? []).map((n) => idByName.get(n)!),
+      testId: p.test ?? null,
       sort: i,
     }))
   );

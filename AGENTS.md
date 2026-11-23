@@ -58,6 +58,11 @@ syncs at the end.
   throws on an unknown chapter name.
 - **`npm run db:push` can't rename columns here** — drizzle-kit prompts interactively
   and there's no TTY. Run the `alter table` directly.
+- **Speed**: every Neon query is an HTTP round-trip. Keep pages to ONE `Promise.all` of
+  queries; the syllabus and per-chapter counts are cached in-process (`lib/cache.ts`, 5–10
+  min — a seed script's changes can take that long to show). `loading.tsx` in each route
+  group is what makes a tap respond instantly; don't remove it. `vercel.json` pins
+  functions to `sin1`, next to the Neon database (ap-southeast-1).
 - The AI returns chapter names that don't match seeded names verbatim ("Buy-back" vs
   "Buyback") — both the admin UI and the CLI fuzzy-match. Keep that.
 
@@ -69,9 +74,20 @@ enabled, so nudges genuinely reach her — treat them as outward-facing messages
 
 ## January 2027 attempt (added 23 Nov 2026)
 
-- **Daily 5** (`lib/daily-five.ts`): home-screen button builds a 5-question, 5-minute quiz
-  from today's plan chapters, drawing ONLY from reviewed bank questions (never generated on
-  the fly). Copies carry `source_question_id` so history follows the original.
+- **Home screen is the day's flow**: today's plan rows, each with its reference material
+  (notes / flashcards / practice questions per chapter, or a button to the in-app test) →
+  **Tonight**: one-tap log of the planned chapters (`components/TodayLog.tsx`, writes
+  `daily_topics`) → **Night test**.
+- **Night test** (`lib/night-test.ts`): 10 questions, 10 minutes, built from the chapters
+  she logged today (falls back to today's plan), plus one "comeback" question she last got
+  wrong. Draws ONLY from reviewed bank questions (never generated on the fly). Copies carry
+  `source_question_id` so history follows the original. One per day; submitting it ticks
+  the day's "Log the day + night test" row (`DAILY_HABIT_TITLE` in `lib/exam.ts`). The AI
+  `nightly-test.ts` script still exists for a bespoke test when Pranav asks for one.
+- **Plan rows carry two extra columns**: `ref_chapter_ids` (reference chapters shown on the
+  home screen — never used for ticking) and `test_id` (an in-app test). `seed-plan.ts`
+  infers the reference chapters from the row title and throws if a linked test is gone;
+  `--show-refs` prints what it inferred.
 - **Question bank**: hand-written files in `scripts/bank/*.ts` (correct option FIRST; the
   seeder shuffles) → `npx tsx scripts/seed-bank.ts --bank=tax-income`.
 - **Flashcards**: `scripts/gen-flashcards.ts` drafts to `scripts/flashcards/*.json`; review

@@ -2,9 +2,9 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { startDailyFive } from "@/app/actions/study";
+import { startNightTest } from "@/app/actions/study";
 
-export default function DailyFiveButton() {
+export default function NightTestButton({ size }: { size: number }) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
   const [error, setError] = useState("");
@@ -17,16 +17,16 @@ export default function DailyFiveButton() {
           startTransition(async () => {
             try {
               setError("");
-              const id = await startDailyFive();
+              const id = await startNightTest();
               router.push(`/exam/${id}`);
             } catch {
-              setError("Couldn't build today's quiz — check your internet and try again.");
+              setError("Couldn't build tonight's test — check your internet and try again.");
             }
           })
         }
         className="w-full h-14 rounded-full bg-foreground text-background font-semibold text-[15px] disabled:opacity-60"
       >
-        {pending ? "Picking your five…" : "Start today's 5  ·  5 min"}
+        {pending ? "Building your test…" : `Start tonight's test  ·  ${size} Qs  ·  ${size} min`}
       </button>
       {error && <p className="mt-2 text-sm text-red">{error}</p>}
     </div>

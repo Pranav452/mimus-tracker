@@ -15,8 +15,8 @@ import { requireUser, logActivity, todayIST } from "@/lib/auth";
 import { and, eq } from "drizzle-orm";
 import { getAllChapters, getTestWithQuestions } from "@/lib/queries";
 import { syncPlanProgress } from "@/lib/plan-sync";
-import { getOrCreateDailyFive } from "@/lib/daily-five";
-import { DAILY_HABIT_TITLE } from "@/lib/exam";
+import { getOrCreateNightTest } from "@/lib/night-test";
+import { DAILY_HABIT_TITLE, NIGHT_TEST_PREFIX } from "@/lib/exam";
 import {
   generateFlashcards,
   evaluateWrittenAnswer,
@@ -25,21 +25,38 @@ import {
 
 export async function addDailyTopic(chapterId: number, note?: string) {
   const user = await requireUser();
-  await db.insert(dailyTopics).values({
-    userId: user.id,
-    chapterId,
-    forDate: todayIST(),
-    note: note || null,
-  });
-  await logActivity(user.id, "topic");
-  // studying a topic bumps its progress to at least in_progress
-  await db
-    .insert(chapterProgress)
-    .values({ userId: user.id, chapterId, status: "in_progress" })
-    .onConflictDoNothing({
-      target: [chapterProgress.userId, chapterProgress.chapterId],
-    });
-  await syncPlanProgress(user.id);
+  const today = todayIST();
+  // the home screen logs with one tap per chapter — a double tap must not log twice
+  const [already] = await db
+    .select({ id: dailyTopics.id })
+    .from(dailyTopics)
+    .where(
+      and(
+        eq(dailyTopics.userId, user.id),
+        eq(dailyTopics.chapterId, chapterId),
+        eq(dailyTopics.forDate, today)
+      )
+    )
+    .limit(1);
+  if (!already || note) {
+    await Promise.all([
+      db.insert(dailyTopics).values({
+        userId: user.id,
+        chapterId,
+        forDate: today,
+        note: note || null,
+      }),
+      logActivity(user.id, "topic"),
+      // studying a topic bumps its progress to at least in_progress
+      db
+        .insert(chapterProgress)
+        .values({ userId: user.id, chapterId, status: "in_progress" })
+        .onConflictDoNothing({
+          target: [chapterProgress.userId, chapterProgress.chapterId],
+        }),
+    ]);
+    await syncPlanProgress(user.id);
+  }
   revalidatePath("/topics");
   revalidatePath("/planner");
   revalidatePath("/");
@@ -54,6 +71,7 @@ export async function removeDailyTopic(topicId: number) {
   await syncPlanProgress(user.id);
   revalidatePath("/topics");
   revalidatePath("/planner");
+  revalidatePath("/");
 }
 
 export async function setChapterStatus(
@@ -169,8 +187,8 @@ export async function submitAttempt(payload: SubmitPayload) {
       .values(rows.map((r) => ({ ...r, attemptId: attempt.id })));
   }
   await logActivity(user.id, "test");
-  // finishing the Daily 5 is the day's habit — tick it for her
-  if (data.test.title.startsWith("Daily 5")) {
+  // finishing the night test closes the day — tick the habit row for her
+  if (data.test.title.startsWith(NIGHT_TEST_PREFIX)) {
     await db
       .update(planItems)
       .set({ done: true, manual: true })
@@ -342,10 +360,10 @@ export async function evaluateWrittenFromPhoto(
   return { marks: awarded, feedback, transcript };
 }
 
-/** Today's five-question quiz, built from today's plan. Returns the test id. */
-export async function startDailyFive() {
+/** Tonight's test, built from what she logged today. Returns the test id. */
+export async function startNightTest() {
   const user = await requireUser();
-  const id = await getOrCreateDailyFive(user.id, todayIST());
+  const id = await getOrCreateNightTest(user.id, todayIST());
   revalidatePath("/");
   revalidatePath("/tests");
   return id;

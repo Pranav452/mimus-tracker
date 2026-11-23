@@ -85,7 +85,7 @@ body {
   }
 }
 .fade-up {
-  animation: fade-up 0.35s ease both;
+  animation: fade-up 0.18s ease both;
 }
 
 /* iOS PWA safe areas */

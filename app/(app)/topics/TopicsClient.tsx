@@ -129,8 +129,7 @@ export default function TopicsClient({
         </h2>
         {todayTopics.length === 0 ? (
           <p className="text-sm text-muted rounded-3xl bg-surface border border-line p-5">
-            Nothing yet. Log what you&apos;re studying — Pranav will turn it into
-            tonight&apos;s test. 💪
+            Nothing yet. Log what you studied — tonight&apos;s test is built from it. 💪
           </p>
         ) : (
           <div className="space-y-2.5">
