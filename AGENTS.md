@@ -75,9 +75,12 @@ enabled, so nudges genuinely reach her — treat them as outward-facing messages
 - **Question bank**: hand-written files in `scripts/bank/*.ts` (correct option FIRST; the
   seeder shuffles) → `npx tsx scripts/seed-bank.ts --bank=tax-income`.
 - **Flashcards**: `scripts/gen-flashcards.ts` drafts to `scripts/flashcards/*.json`; review
-  by hand, then `npx tsx scripts/seed-flashcards.ts --paper=tax`. **Only `tax` is reviewed
-  and seeded. `law.json` and `accounts.json` are UNREVIEWED drafts — do not seed them until
-  checked** (the Tax drafts had ~1 in 5 cards wrong or stale).
+  by hand, then `npx tsx scripts/seed-flashcards.ts --paper=tax|law|accounts`. All three
+  papers are reviewed and seeded (934 cards, every one of the 72 chapters). The
+  `_patch_*.py` files beside the JSON are the record of that review — **never seed a fresh
+  draft unreviewed**: roughly 1 card in 5 was wrong or stale, and the Accounts drafts were
+  full of Ind AS/IFRS rules (restating comparatives, "held for sale", discounting
+  provisions) that are wrong for this AS-based syllabus.
 - **Plan sync ignores topics logged before the plan's first day**, so an old attempt's
   history can't tick a new plan.
 - Tax past papers older than May 2026 use old slabs/GST rates — don't schedule them.

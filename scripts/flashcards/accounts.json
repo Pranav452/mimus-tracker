@@ -1,8 +1,8 @@
 {
   "Investment Accounts (AS 13)": [
     {
-      "front": "Within AS 13, what is the time threshold that makes an investment 'current'?",
-      "back": "1 year — investments held for not more than one year from date of acquisition are current investments (AS 13)."
+      "front": "Current vs long-term investment (AS 13)?",
+      "back": "Current: by its nature readily realisable AND intended to be held for not more than one year from the date it is made. Long-term: everything else."
     },
     {
       "front": "How are current investments measured under AS 13?",
@@ -25,12 +25,12 @@
       "back": "Inclusive — cost comprises purchase price plus directly attributable acquisition costs (brokerage, fees, stamp duty) (AS 13)."
     },
     {
-      "front": "How are bonus shares received on an investment accounted for under AS 13?",
-      "back": "Apportion cost — allocate original acquisition cost between original and bonus securities pro rata to market values on allotment date (AS 13)."
+      "front": "Bonus shares and rights shares on an investment — cost treatment?",
+      "back": "Bonus: NO cost added; quantity rises, so cost per share falls. Rights subscribed: price paid is added to carrying amount. Rights sold: proceeds to P&L — unless bought cum-right and ex-right market value is below cost, then reduce the carrying amount."
     },
     {
-      "front": "What must you do when an investment is reclassified from long‑term to current?",
-      "back": "Revalue on transfer — on reclassification to current, value at the lower of carrying amount and fair value; any reduction recognised in profit & loss (AS 13)."
+      "front": "Reclassification between long-term and current — at what value?",
+      "back": "Long-term → current: lower of COST and CARRYING AMOUNT on the transfer date. Current → long-term: lower of COST and FAIR VALUE on the transfer date."
     },
     {
       "front": "Where are gains or losses on sale of investments shown?",
@@ -41,8 +41,24 @@
       "back": "Disclose — classification (current/long‑term), cost, market/fair value of quoted investments, aggregate provision for diminution and particulars by category (AS 13)."
     },
     {
-      "front": "What common valuation step do students often miss under AS 13?",
-      "back": "Classification first — always determine current vs long‑term before measurement; failure to reclassify correctly is the most common exam mistake (AS 13)."
+      "front": "Bought cum-interest — how is the price split in the investment account?",
+      "back": "Accrued interest from the last interest date to the purchase date is NOT cost: debit it to the interest column. Only the balance is capital cost. On sale, split the proceeds the same way."
+    },
+    {
+      "front": "Current investments — compare cost and fair value at what level?",
+      "back": "Individually, or category-wise (equity, preference, debentures) — never on an overall/global basis. Long-term investments are assessed individually."
+    },
+    {
+      "front": "Dividend received out of pre-acquisition profits?",
+      "back": "It is a recovery of cost — credit the investment (reduce carrying amount), not income. Only the post-acquisition part is income."
+    },
+    {
+      "front": "Selling part of a holding — which cost is matched?",
+      "back": "Average carrying amount of the total holding (weighted average cost). Profit = net sale proceeds (after brokerage) minus that average cost."
+    },
+    {
+      "front": "Investment property under AS 13?",
+      "back": "Land or building not intended to be occupied substantially for own use or operations. Accounted as a LONG-TERM investment: cost less other-than-temporary diminution."
     }
   ],
   "Cash Flow Statement (AS 3)": [
@@ -59,12 +75,12 @@
       "back": "2 methods — Direct or Indirect; Indirect reconciles net profit to net cash from operating activities by adjusting non‑cash items and working capital. (AS 3)"
     },
     {
-      "front": "When can bank overdrafts be included in cash and cash equivalents?",
-      "back": "On‑demand — bank overdrafts repayable on demand are included only if they are integral to the entity's cash management; otherwise shown as financing. (AS 3)"
+      "front": "Bank overdraft in an AS 3 cash flow statement?",
+      "back": "AS 3 is silent. Treat it as a borrowing — financing activity — and say so in a note. The 'part of cash equivalents if integral to cash management' rule is Ind AS 7, not this syllabus."
     },
     {
-      "front": "How must interest and dividends be classified in the cash flow statement?",
-      "back": "1 choice — interest and dividends may be classified as operating OR as investing/financing; the chosen policy must be applied consistently and disclosed. (AS 3)"
+      "front": "Interest and dividends — classification under AS 3?",
+      "back": "Non-financial enterprise: interest PAID and dividend PAID = financing; interest and dividend RECEIVED = investing. Financial enterprise: interest paid and interest/dividend received = operating. Dividend paid is always financing. No free choice."
     },
     {
       "front": "Where are income taxes paid presented in the cash flow statement?",
@@ -91,8 +107,20 @@
       "back": "Material restrictions — disclose cash and cash equivalents not available for use by the entity and explain the nature of restrictions. (AS 3)"
     },
     {
-      "front": "How should dividends paid and dividends received be classified?",
-      "back": "Paid = financing; Received = operating or investing per entity policy — classification must be consistent and disclosed. (AS 3)"
+      "front": "Proposed dividend in a cash flow question — what was actually paid?",
+      "back": "LAST year's proposed dividend is this year's cash outflow (paid after the AGM). This year's proposed dividend is not a liability (AS 4) and not a cash flow. Add any interim dividend paid this year."
+    },
+    {
+      "front": "Extraordinary items in the cash flow statement?",
+      "back": "Classify as operating, investing or financing as appropriate and disclose SEPARATELY — e.g. insurance claim for earthquake loss of stock = operating; of a building = investing."
+    },
+    {
+      "front": "Foreign currency cash flows and unrealised exchange gains?",
+      "back": "Record at the rate on the date of the cash flow. Unrealised exchange differences are not cash flows; the effect on cash held in foreign currency is shown separately to reconcile opening and closing cash."
+    },
+    {
+      "front": "Acquisition or disposal of a subsidiary — presentation?",
+      "back": "A separate line under INVESTING activities, net of cash and cash equivalents acquired or disposed of."
     }
   ],
   "Buyback of Shares": [
@@ -101,8 +129,8 @@
       "back": "25% — buyback in a financial year shall not exceed 25% of the aggregate of paid‑up capital and free reserves (s.68)."
     },
     {
-      "front": "What is the separate 25% limit relating to paid‑up equity capital in a financial year?",
-      "back": "25% — buyback in a financial year cannot exceed 25% of the company’s total paid‑up equity capital (applies alongside the aggregate 25% limit; s.68)."
+      "front": "Limit on the NUMBER of equity shares bought back in a year?",
+      "back": "Not more than 25% of the total paid-up equity capital of that financial year — the 'shares outstanding test'. Applies alongside the 25%-of-capital-and-free-reserves 'resources test'."
     },
     {
       "front": "What is the maximum permissible debt‑to‑equity ratio after a buyback?",
@@ -113,20 +141,20 @@
       "back": "10% — board resolution may authorise buyback up to 10% of aggregate paid‑up capital and free reserves; beyond that a special resolution is required (s.68/Buy‑back Rules)."
     },
     {
-      "front": "What minimum interval must elapse between two buybacks by a company?",
-      "back": "1 year — a company cannot undertake a buyback if it has completed a buyback in the preceding one year (s.68)."
+      "front": "Cooling periods around a buyback?",
+      "back": "No new buyback offer within 1 year of closing the previous one. No fresh issue of the same kind of shares for 6 months after — except bonus shares and conversions (warrants, ESOPs, sweat equity, preference shares, debentures). Complete within 1 year of the resolution."
     },
     {
-      "front": "From which funds may a company legally finance a buyback?",
-      "back": "3 sources — free reserves, securities premium account, and proceeds of issue of shares/convertible securities (other than equity shares) (s.68)."
+      "front": "Out of which funds can a buyback be made (s.68(1))?",
+      "back": "Free reserves, securities premium account, or proceeds of an issue of shares or other specified securities — but NOT the proceeds of an earlier issue of the SAME kind of shares."
     },
     {
-      "front": "When is a company prohibited from undertaking a buyback because of defaults?",
-      "back": "Any default — buyback is prohibited if the company has defaulted in repayment of deposits, interest, redemption of debentures or payment of dividend (s.68)."
+      "front": "When is buyback prohibited (s.70)?",
+      "back": "Default in repaying deposits or interest, redeeming debentures or preference shares, paying dividend, or repaying a term loan or interest to a bank/FI — unless remedied and 3 years have passed. Also: not through a subsidiary or investment company."
     },
     {
-      "front": "List the statutory modes through which a company may conduct a buyback.",
-      "back": "Main modes — tender offer (proportionate), open market, odd‑lot buyback and buyback from employees under ESOPs (Buy‑back Rules)."
+      "front": "Permitted modes of buyback (s.68(5))?",
+      "back": "From existing holders on a proportionate basis (tender offer); from the open market; from employees holding ESOP or sweat equity securities."
     },
     {
       "front": "Within how many days must shares bought back be extinguished and records updated after completion?",
@@ -135,6 +163,22 @@
     {
       "front": "What statutory filings and time limits must follow a buyback (special resolution route)?",
       "back": "30 days — file MGT‑14 within 30 days of passing special resolution; file return of buyback (Form SH‑11) with ROC within 30 days of completion (Companies Act/Buy‑back Rules)."
+    },
+    {
+      "front": "The three tests for maximum buyback — and which one wins?",
+      "back": "1) Shares outstanding: 25% of equity shares. 2) Resources: 25% of paid-up capital + free reserves ÷ buyback price. 3) Debt-equity: post-buyback debt not more than twice capital + free reserves. Answer = the LOWEST of the three."
+    },
+    {
+      "front": "Debt-equity test — how is the maximum buyback worked out?",
+      "back": "Minimum equity to keep = total debt ÷ 2. Let x = transfer to CRR and y = buyback amount: (shareholders' funds − x) − y = minimum equity, and y = (x ÷ face value) × buyback price. Solve the two together — CRR is not a free reserve."
+    },
+    {
+      "front": "Journal treatment of the premium paid and the CRR on buyback?",
+      "back": "Premium on buyback: debit Securities Premium / free reserves. CRR (s.69): transfer the NOMINAL value of shares bought back out of free reserves or securities premium. No CRR for the part funded by a fresh issue."
+    },
+    {
+      "front": "Buyback paperwork — the forms?",
+      "back": "Declaration of solvency SH-9 before the buyback; letter of offer SH-8; special resolution in MGT-14 within 30 days; extinguish shares within 7 days of completion; return of buyback SH-11 within 30 days of completion; register in SH-10."
     }
   ],
   "Company Final Accounts": [
@@ -143,20 +187,20 @@
       "back": "12 months — amounts expected to be realized/settled within 12 months from the reporting date are current; otherwise non‑current (Schedule III, Companies Act, classification rule)."
     },
     {
-      "front": "Give the exact vertical order of headings in the Balance Sheet as mandated by Schedule III.",
-      "back": "Order — Equity & Liabilities: (1) Shareholders' funds; (2) Non‑current liabilities; (3) Current liabilities. Assets: (1) Non‑current assets; (2) Current assets (Schedule III)."
+      "front": "Order of headings in the Schedule III (Division I) balance sheet?",
+      "back": "Equity & Liabilities: (1) Shareholders' funds; (2) Share application money pending allotment; (3) Non-current liabilities; (4) Current liabilities. Assets: (1) Non-current assets; (2) Current assets."
     },
     {
-      "front": "How should installments of long‑term borrowings due within the next year be presented?",
-      "back": "Within 12 months — principal instalments due in the next 12 months are shown under Current liabilities as ‘Current maturities of long‑term borrowings’ (Schedule III)."
+      "front": "Instalments of a long-term loan due within 12 months — where shown?",
+      "back": "Under SHORT-TERM BORROWINGS as 'current maturities of long-term borrowings' (2021 amendment — earlier it sat in Other current liabilities)."
     },
     {
-      "front": "From what source may a company declare dividend, when must it be paid, and when is unpaid dividend transferred to IEPF?",
-      "back": "Out of profits/free reserves — dividend only from profits or free reserves (Sec 123); pay within 30 days of declaration (Sec 127); unpaid dividend transferred to IEPF after 7 years (Sec 124)."
+      "front": "Managerial remuneration limits (s.197)?",
+      "back": "Overall 11% of net profits (computed u/s 198). One MD/WTD/manager: 5%; more than one: 10% in all. Other directors: 1% if there is an MD/WTD/manager, otherwise 3%. Sitting fees are outside the limit."
     },
     {
-      "front": "Can 'extraordinary items' be presented separately in company Profit & Loss? If not, how report them?",
-      "back": "Not permitted — Schedule III forbids separate presentation of extraordinary items; disclose their nature and amount in notes and include in P&L totals (Schedule III)."
+      "front": "Exceptional vs extraordinary items in the Division I Statement of P&L?",
+      "back": "BOTH have their own line. Exceptional items: shown before 'profit before extraordinary items and tax'. Extraordinary items: shown separately after that (AS 5). The 'no extraordinary items' rule is Ind AS."
     },
     {
       "front": "How must prior‑period items be shown in company financial statements?",
@@ -175,38 +219,54 @@
       "back": "Probable outflow — recognise a provision when a present obligation exists and probable outflow of resources is expected; contingent liabilities are disclosed, not recognised (AS 29: Provisions, Contingent Liabilities)."
     },
     {
-      "front": "Which shareholders must be disclosed by name and percentage in the notes — what's the disclosure threshold?",
-      "back": "5% threshold — disclose each shareholder holding 5% or more of the voting/share capital with name and percentage (Schedule III disclosures)."
+      "front": "Shareholding disclosures in the share capital note?",
+      "back": "Each shareholder holding MORE THAN 5% of shares (name, number, %); shares held by the holding company and its group; promoters' shareholding with % change during the year; reconciliation of opening and closing number of shares."
     },
     {
       "front": "Where are 'exceptional items' shown in the Statement of Profit & Loss and how must they be explained?",
       "back": "Before tax — exceptional items are shown separately (as 'Exceptional items') affecting profit before tax; disclose nature and amount in notes (Schedule III)."
+    },
+    {
+      "front": "Rounding off in Schedule III — the rule after the 2021 amendment?",
+      "back": "Now mandatory, based on TOTAL INCOME: below ₹100 crore — nearest hundreds, thousands, lakhs or millions; ₹100 crore or more — nearest lakhs, millions or crores. One unit used uniformly."
+    },
+    {
+      "front": "Debit balance of P&L, calls in arrears, forfeited shares — where do they go?",
+      "back": "Debit P&L balance: a NEGATIVE figure under 'Surplus' in Reserves & Surplus (even if the total turns negative). Calls unpaid: deducted from subscribed capital. Forfeited shares amount: added to share capital."
+    },
+    {
+      "front": "Proposed final dividend at year-end — provide or disclose?",
+      "back": "Disclose in the NOTES only. Dividend declared after the balance sheet date is not a liability at that date (AS 4, revised). It is adjusted in Surplus in the year it is paid."
+    },
+    {
+      "front": "New disclosures added to Schedule III in 2021 — the ones to name?",
+      "back": "Ageing schedules for trade receivables and trade payables; ageing of CWIP and intangibles under development; promoters' shareholding; key ratios with explanation for change above 25%; security deposits under Other non-current assets."
     }
   ],
   "Amalgamation": [
     {
       "front": "Name the two types of amalgamation under AS 14 and the accounting method each uses.",
-      "back": "2: Amalgamation in the nature of merger — pooling of interests (book values); Amalgamation in the nature of purchase — purchase method (assets/liabilities at fair value; goodwill/capital reserve). [AS 14]"
+      "back": "Amalgamation in the nature of merger — pooling of interests (book values); Amalgamation in the nature of purchase — purchase method (assets/liabilities at fair value; goodwill/capital reserve). [AS 14]"
     },
     {
-      "front": "Give the key accounting consequences that permit 'in the nature of merger' treatment (pooling).",
-      "back": "4: Assets/liabilities recorded at carrying amounts; consideration wholly/equity shares; transferor’s reserves carried forward; no goodwill recognised (transferor’s share capital cancelled). [AS 14]"
+      "front": "The five conditions for 'amalgamation in the nature of merger' (AS 14)?",
+      "back": "1) ALL assets and liabilities taken over. 2) Holders of at least 90% of the face value of equity become equity holders of the transferee. 3) Consideration to them wholly in equity shares (cash only for fractions). 4) Business intended to be carried on. 5) Book values unchanged, except to align accounting policies."
     },
     {
       "front": "How are assets and liabilities recorded under the purchase method on amalgamation?",
-      "back": "1: At their fair (revalued) values as at the date of amalgamation; differences with consideration produce goodwill or capital reserve. [AS 14]"
+      "back": "At their fair (revalued) values as at the date of amalgamation; differences with consideration produce goodwill or capital reserve. [AS 14]"
     },
     {
       "front": "State the rule to decide Goodwill versus Capital Reserve on amalgamation.",
-      "back": "Rule: If Purchase Consideration > Net Assets at fair value → Goodwill; if Purchase Consideration < Net Assets at fair value → Capital Reserve (surplus). [AS 14]"
+      "back": "If Purchase Consideration > Net Assets at fair value → Goodwill; if Purchase Consideration < Net Assets at fair value → Capital Reserve (surplus). [AS 14]"
     },
     {
       "front": "What is the treatment of investments and inter-company balances on amalgamation?",
-      "back": "1: All inter-company investments and balances between transferor and transferee are eliminated/cancelled on amalgamation. [AS 14]"
+      "back": "All inter-company investments and balances between transferor and transferee are eliminated/cancelled on amalgamation. [AS 14]"
     },
     {
       "front": "How are the reserves of the transferor treated in a merger in the nature of merger?",
-      "back": "1: All reserves (capital and revenue) of the transferor are carried forward in the transferee’s books at their existing carrying amounts. [AS 14]"
+      "back": "All reserves (capital and revenue) of the transferor are carried forward in the transferee’s books at their existing carrying amounts. [AS 14]"
     },
     {
       "front": "Give the concise stepwise order to account under the purchase method (most-committed exam step sequence).",
@@ -214,23 +274,39 @@
     },
     {
       "front": "How is the share-exchange ratio reflected in accounting for a merger in the nature of merger?",
-      "back": "1: Use the agreed exchange ratio to record equity issued at nominal value in transferee; share capital of transferor is cancelled and differences adjust reserves. [AS 14]"
+      "back": "Use the agreed exchange ratio to record equity issued at nominal value in transferee; share capital of transferor is cancelled and differences adjust reserves. [AS 14]"
     },
     {
-      "front": "How is Minority Interest measured in purchase-method versus merger-method amalgamations?",
-      "back": "1: Purchase method — minority interest measured at fair value at date of amalgamation; Merger (pooling) — minority interest carried forward at book/carrying amounts. [AS 14]"
+      "front": "Purchase consideration — what is in and what is out?",
+      "back": "Only what is paid to the SHAREHOLDERS (equity and preference) of the transferor — shares, cash, other assets. Payments to debenture holders and creditors, and liquidation expenses, are NOT consideration."
     },
     {
-      "front": "How are amalgamation (scheme) expenses treated in the transferee’s accounts?",
-      "back": "Rule: Amalgamation expenses are charged to profit & loss when incurred unless they form part of purchase consideration (then included in consideration). [AS 14]"
+      "front": "Liquidation expenses of the transferor — treatment?",
+      "back": "Borne by transferor: debit Realisation A/c. Borne by transferee: debit Goodwill / Capital Reserve (purchase method) or General Reserve / P&L (merger). Never part of purchase consideration."
     },
     {
-      "front": "What happens to accumulated profits or losses of the transferor in a merger in the nature of merger?",
-      "back": "1: Accumulated profits and losses of the transferor are carried forward in transferee’s books at existing carrying amounts (not written off). [AS 14]"
+      "front": "Statutory reserves of the transferor under the PURCHASE method?",
+      "back": "Must still be carried: debit Amalgamation Adjustment Reserve, credit the Statutory Reserve. Reverse the entry when the reserve is no longer required. Other reserves of the transferor disappear."
     },
     {
       "front": "Which Companies Act provisions govern merger/amalgamation approvals and tribunal jurisdiction?",
-      "back": "3: Companies Act, 2013 — Sections 230–232 cover compromise/arrangement and merger/amalgamation; scheme requires NCLT approval and compliance with statutory procedure."
+      "back": "Companies Act, 2013 — Sections 230–232 cover compromise/arrangement and merger/amalgamation; scheme requires NCLT approval and compliance with statutory procedure."
+    },
+    {
+      "front": "Goodwill arising on amalgamation — amortisation?",
+      "back": "Over its useful life, not exceeding FIVE years unless a somewhat longer period can be justified (AS 14)."
+    },
+    {
+      "front": "Pooling of interests — share capital issued differs from the transferor's capital?",
+      "back": "The difference is adjusted in RESERVES of the transferee. No goodwill or capital reserve arises under the merger method."
+    },
+    {
+      "front": "Inter-company stock containing unrealised profit on amalgamation?",
+      "back": "Cancel mutual debtors/creditors and bills. Unrealised profit in stock: reduce the stock and debit Goodwill / Capital Reserve (purchase) or General Reserve (merger)."
+    },
+    {
+      "front": "Net payment method vs net assets method for consideration?",
+      "back": "Net payment: add up everything paid to shareholders in each form. Net assets: agreed value of assets taken over minus liabilities taken over. If the question gives the payments, net payment prevails."
     }
   ],
   "Internal Reconstruction": [
@@ -259,70 +335,94 @@
       "back": "Debit balance of P&L is written off via Reconstruction A/c against distributable reserves first (if permitted) and thereafter absorbed by capital reduction as per the sanctioned scheme."
     },
     {
-      "front": "What is the nature and final treatment of Reconstruction Account in the books?",
-      "back": "Reconstruction A/c is a temporary nominal (suspense) account recording sacrifices, write‑offs and revaluation differences; it is finally closed to capital accounts and reflected in the reconstructed balance sheet."
+      "front": "Reconstruction (Capital Reduction) Account — nature and how it is closed?",
+      "back": "A temporary account: credited with sacrifices by shareholders and creditors and appreciation in assets; debited with losses, fictitious assets and write-downs. Any credit balance left goes to CAPITAL RESERVE."
     },
     {
-      "front": "How are old shares surrendered and new shares issued recorded in the books during reconstruction (journal principle)?",
-      "back": "Old shares surrendered: Share Capital (old) debited and Reconstruction A/c credited (to cancel). New shares issued: Share Capital credited at par; any difference routed through Reconstruction A/c."
+      "front": "Entry for reducing a ₹10 share to ₹6 fully paid?",
+      "back": "Equity Share Capital (₹10) A/c Dr 10 → To Equity Share Capital (₹6) A/c 6, To Capital Reduction A/c 4. The sacrifice is the credit to Capital Reduction."
     },
     {
       "front": "How must unrecorded assets or liabilities discovered during reconstruction be treated in accounting?",
       "back": "Any unrecorded assets/liabilities are recognised at agreed values; resultant gain/loss is taken to Reconstruction A/c and treated according to the sanctioned scheme."
     },
     {
-      "front": "When does an internal reconstruction require alteration of the Memorandum/Articles of Association?",
-      "back": "If the scheme changes share-capital (amount, classes or rights) the Memorandum/Articles must be altered — such alterations are subject to NCLT sanction under ss.230/66."
+      "front": "Alteration of capital u/s 61 vs reduction u/s 66?",
+      "back": "s.61 (increase, consolidation, sub-division, conversion to stock, cancel unissued): ordinary resolution if articles permit; Tribunal only if consolidation changes voting percentages. s.66 reduction: special resolution + Tribunal confirmation."
+    },
+    {
+      "front": "Arrears of preference dividend waived or settled in a reconstruction?",
+      "back": "Arrears are only a contingent liability — no entry for the part WAIVED. Any amount actually paid or settled in shares is debited to Capital Reduction A/c."
+    },
+    {
+      "front": "Creditors or debenture holders agree to a cut — entry?",
+      "back": "Creditors / Debentures A/c Dr → To Capital Reduction A/c with the amount sacrificed. If they take new shares or debentures in settlement, credit those for the agreed value."
     }
   ],
   "Consolidation": [
     {
-      "front": "What exact percentage or condition defines a subsidiary for consolidation under AS 21?",
-      "back": "50%: Parent holds >50% of nominal equity share capital, or controls composition of the board or controls voting power — then it is a subsidiary (AS 21)."
+      "front": "When is an enterprise a subsidiary under AS 21?",
+      "back": "Control = ownership, directly or through subsidiaries, of MORE THAN ONE-HALF of the voting power, OR control of the composition of the board of directors so as to obtain economic benefits."
     },
     {
-      "front": "How is non‑controlling interest measured on consolidation under AS 21?",
-      "back": "Minority%: NCI measured as minority percentage of subsidiary’s net assets (no fair‑value option under AS 21); NCI’s share of post‑acq profit shown separately (AS 21)."
+      "front": "How is minority interest measured under AS 21?",
+      "back": "Minority's % of the subsidiary's net assets: their share of equity at the date of acquisition plus their share of movements since. Shown separately from liabilities and the parent's equity. No fair-value option."
     },
     {
-      "front": "Give the short formula for goodwill on consolidation under AS 21.",
-      "back": "Formula: Goodwill = Cost of acquisition − Parent’s share of subsidiary’s net assets at acquisition (pre‑acquisition reserves included). If negative, recognise bargain purchase gain (AS 21)."
+      "front": "Goodwill or capital reserve on consolidation — the formula?",
+      "back": "Cost of investment minus parent's share of the subsidiary's equity on the acquisition date (capital + pre-acquisition reserves). Positive = GOODWILL. Negative = CAPITAL RESERVE (never a gain in P&L)."
     },
     {
       "front": "How are pre‑acquisition and post‑acquisition profits of a subsidiary treated on consolidation?",
-      "back": "Pre/post: Pre‑acq profits are part of net assets at acquisition and reduce goodwill; post‑acq profits included in consolidated profit and apportioned between parent and NCI (AS 21)."
+      "back": "Pre/post: Pre‑acq profits are part of net assets at acquisition and reduce goodwill; post‑acq profits included in consolidated profit and apportioned between parent and minority interest (AS 21)."
     },
     {
-      "front": "What to do with unrealised profit in unsold intra‑group inventory at year‑end?",
-      "back": "Eliminate 100%: Remove whole unrealised profit from inventory; allocate NCI’s share = NCI% × unrealised profit and adjust consolidated profit (AS 21)."
+      "front": "Unrealised profit in unsold intra-group stock?",
+      "back": "Eliminate IN FULL. Downstream (parent sold): all borne by the group. Upstream (subsidiary sold): reduce the subsidiary's profit, so the minority bears its share."
     },
     {
       "front": "How to treat intra‑group transfer of a depreciable fixed asset that remains in transferee's books?",
-      "back": "Eliminate: Remove unrealised gain from asset carrying amount and reverse excess depreciation since transfer; adjust current depreciation and split effect with NCI (AS 21)."
+      "back": "Eliminate: Remove unrealised gain from asset carrying amount and reverse excess depreciation since transfer; adjust current depreciation and split effect with minority interest (AS 21)."
     },
     {
       "front": "How are dividends received from a subsidiary treated for consolidation when declared out of pre‑ and post‑acquisition profits?",
-      "back": "Rule: Dividend from pre‑acq profits reduces cost of investment; dividend from post‑acq profits recognised as income and apportioned between parent and NCI (AS 21)."
+      "back": "Dividend from pre‑acq profits reduces cost of investment; dividend from post‑acq profits recognised as income and apportioned between parent and minority interest (AS 21)."
     },
     {
       "front": "What percentage presumes 'significant influence' and how are associates accounted (AS 23)?",
       "back": "20%: Holding of 20% or more of voting power presumes significant influence; associates are accounted for by the equity method (AS 23)."
     },
     {
-      "front": "What to do when parent and subsidiary have different reporting dates (AS 21)?",
-      "back": "3 months: If reporting date difference ≤3 months, use subsidiary statements and adjust for significant transactions/events; if >3 months, prepare adjusted statements or make material adjustments (AS 21)."
+      "front": "Parent and subsidiary have different reporting dates (AS 21)?",
+      "back": "Allowed if the gap is not more than SIX months; adjust for significant transactions in between. (Three months is the Ind AS 110 figure.)"
     },
     {
-      "front": "How is negative goodwill (bargain purchase) treated on consolidation under AS 21?",
-      "back": "Immediate: If cost < acquirer’s share of net assets, recognise the bargain purchase gain immediately in profit or loss on acquisition (AS 21)."
+      "front": "Cost of investment is LESS than the parent's share of equity — treatment?",
+      "back": "Capital Reserve on consolidation, shown in the consolidated balance sheet. AS 21 has no 'bargain purchase gain' in P&L."
     },
     {
       "front": "Give the correct sequence of core consolidation steps examiners expect.",
-      "back": "Steps: 1) Align accounting policies/reporting dates; 2) Eliminate investment v. subsidiary equity (share capital & pre‑acq reserves); 3) Compute goodwill/bargain; 4) Eliminate intra‑group items; 5) Compute NCI; 6) Aggregate (AS 21)."
+      "back": "Steps: 1) Align accounting policies/reporting dates; 2) Eliminate investment v. subsidiary equity (share capital & pre‑acq reserves); 3) Compute goodwill/bargain; 4) Eliminate intra‑group items; 5) Compute minority interest; 6) Aggregate (AS 21)."
     },
     {
       "front": "What's the common wrong step students skip in consolidation calculations?",
       "back": "Error: Skipping adjustment of subsidiary’s accounting policies/reporting‑date differences before eliminating investment and computing goodwill — these adjustments must be done first (AS 21)."
+    },
+    {
+      "front": "Minority's share of losses exceeds its interest in equity?",
+      "back": "The excess, and further losses, are adjusted against the MAJORITY interest — unless the minority has a binding obligation to make good. Later profits go to the majority until its absorbed share is recovered."
+    },
+    {
+      "front": "When is a subsidiary excluded from consolidation?",
+      "back": "Control is intended to be temporary (acquired and held exclusively for disposal in the near future), or severe long-term restrictions impair its ability to transfer funds. Account under AS 13 instead."
+    },
+    {
+      "front": "Subsidiary issues bonus shares — effect on cost of control?",
+      "back": "Out of PRE-acquisition profits: no effect. Out of POST-acquisition profits: revenue profits shrink and the paid-up value held rises, so goodwill falls (or capital reserve rises)."
+    },
+    {
+      "front": "Cumulative preference shares of the subsidiary held outside the group?",
+      "back": "Parent computes its share of profit only AFTER deducting the subsidiary's preference dividend for the period — whether or not declared."
     }
   ],
   "Branch Accounts": [
@@ -336,11 +436,11 @@
     },
     {
       "front": "Give the formula to eliminate unrealised profit when goods sent at invoice price remain unsold at branch year‑end.",
-      "back": "1 formula: Unrealised profit = p/(100+p) × closing stock at invoice price (p = profit % on cost)."
+      "back": "Unrealised profit = p/(100+p) × closing stock at invoice price (p = profit % on cost)."
     },
     {
-      "front": "When must you prepare a Memorandum Branch Trading Account in the head‑office books?",
-      "back": "1 condition: Prepare it when branch keeps incomplete records (or only totals) — to compute branch gross profit from HO records before preparing Branch Account."
+      "front": "Methods of accounting for a dependent branch?",
+      "back": "Debtors method (one Branch A/c — small branch); Stock and Debtors method (separate control accounts — goods at invoice price); Final Accounts method (memorandum Branch Trading and P&L); Wholesale branch method."
     },
     {
       "front": "What is the headline 5‑step sequence to prepare HO’s Branch Account and adjust branch profit?",
@@ -352,83 +452,99 @@
     },
     {
       "front": "What is the single posting students commonly forget with goods sent at invoice price?",
-      "back": "1 common omission: failing to eliminate unrealised profit in unsold branch stock — must adjust using p/(100+p) × stock at invoice price."
+      "back": "Failing to eliminate unrealised profit in unsold branch stock — must adjust using p/(100+p) × stock at invoice price."
     },
     {
       "front": "How are independent branches treated for preparation of final accounts?",
-      "back": "1 rule: Independent branch prepares full Trading, P&L and Balance Sheet; HO records branch’s net balance and treats branch as a separate accounting unit."
+      "back": "Independent branch prepares full Trading, P&L and Balance Sheet; HO records branch’s net balance and treats branch as a separate accounting unit."
     },
     {
-      "front": "Name the 2 standard methods for translating a foreign branch and the key rate used in each.",
-      "back": "2 methods: Current‑rate — balance sheet items at closing rate, income at average rate; Temporal — monetary at closing rate, non‑monetary at historical rates."
+      "front": "Foreign branch under AS 11 — integral vs non-integral?",
+      "back": "Integral: monetary items at closing rate, non-monetary at historical rate, income/expenses at average rate, depreciation at the asset's rate; difference to P&L. Non-integral: ALL assets and liabilities at closing rate, income/expenses at average; difference to Foreign Currency Translation Reserve."
     },
     {
       "front": "If a branch keeps its own debtors ledger but HO collects a debtor for the branch, what single entry does HO pass?",
-      "back": "1 entry: Debit Bank/Cash; Credit Branch A/c — showing collection on branch’s behalf (branch books record debtor settlement)."
+      "back": "Debit Bank/Cash; Credit Branch A/c — showing collection on branch’s behalf (branch books record debtor settlement)."
     },
     {
-      "front": "How are goods‑in‑transit between HO and branch treated at the accounting date?",
-      "back": "1 rule: Include goods‑in‑transit in the recipient branch’s closing stock for branch accounts; show corresponding 'goods‑in‑transit' or 'goods sent' in HO books until received."
+      "front": "Goods or cash in transit between HO and branch at year-end?",
+      "back": "Adjust in ONE set of books, usually HO: Goods-in-transit A/c Dr / Cash-in-transit A/c Dr → To Branch A/c. Shown as an asset; reversed next year."
     },
     {
-      "front": "How should inter‑branch transfers be recorded in HO books when branches have incomplete records?",
-      "back": "1 rule: Treat transfers as goods sent by HO — debit Branch A/c (invoice price), credit Goods/Stock; eliminate unrealised profit on unsold transferred goods in HO accounts."
+      "front": "Inter-branch transfer of goods — entry in HO books?",
+      "back": "Receiving Branch A/c Dr → To Supplying Branch A/c. Each branch records it through its Head Office account, not through the other branch."
+    },
+    {
+      "front": "Stock and Debtors method — which accounts are opened?",
+      "back": "Branch Stock A/c (at invoice price), Branch Debtors A/c, Branch Expenses A/c, Goods Sent to Branch A/c, Branch Adjustment A/c (the loading — gives gross profit), Branch P&L A/c."
+    },
+    {
+      "front": "Shortage or surplus in Branch Stock A/c kept at invoice price?",
+      "back": "Split it: the LOADING part goes to Branch Adjustment A/c, the COST part to Branch P&L A/c. Normal loss: adjust only the loading."
+    },
+    {
+      "front": "Branch fixed asset account kept in HO books — depreciation entries?",
+      "back": "Branch books: Depreciation A/c Dr → To Head Office A/c. HO books: Branch A/c Dr → To Branch Fixed Asset A/c. Same for an asset bought by the branch: Branch debits HO; HO debits Branch Asset."
     }
   ],
   "AS 1 — Disclosure of Accounting Policies": [
     {
       "front": "Under which heading must material accounting policies be presented in the financial statements?",
-      "back": "1. 'Summary of significant accounting policies' — a separate note disclosing material policies used (AS 1)."
+      "back": "'Summary of significant accounting policies' — a separate note disclosing material policies used (AS 1)."
     },
     {
-      "front": "When must an entity change an accounting policy and how should such a change be accounted for?",
-      "back": "2. Change required by statute/AS or to give reliable, relevant information; account retrospectively unless impracticable; disclose nature, reason and effect on current and prior periods (AS 1)."
+      "front": "Change in accounting policy — what does AS 1 require?",
+      "back": "Disclose any change with a material effect in the current period or later periods, and the AMOUNT of the effect to the extent ascertainable. If not ascertainable, say so. No restatement of earlier years."
     },
     {
-      "front": "How must the effect of a voluntary change in accounting policy be shown in comparatives?",
-      "back": "3. Retrospectively restate all prior periods presented and adjust opening balances; if impracticable, apply from earliest practicable date and disclose explanation (AS 1)."
+      "front": "Change has no material effect this year but will in later years?",
+      "back": "The fact of the change must still be disclosed in the period in which it is adopted (AS 1)."
     },
     {
       "front": "How are changes in accounting estimates treated under AS 1 (vs policy changes)?",
-      "back": "4. Accounted prospectively — recognize effects in current and future periods only; do not restate prior periods; disclose nature and effect if material (AS 1/AS 5 distinction)."
+      "back": "Accounted prospectively — recognize effects in current and future periods only; do not restate prior periods; disclose nature and effect if material (AS 1/AS 5 distinction)."
     },
     {
       "front": "What must you do if you cannot quantify the effect of a change in accounting policy?",
-      "back": "5. State that the effect cannot be quantified, give reasons, and disclose the nature of the change and the periods affected (AS 1)."
+      "back": "State that the effect cannot be quantified, give reasons, and disclose the nature of the change and the periods affected (AS 1)."
     },
     {
-      "front": "What does AS 1 require about consistency in selection and application of policies?",
-      "back": "6. Policies must be consistently selected and applied; if inconsistent, disclose the deviation, reasons and financial effect to maintain comparability (AS 1)."
+      "front": "The three fundamental accounting assumptions?",
+      "back": "Going concern, Consistency, Accrual. If followed — no disclosure needed. If NOT followed — the fact must be disclosed."
     },
     {
       "front": "Name the specific measurement bases/policy details examiners expect disclosed (give common examples).",
-      "back": "7. State measurement bases: inventory valuation (FIFO/weighted average), depreciation method and rates, revenue recognition policy, investments valuation, foreign currency translation and government grants (AS 1)."
+      "back": "State measurement bases: inventory valuation (FIFO/weighted average), depreciation method and rates, revenue recognition policy, investments valuation, foreign currency translation and government grants (AS 1)."
     },
     {
       "front": "Are immaterial accounting policies required to be disclosed?",
-      "back": "8. No — disclose only material policies; immaterial items may be aggregated and omission is acceptable if immaterial (AS 1)."
+      "back": "No — disclose only material policies; immaterial items may be aggregated and omission is acceptable if immaterial (AS 1)."
     },
     {
-      "front": "How are prior period errors presented differently from changes in accounting policy?",
-      "back": "9. Correct prior period errors by restating comparatives and adjusting opening retained earnings (AS 5); policy changes are treated retrospectively unless impracticable (AS 1)."
+      "front": "What guides the SELECTION of accounting policies?",
+      "back": "Prudence (provide for known losses, do not anticipate profits), Substance over form, Materiality. Aim: a true and fair view."
     },
     {
       "front": "May an entity use boilerplate statements like ‘accounts prepared in accordance with AS’ instead of specifics?",
-      "back": "10. No — disclose specific policies and measurement bases; avoid generic/boilerplate statements that fail to reveal key judgments or methods (AS 1)."
+      "back": "No — disclose specific policies and measurement bases; avoid generic/boilerplate statements that fail to reveal key judgments or methods (AS 1)."
+    },
+    {
+      "front": "Does disclosing a wrong policy cure it?",
+      "back": "No. Disclosure of accounting policies, or of changes in them, cannot remedy a wrong or inappropriate treatment in the accounts (AS 1)."
     }
   ],
   "AS 4 — Events occurring after Balance Sheet date": [
     {
-      "front": "Which period does AS 4 treat as 'events occurring after the balance sheet date'?",
-      "back": "Between the balance sheet date and the date when the financial statements are authorised for issue — events in this interval are covered (AS 4)."
+      "front": "Which events does AS 4 cover?",
+      "back": "Significant events, favourable or unfavourable, between the balance sheet date and the date the financial statements are APPROVED by the Board of Directors (or other approving authority)."
     },
     {
       "front": "When must you adjust amounts in the financial statements for events after the balance sheet date?",
       "back": "Adjust when the event provides evidence of conditions that existed at the balance sheet date (adjusting events) — revise recognised amounts accordingly (AS 4)."
     },
     {
-      "front": "When is an event after the balance sheet date treated as non‑adjusting and what must be disclosed?",
-      "back": "If the event indicates conditions that arose after the balance sheet date, it is non‑adjusting; disclose nature and estimated financial effect, or state that estimate cannot be made (AS 4)."
+      "front": "Non-adjusting events — where are they disclosed?",
+      "back": "No change to the figures. Material changes and commitments affecting the financial position are disclosed in the REPORT OF THE APPROVING AUTHORITY (Board's report): nature of the event and an estimate of its effect, or that it cannot be estimated."
     },
     {
       "front": "How should a proposed final dividend declared after the balance sheet date be treated under AS 4?",
@@ -447,16 +563,16 @@
       "back": "Examples: major business combination after BS; major fire/ flood destroying assets after BS; decline in market value of investments after BS — no adjustment, disclose if material (AS 4)."
     },
     {
-      "front": "What disclosure about authorisation must be made under AS 4?",
-      "back": "Disclose the date when financial statements were authorised for issue and the identity of the person(s) authorising them (e.g., board of directors) (AS 4)."
+      "front": "Debtor becomes insolvent after the balance sheet date — adjusting or not?",
+      "back": "Depends on WHY. Loss caused by conditions existing at the balance sheet date (already in trouble): adjusting — provide. Caused by an event after that date (fire at his premises in April): non-adjusting — disclose."
     },
     {
       "front": "How do you distinguish an event that causes a change in estimate versus an adjusting event under AS 4?",
-      "back": "Rule: if the event provides evidence of conditions existing at the balance sheet date, treat as adjusting (revise amounts); if not, it’s a change due to post‑BS conditions and is non‑adjusting (AS 4)."
+      "back": "If the event provides evidence of conditions existing at the balance sheet date, treat as adjusting (revise amounts); if not, it’s a change due to post‑BS conditions and is non‑adjusting (AS 4)."
     },
     {
-      "front": "How are contingent liabilities/assets affected by events after the balance sheet date under AS 4?",
-      "back": "If post‑BS event provides evidence that a contingent liability/asset existed at BS, recognise or adjust; otherwise retain contingency and disclose nature and estimate (AS 4)."
+      "front": "Exceptions — events after the date that are adjusted anyway?",
+      "back": "Where statute requires, or where the event shows the going concern assumption no longer holds (e.g. destruction of the major plant) — then the basis of accounting itself changes."
     }
   ],
   "AS 2 — Valuation of Inventory": [
@@ -489,16 +605,16 @@
       "back": "NRV = estimated selling price in the ordinary course of business less estimated costs of completion and estimated costs necessary to make the sale — AS 2."
     },
     {
-      "front": "How should costs be allocated for joint production and how are by‑products treated under AS 2?",
-      "back": "Allocate joint costs to products on physical measures or relative NRV at split‑off; by‑products may be measured at NRV, with proceeds deducted from main product cost or shown as other income — AS 2."
+      "front": "Joint products and by-products under AS 2?",
+      "back": "Joint costs: allocate on a rational basis, e.g. relative sales value at separation or at completion. By-products, scrap and waste: measured at NRV, and that value is DEDUCTED from the cost of the main product."
     },
     {
-      "front": "If inventory was written down to NRV in prior periods and NRV later increases, what does AS 2 require?",
-      "back": "Reversal of write‑down is permitted to the extent of the original write‑down, recognised in profit or loss, but not above original cost — AS 2."
+      "front": "Cost vs NRV — compared how, and how often?",
+      "back": "Item by item (or groups of similar items) — never total cost against total NRV. Reassess NRV at every balance sheet date. Under a firm sales contract, NRV = the contract price."
     },
     {
-      "front": "What are the key AS 2 disclosure requirements you must always state in the financials?",
-      "back": "Disclose cost formulas, total carrying amount by classification, amount of write‑downs to NRV and reversals, and circumstances/amounts of those adjustments — AS 2."
+      "front": "AS 2 disclosures?",
+      "back": "The accounting policy adopted including the cost formula used; the total carrying amount of inventories and its classification (raw materials, WIP, finished goods, stores, loose tools)."
     },
     {
       "front": "How is the cost of inventories of purchased goods determined under AS 2?",
@@ -507,58 +623,70 @@
     {
       "front": "How should costs of idle capacity and similar items be treated under AS 2?",
       "back": "Costs of idle capacity, abnormal idle time, and non‑production overheads are expensed; they are not included in inventory cost — AS 2."
+    },
+    {
+      "front": "Raw material price has fallen — do you write the raw material down?",
+      "back": "NOT if the finished goods will still sell at or above cost. If the finished product's NRV is below its cost, write the material down — and REPLACEMENT COST is the best measure of its NRV."
+    },
+    {
+      "front": "What is outside AS 2?",
+      "back": "WIP under construction contracts (AS 7), WIP of service providers, shares and other financial instruments held as stock-in-trade, and producers' livestock, agricultural/forest products and mineral ores measured at NRV by trade practice."
+    },
+    {
+      "front": "Standard cost and retail method — allowed?",
+      "back": "Yes, for convenience, if the results approximate actual cost. Retail method: sales value less the appropriate gross margin percentage."
     }
   ],
   "AS 5 — Net Profit or Loss for the Period, Prior Period Items and Changes in Accounting Policies": [
     {
-      "front": "Which adjustments qualify as 'prior period items' under AS 5 — what conditions must they meet?",
-      "back": "1. Adjustments of income/expense relating to prior periods — errors/omissions or current events attributable to earlier periods; material and non‑recurring in nature. AS 5."
+      "front": "What is a 'prior period item' (AS 5)?",
+      "back": "Income or expense arising in the CURRENT period from ERRORS OR OMISSIONS in preparing the financial statements of one or more earlier periods. A revised estimate is not a prior period item."
     },
     {
-      "front": "Where must prior period items be presented in the financial statements as per AS 5?",
-      "back": "1. Shown separately in the Profit & Loss account as 'Prior period items' after tax, as part of the net profit for the period. AS 5."
+      "front": "Presentation of prior period items?",
+      "back": "Included in the current year's profit or loss, with their nature and amount disclosed separately so that the impact on current profit can be seen. Opening balances and comparatives are NOT restated."
     },
     {
-      "front": "How should the tax effect of a prior period item be shown under AS 5?",
-      "back": "1. Tax effect must be disclosed separately; prior period items are presented net of their tax effect. AS 5."
+      "front": "What is an extraordinary item, and how is it shown?",
+      "back": "Income or expense from events clearly distinct from ordinary activities and not expected to recur frequently — e.g. earthquake loss, attachment of property. Part of net profit, but nature and amount disclosed SEPARATELY on the face of the P&L."
     },
     {
-      "front": "How must a change in accounting policy be accounted for according to AS 5?",
-      "back": "1. Apply retrospectively to all prior periods; restate comparative amounts and adjust opening retained earnings of the earliest period, unless retrospective application is impracticable. Disclose nature and effects. AS 5."
+      "front": "When may an accounting policy be changed (AS 5)?",
+      "back": "Only if required by statute, required for compliance with an Accounting Standard, or it gives a more appropriate presentation. Disclose the change and its impact; if the amount is not ascertainable, say so."
     },
     {
-      "front": "How does AS 5 require you to treat a change in accounting estimate (vs a change in policy)?",
-      "back": "1. Change in estimate is accounted for prospectively in current and future periods; change in accounting policy requires retrospective application. AS 5."
+      "front": "Change in accounting estimate — how is it accounted for (AS 5)?",
+      "back": "Prospectively: in the P&L of the period of change, and of future periods if they are affected too. No prior period adjustment — a revised estimate is neither a prior period item nor extraordinary."
     },
     {
-      "front": "How are prior period errors corrected under AS 5?",
-      "back": "1. Correct retrospectively by restating comparative amounts; if impracticable, adjust opening retained earnings of the earliest practicable period and disclose. AS 5."
+      "front": "Is restating last year's figures the fix for an error found this year?",
+      "back": "No. Under AS 5 the correction passes through THIS year's P&L as a prior period item, separately disclosed. Retrospective restatement is Ind AS 8, not this syllabus."
     },
     {
-      "front": "Are 'extraordinary items' permitted under AS 5?",
-      "back": "1. No — AS 5 does not permit extraordinary items; all income/expenses must be included in the Profit & Loss. Prior period and exceptional items are separately disclosed, not labelled 'extraordinary'. AS 5."
+      "front": "Exceptional items (items within ordinary activities needing separate disclosure)?",
+      "back": "Ordinary-activity items of such size, nature or incidence that disclosure is relevant: inventory write-downs, restructuring costs, disposal of fixed assets or long-term investments, litigation settlements, reversal of provisions."
     },
     {
-      "front": "What specific disclosures does AS 5 require for a material prior period item or change in policy?",
-      "back": "1. Disclose nature, amount for current period and each prior period presented, and tax effect; if full retrospective application is impracticable, state reason and impact. AS 5."
+      "front": "What is NOT a change in accounting policy?",
+      "back": "Adopting a policy for events that differ in substance from earlier ones, or for events that did not occur before or were immaterial."
     },
     {
-      "front": "If retrospective application is impracticable, what does AS 5 require you to do?",
-      "back": "1. Apply the change as far back as practicable, adjust opening retained earnings for the earliest practicable period, and disclose why full retrospective application was impracticable. AS 5."
+      "front": "Change in depreciation method — policy or estimate?",
+      "back": "A change in accounting ESTIMATE (AS 10 revised) — applied prospectively. Change in inventory cost formula (FIFO to weighted average) is a change in POLICY."
     },
     {
-      "front": "How should changes in accounting policy that are required by statute or an accounting standard be handled per AS 5?",
-      "back": "1. Apply retrospectively unless impracticable; clearly disclose that the change was mandatory and its effects on current and prior periods. AS 5."
+      "front": "Hard to tell whether it is a change in policy or in estimate?",
+      "back": "Treat it as a change in accounting estimate, with appropriate disclosure (AS 5)."
     },
     {
-      "front": "What is the classic exam trap students make with 'change in estimate' versus 'change in accounting policy' under AS 5?",
-      "back": "1. Mistaking a change in estimate (must be accounted prospectively) for a change in accounting policy (requires retrospective restatement). AS 5."
+      "front": "Where does the effect of a change in estimate go in the P&L?",
+      "back": "In the same classification as the original estimate: ordinary if it was ordinary, extraordinary if it was extraordinary. Period of change, and future periods if they are affected."
     }
   ],
   "AS 7 — Construction Contracts": [
     {
       "front": "Define ‘construction contract’ in exam-precise terms under AS 7.",
-      "back": "Rule: A contract specifically negotiated for construction of an asset (or a closely interrelated/indivisible combination of assets) — i.e., agreement to construct, install or commission physical assets for a customer."
+      "back": "A contract specifically negotiated for construction of an asset (or a closely interrelated/indivisible combination of assets) — i.e., agreement to construct, install or commission physical assets for a customer."
     },
     {
       "front": "State the conditions required to apply the Percentage of Completion method.",
@@ -566,49 +694,57 @@
     },
     {
       "front": "How is ‘stage of completion’ normally measured? Give the standard formula and the accepted alternative.",
-      "back": "Rule: Standard — cost-to-cost: stage = costs incurred to date ÷ estimated total contract costs. Alternative — physical progress (survey of work performed) only if it gives a more reliable measure."
+      "back": "Standard — cost-to-cost: stage = costs incurred to date ÷ estimated total contract costs. Alternative — physical progress (survey of work performed) only if it gives a more reliable measure."
     },
     {
       "front": "Give the exact rule/formula to recognise contract revenue and recognised profit under percentage completion.",
-      "back": "Rule: Revenue recognised = Contract revenue × Stage of completion. Recognised profit = Revenue recognised − Contract costs incurred to date (equivalently stage × total estimated profit, if using proportional profit method)."
+      "back": "Revenue recognised = Contract revenue × Stage of completion. Recognised profit = Revenue recognised − Contract costs incurred to date (equivalently stage × total estimated profit, if using proportional profit method)."
     },
     {
-      "front": "When must the completed-contract method be used and what is recognised under it?",
-      "back": "Rule: Use when outcome cannot be estimated reliably — recognise contract costs as incurred (recoverable portion); do not recognise profit until completion; recognise expected losses immediately."
+      "front": "Outcome of a contract cannot be estimated reliably — what is recognised?",
+      "back": "Revenue only to the extent of contract costs incurred whose recovery is PROBABLE; contract costs expensed as incurred; no profit. Expected loss still recognised at once. (AS 7 has no 'completed contract method'.)"
     },
     {
       "front": "When and how must an expected loss on a contract be recognised?",
-      "back": "Rule: Recognise entire expected loss immediately as an expense as soon as a loss is probable, irrespective of stage of completion (no deferral under either method)."
+      "back": "Recognise entire expected loss immediately as an expense as soon as a loss is probable, irrespective of stage of completion (no deferral under either method)."
     },
     {
-      "front": "What costs constitute ‘contract costs’? List inclusions and main exclusions.",
-      "back": "Rule: Include direct materials/labour, contract-specific and allocable overheads, mobilisation/plant depreciation if attributable, foreseeable losses. Exclude general admin, selling costs and finance costs (unless contract terms say otherwise)."
+      "front": "Contract costs — what is in, what is out?",
+      "back": "In: direct costs (site labour, materials, plant depreciation, hire, design), attributable costs allocated (insurance, construction overheads, borrowing costs per AS 16), costs chargeable to the customer. Out: general administration, selling costs, unreimbursed R&D, depreciation of idle plant."
     },
     {
       "front": "When are variations, claims and incentive payments included in contract revenue?",
-      "back": "Rule: Include only when it is probable the customer will pay and the amount can be measured reliably; otherwise treat as contingent and disclose until recognition criteria met."
+      "back": "Include only when it is probable the customer will pay and the amount can be measured reliably; otherwise treat as contingent and disclose until recognition criteria met."
     },
     {
       "front": "How to present work‑in‑progress and progress billings on the balance sheet?",
-      "back": "Rule: If costs + recognised profit > progress billings → show gross amount due from customers (asset). If progress billings > costs + recognised profit → show gross amount due to customers (liability)."
+      "back": "If costs + recognised profit > progress billings → show gross amount due from customers (asset). If progress billings > costs + recognised profit → show gross amount due to customers (liability)."
     },
     {
       "front": "Give the immediate accounting treatment for amounts recoverable from customers and retentions.",
-      "back": "Rule: Amounts recoverable recognised as receivables when probable of recovery; retentions are deducted from progress billings and shown separately (disclosed as part of receivables/contract asset until collected)."
+      "back": "Amounts recoverable recognised as receivables when probable of recovery; retentions are deducted from progress billings and shown separately (disclosed as part of receivables/contract asset until collected)."
     },
     {
-      "front": "What is the common exam trap when choosing the basis for stage of completion?",
-      "back": "Rule: Trap — mixing cost-to-cost and physical measurement or switching without justification. Use one consistently; change only if new method is demonstrably more reliable and disclose reason and effect."
+      "front": "Cost-to-cost method — which costs are left out of 'costs incurred to date'?",
+      "back": "Costs relating to FUTURE activity: materials delivered to site but not yet installed or used, and advances paid to sub-contractors for work not yet done."
     },
     {
       "front": "List the key AS 7 disclosures required in each reporting period (short list for exams).",
-      "back": "Rule: Disclose contract revenue recognised, method of revenue recognition and stage measurement, methods to measure contract costs, contract costs incurred, recognised profits less losses, retentions, and gross amount due from/to customers plus contingencies."
+      "back": "Disclose contract revenue recognised, method of revenue recognition and stage measurement, methods to measure contract costs, contract costs incurred, recognised profits less losses, retentions, and gross amount due from/to customers plus contingencies."
+    },
+    {
+      "front": "Expected loss on a contract — working for the provision?",
+      "back": "Total expected loss = total estimated cost − contract revenue. Recognise ALL of it now: loss already reflected (cost incurred − revenue recognised) plus a provision for the balance. Stage of completion is irrelevant."
+    },
+    {
+      "front": "Fixed price vs cost plus contract — reliability conditions?",
+      "back": "Fixed price: revenue, costs to complete and stage of completion all reliably measurable, benefits probable. Cost plus: benefits probable and attributable costs clearly identified and reliably measured."
     }
   ],
   "AS 10 — Property, Plant and Equipment": [
     {
       "front": "What are the exact recognition criteria for PPE under AS 10 you must state in the exam?",
-      "back": "2 criteria: probable future economic benefits and cost reliably measurable (AS 10 para 7)."
+      "back": "2 criteria: probable future economic benefits and cost reliably measurable."
     },
     {
       "front": "Which cost items must be included when initially measuring an item of PPE?",
@@ -619,12 +755,12 @@
       "back": "2 models: cost model or revaluation model for subsequent measurement; apply consistently by class of asset (AS 10)."
     },
     {
-      "front": "How are revaluation increases and decreases recognised under AS 10?",
-      "back": "1 rule: increases to revaluation surplus in equity except to reverse previous P&L loss; decreases charged to P&L except to the extent of any related surplus (AS 10)."
+      "front": "Revaluation increase and decrease under AS 10?",
+      "back": "Increase: credited to Revaluation Surplus (owners' interests) — to P&L only to the extent it reverses an earlier decrease charged there. Decrease: to P&L — except to the extent of a credit in the surplus for that asset."
     },
     {
       "front": "How often must revaluations be done to meet AS 10 requirements?",
-      "back": "Frequency: revalue with sufficient regularity so carrying amount does not differ materially from fair value; frequency depends on market volatility (AS 10)."
+      "back": "Revalue with sufficient regularity so carrying amount does not differ materially from fair value; frequency depends on market volatility (AS 10)."
     },
     {
       "front": "When must you use component accounting for PPE?",
@@ -632,77 +768,101 @@
     },
     {
       "front": "How often must useful life and residual value be reviewed, and how are changes applied?",
-      "back": "1 review: review useful life and residual value at each balance sheet date; changes applied prospectively (AS 10)."
+      "back": "Review useful life and residual value at each balance sheet date; changes applied prospectively (AS 10)."
     },
     {
       "front": "Which depreciation method must you choose if exam question asks?",
-      "back": "1 method rule: select method reflecting asset’s consumption pattern; if indeterminable, use straight-line (AS 10)."
+      "back": "Select method reflecting asset’s consumption pattern; if indeterminable, use straight-line (AS 10)."
     },
     {
       "front": "When can subsequent expenditure on PPE be capitalised?",
-      "back": "1 test: capitalise only if expenditure brings probable future benefits and cost is measurable; routine repairs and maintenance are expensed (AS 10)."
+      "back": "Capitalise only if expenditure brings probable future benefits and cost is measurable; routine repairs and maintenance are expensed (AS 10)."
     },
     {
       "front": "When is an item of PPE derecognised and what is the profit/loss treatment?",
-      "back": "1 event: derecognise on disposal or when no future benefits remain; recognise gain/loss in statement of profit and loss; transfer revaluation surplus to retained earnings on disposal (AS 10)."
+      "back": "Derecognise on disposal or when no future benefits remain; recognise gain/loss in statement of profit and loss; transfer revaluation surplus to retained earnings on disposal (AS 10)."
     },
     {
       "front": "How do you account for exchange/part-exchange of PPE under AS 10?",
-      "back": "1 rule: if transaction has commercial substance, measure new asset at fair value; if not, measure at carrying amount of the old asset (AS 10)."
+      "back": "If transaction has commercial substance, measure new asset at fair value; if not, measure at carrying amount of the old asset (AS 10)."
     },
     {
       "front": "What must you disclose for PPE — list the key disclosure items to memorise.",
       "back": "7 disclosures: measurement basis; depreciation method; useful lives/rates; gross carrying & accumulated depreciation; reconciliation of carrying amount; revaluation details; restrictions and capital commitments (AS 10)."
+    },
+    {
+      "front": "Costs that are NOT part of the cost of PPE?",
+      "back": "Opening a new facility, introducing a new product (advertising), conducting business in a new location or with new customers (staff training), administration and general overheads, initial operating losses. Income from incidental operations goes to P&L."
+    },
+    {
+      "front": "When does depreciation start and stop?",
+      "back": "Starts when the asset is AVAILABLE for use. Stops at the earlier of being retired from active use and held for disposal, or derecognition. It does NOT stop when the asset is idle. Land is not depreciated."
+    },
+    {
+      "front": "Revaluation — one asset or the whole class? And the surplus later?",
+      "back": "The ENTIRE class must be revalued. The surplus may be transferred to revenue reserves on derecognition, or gradually as the asset is used — directly, never through P&L."
+    },
+    {
+      "front": "Asset retired from active use and held for disposal?",
+      "back": "Carry at the LOWER of carrying amount and net realisable value; recognise any write-down in P&L. Spares and stand-by equipment are PPE if they meet the definition, otherwise inventory."
     }
   ],
   "AS 9 — Revenue Recognition": [
     {
-      "front": "State the two conditions required for revenue recognition under AS 9.",
-      "back": "2 conditions: probable inflow of economic benefits and reliable measurement of the amount (AS 9)."
+      "front": "Core conditions for recognising revenue under AS 9?",
+      "back": "The revenue is MEASURABLE, and at the time of sale or service it is not unreasonable to expect ULTIMATE COLLECTION. If collection is uncertain at that time, postpone recognition."
     },
     {
       "front": "When is revenue from sale of goods recognised under AS 9?",
       "back": "When 1) significant risks and rewards of ownership have transferred, 2) no effective control retained, and 3) measurement and collectibility are probable (AS 9)."
     },
     {
-      "front": "How and when is revenue from rendering of services recognised?",
-      "back": "2 rules: recognise by proportion of completion when outcome can be measured reliably; otherwise recognise only to the extent of recoverable costs; profit only when outcome and collection are reliably measurable (AS 9)."
+      "front": "Revenue from services — the two methods?",
+      "back": "Proportionate completion method: recognised as each act is performed, in proportion to completion. Completed service contract method: recognised when the sole or final act is done and the service is chargeable."
     },
     {
-      "front": "When should interest, royalties and dividends be recognised?",
-      "back": "1 rule: interest/royalties on accrual basis (time-proportion or effective interest); dividends when right to receive is established and recovery is probable (AS 9)."
+      "front": "Interest, royalties and dividends — when recognised?",
+      "back": "Interest: time-proportion basis (amount outstanding × rate). Royalties: accrual basis as per the agreement. Dividends: when the owner's RIGHT TO RECEIVE payment is established."
     },
     {
-      "front": "What method and loss recognition rule applies to long-term construction or service contracts?",
-      "back": "1 method: percentage-of-completion (POC) when outcome reliably measurable; 1 rule: recognise expected overall contract losses immediately (AS 9; see AS 7 for POC methods)."
+      "front": "What is outside AS 9?",
+      "back": "Construction contracts (AS 7), hire purchase and lease agreements, government grants and subsidies, insurance contracts of insurers. Also not 'revenue': gains on sale or revaluation of fixed assets, holding gains, exchange gains."
     },
     {
-      "front": "How is revenue treated for hire-purchase and instalment sales where recovery or enforceability is uncertain?",
-      "back": "1 rule: if significant uncertainty or retention of risk exists, recognise revenue only to the extent of cash received; otherwise on transfer of risks and rewards (AS 9)."
+      "front": "Uncertainty about collection arises AFTER the sale was recognised?",
+      "back": "Do not reverse the revenue. Make a separate PROVISION for the uncertain amount. (If the uncertainty existed at the time of sale, recognition is postponed.)"
     },
     {
-      "front": "What is the treatment when goods are sold subject to a right of return?",
-      "back": "1 rule: recognise revenue only if return rate can be estimated reliably and provision made; if not, defer revenue until return period ends or goods become non-returnable (AS 9)."
+      "front": "Sale on approval or 'sale or return' — when is it revenue?",
+      "back": "When the buyer formally accepts, does an act adopting the transaction, or the time for rejection has elapsed (a reasonable time if none is fixed). Guaranteed sale with money-back: recognise at sale with a provision for returns."
     },
     {
-      "front": "How are exchange or barter transactions measured for revenue recognition?",
-      "back": "1 rule: measure revenue at fair value of goods/services received (or given) if fair value is reliably measurable; otherwise defer revenue recognition (AS 9)."
+      "front": "Consignment sales and 'bill and hold' sales?",
+      "back": "Consignment: no revenue until the consignee sells to a third party. Bill and hold (delivery delayed at the buyer's request, buyer takes title): recognise, provided the goods are on hand, identified and ready for delivery."
     },
     {
       "front": "What items are excluded from the amount of revenue recognised?",
-      "back": "1 rule: revenue measured at fair value of consideration, net of trade discounts, rebates and indirect taxes collected on behalf of third parties (AS 9)."
+      "back": "Revenue measured at fair value of consideration, net of trade discounts, rebates and indirect taxes collected on behalf of third parties (AS 9)."
     },
     {
-      "front": "When can profit on a sale requiring installation or commissioning be recognised?",
-      "back": "1 condition: recognise only when all conditions of sale are met, installation/commissioning not essential to transfer control, or outcome and collectibility are reliably measurable (AS 9)."
+      "front": "Goods sold subject to installation and inspection?",
+      "back": "No revenue until the customer accepts delivery and installation and inspection are complete. If installation is simple (e.g. a TV set), recognise on delivery."
     },
     {
       "front": "How is revenue accounted for in principal versus agent arrangements?",
-      "back": "1 rule: principal recognises gross revenue; agent recognises only net commission/fee — identify who bears significant risks and rewards to classify (AS 9)."
+      "back": "Principal recognises gross revenue; agent recognises only net commission/fee — identify who bears significant risks and rewards to classify (AS 9)."
     },
     {
-      "front": "What key disclosures does AS 9 require concerning revenue recognition?",
-      "back": "Key disclosures: accounting policies for revenue recognition, amounts for each significant revenue category, methods for contract revenue/POC, unfulfilled obligations and related contingencies (AS 9)."
+      "front": "AS 9 disclosure?",
+      "back": "Besides the AS 1 policy disclosure: the circumstances in which revenue recognition has been POSTPONED pending resolution of significant uncertainties."
+    },
+    {
+      "front": "Instalment sales — how is the price split?",
+      "back": "Sale price EXCLUDING interest is revenue on the date of sale. The interest element is recognised over time, in proportion to the unpaid balance."
+    },
+    {
+      "front": "Subscriptions, advertising commission, tuition and membership fees?",
+      "back": "Publication subscriptions: straight-line over the period. Advertising commission: when the advertisement appears. Tuition fees: over the period of instruction. Entrance fee: generally capitalised; membership fee: over the period of the benefits."
     }
   ],
   "AS 11 — The Effects of Changes in Foreign Exchange Rates": [
@@ -731,8 +891,8 @@
       "back": "Exchange differences on settlement or on translation of monetary items — recognised in profit or loss in the period in which they arise (AS 11)."
     },
     {
-      "front": "When translating a foreign operation for consolidation, what rates apply to assets/liabilities and to income/expenses?",
-      "back": "Assets/liabilities = closing rate; income/expenses = transaction date rates (or a period average if it reasonably approximates). Resulting differences go to Foreign Currency Translation Reserve (AS 11)."
+      "front": "Integral vs non-integral foreign operation — translation rules?",
+      "back": "Integral: as if the transactions were the enterprise's own — monetary at closing rate, non-monetary at historical rate, differences to P&L. Non-integral: all assets and liabilities at closing rate, income/expenses at transaction (average) rates, differences to Foreign Currency Translation Reserve."
     },
     {
       "front": "Where are translation differences recorded, and when are they recycled to profit or loss?",
@@ -745,98 +905,122 @@
     {
       "front": "When is it permissible to use an average exchange rate to translate income and expenses?",
       "back": "Average rate for the period may be used when exchange rates do not fluctuate significantly and the average reasonably approximates actual transaction rates; otherwise use transaction‑date rates (AS 11)."
+    },
+    {
+      "front": "Forward exchange contract NOT for trading or speculation?",
+      "back": "Premium or discount at inception is amortised as expense/income over the life of the contract. Exchange differences recognised in P&L in the period the rates change. Profit or loss on cancellation or renewal: P&L of that period."
+    },
+    {
+      "front": "Forward contract held for trading or speculation?",
+      "back": "Ignore the premium or discount. Mark to market at each balance sheet date: gain or loss = forward rate available for the remaining maturity vs the contracted rate. To P&L."
+    },
+    {
+      "front": "Para 46/46A option for long-term foreign currency monetary items?",
+      "back": "Exchange differences may be: added to or deducted from the cost of a DEPRECIABLE capital asset and depreciated over its remaining life; otherwise accumulated in FCMITDA and amortised over the life of the item. Irrevocable once chosen."
+    },
+    {
+      "front": "Foreign operation reclassified between integral and non-integral?",
+      "back": "Apply the new translation procedure prospectively from the date of change. Integral → non-integral: differences on non-monetary assets go to FCTR. Non-integral → integral: FCTR stays until disposal."
     }
   ],
   "AS 12 — Accounting for Government Grants": [
     {
       "front": "When is a government grant recognised in the books?",
-      "back": "1. Recognition: when there is reasonable assurance that the entity will comply with conditions and the grant will be received (AS 12)."
+      "back": "Recognition: when there is reasonable assurance that the entity will comply with conditions and the grant will be received (AS 12)."
     },
     {
       "front": "What are the permitted treatments for a grant related to a depreciable asset?",
-      "back": "2. Two options: (a) deduct grant from asset carrying amount and depreciate net; or (b) record as deferred income and amortise to P&L over asset's useful life (AS 12)."
+      "back": "Two options: (a) deduct grant from asset carrying amount and depreciate net; or (b) record as deferred income and amortise to P&L over asset's useful life (AS 12)."
     },
     {
       "front": "How must grants related to revenue (compensation for expenses) be recognised?",
-      "back": "3. Matching: recognise in profit & loss over periods in which related expenses are incurred; present either by deducting related expense or as separate other income (AS 12)."
+      "back": "Matching: recognise in profit & loss over periods in which related expenses are incurred; present either by deducting related expense or as separate other income (AS 12)."
     },
     {
-      "front": "How are non‑monetary government grants measured on initial recognition?",
-      "back": "4. Fair value: measure non‑monetary grants at fair value of asset received; if fair value cannot be reliably measured, measure at nominal value (AS 12)."
+      "front": "Non-monetary government grants — at what value?",
+      "back": "Given at a CONCESSIONAL rate: record at acquisition cost. Given FREE: record at a nominal value. (Fair value is IAS 20, not AS 12.)"
     },
     {
-      "front": "How to account for a grant that becomes repayable because conditions are breached?",
-      "back": "5. Repayable grants: recognise a liability when repayment obligation arises; adjust previously recognised income or asset treatment when repayment becomes probable (AS 12)."
+      "front": "Grant becomes refundable — treatment?",
+      "back": "Extraordinary item (AS 5). Revenue grant: first against unamortised deferred credit, balance to P&L. Asset grant: increase the asset's book value (depreciate prospectively over remaining life) or reduce deferred income. Promoters' contribution: reduce capital reserve."
     },
     {
-      "front": "Where and how are government grants presented in the financial statements?",
-      "back": "6. Presentation: grants related to assets either reduce asset carrying amount or appear as deferred income (liability); revenue grants appear in P&L (deduct expense or separate income) (AS 12)."
+      "front": "Grant in the nature of promoters' contribution?",
+      "back": "Given with reference to total investment or towards total capital outlay, with no repayment expected: credit to CAPITAL RESERVE as part of shareholders' funds. Not distributable as dividend, not deferred income."
     },
     {
       "front": "What minimum disclosures does AS 12 require about government grants?",
-      "back": "7. Disclosures: accounting policy, nature and extent of grants recognised, unfulfilled conditions/contingencies, and any repayable grants (AS 12)."
+      "back": "Disclosures: accounting policy, nature and extent of grants recognised, unfulfilled conditions/contingencies, and any repayable grants (AS 12)."
     },
     {
       "front": "If you deduct a grant from an asset, what is the depreciation basis?",
-      "back": "8. Depreciation: charge depreciation on the asset's carrying amount after deducting the grant, over the asset's remaining useful life (AS 12)."
+      "back": "Depreciation: charge depreciation on the asset's carrying amount after deducting the grant, over the asset's remaining useful life (AS 12)."
     },
     {
       "front": "If you recognise a grant as deferred income, how should it be amortised?",
-      "back": "9. Amortisation: allocate deferred grant to income on a systematic basis over the useful life of the related asset, generally on same basis as depreciation (AS 12)."
+      "back": "Amortisation: allocate deferred grant to income on a systematic basis over the useful life of the related asset, generally on same basis as depreciation (AS 12)."
     },
     {
-      "front": "When can an unconditional government grant be recognised immediately?",
-      "back": "10. Unconditional grants: recognise immediately when no conditions exist and reasonable assurance of receipt; treat according to asset or revenue classification (AS 12)."
+      "front": "Grant received as compensation for past losses, or as immediate support with no further costs?",
+      "back": "Recognise in P&L in the period it becomes RECEIVABLE — as an extraordinary item if appropriate (AS 5)."
+    },
+    {
+      "front": "Grant for a NON-depreciable asset, and a grant equal to the whole cost?",
+      "back": "Non-depreciable asset (land): credit to capital reserve; if conditions require spending, credit to income over the period those costs are charged. Grant = whole cost of the asset: show the asset at a nominal value."
     }
   ],
   "AS 16 — Borrowing Costs": [
     {
-      "front": "Name three items included in ‘borrowing costs’ under AS 16 (cite paragraph).",
-      "back": "3 items: interest; amortisation of discounts and finance charges; finance charges in respect of finance leases (AS para 3)."
+      "front": "What do 'borrowing costs' include under AS 16?",
+      "back": "Interest and commitment charges; amortisation of discounts or premiums; amortisation of ancillary costs of arranging borrowings; finance charges under finance leases; exchange differences on foreign currency borrowings to the extent they are an adjustment to interest cost."
     },
     {
-      "front": "What is a ‘qualifying asset’ under AS 16 and how to judge it?",
-      "back": "1 rule: qualifying asset requires a substantial period to get ready for intended use or sale (AS para 2). Assessment is judgemental; AS does not fix a numeric month-limit."
+      "front": "What is a qualifying asset — and how long is 'substantial'?",
+      "back": "An asset that necessarily takes a substantial period to get ready for its intended use or sale. Ordinarily TWELVE MONTHS is substantial, unless a shorter or longer period can be justified on the facts."
     },
     {
-      "front": "When does capitalization of borrowing costs commence? Give the three required conditions (AS para 9).",
-      "back": "3 conditions: expenditures for the asset incurred; borrowing costs incurred; activities to prepare the asset for use are in progress. All three must be met (AS para 9)."
+      "front": "When does capitalization of borrowing costs commence? Give the three required conditions.",
+      "back": "3 conditions: expenditures for the asset incurred; borrowing costs incurred; activities to prepare the asset for use are in progress. All three must be met."
     },
     {
-      "front": "When must capitalization of borrowing costs be suspended? Any exception? (AS para 11)",
-      "back": "1 rule: suspend capitalization when active development is suspended. Exception: do not suspend for temporary delays (AS para 11)."
+      "front": "When is capitalisation suspended — and when not?",
+      "back": "Suspended during extended periods in which ACTIVE DEVELOPMENT is interrupted. Not suspended while substantial technical and administrative work continues, or when a temporary delay is a necessary part of the process (high water levels while building a bridge)."
     },
     {
-      "front": "When does capitalization cease? How about parts of an asset? (AS para 12)",
-      "back": "1 rule: cease when substantially all activities to prepare asset are complete. If parts are ready earlier, cease capitalization for those parts (AS para 12)."
+      "front": "When does capitalization cease? How about parts of an asset?",
+      "back": "Cease when substantially all activities to prepare asset are complete. If parts are ready earlier, cease capitalization for those parts."
     },
     {
-      "front": "How are borrowing costs treated for funds borrowed specifically for a qualifying asset? (AS paras 14–18)",
-      "back": "1 rule: capitalise actual borrowing costs incurred on the specific borrowings less any investment income on temporarily invested borrowed funds (AS paras 16–18)."
+      "front": "How are borrowing costs treated for funds borrowed specifically for a qualifying asset?",
+      "back": "Capitalise actual borrowing costs incurred on the specific borrowings less any investment income on temporarily invested borrowed funds."
     },
     {
-      "front": "How do you compute capitalisable borrowing costs from general borrowings? (AS paras 19–21)",
-      "back": "1 formula: apply the weighted average borrowing rate of general borrowings to the expenditures on the qualifying asset during the period (AS paras 20–21)."
+      "front": "General borrowings — amount to capitalise, and the ceiling?",
+      "back": "Capitalisation rate (weighted average cost of general borrowings outstanding) × expenditure on the qualifying asset. The amount capitalised can NEVER exceed the borrowing costs actually incurred in the period."
     },
     {
-      "front": "How is the weighted average borrowing rate determined? (AS para 20)",
-      "back": "1 rule: weighted average = borrowing costs of general borrowings divided by outstanding general borrowings during the period; exclude borrowings specifically for qualifying assets (AS para 20)."
+      "front": "How is the weighted average borrowing rate determined?",
+      "back": "Weighted average = borrowing costs of general borrowings divided by outstanding general borrowings during the period; exclude borrowings specifically for qualifying assets."
     },
     {
-      "front": "What borrowing costs are not capitalised and must be expensed? (AS paras 8, 23)",
-      "back": "1 rule: borrowing costs not directly attributable to qualifying assets are expensed; costs after completion or before commencement are recognised as expense (AS paras 8, 23)."
+      "front": "What borrowing costs are not capitalised and must be expensed?",
+      "back": "Borrowing costs not directly attributable to qualifying assets are expensed; costs after completion or before commencement are recognised as expense."
     },
     {
       "front": "Order the calculation steps when both specific and general borrowings finance a qualifying asset.",
       "back": "4 steps: 1) identify qualifying expenditures; 2) apply specific-borrowing actual cost (net investment income); 3) compute weighted average rate for general borrowings; 4) apply it to remaining expenditures."
     },
     {
-      "front": "How are funds temporarily invested treated when specific borrowings exist? (AS para 18)",
-      "back": "1 rule: income from temporary investment of specifically borrowed funds is deducted from borrowing costs eligible for capitalisation (AS para 18)."
+      "front": "How are funds temporarily invested treated when specific borrowings exist?",
+      "back": "Income from temporary investment of specifically borrowed funds is deducted from borrowing costs eligible for capitalisation."
     },
     {
-      "front": "What minimum disclosures does AS 16 require about borrowing costs? (AS para 26)",
-      "back": "3 disclosures: amount of borrowing costs capitalised during period; capitalization rate used for general borrowings; amount of borrowing costs recognised as expense and accounting policy (AS para 26)."
+      "front": "What minimum disclosures does AS 16 require about borrowing costs?",
+      "back": "3 disclosures: amount of borrowing costs capitalised during period; capitalization rate used for general borrowings; amount of borrowing costs recognised as expense and accounting policy."
+    },
+    {
+      "front": "Exchange difference on a foreign currency loan — how much is 'borrowing cost'?",
+      "back": "Only up to the difference between interest on an equivalent LOCAL currency borrowing and the interest on the foreign currency borrowing. Any exchange loss beyond that is an AS 11 exchange difference."
     }
   ],
   "AS 15 — Employee Benefits": [
@@ -869,8 +1053,8 @@
       "back": "Past service cost: recognise immediately when benefits vest; if benefits vest in future, spread past service cost over the vesting period (AS 15)."
     },
     {
-      "front": "When must termination benefits be recognised under AS 15?",
-      "back": "Recognition trigger: recognise when entity is demonstrably committed — formal plan communicated and no realistic alternative — or when an irrevocable offer for voluntary termination is accepted (AS 15)."
+      "front": "Termination benefits under AS 15 — when recognised?",
+      "back": "As a liability and expense when, and only when: there is a present obligation from a past event, an outflow is probable, and a reliable estimate can be made. ('Demonstrably committed' is the IAS 19 wording.)"
     },
     {
       "front": "How much of a plan surplus can an employer recognise as an asset under AS 15?",
@@ -886,29 +1070,37 @@
     },
     {
       "front": "What is the formula (order of components) for net defined benefit cost in the profit and loss?",
-      "back": "Formula: Net defined benefit cost = current service cost + past service cost + interest cost − expected return on plan assets + actuarial gains/(losses) ± settlements; recognise in profit or loss (AS 15)."
+      "back": "Net defined benefit cost = current service cost + past service cost + interest cost − expected return on plan assets + actuarial gains/(losses) ± settlements; recognise in profit or loss (AS 15)."
+    },
+    {
+      "front": "Defined contribution vs defined benefit — who carries the risk?",
+      "back": "Contribution plan: employee bears actuarial and investment risk; employer's duty ends with the contribution. Benefit plan: employer bears both. A provident fund with a guaranteed return is a defined BENEFIT plan."
+    },
+    {
+      "front": "Other long-term employee benefits (long-service leave, jubilee awards)?",
+      "back": "Measured like defined benefit plans, but simpler: actuarial gains and losses AND past service cost are both recognised immediately."
     }
   ],
   "AS 17 — Segment Reporting": [
     {
-      "front": "Under AS 17, which two segment types must be presented and which one is primary for reporting?",
-      "back": "2: Primary = business (industry) segments; Secondary = geographical segments. Primary (business) is the primary reporting format unless management shows geography is more relevant."
+      "front": "Primary and secondary segment formats — what decides?",
+      "back": "The dominant source and nature of RISKS AND RETURNS. Mainly products and services: business segments primary, geographical secondary — and vice versa. Internal organisation and reporting is normally the guide."
     },
     {
-      "front": "What is the 10% quantitative test for a reportable segment?",
-      "back": "10%: A segment is reportable if its revenue, or its assets, or its result (absolute value) is ≥10% of the combined totals of all segments."
+      "front": "The 10% tests for a reportable segment?",
+      "back": "Any ONE: revenue (external + inter-segment) ≥ 10% of total segment revenue; OR result ≥ 10% of the combined result of all segments in profit or all segments in loss, whichever is GREATER in absolute amount; OR assets ≥ 10% of total segment assets."
     },
     {
-      "front": "How is 'segment revenue' measured when applying the 10% revenue test?",
-      "back": "Rule: Include both external revenue to third parties and inter-segment revenue (i.e., total revenue as reported to the chief operating decision maker)."
+      "front": "Segment revenue — what is included and excluded?",
+      "back": "Includes sales to external customers and inter-segment sales, directly attributable or reasonably allocable. Excludes extraordinary items, interest and dividend income (unless a financial segment), and gains on sale of investments."
     },
     {
       "front": "What must you do if reportable segments' combined external revenue is less than 75% of the entity's external revenue?",
       "back": "75%: Add additional segments (by descending revenue) until combined external revenue of reportable segments ≥75% of entity's external revenue."
     },
     {
-      "front": "When are segment liabilities required to be disclosed under AS 17?",
-      "back": "Only when regularly reported to the chief operating decision maker: disclose segment liabilities; if not provided to CODM, liabilities need not be disclosed by segment."
+      "front": "Disclosures for each PRIMARY reportable segment?",
+      "back": "Revenue (external and inter-segment separately), result, carrying amount of assets, LIABILITIES, capital expenditure, depreciation and amortisation, other significant non-cash expenses. Segment liabilities are mandatory under AS 17."
     },
     {
       "front": "What reconciliations are mandatory between segment totals and entity financials?",
@@ -919,76 +1111,84 @@
       "back": "Disclose: basis/factors used to identify segments (products, geography, regulation, customers), and measurement policies and bases for allocating revenue, expenses, assets, depreciation and inter-segment pricing."
     },
     {
-      "front": "How is 'segment result' treated for the 10% result threshold when there are losses?",
-      "back": "Use absolute values: compare the absolute magnitudes of segment profits and losses; a loss counts by its absolute value toward the 10% result test."
+      "front": "Segment result test when some segments are in loss?",
+      "back": "Add up the profits of all segments in profit; add up the losses of all segments in loss. Take the LARGER total (absolute). A segment is reportable if its own profit or loss is 10% or more of that figure."
     },
     {
-      "front": "What must be disclosed about inter-segment transactions in segment reporting?",
-      "back": "Disclose: amount of inter-segment revenue and the basis/pricing of inter-segment transactions as used in segment information provided to CODM."
+      "front": "Inter-segment transfers — measurement and disclosure?",
+      "back": "Measured on the basis the enterprise actually used to price them. Disclose that basis and any change in it."
     },
     {
-      "front": "Which economic/operating factors are typically used to define reportable segments (exam trap)?",
-      "back": "Factors: products/services, production processes, customers, distribution methods, regulatory environment and similar economic characteristics; the management (internal) approach governs segment identification."
+      "front": "AS 17 approach vs Ind AS 108 — the exam trap?",
+      "back": "AS 17 identifies segments by RISKS AND RETURNS. The 'management approach' and 'chief operating decision maker' belong to Ind AS 108 — do not use them in an AS answer."
+    },
+    {
+      "front": "Segment expense — what is excluded?",
+      "back": "Extraordinary items, interest expense (unless a financial segment), losses on sale of investments, income tax, and general administrative and head-office expenses that relate to the enterprise as a whole."
+    },
+    {
+      "front": "A segment was reportable last year but falls below 10% this year?",
+      "back": "Keep reporting it if management judges it to be of continuing significance. A segment reportable for the first time: restate prior-period comparatives unless impracticable."
     }
   ],
   "AS 18 — Related Party Disclosures": [
     {
-      "front": "List the main categories of related parties that must be disclosed under AS 18.",
-      "back": "1. Parent, subsidiaries, associates, joint ventures, enterprises under common control; 2. Key Management Personnel and their relatives; 3. Post‑employment benefit plans of the enterprise or related parties. (AS 18 definition)"
+      "front": "The five categories of related parties under AS 18?",
+      "back": "(a) Enterprises that control, are controlled by, or are under common control with the reporting enterprise. (b) Associates and joint ventures. (c) Individuals with control or significant influence, and their relatives. (d) Key management personnel and their relatives. (e) Enterprises over which (c) or (d) have significant influence."
     },
     {
-      "front": "How does AS 18 define 'significant influence' you must recognise for related‑party status?",
-      "back": "1. Power to participate in financial and operating policy decisions, but not control or joint control. Presence of board representation, material transactions or technical dependency indicates significant influence. (AS 18)"
+      "front": "'Control' and 'significant influence' in AS 18?",
+      "back": "Control: more than one-half of voting power, OR control of the board's composition, OR a substantial interest (20% or more) plus power to direct financial/operating policies. Significant influence: participation in those policy decisions without control — presumed at 20% or more of voting power."
     },
     {
-      "front": "Who are 'Key Management Personnel' (KMP) under AS 18 — what must you remember?",
-      "back": "1. Persons with authority/responsibility for planning, directing and controlling the enterprise (directors, CEO, CFO, other senior executives). Disclose KMP and their close family relationships. (AS 18)"
+      "front": "Key management personnel and 'relative' under AS 18?",
+      "back": "KMP: those with authority and responsibility for planning, directing and controlling the activities (MD, whole-time directors). A non-executive director is not KMP merely by being a director. Relative: spouse, son, daughter, brother, sister, father, mother."
     },
     {
       "front": "What minimum items AS 18 requires for every related‑party transaction disclosure?",
-      "back": "1. Nature of relationship, amount of transactions, outstanding balances (including commitments), terms (price, security, interest), provisions for doubtful debts, and amounts written off/forgiven. (AS 18 disclosure requirements)"
+      "back": "Nature of relationship, amount of transactions, outstanding balances (including commitments), terms (price, security, interest), provisions for doubtful debts, and amounts written off/forgiven. (AS 18 disclosure requirements)"
     },
     {
       "front": "Should related‑party disclosures be aggregated by class or shown per individual party under AS 18?",
-      "back": "1. Disclose amounts aggregated by class of related party (e.g., subsidiaries, associates, KMP); name individual related parties only when necessary for understanding or when transactions are material. (AS 18)"
+      "back": "Disclose amounts aggregated by class of related party (e.g., subsidiaries, associates, KMP); name individual related parties only when necessary for understanding or when transactions are material. (AS 18)"
     },
     {
-      "front": "Do arm’s‑length transactions with related parties require disclosure under AS 18?",
-      "back": "1. Yes. All related‑party transactions must be disclosed irrespective of whether conducted at arm’s length. Also state whether transactions were at arm’s length. (AS 18)"
+      "front": "No price was charged for the transaction — still disclosable?",
+      "back": "Yes. A related party transaction is a transfer of resources or obligations REGARDLESS of whether a price is charged. AS 18 does not ask you to certify arm's length."
     },
     {
-      "front": "What specific details must be disclosed about loans, advances, guarantees to related parties?",
-      "back": "1. Outstanding balances, terms and conditions (interest rate, security), repayment schedule, and any provisions against such balances. Also disclose guarantees and commitments. (AS 18)"
+      "front": "Where control exists but there were no transactions?",
+      "back": "Still disclose the NAME of the related party and the NATURE of the relationship. Control relationships are disclosed irrespective of transactions."
     },
     {
-      "front": "How must outstanding receivables/payables with related parties be shown and treated in disclosures?",
-      "back": "1. Show gross outstanding balances, any provision for doubtful debts, and amounts written off/forgiven during the period. Explain terms and security. (AS 18)"
+      "front": "Who is deemed NOT to be a related party?",
+      "back": "Two companies merely having a common director; a single customer, supplier, franchiser, distributor or agent on whom the business depends economically; providers of finance, trade unions, public utilities and government departments in normal dealings."
     },
     {
       "front": "How must remuneration to Key Management Personnel be disclosed under AS 18?",
-      "back": "1. Aggregate amount of remuneration to KMP must be disclosed (not necessarily per individual), and the relationship of close family members where relevant. (AS 18)"
+      "back": "Aggregate amount of remuneration to KMP must be disclosed (not necessarily per individual), and the relationship of close family members where relevant. (AS 18)"
     },
     {
-      "front": "When must the name of a related party be disclosed separately rather than only a class aggregate?",
-      "back": "1. When disclosure of the name is necessary for understanding, or when transactions with that party are material — then give the party’s name and nature of relationship. (AS 18)"
+      "front": "Exemptions from AS 18 disclosure?",
+      "back": "Intra-group transactions in CONSOLIDATED statements; transactions between state-controlled enterprises; and where disclosure would conflict with a duty of confidentiality under statute or a regulator (e.g. banks)."
     },
     {
-      "front": "Does AS 18 require disclosure of commitments and contingent liabilities with related parties?",
-      "back": "1. Yes. Disclose commitments and contingent liabilities involving related parties, including guarantees and other irrevocable obligations. (AS 18)"
+      "front": "'Substantial interest' under AS 18?",
+      "back": "An individual or enterprise holding 20% or more of the voting power, directly or indirectly."
     },
     {
-      "front": "What is the single most common omission (exam trap) in AS 18 disclosures you must avoid?",
-      "back": "1. Omitting provisions/write‑offs for related‑party receivables and failing to state terms (interest/security). Always show outstanding balances plus provisions and state terms. (AS 18)"
+      "front": "Remuneration paid to a whole-time director — is that a related party transaction?",
+      "back": "Yes — he is key management personnel, so the remuneration is disclosed. Sitting fees to a non-executive director are not (he is not KMP)."
     }
   ],
   "AS 19 — Leases": [
     {
-      "front": "List the AS 19 indicators that classify a lease as a finance lease.",
-      "back": "4 indicators: transfer of ownership; bargain purchase option; lease term is a 'major part' of economic life; PV of minimum lease payments is 'substantially all' of fair value. (AS 19)."
+      "front": "Indicators of a finance lease (AS 19)?",
+      "back": "Ownership transfers at the end; bargain purchase option; lease term covers the major part of economic life; PV of minimum lease payments is substantially all of fair value; asset is so specialised that only the lessee can use it without major modification."
     },
     {
-      "front": "How does a lessee initially measure an asset under a finance lease?",
-      "back": "Lower of 2 amounts: fair value of asset and present value of minimum lease payments (contingent rentals excluded); recognise asset and corresponding liability. (AS 19)."
+      "front": "Finance lease in the lessee's books — amount and discount rate?",
+      "back": "Asset and liability at the LOWER of fair value and PV of minimum lease payments (lessee's view). Discount at the rate implicit in the lease if practicable to determine; otherwise the lessee's incremental borrowing rate."
     },
     {
       "front": "Over what period should a lessee depreciate a finance‑leased asset?",
@@ -1015,20 +1215,32 @@
       "back": "Lease term = non‑cancellable period plus renewal periods reasonably certain to be exercised and periods covered by termination options reasonably certain not to be exercised. (AS 19)."
     },
     {
-      "front": "Define lessor's gross investment and net investment in a finance lease.",
-      "back": "Gross investment = sum of minimum lease payments plus unguaranteed residual; Net investment = present value of gross investment discounted at lessor's implicit rate. (AS 19)."
+      "front": "Gross investment, net investment and unearned finance income?",
+      "back": "Gross investment = minimum lease payments (lessor's view) + unguaranteed residual value. Net investment = gross investment − unearned finance income (i.e. its present value at the implicit rate)."
     },
     {
-      "front": "How should a lessor treat unguaranteed residual values in a finance lease?",
-      "back": "Include estimated unguaranteed residual in gross investment; recognise only amounts reasonably certain to be recovered in net investment and income allocation. (AS 19)."
+      "front": "Estimated unguaranteed residual value falls during the lease?",
+      "back": "Review regularly. Revise the income allocation over the remaining term, and recognise IMMEDIATELY any reduction in respect of amounts already accrued."
     },
     {
       "front": "What minimum future‑payments disclosures are required under AS 19?",
       "back": "Disclose aggregate future minimum lease payments under non‑cancellable operating leases by <1 year, 1–5 years, and >5 years, and present value of minimum lease payments for finance leases. (AS 19)."
     },
     {
-      "front": "How is a sale‑and‑leaseback resulting in a finance lease accounted by the seller‑lessee?",
-      "back": "Defer any profit on the sale and amortise it over the lease term; recognise any loss immediately. (AS 19)."
+      "front": "Sale and leaseback resulting in a FINANCE lease?",
+      "back": "Any excess OR deficiency of sale proceeds over carrying amount is deferred and amortised over the lease term in proportion to depreciation of the leased asset. Nothing is taken to P&L at once."
+    },
+    {
+      "front": "Sale and leaseback resulting in an OPERATING lease?",
+      "back": "Sale at fair value: profit/loss immediately. Below fair value: immediately — unless the loss is compensated by below-market future rentals, then defer. Above fair value: defer the excess over fair value. If fair value is below carrying amount, that loss is recognised at once."
+    },
+    {
+      "front": "Manufacturer or dealer lessor — finance lease?",
+      "back": "Recognise selling profit as for an outright sale. If an artificially low interest rate is quoted, restrict profit to what a commercial rate would give. Initial direct costs: expense at the inception of the lease."
+    },
+    {
+      "front": "What is outside AS 19?",
+      "back": "Leases to explore for or use natural resources (oil, gas, timber, minerals); licensing agreements for films, plays, manuscripts, patents, copyrights; and lease agreements to use LAND."
     }
   ],
   "AS 20 — Earnings per Share": [
@@ -1061,46 +1273,58 @@
       "back": "Exclude potential ordinary shares that are anti‑dilutive — those that would increase basic EPS (for profit) or reduce loss per share (for loss). Only include instruments that reduce EPS. (AS 20)."
     },
     {
-      "front": "What EPS disclosures must appear on the face of the profit and loss account?",
-      "back": "Disclose Basic and Diluted EPS for continuing operations, discontinued operations and total net profit; provide reconciliation of numerators and denominators used. (AS 20)."
+      "front": "Presentation and disclosure of EPS under AS 20?",
+      "back": "Basic AND diluted EPS on the face of the P&L for each class of equity, with equal prominence — even if negative. Also EPS excluding extraordinary items. Disclose the numerators with a reconciliation to net profit, weighted average shares, and nominal value per share."
     },
     {
-      "front": "How are a company’s own (treasury/held) shares treated in EPS calculations?",
-      "back": "Exclude treasury/own shares from shares outstanding for both basic and diluted EPS. If reissued, include pro rata from reissue date. (AS 20)."
+      "front": "Rights issue with a bonus element — the adjustment?",
+      "back": "Theoretical ex-rights price = (fair value of all shares before rights + rights proceeds) ÷ shares after rights. Factor = fair value per share before rights ÷ theoretical ex-rights price. Multiply the pre-rights shares (and prior years') by the factor."
     },
     {
       "front": "What is the correct order of steps and a common exam mistake when computing diluted EPS?",
-      "back": "Rule: compute Basic EPS first; then adjust numerator (after‑tax interest/dividends) and denominator for conversions; lastly apply treasury method for options. Common error: omitting tax effect on interest. (AS 20)."
+      "back": "Compute Basic EPS first; then adjust numerator (after‑tax interest/dividends) and denominator for conversions; lastly apply treasury method for options. Common error: omitting tax effect on interest. (AS 20)."
     },
     {
       "front": "How should cumulative versus non‑cumulative preference dividends be treated for Basic EPS?",
       "back": "Deduct cumulative preference dividends from profit attributable to equity shareholders whether paid or not; deduct non‑cumulative preference dividends only if declared/paid in the period. (AS 20)."
+    },
+    {
+      "front": "Partly paid shares in the weighted average?",
+      "back": "Counted as a FRACTION of a share, to the extent they are entitled to participate in dividend relative to a fully paid share."
+    },
+    {
+      "front": "Share application money pending allotment — basic or diluted?",
+      "back": "Not in basic EPS. If it is not statutorily required to be kept separately and is being used in the business, treat it as dilutive POTENTIAL equity shares for diluted EPS."
+    },
+    {
+      "front": "Several potential equity instruments — in what order are they tested?",
+      "back": "From MOST dilutive to least dilutive (lowest earnings per incremental share first). Include one only if it lowers EPS from continuing ordinary operations; stop when the next would raise it."
     }
   ],
   "AS 24 — Discontinuing Operations": [
     {
-      "front": "Under AS 24, when does an operation qualify as a 'discontinuing operation' (point the trigger conditions)?",
-      "back": "When: the component is disposed of, classified as held for sale, or abandoned as part of a single coordinated plan; it must be distinguishable operationally/financially (AS 24)."
+      "front": "What is a discontinuing operation (AS 24)?",
+      "back": "A component that, under a SINGLE PLAN, is being disposed of substantially in its entirety, disposed of piecemeal, or terminated through abandonment — AND is a separate major line of business or geographical area — AND is distinguishable operationally and for financial reporting."
     },
     {
-      "front": "How are assets of a discontinuing operation classified as 'held for sale' measured under AS 24?",
-      "back": "Lower of: carrying amount and net realisable value; recognise any loss immediately. Depreciation ceases once classified as held for sale (AS 24)."
+      "front": "How are the assets of a discontinuing operation measured?",
+      "back": "AS 24 has NO measurement rules — it is a presentation and disclosure standard. Apply the other standards: AS 28 for impairment, AS 29 for provisions, AS 10, AS 15. ('Held for sale at lower of carrying amount and fair value less costs' is Ind AS 105.)"
     },
     {
-      "front": "What is the time limit for expected disposal to classify assets as 'held for sale' under AS 24?",
-      "back": "12 months: expected disposal should occur within 12 months to classify as held for sale (AS 24)."
+      "front": "Initial disclosure event — what triggers the disclosures?",
+      "back": "The EARLIER of: a binding sale agreement for substantially all the assets of the operation; or the Board approving a detailed formal plan AND announcing it."
     },
     {
-      "front": "How must the profit or loss of discontinued operations be shown in the statement of profit and loss (AS 24)?",
-      "back": "As: a single amount, net of tax, presented separately below results of continuing operations; comparative periods must be restated (AS 24)."
+      "front": "What goes on the FACE of the P&L for a discontinuing operation?",
+      "back": "Pre-tax profit or loss from its ordinary activities and the related tax expense; and the pre-tax gain or loss on disposal of its assets or settlement of its liabilities. Not a single net-of-tax line."
     },
     {
-      "front": "What items comprise the 'profit or loss of discontinued operations' under AS 24?",
-      "back": "Include: pre‑tax profit/loss of the operation, gain/loss on measurement or disposal, related tax expense and attributable minority interest (AS 24)."
+      "front": "What goes in the NOTES?",
+      "back": "Description of the operation, its segment, date and nature of the initial disclosure event, expected completion; carrying amounts of total assets to be disposed of and liabilities to be settled; its revenue and expenses; net cash flows by operating, investing, financing."
     },
     {
-      "front": "How must assets and liabilities of a discontinuing operation be presented on the balance sheet (AS 24)?",
-      "back": "Shown: separately from continuing operations; assets held for sale presented as current assets and related liabilities disclosed separately (AS 24)."
+      "front": "What is NOT a discontinuing operation?",
+      "back": "Gradual phasing out of a product line; discontinuing several products within an ongoing line; shifting production or marketing to another location; closing a facility to save costs; selling a subsidiary whose activities are similar to the parent's."
     },
     {
       "front": "What principal disclosures about the nature and timing of disposal does AS 24 require?",
@@ -1111,18 +1335,18 @@
       "back": "Separate disclosure: net cash flows from operating, investing and financing activities attributable to the discontinued operation (AS 24)."
     },
     {
-      "front": "When is a loss on abandonment of an operation recognised under AS 24?",
-      "back": "Recognise: loss in the period of abandonment and present it within discontinued operations' results (AS 24)."
+      "front": "The plan is later withdrawn, or continues into next year?",
+      "back": "Withdrawn: disclose that fact and its effect. Continuing: update the disclosures every period up to and including the period in which the discontinuance is completed. Comparatives are restated to segregate the operation."
     }
   ],
   "AS 25 — Interim Financial Reporting": [
     {
       "front": "What is the primary objective of AS 25 interim reporting that you must state in one line in the exam?",
-      "back": "1 objective: Provide a timely update on material events and changes since the last annual financial statements so users can make economic decisions (objective of AS 25)."
+      "back": "Provide a timely update on material events and changes since the last annual financial statements so users can make economic decisions (objective of AS 25)."
     },
     {
-      "front": "What are the minimum components you must show in a condensed interim financial report?",
-      "back": "5 items: condensed balance sheet; condensed statement of profit & loss; condensed statement of changes in equity; condensed cash flow statement (if published); notes containing significant events and explanations (minimum content rule)."
+      "front": "Minimum components of an interim financial report (AS 25)?",
+      "back": "Condensed balance sheet, condensed statement of profit and loss, condensed cash flow statement, and selected explanatory notes. (There is no statement of changes in equity under AS.)"
     },
     {
       "front": "Which two dates must the condensed balance sheet compare?",
@@ -1134,43 +1358,47 @@
     },
     {
       "front": "What accounting-policy rule applies to interim financial statements?",
-      "back": "1 rule: Use the same accounting policies as the most recent annual financial statements; disclose any change and its effect on the current interim and year-to-date amounts (consistency requirement)."
+      "back": "Use the same accounting policies as the most recent annual financial statements; disclose any change and its effect on the current interim and year-to-date amounts (consistency requirement)."
     },
     {
       "front": "How must income tax expense be determined for interim periods?",
-      "back": "1 method: Apply an estimated average annual effective tax rate to the year-to-date pre-tax profit or loss, allocating tax to the interim period (tax allocation rule for interim reporting)."
+      "back": "Apply an estimated average annual effective tax rate to the year-to-date pre-tax profit or loss, allocating tax to the interim period (tax allocation rule for interim reporting)."
     },
     {
-      "front": "When should an interim dividend be recognised in interim financial statements?",
-      "back": "1 rule: Recognise an interim dividend as a liability when it is declared; disclose the amount and basis of declaration (interim dividend recognition)."
+      "front": "Seasonal revenue and uneven costs at an interim date?",
+      "back": "Do NOT anticipate or defer them at the interim date unless that would also be appropriate at the year-end. Test: would it be recognised if this were the annual balance sheet date?"
     },
     {
       "front": "How must material non‑recurring or unusual items be presented in interim reports?",
-      "back": "1 rule: Disclose nature and amount of material non-recurring or unusual items separately for the interim and year-to-date periods (separate disclosure requirement)."
+      "back": "Disclose nature and amount of material non-recurring or unusual items separately for the interim and year-to-date periods (separate disclosure requirement)."
     },
     {
-      "front": "How are changes in accounting estimates or corrections of errors handled in interim statements?",
-      "back": "1 rule: Apply changes prospectively for the interim period and future periods; disclose the nature and effect on current interim and year-to-date amounts (estimate/error disclosure)."
+      "front": "Change in accounting policy vs change in estimate during the year?",
+      "back": "Policy: restate the PRIOR INTERIM periods of the current financial year. Estimate: earlier interim figures are not restated; a significant change in the final interim period is disclosed in the annual statements."
     },
     {
-      "front": "How must discontinued operations be shown in interim financial statements?",
-      "back": "1 rule: Present results of discontinued operations separately and disclose their post-tax profit or loss for the interim and comparative periods (separate presentation requirement)."
+      "front": "How is materiality judged in an interim report?",
+      "back": "In relation to the INTERIM period's financial data — not the forecast annual figures. Interim measurements may rely more on estimates."
     },
     {
       "front": "When must a condensed cash flow statement be included in an interim report?",
-      "back": "1 condition: Include a condensed cash flow statement year-to-date if the entity presents a cash flow statement in its annual financial statements; otherwise it may be omitted (cash-flow inclusion rule)."
+      "back": "Include a condensed cash flow statement year-to-date if the entity presents a cash flow statement in its annual financial statements; otherwise it may be omitted (cash-flow inclusion rule)."
     },
     {
       "front": "What interim disclosures about seasonal or cyclical operations are mandatory?",
-      "back": "1 disclosure: Describe the nature and financial effect of seasonal or cyclical variations that materially affect interim results (seasonality disclosure requirement)."
+      "back": "Describe the nature and financial effect of seasonal or cyclical variations that materially affect interim results (seasonality disclosure requirement)."
     },
     {
       "front": "What must be disclosed about events occurring after the interim period end?",
-      "back": "1 rule: Disclose material events after the interim period end that could affect users’ decisions, explaining their nature and estimated financial effect (post‑period events disclosure)."
+      "back": "Disclose material events after the interim period end that could affect users’ decisions, explaining their nature and estimated financial effect (post‑period events disclosure)."
     },
     {
-      "front": "How should comparative information be presented when only a single interim period is presented?",
-      "back": "1 requirement: Even when presenting a single interim period, provide year-to-date amounts and corresponding comparatives for the prior year’s interim and year-to-date periods (comparative completeness rule)."
+      "front": "Does frequency of reporting change the annual result?",
+      "back": "No. Interim measurement is on a YEAR-TO-DATE basis, so quarterly or half-yearly reporting must give the same annual figures. Same accounting policies as the annual statements."
+    },
+    {
+      "front": "Year-end bonus, and inventories, at an interim date?",
+      "back": "Bonus: anticipate only if there is a legal or constructive obligation and a reliable estimate. Inventories: same principles as year-end; write down to NRV at the interim date. Basic and diluted EPS go on the face of the interim P&L."
     }
   ],
   "AS 22 — Accounting for Taxes on Income": [
@@ -1187,16 +1415,16 @@
       "back": "All taxable timing differences: recognise deferred tax liabilities in full. (AS 22)"
     },
     {
-      "front": "When can deferred tax assets be recognised — especially for carry forward losses and unabsorbed depreciation?",
-      "back": "Deferred tax assets: recognise to extent of reasonable probability of future taxable profits; unabsorbed depreciation/carry forward losses require virtual certainty supported by convincing evidence. (AS 22)"
+      "front": "Recognising deferred tax ASSETS — the prudence tests?",
+      "back": "Normally: REASONABLE CERTAINTY of sufficient future taxable income. Where there is unabsorbed depreciation or carried-forward tax losses: VIRTUAL CERTAINTY supported by convincing evidence (e.g. firm orders in hand)."
     },
     {
       "front": "Is deferred tax recognised on a revaluation surplus of fixed assets?",
       "back": "Revaluation surplus: no deferred tax is recognised on revaluation surplus of fixed assets until realised. (AS 22)"
     },
     {
-      "front": "Which tax rates/laws are used to measure deferred tax and where is the effect of a rate change recorded?",
-      "back": "Use tax rates and laws enacted at balance-sheet date; adjust DTA/DTL for rate changes in the same period — charge to profit or loss or to equity consistent with where deferred tax was originally recognised. (AS 22)"
+      "front": "Tax rate changes — which rate, and where does the effect go?",
+      "back": "Measure at rates and laws enacted or substantively enacted by the balance sheet date. The effect of a change is taken to the PROFIT AND LOSS of that year."
     },
     {
       "front": "When may you offset deferred tax assets and liabilities in the balance sheet?",
@@ -1211,16 +1439,24 @@
       "back": "Recognise deferred tax in the same period the timing differences originate; reverse deferred tax when the timing difference reverses. (AS 22)"
     },
     {
-      "front": "Give exam-style examples of timing differences and a common permanent difference.",
-      "back": "Timing differences: depreciation, provisions, unrealised inter‑company profits. Permanent difference example: tax‑exempt income — no deferred tax recognised. (AS 22)"
+      "front": "Timing vs permanent differences — exam examples?",
+      "back": "Timing: depreciation (book vs tax), section 43B items allowed on payment, provision for doubtful debts, preliminary expenses. Permanent: penalties and donations disallowed, exempt income — no deferred tax."
     },
     {
       "front": "What minimum disclosures does AS 22 require in the financial statements?",
       "back": "Disclose components of tax expense, current tax payable, movements in DTA/DTL, and reasons for unrecognised deferred tax assets. (AS 22)"
     },
     {
-      "front": "How are changes in accounting policy treated for deferred tax under AS 22 and AS 5?",
-      "back": "Change in accounting policy: follow AS 5; do not restate prior periods (AS 5); recognise deferred tax consequences in the period as required by AS 22. (AS 5 and AS 22)"
+      "front": "Tax holiday (sections 80-IA, 10AA) and deferred tax?",
+      "back": "Timing differences that reverse DURING the holiday: no deferred tax. Those that reverse AFTER it: recognise in the year they originate. Assume those that originate first reverse first."
+    },
+    {
+      "front": "MAT and MAT credit under AS 22?",
+      "back": "MAT paid is CURRENT tax. MAT credit is not a deferred tax asset: recognise 'MAT credit entitlement' as an asset only on convincing evidence that normal tax will be payable within the set-off period."
+    },
+    {
+      "front": "Deferred tax assets at each balance sheet date?",
+      "back": "Review the carrying amount: write down if realisation is no longer reasonably/virtually certain; reverse the write-down if it becomes so. Reassess unrecognised deferred tax assets too."
     }
   ],
   "AS 26 — Intangible Assets": [
@@ -1230,53 +1466,65 @@
     },
     {
       "front": "What items are included in the initial cost of an intangible asset?",
-      "back": "Cost rule: purchase price plus directly attributable expenditures to bring the asset to use (e.g., legal fees, testing). Subsequent general overheads excluded unless directly attributable (AS 26 measurement on initial recognition)."
+      "back": "Purchase price plus directly attributable expenditures to bring the asset to use (e.g., legal fees, testing). Subsequent general overheads excluded unless directly attributable (AS 26 measurement on initial recognition)."
     },
     {
       "front": "How are internally generated Intangibles treated — research vs development?",
-      "back": "1 rule: research costs expensed; development costs capitalised only if 6 criteria are satisfied (technical feasibility, intention, ability to use/sell, probable future benefits, resources available, reliable measurement) (AS 26)."
+      "back": "Research costs expensed; development costs capitalised only if 6 criteria are satisfied (technical feasibility, intention, ability to use/sell, probable future benefits, resources available, reliable measurement) (AS 26)."
     },
     {
       "front": "When does amortisation of an intangible asset begin and what is the usual residual value assumption?",
-      "back": "Time rule: amortisation begins when the asset is available for use. Residual value is normally zero unless a contractual commitment or market exists to recover it (AS 26 amortisation start and residual value)."
+      "back": "Amortisation begins when the asset is available for use. Residual value is normally zero unless a contractual commitment or market exists to recover it (AS 26 amortisation start and residual value)."
     },
     {
       "front": "How often must useful life and amortisation method be reviewed and how are changes accounted?",
-      "back": "1 frequency: review useful life and amortisation method at least annually; changes prospectively as a change in accounting estimate (AS 26 review and adjustment rule)."
+      "back": "Review useful life and amortisation method at least annually; changes prospectively as a change in accounting estimate (AS 26 review and adjustment rule)."
     },
     {
-      "front": "What is the treatment for an intangible asset with an indefinite useful life?",
-      "back": "1 rule: do not amortise; test for impairment annually and whenever indicators exist. If life is later determined finite, start amortising prospectively (AS 26 indefinite-life rule)."
+      "front": "Useful life of an intangible asset under AS 26?",
+      "back": "Rebuttable presumption: not more than TEN years from when it is available for use. Every intangible is amortised — there is no 'indefinite life, no amortisation' under AS. If amortised over more than 10 years: disclose why, and test for impairment every year."
     },
     {
-      "front": "When is revaluation of an intangible asset permitted and how are increases/decreases recognised?",
-      "back": "1 condition: revaluation permitted only if an active market exists. Increase to revaluation reserve (except reversal of prior P&L charge recognised in P&L); decreases charged to P&L unless covered by existing revaluation reserve (AS 26 revaluation rules)."
+      "front": "Can an intangible asset be revalued under AS 26?",
+      "back": "No. Cost less accumulated amortisation and impairment only. The revaluation model for intangibles is Ind AS 38."
     },
     {
       "front": "When can subsequent expenditure on an existing intangible be capitalised?",
-      "back": "1 rule: capitalise only if it meets recognition criteria and increases future economic benefits; otherwise expense. Routine maintenance and day-to-day servicing are expensed (AS 26 subsequent expenditure)."
+      "back": "Capitalise only if it meets recognition criteria and increases future economic benefits; otherwise expense. Routine maintenance and day-to-day servicing are expensed (AS 26 subsequent expenditure)."
     },
     {
       "front": "How is an intangible asset acquired in exchange measured when the exchange has no commercial substance?",
-      "back": "1 rule: if exchange lacks commercial substance and fair value not reliably measurable, measure acquired asset at carrying amount of asset given up; otherwise use fair value (AS 26 exchange provision)."
+      "back": "If exchange lacks commercial substance and fair value not reliably measurable, measure acquired asset at carrying amount of asset given up; otherwise use fair value (AS 26 exchange provision)."
     },
     {
       "front": "What is the accounting on derecognition (disposal) of an intangible asset?",
-      "back": "1 computation: recognise gain or loss in P&L equal to net disposal proceeds minus carrying amount on disposal or retirement (AS 26 derecognition rule)."
+      "back": "Recognise gain or loss in P&L equal to net disposal proceeds minus carrying amount on disposal or retirement (AS 26 derecognition rule)."
     },
     {
       "front": "What minimum disclosures AS 26 requires annually for each class of intangible assets?",
-      "back": "1 reconciliation: disclose opening carrying amount, additions, disposals, revaluations, amortisation, impairment losses, and closing carrying amount, plus amortisation methods, useful lives, and revaluation details (AS 26 disclosure requirements)."
+      "back": "Disclose opening carrying amount, additions, disposals, revaluations, amortisation, impairment losses, and closing carrying amount, plus amortisation methods, useful lives, and revaluation details (AS 26 disclosure requirements)."
+    },
+    {
+      "front": "What can NEVER be recognised as an intangible asset?",
+      "back": "Internally generated goodwill, brands, mastheads, publishing titles, customer lists. Expensed when incurred: research, start-up and preliminary costs, training, advertising, relocation."
+    },
+    {
+      "front": "Expenditure on an intangible item was expensed last year — can it be capitalised now?",
+      "back": "No. Expenditure initially recognised as an expense cannot be reinstated as part of the cost of an intangible asset later."
+    },
+    {
+      "front": "Amortisation method, and intangibles not yet in use?",
+      "back": "Method should reflect the pattern of benefits; if that cannot be determined reliably, STRAIGHT-LINE. An intangible not yet available for use is tested for impairment at least every year-end."
     }
   ],
   "AS 28 — Impairment of Assets": [
     {
       "front": "When is an asset treated as impaired under AS 28?",
-      "back": "1 condition: when carrying amount exceeds recoverable amount. Impairment loss = carrying amount − recoverable amount (AS 28)."
+      "back": "When carrying amount exceeds recoverable amount. Impairment loss = carrying amount − recoverable amount (AS 28)."
     },
     {
-      "front": "Which two amounts determine an asset’s recoverable amount?",
-      "back": "2 amounts: the higher of net selling price (fair value less costs of disposal) and value in use (present value of future cash flows) (AS 28)."
+      "front": "Recoverable amount under AS 28?",
+      "back": "The HIGHER of net selling price (arm's-length sale price less costs of disposal) and value in use (present value of future cash flows from use and eventual disposal)."
     },
     {
       "front": "What are the three required steps to estimate value in use?",
@@ -1284,27 +1532,27 @@
     },
     {
       "front": "Which discount rate is used to compute value in use?",
-      "back": "1 rate: a pre‑tax discount rate that reflects the time value of money and risks specific to the asset or CGU (AS 28)."
+      "back": "A pre‑tax discount rate that reflects the time value of money and risks specific to the asset or CGU (AS 28)."
     },
     {
       "front": "When must impairment be tested at cash‑generating unit (CGU) level rather than individually?",
-      "back": "1 rule: test at CGU where an asset does not generate largely independent cash inflows; CGU = smallest identifiable group generating largely independent inflows (AS 28)."
+      "back": "Test at CGU where an asset does not generate largely independent cash inflows; CGU = smallest identifiable group generating largely independent inflows (AS 28)."
     },
     {
       "front": "What is the order for allocating an impairment loss within a CGU?",
       "back": "2 steps: reduce allocated goodwill first; then allocate remaining loss pro‑rata to other assets of the CGU, without reducing any asset below its recoverable amount (AS 28)."
     },
     {
-      "front": "Which assets are excluded from AS 28 impairment testing?",
-      "back": "1 rule: AS 28 excludes assets covered by other standards — e.g., inventories, financial instruments, deferred tax assets, employee‑benefit assets, construction‑contract assets, biological assets, and investment property at fair value (AS 28)."
+      "front": "Which assets are outside AS 28?",
+      "back": "Inventories (AS 2), assets arising from construction contracts (AS 7), financial assets including investments (AS 13), and deferred tax assets (AS 22)."
     },
     {
-      "front": "When may an impairment loss be reversed and what is the limit?",
-      "back": "1 limit: reverse when impairment reasons no longer exist; recognise reversal in profit or loss (except revalued assets); reversal capped at the carrying amount that would have existed absent prior impairment (AS 28)."
+      "front": "Reversing an impairment loss — when, the cap, and goodwill?",
+      "back": "Only if the ESTIMATES used for recoverable amount have changed. Cap: the carrying amount (net of depreciation) had no loss been recognised. Goodwill: reversed only if the loss came from a specific external event of an exceptional nature and later external events reversed it."
     },
     {
       "front": "How is impairment of an asset carried at revalued amount treated?",
-      "back": "1 rule: impairment reduces revaluation surplus for that asset to the extent of any credit balance in revaluation reserve; any excess impairment recognised in profit or loss (AS 28)."
+      "back": "Impairment reduces revaluation surplus for that asset to the extent of any credit balance in revaluation reserve; any excess impairment recognised in profit or loss (AS 28)."
     },
     {
       "front": "Name four external indicators that an asset may be impaired.",
@@ -1316,7 +1564,15 @@
     },
     {
       "front": "What is the single most common calculation mistake students make on impairment of depreciable assets?",
-      "back": "1 common error: failing to revise future depreciation after recognising impairment. Correct: allocate impairment, then recalculate remaining depreciable amount and depreciate prospectively over revised remaining life (AS 28)."
+      "back": "Failing to revise future depreciation after recognising impairment. Correct: allocate impairment, then recalculate remaining depreciable amount and depreciate prospectively over revised remaining life (AS 28)."
+    },
+    {
+      "front": "Cash flow estimates for value in use — the rules?",
+      "back": "Based on reasonable assumptions and approved budgets, normally up to FIVE years. Exclude financing cash flows and income tax, and the effects of future restructuring not yet committed or future capital expenditure that enhances performance."
+    },
+    {
+      "front": "Goodwill and corporate assets in a CGU test?",
+      "back": "Bottom-up test: can it be allocated to the CGU on a reasonable basis? If yes, test that CGU including it. If not, also do a top-down test on the smallest larger CGU to which it can be allocated."
     }
   ],
   "AS 29 — Provisions, Contingent Liabilities and Contingent Assets": [
@@ -1333,24 +1589,24 @@
       "back": "Not recognised; disclose unless the possibility of outflow is remote. If obligation is only possible or outflow is not probable, treat as contingent liability and disclose. (AS 29)."
     },
     {
-      "front": "When should a contingent asset be recognised or disclosed under AS 29?",
-      "back": "Not recognised; disclose when inflow is probable. Recognise only when virtually certain. (AS 29)."
+      "front": "Contingent asset under AS 29 — recognise, disclose, or neither?",
+      "back": "Not recognised AND not disclosed in the financial statements. If an inflow is probable, it is usually mentioned in the Board's report. When realisation becomes VIRTUALLY CERTAIN it is no longer contingent — recognise it."
     },
     {
       "front": "How must the amount of a provision be measured under AS 29?",
       "back": "Best estimate of the outflow at the reporting date, reflecting risks and uncertainties; use expected value for large populations. (AS 29 measurement)."
     },
     {
-      "front": "When must provisions be discounted and which discount rate is used under AS 29?",
-      "back": "Discount if time value of money is material; use a pre‑tax rate that reflects current market rates and risks specific to the liability. (AS 29 measurement)."
+      "front": "Are provisions discounted to present value under AS 29?",
+      "back": "NO — except decommissioning, restoration and similar liabilities recognised as part of the cost of PPE, which are discounted at a pre-tax rate. General discounting is IAS 37 / Ind AS 37."
     },
     {
-      "front": "How are reimbursements (e.g., insurance recoveries) for a recognised provision accounted under AS 29?",
-      "back": "Recognise reimbursement asset only when virtually certain; record separately. Net presentation allowed only if lawful and entity intends to settle net. (AS 29)."
+      "front": "Expected reimbursement (insurance, indemnity) of a provision?",
+      "back": "Recognise only when VIRTUALLY CERTAIN, as a separate asset, not exceeding the provision. In the P&L the expense may be shown net of the reimbursement."
     },
     {
-      "front": "What are the AS 29 conditions for recognising a provision for restructuring?",
-      "back": "Recognise only when a detailed formal plan exists and affected parties have a valid expectation due to entity's actions; include only direct restructuring costs. Future operating losses excluded. (AS 29 restructuring rules)."
+      "front": "Restructuring provision under AS 29?",
+      "back": "Only when the ordinary recognition criteria are met — AS 29 does not recognise 'constructive obligations'. No obligation for a sale of an operation until there is a binding sale agreement. Include only direct costs, not ongoing activities."
     },
     {
       "front": "When must an onerous contract give rise to a provision and how is it measured?",
@@ -1367,6 +1623,14 @@
     {
       "front": "Fast exam rule to distinguish provision, liability and contingent liability under AS 29.",
       "back": "Provision = present obligation + probable outflow + reliable estimate (recognise). Liability = present and measurable. Contingent liability = possible obligation or improbable outflow → disclose, do not recognise. (AS 29)."
+    },
+    {
+      "front": "Probable, possible, remote — the three outcomes?",
+      "back": "Probable (more likely than not) + reliable estimate: PROVIDE. Possible, or probable but not measurable: DISCLOSE as contingent liability. Remote: nothing."
+    },
+    {
+      "front": "Measuring a provision — three things to remember?",
+      "back": "Best estimate, before tax. Ignore gains from the expected disposal of assets. A provision is used only for the expenditure it was created for; reverse it if an outflow is no longer probable."
     }
   ]
 }

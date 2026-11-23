@@ -9,8 +9,8 @@
       "back": "30 days — file INC‑22 notifying registered office; s.12 Companies Act, 2013."
     },
     {
-      "front": "Within how many days must a public company file commencement of business and which form/section applies?",
-      "back": "180 days — file INC‑20A declaration of commencement of business; s.10A Companies Act, 2013."
+      "front": "Declaration of commencement of business — who, when, which form?",
+      "back": "Every company having a share capital: a director files INC-20A within 180 days of incorporation, confirming subscribers have paid for their shares (s.10A). Until then it cannot commence business or borrow."
     },
     {
       "front": "What are the numeric thresholds that define a 'Small Company' under the Act?",
@@ -39,6 +39,26 @@
     {
       "front": "If a company has share capital, how many shares must each subscriber to the Memorandum take?",
       "back": "At least 1 share each — each subscriber must take and subscribe to the shares stated against their name in the Memorandum."
+    },
+    {
+      "front": "Doctrine of ultra vires — effect of an act beyond the objects clause?",
+      "back": "Void ab initio; cannot be ratified even by all shareholders (Ashbury Railway Carriage v. Riche). The company is not bound, and directors may be personally liable."
+    },
+    {
+      "front": "Constructive notice vs indoor management?",
+      "back": "Constructive notice: outsiders are deemed to know the MOA/AOA. Indoor management (Royal British Bank v. Turquand): they may assume internal procedure was followed. No protection for forgery, knowledge of irregularity, or suspicious circumstances."
+    },
+    {
+      "front": "Shifting the registered office — what approval is needed?",
+      "back": "Within the same city/town: Board resolution. Outside local limits, same State: special resolution. One ROC to another in the same State: + Regional Director's confirmation. State to State: SR + Central Government (RD) approval, alter MOA."
+    },
+    {
+      "front": "Section 8 company — the essentials?",
+      "back": "Formed for charity, science, art, sport, education, etc.; profits applied to objects; NO dividend to members. Licence from the Central Government; need not use 'Limited'. Can never be a small company."
+    },
+    {
+      "front": "Alteration of articles and entrenchment (s.14, s.5)?",
+      "back": "Articles altered by special resolution. Entrenchment makes specified provisions alterable only on stricter conditions — agreed by ALL members (private) or by special resolution (public)."
     }
   ],
   "Introduction — Preliminary Law": [
@@ -85,6 +105,18 @@
     {
       "front": "What is required of subscribers in the subscription clause of the Memorandum at incorporation?",
       "back": "Each subscriber must take at least one share; subscription clause is part of memorandum (s.4) and subscribers must sign and state number of shares taken."
+    },
+    {
+      "front": "Holding/subsidiary vs associate company?",
+      "back": "Subsidiary (s.2(87)): the other company controls the composition of its Board, or controls more than one-half of total voting power. Associate (s.2(6)): significant influence = at least 20% of voting power, but not a subsidiary."
+    },
+    {
+      "front": "When can the corporate veil be lifted?",
+      "back": "Fraud or improper conduct, evasion of tax or law, the company being a sham or agent of its members, enemy character, and where statute provides. Starting point is separate personality — Salomon v. Salomon."
+    },
+    {
+      "front": "Which companies can NEVER be a small company?",
+      "back": "A public company, a holding company, a subsidiary company, a section 8 company, and a company governed by a special Act — whatever their capital and turnover."
     }
   ],
   "Prospectus and Allotment of Shares": [
@@ -105,34 +137,46 @@
       "back": "200 persons — aggregate limit per financial year for private placement (Section 42); excludes qualified institutional buyers and employees."
     },
     {
-      "front": "What is the time limit to complete allotment after receipt of application money?",
-      "back": "60 days — allotment must be completed within 60 days of receipt of application money (Companies (Prospectus & Allotment of Securities) Rules)."
+      "front": "Private placement — time to allot, and if not allotted?",
+      "back": "Allot within 60 days of receiving application money; else refund within 15 days after that; else repay with interest at 12% p.a. Money must sit in a separate bank account (s.42(6))."
     },
     {
       "front": "If allotment is not made within 60 days, what is the refund timing and consequence for delay?",
       "back": "15 days — refund must be made within 15 days after the 60‑day period; if delayed, company pays interest (statutory rate widely applied as 12% p.a. for late refunds)."
     },
     {
-      "front": "Which form and time limit apply for filing the Return of Allotment with ROC?",
-      "back": "PAS‑3 — file Return of Allotment with Registrar within 30 days of allotment (Companies (Prospectus & Allotment of Securities) Rules, 2014)."
+      "front": "Return of allotment in PAS-3 — time limits?",
+      "back": "Private placement: within 15 days of allotment (s.42(8)). Other allotments: within 30 days (s.39(4))."
     },
     {
-      "front": "What is the statutory cap on persons and who is excluded in private placement offers — short recall?",
-      "back": "200 persons cap per financial year (Section 42); excludes qualified institutional buyers and employees, and offers must be made via private placement procedure."
+      "front": "Misstatement in a prospectus — s.34 vs s.35 vs s.36?",
+      "back": "s.34: CRIMINAL liability (punishable as fraud u/s 447). s.35: CIVIL liability to compensate those who subscribed. s.36: punishment for fraudulently inducing persons to invest."
+    },
+    {
+      "front": "Minimum subscription and application money (s.39)?",
+      "back": "No allotment unless the minimum amount stated in the prospectus is subscribed. Application money at least 5% of nominal value (or as SEBI specifies). Not received within 30 days of issue → refund within 15 days of closure."
+    },
+    {
+      "front": "Private placement — consequence of breaching s.42?",
+      "back": "Offer to more than 200 persons, or any advertisement, makes it a deemed PUBLIC offer. Penalty on company, promoters and directors: up to the amount raised or ₹2 crore, whichever is lower; refund within 30 days of the order."
+    },
+    {
+      "front": "Shelf prospectus vs red herring prospectus?",
+      "back": "Shelf (s.31): valid 1 year for multiple issues; an information memorandum before each later issue. Red herring (s.32): lacks price/quantum; filed with ROC at least 3 days before the offer opens."
     }
   ],
   "Shares and Debentures": [
     {
-      "front": "What is the maximum number of persons to whom securities can be offered on private placement in one financial year, and who is excluded from this count?",
-      "back": "200 persons per financial year; qualified institutional buyers and employees under ESOPs are excluded. (Section 42)"
+      "front": "Securities premium account — the only permitted uses (s.52)?",
+      "back": "Fully paid bonus shares; preliminary expenses; commission/discount/expenses on issue of securities; premium on redemption of preference shares or debentures; buyback u/s 68. Nothing else."
     },
     {
-      "front": "Within how many days must allotment be completed after receipt of application money, and what happens if allotment is not made?",
-      "back": "60 days to allot; if not allotted, refund within 15 days of expiry, otherwise repay with interest at 12% p.a. (Companies (Prospectus & Allotment of Securities) Rules, 2014)"
+      "front": "Rights issue u/s 62(1)(a) — the conditions?",
+      "back": "Offered to existing equity holders in proportion to paid-up capital; open 15 to 30 days; right of renunciation; not accepted = deemed declined. ESOP: special resolution. Preferential allotment: SR + registered valuer's price."
     },
     {
-      "front": "What are the quantitative limits and key eligibility conditions for issuing sweat equity shares?",
-      "back": "15% of existing paid‑up equity or ₹5,00,000 per year, whichever is higher; company must have completed 1 year. (Section 54 and Rules)"
+      "front": "Sweat equity (s.54) — the limits?",
+      "back": "Special resolution, valid 12 months. Per year: 15% of paid-up equity or ₹5 CRORE in value, whichever is higher. Overall cap 25% of paid-up equity. Lock-in 3 years."
     },
     {
       "front": "State the statutory numerical limits and essential conditions for a company buyback of shares.",
@@ -143,8 +187,8 @@
       "back": "Within 20 years from date of issue. (Section 55)"
     },
     {
-      "front": "Within how many days must a company register a charge created on its property, and what are the legal consequences if not registered timely?",
-      "back": "30 days from creation; ROC may extend (fees) up to 300 days; unregistered charge cannot be enforced against liquidator/receiver and attracts penalties. (Section 77)"
+      "front": "Bonus shares (s.63) — sources and bars?",
+      "back": "Out of free reserves, securities premium or CRR only — NEVER a revaluation reserve. Not in lieu of dividend. Once announced, cannot be withdrawn. Partly paid shares must first be made fully paid."
     },
     {
       "front": "When is appointment of a debenture trustee mandatory and where must the debenture trust deed/trustee particulars appear?",
@@ -153,40 +197,64 @@
     {
       "front": "By when must a company file the return of allotment (Form PAS‑3) with the Registrar of Companies?",
       "back": "30 days from the date of allotment — file Form PAS‑3 under Companies (Share Capital & Debentures) Rules."
+    },
+    {
+      "front": "Delivery of certificates (s.56) — time limits?",
+      "back": "Subscribers to MOA: 2 months from incorporation. Allotment: 2 months. Transfer/transmission: 1 month from receipt of the instrument. Debentures: 6 months from allotment. Transfer instrument lodged within 60 days of execution."
+    },
+    {
+      "front": "Capital Redemption Reserve on buyback (s.69)?",
+      "back": "Equal to the NOMINAL value of shares bought back out of free reserves or securities premium. Usable only to issue fully paid bonus shares."
+    },
+    {
+      "front": "Reduction of capital (s.66) vs buyback (s.68)?",
+      "back": "Reduction: special resolution + confirmation by the Tribunal (NCLT). Buyback: no Tribunal — board resolution up to 10%, special resolution up to 25%."
     }
   ],
   "Acceptance of Deposits by Companies": [
     {
-      "front": "Which sections of the Companies Act, 2013 govern acceptance of deposits by companies?",
-      "back": "3: Sections 73 to 76 (Chapter V) deal with acceptance of deposits, repayment, application of provisions and penalties."
+      "front": "Which sections govern deposits?",
+      "back": "ss.73 to 76A with the Companies (Acceptance of Deposits) Rules, 2014. s.73: prohibition + deposits from members. s.76: eligible public companies from the public. s.76A: punishment."
     },
     {
-      "front": "What is the statutory maximum a company may accept as deposits from its members (aggregate limit)?",
-      "back": "35%: of paid‑up share capital + free reserves + securities premium account (Companies (Acceptance of Deposits) Rules, 2014, Rule 3)."
+      "front": "Deposit limits — who can take how much?",
+      "back": "Eligible public company: 10% of capital + free reserves + securities premium from members, 25% from public. Government eligible company: 35% from public. Other public company: 35% from members. Private company: 100% from members."
     },
     {
-      "front": "What interest must a company pay on deposits if it defaults in repayment on due date?",
-      "back": "2× rate or 18%: interest at twice the contracted rate or 18% p.a., whichever is higher (Section 74)."
+      "front": "Interest on deposits not repaid on maturity?",
+      "back": "Penal interest at 18% p.a. for the overdue period (Rule 17)."
     },
     {
-      "front": "Within what period must a company file the annual return of deposits and in which form?",
-      "back": "90 days: file annual return of deposits in Form DPT‑3 within 90 days of the financial year‑end (Companies (Acceptance of Deposits) Rules)."
+      "front": "Return of deposits — form and due date?",
+      "back": "Form DPT-3, on or before 30 June every year, with information as on 31 March, duly audited."
     },
     {
-      "front": "What minimum transfer to a Deposit Repayment Reserve (DRR) must a company make for maturing deposits?",
-      "back": "15%: transfer not less than 15% of amount of deposits maturing during the year to the Deposit Repayment Reserve Account (Companies (Acceptance of Deposits) Rules)."
+      "front": "Deposit repayment reserve account?",
+      "back": "On or before 30 April each year, deposit at least 20% of deposits maturing during the FOLLOWING financial year in a scheduled bank. Usable only for repaying deposits."
     },
     {
-      "front": "Which common classes of companies are explicitly excluded from Chapter V deposit rules (i.e., exempt)?",
-      "back": "Some exempt classes: Government companies, banking companies and NBFCs, insurance companies and Nidhi companies (exemptions specified in the Rules)."
-    },
-    {
-      "front": "If a company rejects or doesn’t accept a deposit application, by when must it refund the application money?",
-      "back": "30 days: refund application money (or excess) to the applicant within 30 days from rejection/non‑acceptance (Companies (Acceptance of Deposits) Rules)."
+      "front": "Who is outside Chapter V altogether?",
+      "back": "Banking companies, NBFCs registered with RBI, housing finance companies registered with NHB, and other companies the Central Government specifies."
     },
     {
       "front": "What mandatory corporate action must a public company take before accepting deposits from persons other than its members?",
       "back": "Special resolution + prescribed circular: public company must pass a special resolution and circulate the prescribed offer/circular (Form DPT‑1) before accepting deposits from non‑members (Rules)."
+    },
+    {
+      "front": "Who is an 'eligible company' u/s 76?",
+      "back": "A PUBLIC company with net worth of at least ₹100 crore OR turnover of at least ₹500 crore, which has obtained prior consent by special resolution filed with the ROC, and a credit rating every year."
+    },
+    {
+      "front": "Tenure of deposits?",
+      "back": "Not less than 6 months and not more than 36 months. Exception: up to 10% of capital + free reserves for 3 to 6 months to meet short-term needs. No deposits repayable on demand."
+    },
+    {
+      "front": "Amounts that are NOT deposits (Rule 2(1)(c)) — the common ones?",
+      "back": "From Government/banks/financial institutions; from another company; share application money allotted within 60 days; from a DIRECTOR out of his own funds (with declaration); secured debentures; advances for goods/services adjusted within 365 days."
+    },
+    {
+      "front": "Punishment u/s 76A?",
+      "back": "Company: fine of at least ₹1 crore or twice the deposit (whichever lower), up to ₹10 crore. Officer in default: imprisonment up to 7 years and fine ₹25 lakh to ₹2 crore; fraud u/s 447 if wilful."
     }
   ],
   "Registration of Charge": [
@@ -219,66 +287,78 @@
       "back": "A register of charges with particulars (date, amount, creditor, property, instrument reference) and copies of charge instruments; open for inspection on payment of prescribed fee."
     },
     {
-      "front": "If a company misses the 30‑day deadline, can it still register the charge later?",
-      "back": "Yes — Registrar may permit delayed registration on application subject to conditions and additional fees; once registered, the registration date governs priority."
+      "front": "Missed the 30 days — what are the extended windows (s.77)?",
+      "back": "Up to 60 days from creation: ROC may allow with additional fees. A further 60 days (120 in all): with ad valorem fees. Beyond that: only the Central Government can extend, u/s 87."
+    },
+    {
+      "front": "Company does not register the charge — what can the lender do (s.78)?",
+      "back": "The charge-holder may himself apply after the 30 days. ROC gives the company 14 days' notice; then registers. He recovers the fees paid from the company."
+    },
+    {
+      "front": "Satisfaction of charge (s.82) — time and form?",
+      "back": "Intimate the ROC within 30 days of payment in full, Form CHG-4; ROC may allow up to 300 days with additional fees. ROC issues a memorandum of satisfaction."
+    },
+    {
+      "front": "Effect of registration on third parties (s.80)?",
+      "back": "Any person acquiring the charged property is DEEMED to have notice of the charge from the date of its registration."
     }
   ],
   "Management and Administration": [
     {
-      "front": "Within how many days must a company notify the RoC of its registered office after incorporation (which form)?",
-      "back": "30 days — notify situation of registered office to RoC in Form INC‑22 within 30 days of incorporation (s.12)."
+      "front": "Annual return (s.92) — form, due date, certification?",
+      "back": "MGT-7 (MGT-7A for OPC and small companies) within 60 days of the AGM. Certified in MGT-8 by a CS in practice if listed, or paid-up capital ₹10 crore+ or turnover ₹50 crore+."
     },
     {
-      "front": "By when must a company with share capital file the commencement‑of‑business declaration and in which form?",
-      "back": "180 days — file declaration of commencement of business in Form INC‑20A within 180 days of incorporation (s.10A / Incorporation rules)."
+      "front": "AGM timing (s.96)?",
+      "back": "First AGM: within 9 months of the close of the first FY (no ROC extension). Later: within 6 months of FY close; gap not over 15 months. ROC may extend by 3 months. 9 AM to 6 PM, not a national holiday."
     },
     {
-      "front": "What are the paid‑up capital and turnover thresholds for a 'Small Company' (current law and section)?",
-      "back": "₹10 crore & ₹100 crore — 'Small company' = paid‑up capital ≤ ₹10 crore AND turnover ≤ ₹100 crore (s.2(85), G.S.R. 880(E), effective 1‑Dec‑2025)."
+      "front": "EGM on requisition (s.100)?",
+      "back": "Members holding 1/10th of paid-up voting capital. Board must move within 21 days and hold it within 45 days of the requisition; else requisitionists hold it within 3 months. Expenses recovered from defaulting directors."
     },
     {
-      "front": "What are the residency and citizenship requirements for an OPC’s member/nominee? Any capital/turnover ceiling?",
-      "back": "120 days — OPC member/nominee must be a natural person, Indian citizen and resident in India for at least 120 days (Incorporation Rules); OPC has no paid‑up/turnover ceilings."
+      "front": "Proxy (s.105) — the rules?",
+      "back": "Need not be a member; cannot speak; votes only on a poll. One person: proxy for max 50 members and 10% of voting capital. Deposit 48 hours before; inspection from 24 hours before."
     },
     {
-      "front": "State the numeric limits and conditions for a company buyback (section).",
-      "back": "25% & 25% — buyback limited to 25% of paid‑up capital + free reserves or 25% of paid‑up equity in a year; debt‑equity ratio 2:1; board buyback limit 10%; one‑year gap between buybacks (s.68)."
+      "front": "Poll demand vs special notice — the fractions?",
+      "back": "Poll (s.109): 1/10th of total voting power OR ₹5 lakh paid-up capital. Special notice (s.115): 1% of voting power OR ₹5 lakh paid-up capital. Same ₹5 lakh, different fractions."
     },
     {
-      "front": "How many board meetings are required yearly and what is the maximum gap allowed between two meetings?",
-      "back": "4 meetings & 120 days — board must meet at least four times a year; maximum gap between consecutive meetings is 120 days (s.173)."
+      "front": "Closing the register of members (s.91)?",
+      "back": "At least 7 days' prior notice. Closed for not more than 30 days at a stretch and 45 days in a year."
     },
     {
-      "front": "What is the minimum notice period for a board meeting and when can it be shortened?",
-      "back": "7 days — notice for a board meeting must be at least 7 days in writing; it can be shortened only with the consent of all directors (s.173)."
+      "front": "Significant beneficial owner (s.90)?",
+      "back": "Holds, alone or together, beneficial interest of at least 10% in shares, voting rights or distributable dividend, or exercises control/significant influence. BEN-1 to the company; company files BEN-2."
     },
     {
-      "front": "What is the quorum for a board meeting?",
-      "back": "One‑third or two — quorum is one‑third of total strength or two directors, whichever is higher (s.174)."
+      "front": "Filing resolutions with the ROC (s.117)?",
+      "back": "MGT-14 within 30 days of passing — all special resolutions and specified Board resolutions and agreements."
     },
     {
       "front": "How many days’ notice is required for a general meeting and how can shorter notice be validly given?",
       "back": "21 days & 95% — general meeting notice at least 21 days; shorter notice valid only with consent of members holding at least 95% of voting power (s.101)."
     },
     {
-      "front": "What is the quorum for a general meeting: public company, private company, and OPC?",
-      "back": "5 / 2 / 1 — quorum: public companies 5 members, private companies 2 members, OPC 1 member (s.103)."
+      "front": "Quorum for a general meeting (s.103)?",
+      "back": "Public company: 5 members if up to 1,000 members; 15 if 1,001 to 5,000; 30 if more than 5,000. Private company: 2. PERSONALLY present — proxies do not count; a s.113 corporate representative does."
     },
     {
       "front": "Within what time must minutes of meetings be signed and by whom?",
       "back": "30 days — minutes of board and general meetings to be signed by the chairperson of the meeting (or of the next meeting) within 30 days (s.118)."
     },
     {
-      "front": "What is the residency requirement for the 'resident director' that every company must have?",
-      "back": "182 days — at least one director must have stayed in India for at least 182 days in the previous calendar year (s.149(3))."
+      "front": "No quorum within half an hour — what happens?",
+      "back": "Meeting stands adjourned to the same day next week, same time and place. If it was called on REQUISITION, it stands cancelled. At the adjourned meeting, members present are the quorum."
     },
     {
-      "front": "When is a whole‑time company secretary mandatory (numeric threshold and section)?",
-      "back": "₹10 crore & listed — whole‑time company secretary mandatory for listed companies and public companies with paid‑up capital ≥ ₹10 crore (s.203)."
+      "front": "Ordinary vs special resolution (s.114)?",
+      "back": "Ordinary: votes for exceed votes against. Special: intention stated in the notice, and votes for are at least THREE TIMES the votes against."
     },
     {
-      "front": "What is the statutory cap on number of directors and how can it be increased?",
-      "back": "15 (max) — board size capped at 15 directors; can be increased beyond 15 (up to 20) by passing a special resolution (s.149(1))."
+      "front": "Report on AGM (s.121) and postal ballot (s.110)?",
+      "back": "AGM report: listed public companies only, MGT-15 within 30 days. Postal ballot: mandatory for notified items; not required for OPC and companies with up to 200 members."
     }
   ],
   "Audit and Auditors": [
@@ -295,8 +375,8 @@
       "back": "Individual: 5 consecutive years; Firm: 10 consecutive years (two terms of 5). Cooling‑off period after expiry: 5 years. (Section 139(2) — rotation provisions.)"
     },
     {
-      "front": "Within what period must the Board fill a casual vacancy of auditor caused by resignation?",
-      "back": "30 days — Board to appoint another auditor to fill casual vacancy within 30 days; appointment holds till conclusion of next AGM and is ratifiable by members. (s.139(8).)"
+      "front": "Casual vacancy in the office of auditor (s.139(8))?",
+      "back": "Board fills it within 30 days. If caused by RESIGNATION, the appointment must also be approved by the company in general meeting within 3 months of the Board's recommendation. Holds office till the next AGM."
     },
     {
       "front": "What statutory rights does an auditor have to obtain information and inspect company records?",
@@ -307,20 +387,40 @@
       "back": "Whether F/S give true & fair view and comply with accounting standards; proper books maintained; adequacy and operating effectiveness of internal financial controls. (Section 143(3).)"
     },
     {
-      "front": "What is the monetary threshold and time limit for an auditor to report a fraud to the Central Government?",
-      "back": "₹1 crore — if fraud exceeds ₹1 crore, auditor must report to the Central Government within 60 days. (Section 143(12).)"
+      "front": "Fraud reporting by the auditor (s.143(12))?",
+      "back": "₹1 crore or more: report to Board/Audit Committee within 2 days, seek reply within 45 days, then forward to the Central Government within 15 days (ADT-4). Below ₹1 crore: to Board/Audit Committee only; disclosed in Board's report."
     },
     {
-      "front": "How must an auditor’s tenure be described once appointed at an AGM?",
-      "back": "Until conclusion of next AGM — auditor holds office from conclusion of the AGM at which appointed until conclusion of the next AGM (one‑year term). (Section 139(1) context.)"
+      "front": "Tenure of an auditor appointed at an AGM (s.139(1))?",
+      "back": "From the conclusion of that AGM till the conclusion of the SIXTH AGM — a five-year term. Annual ratification by members is no longer required."
     },
     {
       "front": "What must the principal auditor do when a branch is audited by a branch auditor?",
       "back": "Disclose in the main audit report reliance on the branch auditor’s work, consider the branch auditor’s findings and state that branch was separately audited. (Section 143(8).)"
     },
     {
-      "front": "Who appoints the first auditor and within what basic time frame after incorporation?",
-      "back": "30 days — Board to appoint the first auditor within 30 days of incorporation; if the Board fails, members at the first general meeting appoint. (Section 139(6) context.)"
+      "front": "First auditor (s.139(6))?",
+      "back": "Appointed by the Board within 30 days of incorporation; failing which, by members at an EGM within 90 days. Holds office till the conclusion of the FIRST AGM."
+    },
+    {
+      "front": "Which companies must rotate auditors (Rule 5)?",
+      "back": "Listed companies; unlisted PUBLIC companies with paid-up capital ₹10 crore+; PRIVATE companies with paid-up capital ₹50 crore+; any company with public borrowings/deposits of ₹50 crore+."
+    },
+    {
+      "front": "Disqualifications u/s 141(3) — the money limits?",
+      "back": "Self/relative/partner holding securities (a RELATIVE may hold up to ₹1 lakh face value); indebted above ₹5 lakh; guarantee above ₹1 lakh; business relationship. Also: officer/employee, body corporate (LLP allowed), more than 20 audits."
+    },
+    {
+      "front": "Removing an auditor before his term (s.140(1))?",
+      "back": "Board resolution → application to the Central Government in ADT-2 within 30 days → on approval, special resolution within 60 days. Auditor must get a reasonable opportunity of being heard."
+    },
+    {
+      "front": "Services an auditor cannot render (s.144)?",
+      "back": "Accounting and book-keeping; internal audit; design of financial information systems; actuarial; investment advisory; investment banking; outsourced financial services; management services."
+    },
+    {
+      "front": "Auditor's resignation — filing?",
+      "back": "File ADT-3 within 30 days of resignation with the company and the ROC (also with the CAG for government companies), stating reasons. Default: penalty of ₹50,000 or audit fees, whichever is less, plus ₹500 a day."
     }
   ],
   "Declaration of Dividends": [
@@ -329,16 +429,16 @@
       "back": "Only out of profits of the company for that year or previous years (after providing depreciation); not out of capital except as permitted — Section 123(1)."
     },
     {
-      "front": "When is a company prohibited from declaring any dividend despite having profits? Give the exceptions.",
-      "back": "If it has defaulted in repayment of deposits, debentures, redemption of preference shares or repayment of term loans, dividend cannot be declared — proviso to Section 123(1)."
+      "front": "When is a company barred from declaring dividend on equity shares (s.123(6))?",
+      "back": "While it is in default of sections 73 and 74 — acceptance and repayment of DEPOSITS. (Do not confuse with s.70, which bars BUYBACK for deposit, debenture, preference and term-loan defaults.)"
     },
     {
       "front": "Who can declare an interim dividend and under which section?",
       "back": "The Board of Directors may declare an interim dividend during a financial year — Section 123(3)."
     },
     {
-      "front": "What is the time-limit to pay/dispatch a declared dividend to shareholders?",
-      "back": "30 days — dividend must be paid/posted within 30 days from the date of its declaration (Companies (Declaration and Payment of Dividend) Rules and practice)."
+      "front": "Time to pay a declared dividend, and the punishment (s.127)?",
+      "back": "Within 30 days of declaration. Default: every director knowingly a party — imprisonment up to 2 years and fine of at least ₹1,000 a day; company pays simple interest at 18% p.a."
     },
     {
       "front": "If declared dividend remains unpaid after 30 days, what must the company do and by when? Give the section.",
@@ -357,12 +457,28 @@
       "back": "The registered holder on the date of declaration gets the dividend; a transfer after the declaration does not entitle the transferee — Section 126 (classic examiner trap)."
     },
     {
-      "front": "In what form may dividend be paid? Give the restriction and section.",
-      "back": "Dividend must be paid in cash (by cheque, warrant, electronic transfer etc.) unless Articles provide otherwise — no non‑cash payment of dividend — Section 123(4)."
+      "front": "In what form may dividend be paid (s.123(5))?",
+      "back": "Only in CASH — cheque, warrant or electronic mode — to the registered holder or his banker. Capitalising profits to issue fully paid bonus shares is not barred by this rule."
     },
     {
       "front": "If a dividend already transferred to IEPF is claimed later by the shareholder, where and how is the refund claim made?",
       "back": "The shareholder/nominee can claim refund from the IEPF Authority under the prescribed procedure; IEPF rules provide for refund of such amounts to entitled persons — Section 125 (IEPF refund mechanism)."
+    },
+    {
+      "front": "Dividend out of accumulated reserves when profits are inadequate — the conditions?",
+      "back": "Rate not above the average of the 3 preceding years; withdrawal not above 1/10th of paid-up capital + free reserves; amount first used to set off the year's losses; reserves after withdrawal at least 15% of paid-up capital."
+    },
+    {
+      "front": "Interim dividend when the company has a loss in the current year?",
+      "back": "Rate cannot exceed the average of dividends declared in the 3 immediately preceding financial years (s.123(3)). It caps the rate; it does not bar the dividend."
+    },
+    {
+      "front": "Unpaid Dividend Account — statement and interest (s.124)?",
+      "back": "Statement of names and unpaid amounts on the company's website within 90 days of the transfer. Default in transferring: interest at 12% p.a. for the members' benefit."
+    },
+    {
+      "front": "What goes to the IEPF after 7 years?",
+      "back": "The unpaid/unclaimed dividend AND the underlying SHARES on which dividend has been unclaimed for 7 consecutive years (s.124(5), (6)). Both can be reclaimed from the IEPF Authority."
     }
   ],
   "Accounts of Companies": [
@@ -375,8 +491,8 @@
       "back": "True & fair view — Financial statements must give a true and fair view and comply with accounting standards notified under Section 133 (requirement in Section 129; see s.133 for AS power)."
     },
     {
-      "front": "Which companies are exempt from preparing a cash flow statement?",
-      "back": "OPC and Small Company — Cash flow statement not required for One Person Company and Small Company (Section 129(3)). Small Company per s.2(85): paid‑up ≤ ₹10 crore and turnover ≤ ₹100 crore."
+      "front": "Which companies need not prepare a cash flow statement (s.2(40))?",
+      "back": "One Person Company, small company (paid-up up to ₹10 crore AND turnover up to ₹100 crore), dormant company, and a private company that is a start-up."
     },
     {
       "front": "When must a company prepare consolidated financial statements and which AS govern them?",
@@ -401,6 +517,22 @@
     {
       "front": "Which e‑form is used to file annual financial statements with the ROC and what is the deadline?",
       "back": "AOC‑4 — Audited financial statements are filed with the ROC in e‑form AOC‑4 within 30 days of the AGM; consolidated FS (if any) filed in AOC‑4 CFS as applicable (Section 137 and Rules)."
+    },
+    {
+      "front": "CSR (s.135) — when does it apply and how much?",
+      "back": "Any ONE in the immediately preceding FY: net worth ₹500 crore+, turnover ₹1,000 crore+, or net profit ₹5 crore+. Spend 2% of average net profits of the 3 preceding FYs. No CSR Committee if the obligation is ₹50 lakh or less."
+    },
+    {
+      "front": "Re-opening (s.130) vs voluntary revision (s.131)?",
+      "back": "130: only on a court/Tribunal order, for fraud or mismanagement; up to 8 years back. 131: directors' own application with Tribunal approval; any of the 3 preceding FYs; once a year."
+    },
+    {
+      "front": "Internal audit (s.138) — unlisted public company thresholds?",
+      "back": "Paid-up capital ₹50 crore+, or turnover ₹200 crore+, or bank/PFI borrowings above ₹100 crore, or deposits ₹25 crore+. Private company: turnover ₹200 crore+ or borrowings above ₹100 crore. Every listed company."
+    },
+    {
+      "front": "Filing financial statements — OPC, and if not adopted at the AGM?",
+      "back": "Normally AOC-4 within 30 days of the AGM. OPC: within 180 days of the close of the FY. If not adopted, file unadopted statements within 30 days; ROC takes them as provisional."
     }
   ],
   "Companies Incorporated outside India": [
@@ -433,14 +565,22 @@
       "back": "Copies of its balance-sheet, profit & loss account, auditors’ report and list of directors/managers concerned with the Indian operations — filed annually in the prescribed form and manner."
     },
     {
-      "front": "What is the immediate practical consequence if a foreign company does not register or file required particulars in India?",
-      "back": "Non-registration/non-filing disables statutory compliance: Registrar may take action, the company risks penalties/prosecution and practical difficulties in enforcing rights or transacting through Indian place(s) of business."
+      "front": "Foreign company fails to comply with Chapter XXII — effect on its contracts (s.393)?",
+      "back": "Contracts stay VALID and it can be sued — but the company cannot bring any suit, claim a set-off or counter-claim on them until it complies."
+    },
+    {
+      "front": "When must a foreign company comply as if it were an Indian company (s.379(2))?",
+      "back": "Where not less than 50% of its paid-up share capital is held by Indian citizens and/or companies or bodies corporate incorporated in India."
+    },
+    {
+      "front": "Accounts of a foreign company (s.381) — filing time?",
+      "back": "Balance sheet, P&L and a list of all places of business in India, within 6 months of the close of the financial year; ROC may extend by up to 3 months."
     }
   ],
   "Limited Liability Partnership Act, 2008": [
     {
-      "front": "Give the numeric minimums and residency rule to form a valid LLP (partners and designated partners).",
-      "back": "2 partners minimum; 2 designated partners minimum; at least one designated partner must be an Indian resident (must satisfy residency requirement)."
+      "front": "Minimum partners and designated partners; who is 'resident'?",
+      "back": "At least 2 partners; at least 2 designated partners who are individuals, one of them resident in India — i.e. stayed in India at least 120 days during the financial year (s.7)."
     },
     {
       "front": "Is there a maximum limit on number of partners in an LLP?",
@@ -477,6 +617,22 @@
     {
       "front": "Who bears primary legal responsibility for statutory compliance of the LLP (designation/role)?",
       "back": "Designated partners — they are responsible for regulatory filings and compliance; failure can attract personal liability and penalties for designated partners."
+    },
+    {
+      "front": "Whose agent is a partner of an LLP (s.26)?",
+      "back": "Agent of the LLP — NOT of the other partners. The LLP is liable for his wrongful acts in the course of business; other partners are not personally liable."
+    },
+    {
+      "front": "When is liability UNLIMITED in an LLP (s.30)?",
+      "back": "Where the LLP or its partners act with intent to defraud creditors or for a fraudulent purpose: unlimited for the LLP and for the partners who acted so. Also imprisonment up to 5 years and fine ₹50,000 to ₹5 lakh."
+    },
+    {
+      "front": "No LLP agreement, or it is silent — what governs (s.23(4))?",
+      "back": "The First Schedule: equal share in capital and profits, every partner may take part in management, no remuneration for management, new partner only with consent of all."
+    },
+    {
+      "front": "Fewer than 2 partners for more than 6 months?",
+      "back": "The sole partner who carries on business knowing this is PERSONALLY liable for obligations incurred in that period (s.6). It is also a ground for winding up."
     }
   ],
   "General Clauses Act, 1897": [
@@ -493,20 +649,20 @@
       "back": "Singular includes plural and vice‑versa; masculine includes feminine — words import the other gender/number unless context forbids."
     },
     {
-      "front": "When a period is expressed in months and the corresponding date next month does not exist, when does it end?",
-      "back": "End on the last day of the last month — if no corresponding date exists, use the month's final day."
+      "front": "'From' and 'to' in computing time (s.9)?",
+      "back": "'From' EXCLUDES the first day; 'to' INCLUDES the last day."
     },
     {
-      "front": "If a statutory time‑limit expires on a public holiday, what happens to the deadline?",
-      "back": "Extends to the next day that is not a public holiday — period runs until the next working day."
+      "front": "Last day falls on a day the court or office is closed (s.10)?",
+      "back": "The act is in time if done on the NEXT day on which the court or office is open. It saves only the last day — it is not a general extension."
     },
     {
       "front": "What is the legal effect of repeal of an enactment on acts done before repeal?",
       "back": "Repeal does not affect previous acts, rights, liabilities or penalties incurred before repeal — saved unless express contrary provision."
     },
     {
-      "front": "How are the words 'may' and 'shall' generally construed in statutes?",
-      "back": "'Shall' is ordinarily mandatory; 'may' is ordinarily directory/discretionary — context may alter the construction."
+      "front": "Service by post (s.27)?",
+      "back": "Deemed effected by properly addressing, pre-paying and posting by registered post — at the time the letter would be delivered in the ordinary course, unless the contrary is proved."
     },
     {
       "front": "Does the General Clauses Act treat 'writing' to include printed material?",
@@ -517,14 +673,26 @@
       "back": "Reference applies to the successor authority or new name — reorganisation or renaming does not defeat statutory reference unless contrary intent."
     },
     {
-      "front": "Can different provisions of an Act be brought into force on different days?",
-      "back": "Yes — different days may be appointed for different provisions; commencement can be staggered by notification under the Act."
+      "front": "When does a Central Act come into operation if no date is stated (s.5)?",
+      "back": "On the day it receives the President's assent. It operates from the first moment of that day (s.5(3))."
+    },
+    {
+      "front": "Effect of repeal (s.6) — what survives?",
+      "back": "Unless a different intention appears: previous operation of the law, rights and liabilities accrued, penalties incurred, and pending proceedings all survive. Repeal does not revive anything not in force."
+    },
+    {
+      "front": "Power to appoint (s.16) and power to make rules (s.21)?",
+      "back": "s.16: power to appoint includes power to suspend or dismiss. s.21: power to issue notifications, orders, rules or bye-laws includes power to add to, amend, vary or rescind them."
+    },
+    {
+      "front": "Key definitions in s.3 — 'financial year', 'good faith', 'immovable property'?",
+      "back": "Financial year: commencing on 1 April. Good faith: done honestly, whether negligently or not. Immovable property: includes land, benefits arising out of land, and things attached to the earth."
     }
   ],
   "Foreign Exchange Management Act, 1999": [
     {
-      "front": "Resident status for FEMA — how many days and where is it defined?",
-      "back": "182 days — 'resident' means a person residing in India for more than 182 days in the preceding financial year (FEMA definition, sec 2(v))."
+      "front": "'Person resident in India' u/s 2(v) — the test and its exceptions?",
+      "back": "Resided in India more than 182 days in the PRECEDING financial year — BUT not one who has gone or stays abroad for employment, business or an uncertain period. A person coming to India for those purposes becomes resident. Purpose beats day-count."
     },
     {
       "front": "Liberalised Remittance Scheme (LRS) limit and who can use it?",
@@ -547,12 +715,12 @@
       "back": "Only RBI‑authorised persons — banks and entities authorised by RBI (Authorised Dealers/Money‑chang ers/Authorised Persons) can buy/sell foreign exchange or deal in foreign securities."
     },
     {
-      "front": "Nature of contraventions and penalties under FEMA — civil or criminal?",
-      "back": "Civil — contraventions are civil offences; adjudicated by Adjudicating Authority with monetary penalties and enforcement actions (not criminal prosecution under FEMA's regular scheme)."
+      "front": "Penalty for contravention (s.13)?",
+      "back": "Up to THRICE the sum involved where quantifiable; otherwise up to ₹2 lakh. Continuing contravention: up to ₹5,000 for every day after the first. Civil, adjudicated by the Adjudicating Authority."
     },
     {
-      "front": "Can FEMA contraventions be compounded and by whom?",
-      "back": "Compounding allowed — RBI/competent authority may compound contraventions on application, reducing/settling liability as per compounding scheme and RBI/HEAA guidelines."
+      "front": "Compounding (s.15)?",
+      "back": "On application, by the RBI or Directorate of Enforcement, within 180 days of the application. Once compounded, no further proceedings for that contravention."
     },
     {
       "front": "Export/import of Indian currency — what is permitted?",
@@ -561,6 +729,18 @@
     {
       "front": "How is foreign investment (FDI) routed under FEMA/FDI policy?",
       "back": "2 routes — Automatic Route (no prior government approval) and Government Route (prior approval required); sectoral caps/conditions are governed by FEMA regulations and FDI policy notifications."
+    },
+    {
+      "front": "Current vs capital account — the rule of freedom?",
+      "back": "Current account (s.5): FREE, subject to reasonable restrictions by the Central Government. Capital account (s.6): permitted only to the extent RBI/Central Government allow. Free unless restricted vs restricted unless permitted."
+    },
+    {
+      "front": "Current account transactions — Schedules I, II and III?",
+      "back": "Schedule I: PROHIBITED (remittance of lottery winnings, racing income, purchase of lottery tickets, banned magazines). Schedule II: prior approval of the Central Government. Schedule III: RBI approval beyond specified limits; individuals — LRS USD 2,50,000."
+    },
+    {
+      "front": "Realisation and repatriation of export proceeds (s.7, s.8)?",
+      "back": "Exporters must furnish a declaration of full export value and realise and repatriate the proceeds to India within the period RBI specifies. Residents must take reasonable steps to bring back foreign exchange due."
     }
   ],
   "Interpretation of Statutes": [
