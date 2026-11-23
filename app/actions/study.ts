@@ -9,11 +9,14 @@ import {
   attemptAnswers,
   questions,
   flashcards,
+  planItems,
 } from "@/lib/db/schema";
 import { requireUser, logActivity, todayIST } from "@/lib/auth";
 import { and, eq } from "drizzle-orm";
 import { getAllChapters, getTestWithQuestions } from "@/lib/queries";
 import { syncPlanProgress } from "@/lib/plan-sync";
+import { getOrCreateDailyFive } from "@/lib/daily-five";
+import { DAILY_HABIT_TITLE } from "@/lib/exam";
 import {
   generateFlashcards,
   evaluateWrittenAnswer,
@@ -166,6 +169,21 @@ export async function submitAttempt(payload: SubmitPayload) {
       .values(rows.map((r) => ({ ...r, attemptId: attempt.id })));
   }
   await logActivity(user.id, "test");
+  // finishing the Daily 5 is the day's habit — tick it for her
+  if (data.test.title.startsWith("Daily 5")) {
+    await db
+      .update(planItems)
+      .set({ done: true, manual: true })
+      .where(
+        and(
+          eq(planItems.userId, user.id),
+          eq(planItems.onDate, todayIST()),
+          eq(planItems.title, DAILY_HABIT_TITLE)
+        )
+      );
+    revalidatePath("/planner");
+    revalidatePath("/");
+  }
   revalidatePath("/tests");
   revalidatePath("/analytics");
   return attempt.id;
@@ -322,6 +340,15 @@ export async function evaluateWrittenFromPhoto(
   await recomputeAttempt(attemptId);
   revalidatePath(`/results/${attemptId}`);
   return { marks: awarded, feedback, transcript };
+}
+
+/** Today's five-question quiz, built from today's plan. Returns the test id. */
+export async function startDailyFive() {
+  const user = await requireUser();
+  const id = await getOrCreateDailyFive(user.id, todayIST());
+  revalidatePath("/");
+  revalidatePath("/tests");
+  return id;
 }
 
 export async function getOrGenerateFlashcards(chapterId: number) {

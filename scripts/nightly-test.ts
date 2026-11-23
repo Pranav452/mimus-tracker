@@ -99,7 +99,7 @@ Rules:
     messages: [
       {
         role: "system",
-        content: `You are an expert CA Intermediate (ICAI, India) exam question setter, well-versed in recent exam trends. Respond with ONLY a valid JSON array, no markdown fences.\n\nUse CURRENT law as applicable to the September 2026 attempt:\n${AMENDMENTS_BRIEF}`,
+        content: `You are an expert CA Intermediate (ICAI, India) exam question setter, well-versed in recent exam trends. Respond with ONLY a valid JSON array, no markdown fences.\n\nUse CURRENT law as applicable to the January 2027 attempt:\n${AMENDMENTS_BRIEF}`,
       },
       { role: "user", content: prompt },
     ],

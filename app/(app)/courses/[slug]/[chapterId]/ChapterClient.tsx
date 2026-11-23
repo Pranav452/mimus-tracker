@@ -32,6 +32,7 @@ type Status = "not_started" | "in_progress" | "done";
 export default function ChapterClient({
   chapterId,
   chapterName,
+  initialTab = "learn",
   note,
   status: initialStatus,
   quiz,
@@ -39,13 +40,14 @@ export default function ChapterClient({
 }: {
   chapterId: number;
   chapterName: string;
+  initialTab?: "learn" | "quiz" | "cards";
   note: { title: string; blocks: NoteBlock[] } | null;
   status: Status;
   quiz: Quiz[];
   cards: Card[];
 }) {
   const router = useRouter();
-  const [tab, setTab] = useState<"learn" | "quiz" | "cards">("learn");
+  const [tab, setTab] = useState<"learn" | "quiz" | "cards">(initialTab);
   const [status, setStatus] = useState<Status>(initialStatus);
   const [cards, setCards] = useState<Card[]>(initialCards);
   const [cardIdx, setCardIdx] = useState(0);

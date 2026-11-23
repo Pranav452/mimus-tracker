@@ -1,0 +1,1450 @@
+{
+  "Basics of Income Tax": [
+    {
+      "front": "Which year is the 'Previous Year' and which is the 'Assessment Year' — name the sections.",
+      "back": "Previous Year = year immediately preceding the Assessment Year (sec 3); Assessment Year = year immediately following the Previous Year (sec 2(9))."
+    },
+    {
+      "front": "Which section creates the charge of income‑tax on a person for an assessment year?",
+      "back": "Section 4: Charge of income‑tax — income of every person is chargeable to income‑tax for the assessment year."
+    },
+    {
+      "front": "Which incomes are taxable in India irrespective of the taxpayer's residence (which section)?",
+      "back": "Sec 5: Income accruing or arising in India, or deemed to accrue/arise in India, is taxable in India regardless of the person's residence."
+    },
+    {
+      "front": "Name the five heads of income that must be computed separately (section).",
+      "back": "5 heads: Salaries; House‑Property; Profits & Gains of Business/Profession; Capital Gains; Other Sources (sec 14)."
+    },
+    {
+      "front": "Who is a 'person' under the Income‑tax Act — give the statutory reference.",
+      "back": "Sec 2(31): Person includes individual, HUF, company, firm, AOP/BOI, local authority and any other juridical/artificial person."
+    },
+    {
+      "front": "Give the numeric tests under s.6(1) when an individual becomes 'resident'.",
+      "back": "182 days OR 60 days + 365 days: Individual is resident if in India ≥182 days in PY, or ≥60 days in PY and ≥365 days in the 4 preceding years (s.6(1))."
+    },
+    {
+      "front": "What numeric tests determine 'ordinarily resident' under s.6(6)?",
+      "back": "2 & 730: OR requires resident in at least 2 of the 10 preceding years AND stayed ≥730 days in India during the 7 preceding years (s.6(6)); otherwise RNOR."
+    },
+    {
+      "front": "When does s.6(1A) deem an Indian citizen to be resident?",
+      "back": "Indian CITIZEN (not PIO) + total income other than from foreign sources above ₹15 lakh + not liable to tax in any other country by reason of domicile or residence. Always RNOR (s.6(6)(d))."
+    },
+    {
+      "front": "State the concise sequence (main steps) to compute tax from receipts to tax payable.",
+      "back": "5 steps: Compute income under 5 heads → Aggregate Gross Total Income → Deduct Chapter VI‑A → Arrive at Total Income → Compute tax, apply rebates/relief (then cess/interest)."
+    },
+    {
+      "front": "What is the classic difference between Sec 5 and Sec 9 of the Act?",
+      "back": "Sec5 = charging provision that defines taxable scope; Sec9 = lists specific events/sources deemed to accrue/arise in India (e.g., business connection, transfer of India‑situated assets)."
+    }
+  ],
+  "Income from House Property": [
+    {
+      "front": "Give the exact computation sequence from Annual Value to Income from House Property (name sections).",
+      "back": "5 steps: 1) Annual Value (s.23); 2) Less municipal taxes paid by owner; 3) Net Annual Value; 4) Less 30% standard deduction (s.24(a)) and interest on borrowed capital (s.24(b)); 5) Income from House Property (s.22)."
+    },
+    {
+      "front": "State the standard deduction from Net Annual Value and its legal provision.",
+      "back": "30% of Net Annual Value as standard deduction under section 24(a)."
+    },
+    {
+      "front": "Interest on borrowed capital u/s 24(b): let-out vs self-occupied, old vs new regime?",
+      "back": "Let-out: full interest, no ceiling. Self-occupied (old regime): ₹2,00,000, or ₹30,000 if conditions fail. New regime: NIL for self-occupied. Pre-construction interest: 5 equal instalments from year of completion."
+    },
+    {
+      "front": "When are municipal taxes deductible and how do they affect Gross Annual Value?",
+      "back": "Municipal taxes actually paid by the owner in the year are deductible from Gross Annual Value (reduce GAV) (s.23(1))."
+    },
+    {
+      "front": "How do you arrive at Gross Annual Value of a let-out house?",
+      "back": "Step 1: expected rent = higher of municipal value and fair rent, capped at standard rent. Step 2: GAV = higher of expected rent and actual rent received or receivable (s.23(1)). Vacancy can pull GAV below expected rent."
+    },
+    {
+      "front": "How many houses can be treated as self-occupied with nil annual value?",
+      "back": "TWO, at the owner's option (s.23(2)/(4)). A third and further houses are deemed let out and taxed on expected rent. The ₹2,00,000 interest ceiling covers both self-occupied houses together."
+    },
+    {
+      "front": "Co-owned house with definite shares: how is it taxed, and what does each co-owner get?",
+      "back": "Each co-owner is assessed separately on his share (s.26). For a self-occupied house, EACH co-owner gets the full ₹2,00,000 interest limit (old regime) — it is not split."
+    },
+    {
+      "front": "When is rent included in Gross Annual Value — what does 'received or receivable' mean?",
+      "back": "Rent is taxable on a 'received or receivable' basis — included in GAV when due (receivable) or actually received during the year (s.23)."
+    },
+    {
+      "front": "Are actual repairs, insurance and collection charges separately deductible in addition to the standard deduction?",
+      "back": "No. 30% standard deduction on NAV (s.24(a)) is a composite allowance for repairs, insurance and collection charges; no separate deduction for these items thereafter."
+    },
+    {
+      "front": "How are arrears of rent / unrealised rent recovered later taxed?",
+      "back": "s.25A: taxed in the year of RECEIPT under house property, after a flat 30% deduction — even if the assessee no longer owns the property."
+    },
+    {
+      "front": "Can a house property loss be set off against salary: old regime vs new regime?",
+      "back": "Old regime: yes, up to ₹2,00,000 a year (s.71(3A)); balance carried forward 8 years against HP income only. New regime: NO set-off against any other head."
+    },
+    {
+      "front": "When are municipal taxes deductible from GAV?",
+      "back": "Only when actually PAID by the OWNER during the year — even if they relate to earlier years. Not if merely due, and not if borne by the tenant."
+    }
+  ],
+  "Residential Status": [
+    {
+      "front": "State the 182‑day rule for an individual’s residence (exact days and section).",
+      "back": "182 days: Individual is resident if present in India for 182 days or more in the previous year (section 6(1))."
+    },
+    {
+      "front": "State the alternative short‑stay condition that also makes an individual resident (exact days and preceding‑years test).",
+      "back": "60 days + 365 days: Individual resident if present in India for 60 days or more in the previous year AND for 365 days or more during the 4 preceding years (section 6(1))."
+    },
+    {
+      "front": "s.6(1A) deemed residency — the three conditions?",
+      "back": "(1) Indian CITIZEN only, not PIO; (2) total income other than foreign-source income exceeds ₹15 lakh; (3) not liable to tax in any other country. Result: deemed resident, and always RNOR."
+    },
+    {
+      "front": "When is a resident individual 'not ordinarily resident' (RNOR)?",
+      "back": "If EITHER: non-resident in 9 out of 10 preceding years, OR in India for 729 days or less in the 7 preceding years (s.6(6)). Fail both escape routes = ROR."
+    },
+    {
+      "front": "Define 'Resident but not Ordinarily Resident' (RNOR) and state precisely which foreign income is taxable.",
+      "back": "RNOR: resident who fails ROR tests (s.6). Taxable: income received/ deemed received in India; income accruing/ arising/ deemed to arise in India; foreign income only if from business controlled or profession set up in India."
+    },
+    {
+      "front": "What income is taxable in India for a Non‑Resident (NR)? Give the exact categories.",
+      "back": "2 categories: income received or deemed to be received in India; income accruing or arising or deemed to arise in India (i.e., India‑sourced income)."
+    },
+    {
+      "front": "How should you count days of stay in India for residence tests?",
+      "back": "Count days: calendar days; any part‑day in India counts as a day; day of arrival and day of departure are included when determining total days of stay."
+    },
+    {
+      "front": "When is a company resident in India? And a firm / HUF / AOP?",
+      "back": "Company: Indian company, OR its place of effective management (POEM) is in India in that year (s.6(3)). Firm/HUF/AOP: resident unless control and management is WHOLLY outside India."
+    },
+    {
+      "front": "Give the stepwise procedure (the one students often skip) to determine an individual’s final residential status.",
+      "back": "2 steps: (1) Apply residence tests (182 days OR 60+365) to decide Resident/NR (s.6(1)). (2) If Resident, apply ROR tests (2/10 years and 730/7 years) to classify ROR or RNOR — many forget step 2."
+    },
+    {
+      "front": "State precisely the tax incidence for an Ordinary Resident (ROR).",
+      "back": "Worldwide: ROR is taxed on global income (income received/earned/declared anywhere) — scope of total income under section 5 (resident ordinarily taxed on worldwide income)."
+    },
+    {
+      "front": "Indian citizen LEAVES India for employment or as ship's crew — which residence test applies?",
+      "back": "Only the 182-day test. The 60-day condition is replaced by 182 days (Explanation 1(a) to s.6(1)), so the 60 + 365 route is unavailable."
+    },
+    {
+      "front": "Indian citizen or PIO VISITING India — when does 60 days become 120 days?",
+      "back": "If income other than foreign-source income exceeds ₹15 lakh: 120 days + 365 days in 4 preceding years makes him resident (and RNOR). If such income is ₹15 lakh or less: only the 182-day test applies."
+    }
+  ],
+  "Income from Salary": [
+    {
+      "front": "State the standard deduction available against salary and cite the section; old vs new regime amounts for AY 2026-27.",
+      "back": "₹50,000 (old regime) / ₹75,000 (new regime); deduction under section 16(ia)."
+    },
+    {
+      "front": "What three amounts are compared for HRA exemption and the metro/non‑metro percentages?",
+      "back": "Least of: actual HRA received; rent paid minus 10% of salary; 50% (metro) / 40% (non‑metro) of salary. Rule/section: Sec 10(13A) (HRA rules)."
+    },
+    {
+      "front": "What are the exact conditions and limits for LTA exemption?",
+      "back": "Two journeys in a block of 4 years; travel only within India; exemption limited to actual travel fare. Exemption under Section 10(5)."
+    },
+    {
+      "front": "What is the entertainment allowance deduction for government employees (limits and rule)?",
+      "back": "Least of: actual entertainment allowance; 20% of salary; ₹5,000. Deduction under section 16(ii) (available to government employees only)."
+    },
+    {
+      "front": "State the exemption limits for children's education allowance and hostel allowance (per child, max children).",
+      "back": "Children's education allowance: ₹100 per month per child (max 2 children). Hostel allowance: ₹300 per month per child (max 2 children). (Allowances under Rule/section for exempt allowances.)"
+    },
+    {
+      "front": "What deduction is allowed for professional tax when computing taxable salary?",
+      "back": "Amount of professional tax actually paid is deductible under section 16(iii). No separate monetary cap beyond actual tax paid."
+    },
+    {
+      "front": "Order of steps to compute taxable salary?",
+      "back": "Gross salary (basic + allowances + perquisites + profits in lieu) → less exempt allowances and exempt retirement benefits → less s.16 deductions (standard deduction; old regime also entertainment allowance and professional tax)."
+    },
+    {
+      "front": "What is the gratuity exemption limit and the position for government employees?",
+      "back": "₹20,00,000 maximum exemption under section 10(10) (statutory gratuity). For government employees, gratuity received is fully exempt (subject to provisions)."
+    },
+    {
+      "front": "How are 'profits in lieu of salary' treated and where are they charged?",
+      "back": "Profits in lieu of salary (compensation on termination, retrenchment etc.) taxable under section 17(3) except amounts exempt under sec 10(10)/10(10A)/10(10B as applicable)."
+    },
+    {
+      "front": "What is the 'specified employee' salary threshold used in valuation rules (Rule 3C)?",
+      "back": "₹4,00,000 salary threshold for 'specified employee' under Rule 3C (affects certain perquisite valuation rules)."
+    },
+    {
+      "front": "What gross total income limit applies for employer‑paid medical treatment abroad per Rule 3D?",
+      "back": "Gross total income ceiling ₹8,00,000 under Rule 3D for valuation/exemption considerations regarding employer‑paid medical travel abroad."
+    },
+    {
+      "front": "Where are perquisites defined and valued?",
+      "back": "Defined in s.17(2); valued under Rule 3 of the Income-tax Rules. Rule 3C and 3D carry the new ₹4,00,000 and ₹8,00,000 limits."
+    },
+    {
+      "front": "Rent-free unfurnished accommodation owned by a private employer — perquisite value?",
+      "back": "10% of salary if population above 40 lakh; 7.5% if above 15 lakh up to 40 lakh; 5% otherwise (2011 census; Rule 3 from 1-9-2023). The old 15% / 10% / 7.5% rates are superseded."
+    },
+    {
+      "front": "Leave encashment at retirement — exemption ceiling for non-government employees?",
+      "back": "₹25,00,000 (s.10(10AA)); least of the ceiling, actual amount, 10 months' average salary, and unavailed leave at max 30 days a year. Encashment DURING service is fully taxable."
+    },
+    {
+      "front": "Employer's contributions to PF + NPS + superannuation — when taxable?",
+      "back": "The aggregate above ₹7,50,000 in a year is a perquisite (s.17(2)(vii)), and so is the annual accretion on that excess. Separately, employer's PF contribution above 12% of salary is taxable."
+    },
+    {
+      "front": "Commuted pension — how much is exempt for a non-government employee?",
+      "back": "1/3 of the FULL commuted value if he also gets gratuity; 1/2 if he does not (s.10(10A)). Gross up first: full value = amount received ÷ percentage commuted. Government employees: fully exempt."
+    },
+    {
+      "front": "Which salary deductions/exemptions die in the new regime?",
+      "back": "HRA, LTA, children education and hostel allowance, professional tax, entertainment allowance. What survives: standard deduction ₹75,000 and employer's NPS contribution u/s 80CCD(2)."
+    }
+  ],
+  "Set off and Carry Forward of Losses": [
+    {
+      "front": "Which section governs intra‑head set‑off of loss from one source against income from another source in the same head?",
+      "back": "1. Section 70: Loss from one source under the same head may be set off against income from another source under that head in the same AY (intra‑head set‑off)."
+    },
+    {
+      "front": "What is the prescribed sequence to adjust losses when computing total income?",
+      "back": "1. Order: intra‑head set‑off (s.70) → inter‑head set‑off in same AY (s.71) → compute total income → carry forward unadjusted losses under relevant sections."
+    },
+    {
+      "front": "How long can a non‑speculative business loss be carried forward and against which income can it be set off?",
+      "back": "1. 8 assessment years; set off only against profits & gains of business or profession (carry‑forward rules: s.72)."
+    },
+    {
+      "front": "What are the set‑off and carry‑forward rules for speculative business losses?",
+      "back": "1. Set off in same AY only against speculative gains; unabsorbed speculative loss carried forward 4 assessment years and can be set off only against speculative gains (s.73)."
+    },
+    {
+      "front": "How are short‑term and long‑term capital losses adjusted and what is the carry‑forward period?",
+      "back": "1. STCL: set off against STCG and LTCG; LTCL: set off only against LTCG. 2. Carry forward for 8 assessment years (s.74)."
+    },
+    {
+      "front": "House property loss — set-off and carry forward?",
+      "back": "Old regime: set off against other heads up to ₹2,00,000 a year (s.71(3A)); balance carried forward 8 AYs against house property income only (s.71B). New regime: no inter-head set-off."
+    },
+    {
+      "front": "What is the rule for unabsorbed depreciation (carry forward and set‑off)?",
+      "back": "1. Unabsorbed depreciation: carried forward without limit and set off in subsequent years until exhausted; can be adjusted against any head's income (as per s.32 read with carry‑forward provisions)."
+    },
+    {
+      "front": "Which losses are restricted to be set off only against income of the same head (give examples and periods)?",
+      "back": "1. LTC loss → only LTCG; Speculation loss → only speculative gains (4 years); Business loss (carried forward) → only business income (8 years); House property carried forward → only house property (8 years)."
+    },
+    {
+      "front": "Which losses need a return filed by the s.139(1) due date to be carried forward?",
+      "back": "Business loss (incl. speculation and specified business), capital loss, and loss from owning race horses (s.80). EXCEPTIONS: house property loss and unabsorbed depreciation carry forward even with a belated return."
+    },
+    {
+      "front": "What is the single common computational step students often miss when setting off losses?",
+      "back": "1. Always perform intra‑head adjustments first (s.70) before inter‑head set‑off; failure to do intra‑head set‑off first leads to incorrect remaining loss and wrong carry‑forward amount."
+    },
+    {
+      "front": "Can business loss be set off against salary income?",
+      "back": "No — s.71(2A) bars set-off of loss under PGBP against income under 'Salaries'. It can be set off against the other heads."
+    },
+    {
+      "front": "Specified business loss (s.35AD) and loss from owning race horses — rules?",
+      "back": "s.73A: specified business loss only against specified business income, carried forward indefinitely. s.74A: race-horse loss only against race-horse income, carried forward 4 AYs. Losses from lottery/betting cannot be set off at all."
+    }
+  ],
+  "Profits and Gains from Business or Profession": [
+    {
+      "front": "s.44AD — turnover limit, rates, and the 5-year rule?",
+      "back": "Up to ₹2 crore; ₹3 crore if cash receipts do not exceed 5% of turnover. Income = 8% of turnover, 6% on receipts through banking channels. Declare lower and opt out → barred from 44AD for the next 5 AYs."
+    },
+    {
+      "front": "s.44ADA — limit and deemed income for professionals?",
+      "back": "Gross receipts up to ₹50 lakh; ₹75 lakh if cash receipts do not exceed 5%. Income = 50% of gross receipts. Unlike 44AD there is no 5-year lock-out."
+    },
+    {
+      "front": "Give the tax‑audit turnover limits for businesses and professionals under section 44AB, and the higher‑limit condition.",
+      "back": "1 crore turnover for business (raised to 10 crore if cash receipts/payments ≤5% of total); 50 lakh gross receipts for professionals. (s.44AB)."
+    },
+    {
+      "front": "What is the cash payment limit under s.40A(3) and what happens if it is breached?",
+      "back": "10,000; if payment in cash exceeds ₹10,000 the entire payment is disallowed as a business expense (not just the excess). (s.40A(3))."
+    },
+    {
+      "front": "When are deductions under s.43B allowable? Give the payment deadline condition and examples.",
+      "back": "Due date of filing return u/s139(1); deductions under s.43B allowed only if actually paid on or before that date. Examples: tax, employer's PF, gratuity, bonus, leave encashment. (s.43B)."
+    },
+    {
+      "front": "How is depreciation computed for tax under s.32 — basis and block treatment?",
+      "back": "WDV; depreciation computed on block of assets at rates in Income‑tax Rules; add cost of additions, subtract disposals, then apply prescribed rate. (s.32)."
+    },
+    {
+      "front": "Under what precise condition is an expenditure allowable under s.37(1)?",
+      "back": "Wholly and exclusively for business; not capital, not personal, and not covered by specific sections s.30–s.36. (s.37(1))."
+    },
+    {
+      "front": "s.40(a)(ia) vs s.40(a)(i) — how much is disallowed for TDS default?",
+      "back": "Payment to a RESIDENT: 30% of the sum disallowed. Payment to a NON-RESIDENT: 100%. Either is allowed in the year the tax is deducted and paid."
+    },
+    {
+      "front": "Write the stepwise order to compute taxable profits from profit & gains of business/profession.",
+      "back": "1) Start with P&L net profit; 2) add back non‑allowable items (s40/40A); 3) add business incomes taxed elsewhere; 4) deduct allowable expenses (s30–s37) and depreciation (s32)."
+    },
+    {
+      "front": "s.40(b) — maximum remuneration to working partners?",
+      "back": "On first ₹6,00,000 of book profit (or loss): ₹3,00,000 or 90% of book profit, whichever is higher. On the balance: 60%. Must be authorised by the deed. Interest to partners capped at 12% p.a."
+    },
+    {
+      "front": "When is a bad debt deductible under s.36?",
+      "back": "If previously included in income and subsequently written off as irrecoverable — bad debt deductible under s.36(1)(vii). Banks have special provisions. (s.36(1)(vii))."
+    },
+    {
+      "front": "s.40A(3) — what is the limit for payments to a transporter?",
+      "back": "₹35,000 per day for plying, hiring or leasing goods carriages (general limit ₹10,000). Cross the limit and the WHOLE payment is disallowed, not the excess."
+    },
+    {
+      "front": "s.43B(h) — payments to micro and small enterprises?",
+      "back": "Deductible only on ACTUAL PAYMENT if not paid within the MSMED Act limit (45 days with written agreement, 15 days without). Paying before the return due date does NOT save it."
+    },
+    {
+      "front": "Employees' PF contribution deposited late — treatment?",
+      "back": "It is the employer's income u/s 2(24)(x); deduction u/s 36(1)(va) only if deposited by the due date under the PF law. The 'before return due date' relief of s.43B covers only the EMPLOYER'S own contribution."
+    },
+    {
+      "front": "Depreciation when an asset is used for less than 180 days? Additional depreciation?",
+      "back": "Under 180 days: half the normal rate. Additional depreciation: 20% on new plant and machinery for manufacturers (10% if under 180 days, balance next year) — NOT available in the new regime."
+    },
+    {
+      "front": "s.44AE — presumptive income for goods carriages?",
+      "back": "Up to 10 vehicles. Heavy goods vehicle: ₹1,000 per tonne of gross vehicle weight per month or part. Other vehicles: ₹7,500 per month or part. A part of a month counts as a full month."
+    }
+  ],
+  "Capital Gains": [
+    {
+      "front": "s.112A — rate, exemption and the grandfathering cost rule?",
+      "back": "12.5% on LTCG above ₹1,25,000 from STT-paid listed equity/equity funds, no indexation. Cost = higher of (a) actual cost and (b) LOWER of FMV on 31-1-2018 and sale price. It can wipe out a gain but never create a loss."
+    },
+    {
+      "front": "How is short‑term capital gain on sale of listed equity/units (where STT paid) taxed and under which section?",
+      "back": "20%: STCG on securities where STT paid is taxed at 20% under s.111A (sale on recognised stock exchange, STT requirement essential)."
+    },
+    {
+      "front": "LTCG on land or building sold by a resident individual/HUF — which rate?",
+      "back": "Acquired BEFORE 23-7-2024: tax = lower of 12.5% without indexation and 20% with indexation. Acquired on or after that date, and for all other assessees and assets: 12.5% without indexation."
+    },
+    {
+      "front": "Holding‑period thresholds to treat as long‑term: (a) listed equity/units (b) other assets.",
+      "back": "12 months / 24 months: Listed equity/units = long‑term if >12 months; other capital assets = long‑term if >24 months."
+    },
+    {
+      "front": "s.54 — time limits, cap and the two-house option?",
+      "back": "Buy within 1 year before or 2 years after, or construct within 3 years. Cost of new house counted up to ₹10 crore. If LTCG is up to ₹2 crore, may invest in TWO houses — once in a lifetime."
+    },
+    {
+      "front": "s.54F — how is the exemption computed and what is the ownership condition?",
+      "back": "Exemption = LTCG × amount invested ÷ NET CONSIDERATION. Must not own more than one residential house (other than the new one) on the date of transfer. ₹10 crore cap applies. Asset sold must NOT be a residential house."
+    },
+    {
+      "front": "Give the limit, time‑window and lock‑in for investment under section 54EC.",
+      "back": "₹50,00,000: invest in notified bonds within 6 months of transfer; bonds locked‑in for 5 years; applies to LTCG from land or building (s.54EC)."
+    },
+    {
+      "front": "What is the three‑step computation sequence for capital gain (name the section reference)?",
+      "back": "1) Full value of consideration; 2) Less cost of transfer/expenses; 3) Less (indexed) cost of acquisition & improvement = capital gain (s.48; use CII where indexation allowed)."
+    },
+    {
+      "front": "How do set‑off and carry‑forward rules work between short‑term and long‑term capital losses?",
+      "back": "STCL can be set off against STCG or LTCG; LTCL only against LTCG; unabsorbed losses carried forward for 8 assessment years if return filed within due date."
+    },
+    {
+      "front": "Whose cost is used when an asset is received as a gift for computing capital gains on later transfer?",
+      "back": "Cost of previous owner: recipient inherits previous owner's cost and acquisition date for capital gains computation (s.49 applies to such provisions)."
+    },
+    {
+      "front": "How do you compute indexed cost using the Cost Inflation Index (CII)?",
+      "back": "Indexed cost = Actual cost × (CII of year of transfer / CII of year of acquisition); apply where indexation benefit is available (used in s.48 computations)."
+    },
+    {
+      "front": "What base‑cost rule applies to assets acquired before 1‑4‑2001 for capital gains computation?",
+      "back": "FMV rule: for assets acquired before 01‑04‑2001, use higher of actual cost or FMV as on 01‑04‑2001 as base for computing capital gains (then apply indexation forward)."
+    },
+    {
+      "front": "s.50C — when does stamp duty value replace actual consideration?",
+      "back": "Only if stamp value exceeds 110% of the consideration. If it does, the WHOLE stamp value is adopted. Same 10% tolerance in s.43CA and s.56(2)(x)."
+    },
+    {
+      "front": "Sale of depreciable assets (s.50) — nature of the gain?",
+      "back": "ALWAYS short-term, whatever the holding period. Gain arises when sale value exceeds opening WDV + additions, or the block ceases to exist."
+    },
+    {
+      "front": "Buyback of shares on or after 1-10-2024 — tax in the shareholder's hands?",
+      "back": "Entire amount received is DIVIDEND (s.2(22)(f)), no deduction for cost. For capital gains the consideration is nil, so the cost becomes a capital LOSS to set off or carry forward."
+    },
+    {
+      "front": "Capital asset converted into stock-in-trade — when and on what value is gain taxed?",
+      "back": "s.45(2): capital gain taxed in the year the stock is SOLD, using FMV on the date of conversion as consideration. Sale price minus that FMV is business income."
+    }
+  ],
+  "Income from Other Sources": [
+    {
+      "front": "Which section is the charging provision for Income from Other Sources and what incomes does it residually include (one line)?",
+      "back": "56: residuary head — incomes not chargeable under Salaries, HP, PGBP or CG (s.56); includes dividends, interest, family pension, gifts, winnings, other residual receipts."
+    },
+    {
+      "front": "When are gifts/monetary receipts from non‑relatives taxable? Name the threshold and main exemptions.",
+      "back": "₹50,000: gifts/monies from non‑relatives aggregating >₹50,000 taxable under s.56(2); gifts from relatives, on marriage, by will, local authorities, recognised institutions are exempt."
+    },
+    {
+      "front": "Immovable property bought for inadequate consideration — when is the difference taxed?",
+      "back": "s.56(2)(x): only if stamp value exceeds consideration by more than the HIGHER of ₹50,000 and 10% of the consideration. If it does, the whole difference is taxable."
+    },
+    {
+      "front": "How are shares, securities or movable property received for inadequate or no consideration taxed (give the numeric test)?",
+      "back": "₹50,000: FMV minus consideration of movable property/shares/securities received without/for inadequate consideration is taxable if FMV>₹50,000 (s.56(2)); listed/unlisted securities have specific rules."
+    },
+    {
+      "front": "What is the general rule for deductions against Income from Other Sources and which section governs it?",
+      "back": "57: only expenses 'wholly and exclusively' for earning IFS are deductible — e.g. interest, manager/agent remuneration, collection/repairs, taxes; no general standard deduction (s.57)."
+    },
+    {
+      "front": "Family pension — deduction in old vs new regime?",
+      "back": "s.57(iia): lower of 1/3 of the pension and ₹15,000 (old regime) or ₹25,000 (new regime). Taxed under Other Sources, never Salaries."
+    },
+    {
+      "front": "Lottery, races, card games, online games — how taxed?",
+      "back": "Flat 30% (s.115BB; online games s.115BBJ on net winnings). No basic exemption, no deduction of any expense, no set-off of losses; in the new regime no 87A rebate against it."
+    },
+    {
+      "front": "Dividend income — what expense can be deducted?",
+      "back": "Only INTEREST expense, and only up to 20% of the dividend (proviso to s.57). Commission or any other expense: nil."
+    },
+    {
+      "front": "What is the TDS threshold for interest relevant to Income from Other Sources (s.194A)?",
+      "back": "₹50,000 (₹1,00,000 for senior citizens): TDS under s.194A on interest is required when interest income exceeds ₹50,000; senior‑citizen threshold is ₹1,00,000."
+    },
+    {
+      "front": "Are dividends exempt or taxable in the shareholder's hands now — name the change and year?",
+      "back": "2020: DDT abolished (Finance Act 2020); dividends are now taxable as 'Income from Other Sources' in the recipient's hands — s.10(34) exemption removed."
+    },
+    {
+      "front": "Interest on compensation or enhanced compensation — when taxed and what deduction?",
+      "back": "Taxed in the year of RECEIPT (s.145B), with a flat 50% deduction (s.57(iv)). No other deduction."
+    },
+    {
+      "front": "Gifts that are NOT taxable u/s 56(2)(x)?",
+      "back": "From relatives; on the individual's own marriage (from anyone); under a will or inheritance; in contemplation of death of the donor; from local authority or registered trust. Otherwise taxable in full once aggregate exceeds ₹50,000."
+    }
+  ],
+  "Deductions": [
+    {
+      "front": "Maximum deduction under Section 80C for AY 2026–27 — amount and does 80CCD(1) fall within it?",
+      "back": "₹1,50,000 — Section 80C. Yes: employee contribution under Section 80CCD(1) counts within the ₹1.5 lakh aggregate limit."
+    },
+    {
+      "front": "How much extra deduction is allowed under Section 80CCD(1B) and who can claim it?",
+      "back": "₹50,000 additional — Section 80CCD(1B). Resident individual NPS subscribers (includes NPS Vatsalya account for minors) — over and above the ₹1.5 lakh 80C limit."
+    },
+    {
+      "front": "s.80CCD(2) — employer's NPS contribution: limit, and does it survive the new regime?",
+      "back": "Yes, it survives. New regime: up to 14% of salary (basic + DA) for all employers. Old regime: 10% for non-government employers, 14% government. Over and above the ₹1.5 lakh limit of s.80CCE."
+    },
+    {
+      "front": "Section 80D: limits for health insurance premium deduction (self/family and parents) and preventive check‑ups?",
+      "back": "Self & family: ₹25,000 (₹50,000 if taxpayer ≥60); Parents: ₹25,000 (₹50,000 if parents ≥60). Preventive health check‑up max ₹5,000 within these limits — Section 80D."
+    },
+    {
+      "front": "How long and how much interest on education loan is deductible under Section 80E?",
+      "back": "Interest fully deductible for up to 8 years from the year repayment begins (or until interest extinguished); no monetary ceiling — Section 80E. Applies to loan for higher education for self, spouse or children."
+    },
+    {
+      "front": "What are the basic 80G rules: deduction rates and the 10% qualifying limit?",
+      "back": "Donations qualify for 100% or 50% deduction (with or without restriction) — Section 80G. Where restricted, deductible amount limited to 10% of Gross Total Income (computed before 80G deductions)."
+    },
+    {
+      "front": "Section 80GG: formula for rent deduction and key eligibility conditions?",
+      "back": "Deduction = least of: ₹5,000/month; 25% of total income; rent paid minus 10% of total income — Section 80GG. For those not receiving HRA, not owning accommodation at workplace/residence; file Form 10BA."
+    },
+    {
+      "front": "Which Chapter VI-A deductions are available in the NEW regime?",
+      "back": "Only 80CCD(2) (employer's NPS), 80CCH(2) (Agniveer corpus) and 80JJAA. Everything else — 80C, 80D, 80E, 80G, 80TTA/TTB — is switched off."
+    },
+    {
+      "front": "Interest on savings bank deposits — limits under Sections 80TTA and 80TTB?",
+      "back": "Non‑senior individuals/HUF: up to ₹10,000 under Section 80TTA. Senior citizens: up to ₹50,000 under Section 80TTB (senior citizens use 80TTB instead of 80TTA)."
+    },
+    {
+      "front": "Where in the income‑computation order are Chapter VI‑A deductions (secs 80C–80U) claimed?",
+      "back": "Chapter VI‑A deductions are subtracted from Gross Total Income to arrive at Total Income — claimed after computing Gross Total Income (i.e., post‑aggregation of heads)."
+    },
+    {
+      "front": "s.80DD and s.80U — amounts?",
+      "back": "Flat ₹75,000; ₹1,25,000 for severe disability (80% or more). 80DD: for a disabled DEPENDANT. 80U: the assessee HIMSELF is disabled. Flat amounts regardless of actual expense. Residents only."
+    },
+    {
+      "front": "Common examiner trap: when to apply 80C/other deductions versus exemptions?",
+      "back": "Apply exemptions and compute Gross Total Income first; then deduct Chapter VI‑A (e.g., 80C). Don’t net 80C against individual heads — it reduces Gross Total Income only after aggregation."
+    },
+    {
+      "front": "s.80DDB — medical treatment of specified diseases?",
+      "back": "Actual expenditure up to ₹40,000; ₹1,00,000 if the patient is a senior citizen. For self or dependant; reduced by insurance or employer reimbursement."
+    },
+    {
+      "front": "s.80G with the 10% qualifying limit — the two steps?",
+      "back": "Step 1: cap the donation at 10% of adjusted gross total income. Step 2: apply 50% or 100% to that capped figure. Cash donations above ₹2,000 get nothing."
+    }
+  ],
+  "Advance Tax, TDS and TCS": [
+    {
+      "front": "Who must pay advance tax, and who is exempt?",
+      "back": "Anyone whose tax payable for the year is ₹10,000 or more (s.208). Exempt: a RESIDENT individual aged 60+ with no business or professional income (s.207(2))."
+    },
+    {
+      "front": "What are the due dates and cumulative instalment percentages for advance‑tax payments?",
+      "back": "15 June 15%, 15 Sept 45% (cumulative), 15 Dec 75% (cumulative), 15 Mar 100% — standard advance‑tax schedule (instalments of advance tax)."
+    },
+    {
+      "front": "What is the 234C rule for interest on shortfall in advance instalments?",
+      "back": "1% per month — interest under s.234C on shortfall in each instalment; charged for the months of deferment on the amount of shortfall for that instalment."
+    },
+    {
+      "front": "When is interest under s.234B levied and at what rate?",
+      "back": "1% per month — s.234B charged from 1 April to date of filing when advance tax paid is insufficient (typically when advance tax paid < 90% of assessed tax)."
+    },
+    {
+      "front": "Distinguish s.234A from s.234B (short, buyer’s‑guide answer).",
+      "back": "1% p.m. both: s.234A — interest for late filing (from due date to filing) on tax unpaid; s.234B — interest for default in payment of advance tax (from 1 April until filing)."
+    },
+    {
+      "front": "Advance tax under presumptive taxation?",
+      "back": "Assessees under s.44AD or s.44ADA pay the whole advance tax in ONE instalment by 15 March. (s.44AE is not covered — normal four instalments.)"
+    },
+    {
+      "front": "What is the TDS threshold for interest other than on securities (section 194A)?",
+      "back": "₹50,000 — no TDS under s.194A if interest ≤ ₹50,000 in the year; senior citizens threshold ₹1,00,000 (as notified)."
+    },
+    {
+      "front": "What is the TDS threshold for professional/technical fees (section 194J)?",
+      "back": "₹50,000 — TDS under s.194J required when fee/payments in aggregate to a deductee exceed ₹50,000 in the financial year."
+    },
+    {
+      "front": "s.194-I — rent: threshold and rates?",
+      "back": "Threshold ₹50,000 per MONTH or part of a month (from 1-4-2025; earlier ₹2.4 lakh a year). 10% on land, building, furniture; 2% on plant and machinery — on the whole rent."
+    },
+    {
+      "front": "What is the TDS threshold for dividend payments (section 194)?",
+      "back": "₹10,000 — payer must deduct TDS on dividend payments exceeding ₹10,000 in aggregate to a payee in a financial year."
+    },
+    {
+      "front": "s.194C — contractors: thresholds and rates?",
+      "back": "Single payment above ₹30,000 OR aggregate above ₹1,00,000 in the year. 1% if payee is an individual or HUF; 2% for any other payee. On the whole amount."
+    },
+    {
+      "front": "s.194T — payments by a firm to its partners?",
+      "back": "From 1-4-2025: 10% TDS on salary, remuneration, commission, bonus or interest to a partner if the aggregate exceeds ₹20,000 in the year."
+    },
+    {
+      "front": "What are the time‑limits for filing belated, revised and updated returns (ss.139(4),(5),(8A))?",
+      "back": "Belated/Revised (ss.139(4)/(5)): by 31 Dec of the assessment year. Updated return (s.139(8A)): within 48 months from end of the relevant assessment year."
+    },
+    {
+      "front": "For TDS on salary, what perquisite thresholds for specified employees and medical travel abroad must you remember (Rules 3C/3D)?",
+      "back": "₹4,00,000 — 'specified employee' salary limit (Rule 3C); ₹8,00,000 gross total income limit for medical travel abroad perquisite (Rule 3D)."
+    },
+    {
+      "front": "s.194-IB — rent paid by an individual/HUF not liable to audit?",
+      "back": "Rent above ₹50,000 a month: 2% (cut from 5% on 1-10-2024), deducted once — in the last month of the year or of the tenancy. No TAN needed."
+    },
+    {
+      "front": "s.194Q vs s.206C(1H)?",
+      "back": "194Q: buyer with turnover above ₹10 crore deducts 0.1% on purchases EXCEEDING ₹50 lakh. 206C(1H) (TCS by seller on goods) was switched off from 1-4-2025."
+    },
+    {
+      "front": "TCS on LRS remittances u/s 206C(1G)?",
+      "back": "Threshold ₹10 lakh (from 1-4-2025). Other purposes: 20% on the excess. Education/medical: 5% on the excess. Education funded by a loan from a specified institution: nil."
+    },
+    {
+      "front": "s.194J — which payments attract 2% rather than 10%?",
+      "back": "Fees for TECHNICAL services, royalty for sale/distribution of films, and call centres: 2%. Professional services, directors' fees and other royalty: 10%. Threshold ₹50,000."
+    }
+  ],
+  "Clubbing of Income": [
+    {
+      "front": "When is income of your spouse clubbed in your hands? Give the essential condition and section.",
+      "back": "1. Income is clubbed when you transfer an asset to your spouse without adequate consideration and income arises from that asset; such income is included in your total income — Section 64(1)."
+    },
+    {
+      "front": "When is a minor child's income NOT clubbed u/s 64(1A)?",
+      "back": "(1) Income from manual work; (2) income from an activity involving the child's skill, talent or specialised knowledge; (3) the minor suffers from a disability specified in s.80U. Everything else is clubbed."
+    },
+    {
+      "front": "What happens to income where you transfer only the income (not the asset) to another person? Name the section.",
+      "back": "1. Income transferred without transfer of the asset remains taxable in the transferor’s hands — Section 60."
+    },
+    {
+      "front": "When is a revocable transfer treated as clubbed in the transferor's hands? (state the rule concisely)",
+      "back": "1. If the transfer is revocable or the transferor retains the right to re-vest the asset/its income, income is treated as transferor’s and clubbed in his total income."
+    },
+    {
+      "front": "How is income treated when an asset is transferred to another but for the benefit (direct/indirect) of the transferor?",
+      "back": "1. Income arising to the transferee is included in the transferor’s income where the transfer was made for the transferor’s benefit; clubbing applies (provisions of Chapter on clubbing)."
+    },
+    {
+      "front": "Minor's income: clubbed with which parent, and what exemption?",
+      "back": "With the parent whose total income (before clubbing) is HIGHER; if parents are separated, the parent maintaining the child. Exemption u/s 10(32): ₹1,500 per child (old regime only)."
+    },
+    {
+      "front": "How are deductions/benefits (e.g., Chapter VI-A) on clubbed income claimed — by transferor or transferee?",
+      "back": "1. Deductions related to clubbed income are claimed by the transferor (whose total income includes the clubbed amount), subject to usual conditions and limits."
+    },
+    {
+      "front": "Name the single most common computation error students make in clubbing problems.",
+      "back": "1. Error: taxing clubbed income in transferee’s hands and again in transferor’s—correct: include clubbed income only in transferor’s gross total income for taxation."
+    },
+    {
+      "front": "Does clubbing change the nature (salary/business/capital gains) of the income when included in transferor's hands?",
+      "back": "1. No — clubbed income retains its original character (e.g., salary/business/capital gain) when included in the transferor’s total income for computation and reliefs."
+    },
+    {
+      "front": "What's the basic procedural step when you identify a clubbing situation in an exam computation?",
+      "back": "1. Step: exclude the clubbed amount from recipient’s taxable income; add that amount to transferor’s appropriate head in his gross total income and compute tax there."
+    },
+    {
+      "front": "Spouse's remuneration from a concern in which the individual has substantial interest?",
+      "back": "Clubbed with the individual (s.64(1)(ii)) — UNLESS the spouse has technical or professional qualifications and the income is solely attributable to them. Substantial interest = 20% or more."
+    },
+    {
+      "front": "Asset gifted to spouse vs to son's wife?",
+      "back": "Both clubbed with the transferor (s.64(1)(iv) and (vi)). Exceptions for spouse: transfer for adequate consideration or under an agreement to live apart. Income on the accumulated income is NOT clubbed."
+    },
+    {
+      "front": "Cross transfers — are they caught?",
+      "back": "Yes. A gifts to B's wife and B gifts to A's wife: each income is clubbed in the hands of the deemed transferor, to the extent the gifts match."
+    }
+  ],
+  "Return of Income": [
+    {
+      "front": "Due dates for the return u/s 139(1)?",
+      "back": "31 July: individuals and others not requiring audit. 31 October: companies, audit cases and their partners. 30 November: transfer-pricing cases. (30 September is the tax AUDIT REPORT date, not the return.)"
+    },
+    {
+      "front": "What is the last date to file a BELATED or a REVISED return for a year?",
+      "back": "31 December of the relevant assessment year — deadline for belated returns (s.139(4)) and revised returns (s.139(5))."
+    },
+    {
+      "front": "What is the time‑limit to file an UPDATED return under section 139(8A)?",
+      "back": "48 months from the end of the relevant assessment year — maximum period to furnish an updated return u/s 139(8A)."
+    },
+    {
+      "front": "Updated return u/s 139(8A) — additional tax by timing?",
+      "back": "On tax + interest: 25% if filed within 12 months of the end of the AY; 50% within 24; 60% within 36; 70% within 48. Cannot be used to claim a refund, reduce tax or increase a loss."
+    },
+    {
+      "front": "How do you distinguish a BELATED return (s.139(4)) from a REVISED return (s.139(5)) — in one line?",
+      "back": "Belated: return filed after the due date under s.139(1) (s.139(4)). Revised: return filed to correct an earlier return within the statutory time limit (s.139(5), by 31‑Dec)."
+    },
+    {
+      "front": "What filing requirement affects the CARRY‑FORWARD of business or capital losses?",
+      "back": "File return on or before the due date u/s 139(1) to claim carry‑forward of business or capital losses; belated/revised returns generally disallow carry‑forward (statutory condition)."
+    },
+    {
+      "front": "What is the procedure and time‑limit when the AO finds a defect in a return (s.139(9))?",
+      "back": "15 days — AO may issue a defect notice u/s 139(9); taxpayer must rectify within the notice period (usually 15 days), failing which the return may be treated as invalid/void (treated as not filed)."
+    },
+    {
+      "front": "If a return is treated as INVALID because defects were not rectified, how is a later filing treated?",
+      "back": "Any subsequent filing is treated as a belated return u/s 139(4) (i.e., treated as filed after the due date)."
+    },
+    {
+      "front": "Practical order of remedies if you discover omissions: revise, or update — which to use and when?",
+      "back": "1) If within 31‑Dec of AY, file a revised return u/s 139(5). 2) If beyond 31‑Dec but within 48 months, pay tax+interest and file an updated return u/s 139(8A)."
+    },
+    {
+      "front": "Fee for filing the return late (s.234F)?",
+      "back": "₹5,000; ₹1,000 if total income does not exceed ₹5 lakh. Separate from 1% a month interest u/s 234A."
+    },
+    {
+      "front": "Who must file a return even with income below the exemption limit?",
+      "back": "Current-account deposits above ₹1 crore; foreign travel spend above ₹2 lakh; electricity above ₹1 lakh; turnover above ₹60 lakh or professional receipts above ₹10 lakh; TDS/TCS ₹25,000+ (₹50,000 seniors); savings deposits ₹50 lakh+."
+    },
+    {
+      "front": "Who verifies the return of a company, firm and LLP (s.140)?",
+      "back": "Company: managing director (else any director). Firm: managing partner (else any partner not a minor). LLP: designated partner. Individual: himself, or a duly authorised person if absent or incapacitated."
+    }
+  ],
+  "Computation of Total Income": [
+    {
+      "front": "Which five heads must you add to arrive at Gross Total Income (name with sections)?",
+      "back": "5: Salaries (s.15–17), House Property (s.22–27), PGBP (s.28–44), Capital Gains (s.45–55A), Other Sources (s.56–59)."
+    },
+    {
+      "front": "Give the exact stepwise sequence from heads of income to tax payable (brief steps you must follow in exam).",
+      "back": "6-step sequence: (1) Compute each head; (2) Aggregate = Gross Total Income; (3) Deduct Chapter VI‑A (s.80) → Total Income; (4) Compute tax on Total Income (apply rebate); (5) Add surcharge (if any); (6) Add cess 4%."
+    },
+    {
+      "front": "What is the standard deduction for salary under old and new regimes (amount and where claimed)?",
+      "back": "₹50,000 old regime; ₹75,000 new regime — allowable against Salary income (practical deduction from gross salary) when taxpayer opts respective regime (salary deductions under s.16/assessment rules)."
+    },
+    {
+      "front": "New regime slabs for AY 2026-27 — and the cumulative tax at each step?",
+      "back": "0-4L nil; 4-8L 5%; 8-12L 10%; 12-16L 15%; 16-20L 20%; 20-24L 25%; above 24L 30%. Cumulative: ₹20,000 at 8L; ₹60,000 at 12L; ₹1,20,000 at 16L; ₹2,00,000 at 20L; ₹3,00,000 at 24L."
+    },
+    {
+      "front": "How much extra NPS deduction is allowed under 80CCD(1B) and who can claim it?",
+      "back": "₹50,000 additional under s.80CCD(1B): available to individual taxpayers (employee or self‑employed) over and above s.80C limit; NPS Vatsalya (minor account) eligible within this ₹50,000."
+    },
+    {
+      "front": "State the tax treatment and thresholds for capital gains on listed equity/units (STT‑paid): LTCG, STCG and other LTCG rates/thresholds.",
+      "back": "₹1,25,000 exemption threshold for LTCG (s.112A): LTCG taxed at 12.5% on amount above ₹1.25 lakh. STCG on STT‑paid equity taxed under s.111A at 20%. Other LTCG taxed 12.5% (no indexation)."
+    },
+    {
+      "front": "How may capital losses be set off and carried forward? (short‑term v long‑term capital losses)",
+      "back": "STCL: set off against any capital gains; LTCL: set off only against LTCG (s.74). Carry forward: capital losses eligible for 8 assessment years (carry forward under s.74), set off per same restrictions."
+    },
+    {
+      "front": "What is the mandatory order of set‑off when you have losses and incomes across heads? (single exam trap)",
+      "back": "Order: intra‑head set‑off first (losses among sources within same head), then inter‑head set‑off across heads (s.70). Always exhaust intra‑head before inter‑head adjustments."
+    },
+    {
+      "front": "Marginal relief just above ₹12 lakh (new regime)?",
+      "back": "Tax cannot exceed the income above ₹12,00,000. E.g. income ₹12,10,000: slab tax ₹61,500 but payable ₹10,000 (+ cess). Without it, earning ₹10,000 more would cost ₹61,500."
+    },
+    {
+      "front": "Is the s.87A rebate available against tax on capital gains u/s 111A/112A in the new regime?",
+      "back": "No (from AY 2026-27). The rebate is limited to tax at SLAB rates. So total income under ₹12 lakh can still carry tax if it includes special-rate income."
+    },
+    {
+      "front": "State the Chapter VI‑A deduction point: from which aggregate are s.80 deductions allowed and cite section.",
+      "back": "From Gross Total Income: Chapter VI‑A deductions (s.80 onwards) are claimed after aggregating all heads to arrive at Gross Total Income, reducing it to Total Income (s.80)."
+    },
+    {
+      "front": "Give the rebate under section 87A for new regime and state old‑regime figure (limits and amounts).",
+      "back": "New regime rebate (s.87A): up to ₹12,00,000 total income, rebate capped at ₹60,000 (with marginal relief). Old regime unchanged: rebate for incomes up to ₹5,00,000 — max ₹12,500 (prior notified limit)."
+    },
+    {
+      "front": "Surcharge rates for an individual — and the new-regime cap?",
+      "back": "10% above ₹50 lakh; 15% above ₹1 crore; 25% above ₹2 crore; 37% above ₹5 crore (old regime only). New regime caps at 25%. On dividend and 111A/112/112A gains: max 15%."
+    },
+    {
+      "front": "Old-regime exemption limits by age?",
+      "back": "₹2,50,000 general; ₹3,00,000 resident aged 60 to under 80; ₹5,00,000 resident aged 80+. The NEW regime has one limit of ₹4,00,000 for everyone."
+    }
+  ],
+  "Charge of GST (Levy, Composition, RCM)": [
+    {
+      "front": "Which section levies CGST on intra‑State supplies — state of supply and the exact legal provision you must quote in answers?",
+      "back": "Section 9 CGST Act: CGST is levied on all intra‑State supplies of goods or services as per rates notified under the Act (levy of CGST — s.9)."
+    },
+    {
+      "front": "Which section levies IGST — when is IGST chargeable (states of movement/import)?",
+      "back": "Section 5 IGST Act: IGST is levied on all inter‑State supplies and on supplies in the course of import of goods or services; IGST applies when supply crosses State/Union border or at import clearance."
+    },
+    {
+      "front": "What is the statutory test and key inclusions of 'supply' that you must cite in answers?",
+      "back": "Section 7 GST Act: Supply = sale, transfer, barter, exchange, licence, rental, lease or disposal for a consideration, made in course/ furtherance of business; includes imports, deemed supplies and specified activities."
+    },
+    {
+      "front": "CGST + SGST or IGST — the one decisive test?",
+      "back": "Compare the LOCATION OF THE SUPPLIER with the PLACE OF SUPPLY (not the recipient's location). Same State: intra-State, CGST + SGST. Different States: inter-State, IGST. Imports: IGST."
+    },
+    {
+      "front": "How does GST treat a composite supply versus a mixed supply — which rate applies?",
+      "back": "Composite v mixed: Composite supply charged at rate of the principal (dominant) supply; Mixed supply charged at the highest rate applicable to any component (classic examiner trap)."
+    },
+    {
+      "front": "What are the monetary eligibility limits for opting composition scheme?",
+      "back": "Turnover limit: aggregate annual turnover up to ₹1.50 crore (₹75 lakh for special category States) — Section 10 (composition) eligibility threshold."
+    },
+    {
+      "front": "Who cannot opt for composition?",
+      "back": "Makers of inter-State outward supplies; suppliers through an e-commerce operator liable to TCS; manufacturers of ice cream, pan masala, tobacco, aerated waters; casual and non-resident taxable persons; suppliers of non-taxable goods."
+    },
+    {
+      "front": "What are the three core consequences of opting for composition you must state in answers?",
+      "back": "Consequences: (1) pay tax at notified concessional rate under s.10, (2) cannot collect tax from recipient, (3) cannot claim Input Tax Credit (ITC) on purchases."
+    },
+    {
+      "front": "Reverse charge u/s 9(3) — the services to remember?",
+      "back": "GTA (5%, recipient pays); legal services by an advocate to a business entity; director's services to the company; sponsorship to a body corporate or firm; residential dwelling rented to a registered person; security services by a non-corporate to a registered person."
+    },
+    {
+      "front": "Composition rates?",
+      "back": "Manufacturers: 1% of turnover in the State. Traders: 1% of turnover of TAXABLE supplies. Restaurants: 5%. Service providers u/s 10(2A): 6%, turnover up to ₹50 lakh. (CGST + SGST combined.)"
+    },
+    {
+      "front": "s.9(3) vs s.9(4)?",
+      "back": "9(3): NOTIFIED goods/services — recipient pays whatever the supplier's status. 9(4): specified registered recipients (promoters in real estate) pay on notified supplies received from UNREGISTERED suppliers."
+    }
+  ],
+  "Introduction to GST": [
+    {
+      "front": "State the GST rate slabs after GST 2.0 and which slabs were abolished (give effective date).",
+      "back": "3 slabs: 5%, 18%, 40% (effective 22‑Sep‑2025); 12% and 28% abolished; individual health and life insurance made exempt under GST 2.0."
+    },
+    {
+      "front": "What is the basic rule for when GST is leviable (scope of levy)?",
+      "back": "Rule: GST is leviable on any 'supply' of goods or services for consideration made in India by a taxable person, except supplies notified as exempt; exports are zero‑rated."
+    },
+    {
+      "front": "What does 'supply' cover under GST — give the short statutory list of examples.",
+      "back": "Section 7: 'supply' includes sale, transfer, barter, exchange, licence, rental, lease, disposal, or import of services, and activities treated as supply even without consideration."
+    },
+    {
+      "front": "How is a composite supply taxed versus a mixed supply — what common examiner trap must you avoid?",
+      "back": "Rule: composite supply taxed at the rate of the principal supply; mixed supply taxed at the highest rate applicable to any component (don’t confuse 'principal' with 'highest‑rate')."
+    },
+    {
+      "front": "GST Council — voting weights, majority and quorum?",
+      "back": "Centre one-third, all States together two-thirds. Decisions need three-fourths of the weighted votes of members present and voting. Quorum: half the members. Chair: Union Finance Minister (Art. 279A)."
+    },
+    {
+      "front": "Which Articles: power to levy GST, IGST on inter-State supply, GST Council?",
+      "back": "246A: concurrent power of Parliament and States to make GST laws. 269A: levy and apportionment of IGST on inter-State supplies and imports. 279A: GST Council. 366(12A): definition of GST."
+    },
+    {
+      "front": "List the conditions required to claim Input Tax Credit (one‑line mnemonic).",
+      "back": "5 conditions: (1) registered person, (2) tax invoice/debit note, (3) receipt of goods/services, (4) tax charged and paid by supplier, (5) return filed — Section 16."
+    },
+    {
+      "front": "What happens if the recipient does NOT pay the supplier within 180 days of the invoice?",
+      "back": "180 days: recipient must reverse any ITC availed (plus interest) if payment to the supplier is not made within 180 days of invoice; reversed ITC treated as output tax."
+    },
+    {
+      "front": "By what deadline must credit‑note adjustments and related ITC be recorded (statutory cut‑off)?",
+      "back": "30 November following the financial year: credit notes (s.34) and ITC adjustments (s.16(4)) must be recorded/claimed by this date."
+    },
+    {
+      "front": "State the current GST TDS and e‑commerce TCS rates and the TDS applicability threshold.",
+      "back": "TDS s.51: 2% where contract value exceeds ₹2.5 lakh; TCS s.52 (e‑commerce operators): 0.5% on supplies collected by the operator."
+    },
+    {
+      "front": "What stays OUTSIDE GST?",
+      "back": "Alcoholic liquor for human consumption (States tax it). Five petroleum products — crude, petrol, diesel, ATF, natural gas — until the Council recommends a date. Electricity. Tobacco is IN GST and can also bear excise."
+    }
+  ],
+  "Supply under GST": [
+    {
+      "front": "State precisely what 'supply' includes under GST (mention section/schedules).",
+      "back": "1. Section 7: 'supply' includes goods/services for consideration in course or furtherance of business; import of services for consideration; activities in Schedule I deemed supply; Schedule II classifies; Schedule III items are not supplies."
+    },
+    {
+      "front": "Which transactions are treated as 'supply' even without consideration? Give classic Schedule I examples.",
+      "back": "1. Schedule I: supply between related/distinct persons without consideration; transfer/disposal of business assets on cessation; supply of goods by principal to agent — all treated as 'supply' even when no consideration."
+    },
+    {
+      "front": "Under Schedule II, how is a works contract treated for GST purposes?",
+      "back": "1. Schedule II: a works contract is treated as a 'supply of service' (i.e., taxable as service, not as sale of goods)."
+    },
+    {
+      "front": "Name two transactions that are explicitly NOT supplies under GST (Schedule III).",
+      "back": "1. Schedule III: services by an employee to employer; sale of land and sale of (completed) buildings — are treated as neither supply of goods nor services."
+    },
+    {
+      "front": "Define 'composite supply' and state the tax rule that applies (mention section).",
+      "back": "1. Section 2(30): composite supply = two or more supplies naturally bundled with a principal supply; entire composite is taxed at the rate of the principal supply."
+    },
+    {
+      "front": "Define 'mixed supply' and state the tax rule that applies (mention section).",
+      "back": "1. Section 2(74): mixed supply = two or more supplies packaged together not naturally bundled; taxed at the highest rate applicable to any component."
+    },
+    {
+      "front": "Is import of services taxable under GST even if not in course/furtherance of business? Quote the section.",
+      "back": "1. Section 7(1)(b): Yes — import of services for consideration is treated as 'supply' and taxable whether or not in course or furtherance of business."
+    },
+    {
+      "front": "When deciding whether a transaction is a 'supply', what is the primary test and its key exceptions?",
+      "back": "1. Primary test: 'in course or furtherance of business' (Section 7). Key exceptions: Schedule I transactions, import of services, and supplies between related/distinct persons (treated as supply even without consideration)."
+    },
+    {
+      "front": "If a composite supply contains exempt, zero-rated and taxable elements, which tax rate applies to the invoice?",
+      "back": "1. Rule: The tax rate of the principal supply applies to the entire composite — even if other components are exempt or zero-rated."
+    },
+    {
+      "front": "How are supplies between distinct persons (separately registered branches) treated for GST?",
+      "back": "1. Rule: Supplies between distinct persons (separately registered branches) are taxable supplies — treated as supplies (inter- or intra-state as per place of supply rules)."
+    }
+  ],
+  "Place of Supply": [
+    {
+      "front": "Inter-State or intra-State — what is compared?",
+      "back": "Location of the SUPPLIER and the PLACE OF SUPPLY. Different States: inter-State (IGST, s.7 IGST Act). Same State: intra-State (CGST + SGST, s.8). The recipient's location matters only where the rule makes it the place of supply."
+    },
+    {
+      "front": "Goods involving movement — place of supply? And bill-to ship-to?",
+      "back": "s.10(1)(a): where the movement TERMINATES for delivery to the recipient. s.10(1)(b): delivered on the direction of a THIRD PERSON → that third person's principal place of business."
+    },
+    {
+      "front": "Goods with no movement, and goods assembled or installed at site?",
+      "back": "No movement: location of the goods at the time of delivery (s.10(1)(c)). Assembled/installed: place of installation (s.10(1)(d)). On board a conveyance: where taken on board (s.10(1)(e))."
+    },
+    {
+      "front": "What is the place of supply for goods supplied on board a conveyance (e.g., food sold on a train)?",
+      "back": "Location at which the goods are taken on board the conveyance (place where goods are loaded/embarked)."
+    },
+    {
+      "front": "Default rule for services, both parties in India (s.12(2))?",
+      "back": "To a REGISTERED person: location of the recipient. To an UNREGISTERED person: location of the recipient if his address is on record; otherwise location of the supplier."
+    },
+    {
+      "front": "Where is the place of supply for services related to immovable property (including short‑stay accommodation)?",
+      "back": "Location where the immovable property is situated (includes rentals, construction, architect, surveying, and short‑term accommodation)."
+    },
+    {
+      "front": "For admission to events or supplying event‑services, where is the place of supply?",
+      "back": "Location where the event actually takes place (the physical venue where the event is held)."
+    },
+    {
+      "front": "Passenger transport — place of supply?",
+      "back": "Registered recipient: location of the recipient. Unregistered: place where the passenger EMBARKS for a continuous journey (s.12(9))."
+    },
+    {
+      "front": "Where is the place of supply for transportation of goods (B2C) when someone hires transport?",
+      "back": "Location where the goods are handed over for transportation; if B2B, use recipient’s location under the B2B rule."
+    },
+    {
+      "front": "How to locate place of supply for restaurant, catering and food‑service supplies?",
+      "back": "Place where the services are actually performed — the physical location of the restaurant or catering venue."
+    },
+    {
+      "front": "Training/performance appraisal, and banking services — place of supply?",
+      "back": "Training (s.12(5)): registered recipient → his location; unregistered → where actually performed. Banking (s.12(12)): location of the recipient on the supplier's records, else location of the supplier."
+    },
+    {
+      "front": "How do you treat composite and mixed supplies when finding place of supply?",
+      "back": "Composite: place of supply = place of the principal supply. Mixed: treat each component separately and determine place for each supply."
+    }
+  ],
+  "Time of Supply": [
+    {
+      "front": "Advance received: is GST payable at receipt — goods vs services?",
+      "back": "SERVICES: yes, time of supply is the earlier of invoice and payment, so an advance is taxed on receipt (receipt voucher). GOODS: no tax on advances — time of supply is the invoice date or last date to invoice."
+    },
+    {
+      "front": "When is the time of supply for a single‑purpose voucher and for a multi‑purpose voucher?",
+      "back": "Single‑purpose: date of sale/issue of the voucher (taxable on issue). Multi‑purpose: date of voucher redemption (taxable on redemption)."
+    },
+    {
+      "front": "By what time must a supplier issue a tax invoice for services (deadline)?",
+      "back": "30 days from date of supply of services — invoice must be issued within 30 days, failing which time‑of‑supply consequences apply."
+    },
+    {
+      "front": "When must a tax invoice for goods be issued (timing relative to removal/delivery)?",
+      "back": "Before or at the time of removal/delivery of goods for supply — invoice must accompany or precede physical movement/delivery."
+    },
+    {
+      "front": "What is the 'date of receipt of payment'?",
+      "back": "The EARLIER of the date it is entered in the supplier's books and the date it is credited to his bank account (Explanation to s.12/13)."
+    },
+    {
+      "front": "Time of supply of GOODS under forward charge?",
+      "back": "Earlier of (a) date of issue of invoice and (b) the last date on which the invoice was required to be issued u/s 31. Date of payment is not relevant for goods."
+    },
+    {
+      "front": "How is time of supply determined for continuous supplies with periodic billing?",
+      "back": "Earliest of: date of issue of periodic invoice, date of receipt of payment for that period, or the date on which supplier becomes entitled to issue the invoice for that period."
+    },
+    {
+      "front": "If an invoice for services is not issued within the prescribed 30 days, what becomes the time of supply?",
+      "back": "Date of provision of the service — if invoice isn’t issued within 30 days, the service date (or earlier payment date) becomes the tax point."
+    },
+    {
+      "front": "By when must credit or debit notes be issued to adjust output tax/ITC for a financial year?",
+      "back": "30 November following the end of the financial year — deadline for issuing credit/debit notes under s.34 and for ITC adjustments under s.16(4)."
+    },
+    {
+      "front": "Reverse charge — time of supply for goods and for services?",
+      "back": "Goods (s.12(3)): earliest of receipt of goods, date of payment, 30 days from supplier's invoice. Services (s.13(3)): earlier of date of payment and 60 days from invoice. Payment date = earlier of books entry and bank debit."
+    },
+    {
+      "front": "Change in rate of tax (s.14) — the rule of thumb?",
+      "back": "Three events: supply, invoice, payment. The rate in force when ANY TWO of them occur applies. Supplied before the change but invoiced and paid after → new rate, time of supply = earlier of invoice/payment."
+    }
+  ],
+  "Value of Supply": [
+    {
+      "front": "What is the primary legal basis for determining the value of a taxable supply in GST exams?",
+      "back": "Section 15: Transaction value (price actually paid or payable) is the primary basis for value of supply, subject to specified inclusions, exclusions and exceptions under the Act."
+    },
+    {
+      "front": "When must the transaction value be set aside and GST Valuation Rules applied instead?",
+      "back": "Section 15: When supplier and recipient are related or price is influenced by special relationship/conditions, transaction value may be disregarded and Valuation Rules applied in prescribed order."
+    },
+    {
+      "front": "What must be ADDED to transaction value (s.15(2))?",
+      "back": "Non-GST taxes and duties; amounts the SUPPLIER was liable to pay but the recipient incurred; incidental expenses (packing, commission) charged before delivery; interest, late fee or penalty for delayed payment; subsidies linked to price EXCEPT government subsidies."
+    },
+    {
+      "front": "When can a discount be excluded from taxable value without a credit note?",
+      "back": "Section 15: Discounts given before or at time of supply and specifically recorded in invoice/contract are excluded from value; post‑supply discounts must be adjusted by credit note to reduce taxable value."
+    },
+    {
+      "front": "Deadline for a credit note to reduce output tax?",
+      "back": "30 November following the financial year of the supply, or the annual return date, whichever is earlier (s.34(2)). A credit note can be issued any time; this limit only governs the tax adjustment."
+    },
+    {
+      "front": "What conditions must be satisfied for a reimbursement to be excluded as a 'pure agent' (not part of value)?",
+      "back": "Pure agent (valuation rules): Excluded if supplier acts on recipient's directions, pays third party, recovers exact amount without markup, separately shown on invoice and supported by documents."
+    },
+    {
+      "front": "Is GST/IGST/UTGST/Compensation Cess charged by supplier included in the taxable value?",
+      "back": "Excluded: Taxes levied under GST (CGST/IGST/UTGST/compensation cess) charged by supplier are not part of taxable value (Section 15)."
+    },
+    {
+      "front": "How is consideration paid or payable by a third party treated for GST valuation?",
+      "back": "Included: Any consideration paid or payable by a third party for supply is part of the value and must be included in taxable value (Section 15)."
+    },
+    {
+      "front": "How is consideration 'not wholly in money' treated for valuation?",
+      "back": "Money‑equivalent: Non‑monetary consideration is valued at its money equivalent and included in taxable value (Section 15)."
+    },
+    {
+      "front": "What is the examiner‑safe order of steps to compute taxable value (common mistake to avoid)?",
+      "back": "Steps: 1) establish transaction value (Section 15); 2) exclude allowable pre‑supply discounts/pure‑agent amounts; 3) add includible expenses/third‑party consideration; 4) apply Valuation Rules if transaction value not acceptable."
+    },
+    {
+      "front": "Post-supply discount — when is it deductible from value?",
+      "back": "s.15(3)(b): only if (1) established by an agreement entered into at or BEFORE the time of supply and linked to specific invoices, AND (2) the recipient has reversed the proportionate ITC. A spontaneous later discount gets nothing."
+    }
+  ],
+  "Exemptions from GST": [
+    {
+      "front": "List the three legal categories of supplies that result in no GST (name the statutes).",
+      "back": "3 categories: zero‑rated supplies (IGST Act s.16), exempt/nil‑rated supplies (by notification under CGST Act s.11) and non‑GST activities (Schedule III, CGST Act)."
+    },
+    {
+      "front": "Define zero‑rated supply and the two routes available for exporters.",
+      "back": "Zero‑rated = exports and supplies to SEZ (IGST Act s.16). 2 routes: export under LUT without tax; or pay IGST and claim refund of unutilised ITC."
+    },
+    {
+      "front": "What is the immediate ITC consequence when you make an exempt (nil‑rated) supply?",
+      "back": "0 output tax collected; inputs/services used exclusively for exempt supplies disallow ITC. Common inputs require proportionate reversal under CGST s.17 and Rules 42/43."
+    },
+    {
+      "front": "When is a composite supply treated as exempt?",
+      "back": "When the principal supply is exempt, the entire composite supply is exempt. Always determine the principal supply first (composite‑supply principle)."
+    },
+    {
+      "front": "How is a mixed supply taxed if one component is exempt?",
+      "back": "Tax at the highest rate among components (mixed‑supply rule). If one component is exempt, highest taxable component’s rate applies."
+    },
+    {
+      "front": "Give three Schedule III examples that are treated as 'not a supply' for GST.",
+      "back": "3 examples: sale of land; actionable claims (except lottery/Betting where taxable); services by an employee to employer (also services of courts). (Schedule III, CGST Act)."
+    },
+    {
+      "front": "What must an exporter furnish to supply zero‑rated under LUT and consequence if not furnished?",
+      "back": "1 valid LUT before export. If no LUT furnished, exporter must pay IGST on export and then claim refund; LUT avoids upfront tax payment."
+    },
+    {
+      "front": "What monthly reversal/reporting must be done in GSTR‑3B because of exempt supplies?",
+      "back": "Monthly: proportionate ITC reversal for exempt supplies must be reported in GSTR‑3B using Rule 42/43; reversal increases output tax liability for the month."
+    },
+    {
+      "front": "GST 2.0 and insurance?",
+      "back": "From 22-9-2025: INDIVIDUAL life insurance and INDIVIDUAL health insurance policies are exempt. Group policies are not covered by this exemption."
+    },
+    {
+      "front": "Exam trap: difference between 'exempt' and 'zero‑rated' regarding availability of ITC refund?",
+      "back": "Key: Zero‑rated allows refund of unutilised ITC (LUT or IGST+refund). Exempt/nil‑rated does NOT permit refund of ITC — ITC must be reversed or cannot be claimed."
+    },
+    {
+      "front": "Hospital room rent — exempt?",
+      "back": "Health care services by a clinical establishment are exempt, EXCEPT room charges above ₹5,000 per day (other than ICU/CCU/ICCU/NICU), which are taxable without ITC."
+    },
+    {
+      "front": "Renting a residential dwelling — exempt or taxable?",
+      "back": "Exempt when used as a residence — EXCEPT when let to a registered person, who then pays under reverse charge. Still exempt if the registered person is a proprietor renting it for his own residence in a personal capacity."
+    },
+    {
+      "front": "Education services — what is exempt?",
+      "back": "Services by an educational institution (pre-school to higher secondary, recognised qualifications, approved vocational courses) to students, faculty and staff. Private coaching is taxable. Catering/transport/security exempt only up to higher secondary."
+    },
+    {
+      "front": "Passenger transport — which modes are exempt?",
+      "back": "Non-AC contract carriage (not tourism/charter), non-AC stage carriage, metro/monorail/tram, inland waterways, rail other than first class and AC. Taxable: air, AC bus, radio taxi, AC and first-class rail."
+    }
+  ],
+  "Input Tax Credit": [
+    {
+      "front": "What is the last date to claim ITC on invoices/credit notes for a financial year (normal rule)?",
+      "back": "30 November following the financial year — final cutoff to avail ITC/adjust with credit notes (s.16(4); credit notes s.34)."
+    },
+    {
+      "front": "If a recipient fails to pay the supplier within how many days must ITC be reversed?",
+      "back": "180 days — ITC must be reversed if recipient doesn’t pay supplier the invoice value within 180 days of invoice (s.16(2)); reversed amount attracts interest (s.50)."
+    },
+    {
+      "front": "What is the interest rate applicable on ITC reversed (and later not restored)?",
+      "back": "18% per annum — interest under s.50 on amount of ITC reversed/short-paid, calculated from date of availing credit to reversal date (s.50 CGST)."
+    },
+    {
+      "front": "Name five classic ‘blocked credits’ (numeric rule reference and examples).",
+      "back": "Section 17(5) — major blocked items: motor vehicles, food/refreshments, club memberships, works contract for immovable property, personal consumption; these credits are not admissible (s.17(5))."
+    },
+    {
+      "front": "Motor vehicles (seating up to 13) — when is ITC allowed despite s.17(5)?",
+      "back": "When used for (i) further supply of such vehicles, (ii) transportation of passengers, or (iii) imparting training on driving. Vehicles for transport of GOODS are not blocked at all."
+    },
+    {
+      "front": "ITC on capital goods when moving from composition/exempt to taxable (s.18)?",
+      "back": "Credit is reduced by 5 percentage points per quarter or part from the invoice date (Rule 40). New registrants u/s 18(1)(a)/(b) get credit only on INPUTS in stock, not capital goods. Invoice must not be over 1 year old."
+    },
+    {
+      "front": "Is IGST paid on import of goods eligible as ITC; what about basic customs duty?",
+      "back": "IGST on import — eligible as ITC; basic customs duty — not eligible. (Import IGST credit allowed under ITC provisions; BCD excluded.)"
+    },
+    {
+      "front": "Can a recipient claim ITC on tax paid under reverse charge mechanism (RCM)?",
+      "back": "Yes — ITC for tax paid under RCM is available provided recipient has tax invoice, goods/services received and files the return/pay tax; treat like other ITC (s.16 conditions apply)."
+    },
+    {
+      "front": "Common credit used for taxable and exempt supplies — how apportioned?",
+      "back": "s.17(2) with Rule 42: reverse common credit × exempt turnover ÷ total turnover. Capital goods: Rule 43, spread over 60 months."
+    },
+    {
+      "front": "If a credit note is issued in the next financial year, by when must it be issued to adjust ITC for the earlier FY?",
+      "back": "30 November following the financial year — credit notes affecting ITC for a FY must be issued by that date to adjust the earlier year’s ITC (s.34; s.16(4))."
+    },
+    {
+      "front": "Conditions to take ITC u/s 16(2)?",
+      "back": "Tax invoice or debit note in hand; invoice furnished by the supplier and reflected in GSTR-2B; goods/services received; tax actually paid to Government; recipient has filed GSTR-3B. No provisional credit beyond GSTR-2B."
+    },
+    {
+      "front": "s.17(5)(b) — food, catering, health, insurance: the exception?",
+      "back": "Blocked unless (a) used for making an outward supply of the same category, or (b) OBLIGATORY for the employer to provide to employees under any law — e.g. a canteen required by the Factories Act."
+    },
+    {
+      "front": "Banks and NBFCs — the s.17(4) option?",
+      "back": "Either normal apportionment u/s 17(2), or avail 50% of eligible ITC every month and let the rest lapse. Option cannot be withdrawn during the rest of the financial year."
+    }
+  ],
+  "Registration": [
+    {
+      "front": "Within how many days must a person apply for GST registration after becoming liable to register?",
+      "back": "30 days — apply within 30 days from the date you become liable to register (Section 25, CGST Act)."
+    },
+    {
+      "front": "How many days before commencement of business must a casual or non‑resident taxable person apply for GST registration?",
+      "back": "5 days — apply at least 5 days before commencing business, with advance deposit of estimated tax (provisions under Section 25 and GST Rules for casual/non‑resident taxable persons)."
+    },
+    {
+      "front": "How many GST registrations are required if a taxpayer has business locations in multiple States/UTs?",
+      "back": "One per State/UT — separate GST registration is required for each State or Union Territory where business is carried on (separate registrations per State/UT)."
+    },
+    {
+      "front": "What is the format and component breakdown of a GSTIN?",
+      "back": "15 characters — 2‑digit State code + 10‑character PAN + 13th‑character entity number (same PAN) + 14th default ‘Z’ + 15th check‑digit (GSTIN structure)."
+    },
+    {
+      "front": "Is PAN mandatory for GST registration? Any exception?",
+      "back": "PAN mandatory — PAN is required for registration; exception: where PAN is not available (non‑resident applicants) other prescribed documents may be allowed per rules."
+    },
+    {
+      "front": "Can a person below the GST turnover threshold obtain registration voluntarily?",
+      "back": "Yes — voluntary registration permitted regardless of turnover; once registered, all compliances, tax liabilities and returns apply (voluntary registration allowed)."
+    },
+    {
+      "front": "Within how many days must changes in registration particulars be intimated to the tax authority?",
+      "back": "15 days — notify and amend registration particulars within 15 days of any change (amendment of registration under GST Rules)."
+    },
+    {
+      "front": "What does the 13th character of the GSTIN signify?",
+      "back": "Entity number — 13th character denotes the number of registrations (entity) with the same PAN in that State (1 for first registration, 2 for second, etc.)."
+    },
+    {
+      "front": "Several places of business in ONE State — how many registrations?",
+      "back": "One is enough, but a SEPARATE registration may be taken for each place of business (s.25(2)). Establishments with separate registrations are 'distinct persons' — supplies between them are taxable."
+    },
+    {
+      "front": "From which date is GST registration effective when an application is filed late or on time?",
+      "back": "Effective date rule — if application is within 30 days, registration effective from date liability arose; if later, registration effective from date of grant (Section 25, CGST Act)."
+    },
+    {
+      "front": "Registration thresholds (aggregate turnover)?",
+      "back": "₹40 lakh: exclusively GOODS, in States that adopted it. ₹20 lakh: services or mixed. ₹10 lakh: Manipur, Mizoram, Nagaland, Tripura. The ₹40 lakh limit is not for ice cream, pan masala, tobacco."
+    },
+    {
+      "front": "What goes into 'aggregate turnover' (s.2(6))?",
+      "back": "All taxable supplies + exempt supplies + exports + inter-State supplies, all-India, same PAN. EXCLUDES inward supplies under reverse charge and the GST itself."
+    },
+    {
+      "front": "Compulsory registration regardless of turnover (s.24)?",
+      "back": "Inter-State taxable supply of GOODS; casual and non-resident taxable persons; those paying under reverse charge; e-commerce operators and their suppliers (with relaxations); TDS deductors; agents. Inter-State SERVICES get the threshold."
+    },
+    {
+      "front": "Casual taxable person — validity of registration?",
+      "back": "Period in the application or 90 days, whichever is earlier; extendable by up to 90 days. Advance deposit of estimated tax required. Apply at least 5 days before starting."
+    },
+    {
+      "front": "Revocation of cancellation — time limit?",
+      "back": "Apply within 90 days of service of the cancellation order (was 30); extendable by up to 180 days by the Commissioner. Not available for voluntary cancellation."
+    }
+  ],
+  "Tax Invoice, Credit and Debit Notes": [
+    {
+      "front": "By when must a supplier issue a tax invoice for (a) goods and (b) services? Quote section.",
+      "back": "Goods: before or at time of removal/delivery; Services: within 30 days from date of supply. Section 31(2)."
+    },
+    {
+      "front": "Give the essential mandatory particulars that must appear on every tax invoice (name the section).",
+      "back": "Section 31(2) — invoice number & date; supplier & recipient name, address, GSTIN; HSN/SAC; description, qty, value; taxable value; rate & tax amount; place of supply; signatory."
+    },
+    {
+      "front": "When is a bill of supply issued instead of a tax invoice?",
+      "back": "By a composition taxpayer, and for EXEMPT supplies (s.31(3)(c)). Exports are zero-rated and need a tax invoice, not a bill of supply."
+    },
+    {
+      "front": "Who issues credit and debit notes and for what events? Quote the governing section.",
+      "back": "Section 34 — Supplier issues Credit Note for decrease in taxable value/tax; Supplier issues Debit Note for increase in taxable value/tax; must reference original invoice and reason."
+    },
+    {
+      "front": "What is the last date to issue a credit/debit note so the recipient can claim/adjust ITC? Cite sections.",
+      "back": "30 November following the end of the financial year in which supply was made, or date of filing annual return, whichever is earlier. Sections 34 and 16(4)."
+    },
+    {
+      "front": "If a credit note is issued in October, when must supplier and recipient reflect it in GST returns? (month-wise action).",
+      "back": "Supplier: declare CN in returns for the month when CN issued (October). Recipient: reduce/reverse ITC in return for the same tax period (October). Sections 34 & 16(4)."
+    },
+    {
+      "front": "Name 5 mandatory particulars that must appear on a credit or debit note (section).",
+      "back": "Section 34 — original invoice no & date; CN/DN no & date; value change; tax amount change; reason for issuance; supplier & recipient details."
+    },
+    {
+      "front": "Credit note vs debit note — is there a time limit?",
+      "back": "Credit note: output tax can be reduced only if declared by 30 November after the FY (or annual return, if earlier). Debit note: no time limit to issue; ITC on it runs from the financial year of the DEBIT NOTE, not the original invoice."
+    },
+    {
+      "front": "If a debit note increases taxable value, when must the supplier pay the additional tax and report it?",
+      "back": "Additional tax is payable and must be declared in the tax period when the debit note is issued; supplier reports and pays tax in that return. Section 34."
+    },
+    {
+      "front": "What must a credit note reference and why is that reference exam-important?",
+      "back": "Must reference original invoice number & date — this links adjustment to original supply so CN/DN can alter supplier's output tax and recipient's ITC correctly. Section 34."
+    },
+    {
+      "front": "Invoice time limits — banks/insurers, and continuous supply of services?",
+      "back": "Services: 30 days from supply; 45 days for banks, insurers, NBFCs. Continuous supply: on or before the due date of payment, or on receipt of payment, or on completion of the event."
+    },
+    {
+      "front": "How many copies of a tax invoice?",
+      "back": "Goods: TRIPLICATE — original for recipient, duplicate for transporter, triplicate for supplier. Services: DUPLICATE — original for recipient, duplicate for supplier."
+    },
+    {
+      "front": "Revised invoice and consolidated invoice?",
+      "back": "Revised invoice: within one month of the registration certificate, for supplies from the effective date. No invoice needed for supplies under ₹200 to an unregistered person who does not ask — one consolidated invoice at day end."
+    }
+  ],
+  "Accounts and Records": [
+    {
+      "front": "How long must a registered person preserve GST accounts and records for a FY?",
+      "back": "72 months — s.36 CGST Act: preserve for 6 years from the due date of furnishing the annual return for the year to which the accounts relate."
+    },
+    {
+      "front": "Which core records must every registered person keep under GST (one‑line list)?",
+      "back": "s.35 — Maintain tax invoices, credit/debit notes, bills of supply, delivery challans, purchase/sales registers, stock accounts, input/output tax ledgers and other prescribed records."
+    },
+    {
+      "front": "Can GST books and records be maintained electronically and are they admissible?",
+      "back": "s.35 — Yes: electronic records permitted; must be readable, retained for the prescribed period and produced to the proper officer on demand."
+    },
+    {
+      "front": "Does the 6‑year (72‑month) preservation period apply to casual and non‑resident taxable persons?",
+      "back": "72 months — s.36: yes; applies equally to casual and non‑resident taxable persons, counted from the due date of the annual return for the relevant year."
+    },
+    {
+      "front": "What minimum records must an Input Service Distributor (ISD) keep for GST purposes?",
+      "back": "s.35 — ISD must retain invoices received, records of ITC distributed, allocation particulars and recipient details, preserved for the statutory period."
+    },
+    {
+      "front": "If an assessment or appeal is pending, how long must related GST records be retained?",
+      "back": "Until final disposal — s.36: retain relevant records beyond 72 months while any assessment, appeal or other proceeding subsists until final disposal."
+    },
+    {
+      "front": "What minimum particulars must a tax invoice/record include for GST bookkeeping?",
+      "back": "s.31/s.35 — GSTIN, invoice number/date, supplier and recipient name, HSN/SAC, taxable value, rate, tax amount and place of supply (if interstate)."
+    },
+    {
+      "front": "What records must an e‑commerce operator maintain for GST and TCS compliance?",
+      "back": "s.35 — Maintain records of supplies made through the platform, supplier details, transaction value, tax collected/settlements and TCS-related documents; preserve for the statutory period."
+    },
+    {
+      "front": "Who must keep records even if unregistered?",
+      "back": "Owners/operators of warehouses and godowns, and transporters (s.35(2)); they enrol in GST ENR-01. Records are kept at the principal place of business."
+    },
+    {
+      "front": "Annual reconciliation — who certifies GSTR-9C now?",
+      "back": "Self-certified by the taxpayer, where aggregate turnover exceeds ₹5 crore. Audit by a chartered or cost accountant was removed from FY 2020-21."
+    }
+  ],
+  "E-way Bill": [
+    {
+      "front": "What consignment value triggers mandatory e‑way bill generation under GST? Cite the rule.",
+      "back": "₹50,000: e‑way bill required where aggregate consignment value exceeds ₹50,000 — Rule 138, CGST Rules."
+    },
+    {
+      "front": "Who may generate an e‑way bill and when must it be generated?",
+      "back": "Supplier, recipient or transporter: e‑way bill must be generated before commencement of movement of goods — Rule 138, CGST Rules."
+    },
+    {
+      "front": "What information is captured in Part A and Part B of the e‑way bill and who fills each part?",
+      "back": "Part A (goods/supply details) by supplier/recipient; Part B (transport/vehicle details) by transporter — Rule 138, CGST Rules."
+    },
+    {
+      "front": "Which documents must physically accompany the goods during transit under e‑way bill rules?",
+      "back": "Invoice or bill of supply/delivery challan and the e‑way bill (or the EWB number) must be carried during transit — Rule 138(7), CGST Rules."
+    },
+    {
+      "front": "Validity of an e-way bill?",
+      "back": "One day for every 200 km or part thereof (normal cargo). Over-dimensional cargo: one day for every 20 km. A 'day' ends at midnight of the day after generation."
+    },
+    {
+      "front": "Within what time and on what condition can an e‑way bill be cancelled on the portal?",
+      "back": "24 hours: e‑way bill may be cancelled on the portal within 24 hours of generation if goods have not been transported — Rule 138, CGST Rules."
+    },
+    {
+      "front": "Does e‑way bill requirement apply when goods move for reasons other than supply (job‑work, return, repair, exhibition)?",
+      "back": "Yes: if consignment value exceeds ₹50,000, e‑way bill is required even for movements for reasons other than supply (job‑work, return, repair, exhibition etc.) — Rule 138, CGST Rules."
+    },
+    {
+      "front": "Can a transporter generate a single e‑way bill for multiple consignments carried in the same vehicle?",
+      "back": "Yes: transporter may generate a consolidated e‑way bill for multiple consignments carried in one vehicle — Rule 138, CGST Rules."
+    },
+    {
+      "front": "When is Part B (vehicle details) not required?",
+      "back": "Movement within the State of up to 50 km between the consignor's place and the transporter's place (or transporter to consignee). Part A is still needed."
+    },
+    {
+      "front": "When is no e-way bill required at all?",
+      "back": "Consignment value up to ₹50,000 (with exceptions); transport by non-motorised conveyance; goods from port/airport to an ICD or CFS for customs clearance; notified exempt goods."
+    },
+    {
+      "front": "Acceptance or rejection by the recipient?",
+      "back": "Within 72 hours of the details being made available, or the time of delivery, whichever is earlier — else deemed accepted."
+    }
+  ],
+  "TDS and TCS under GST": [
+    {
+      "front": "State the GST TDS rate and the value threshold that triggers TDS (section).",
+      "back": "2% under s.51; applies where contract/payment for taxable supply exceeds ₹2,50,000 (threshold for deduction)."
+    },
+    {
+      "front": "TCS by e-commerce operators — rate and base?",
+      "back": "0.5% (0.25% CGST + 0.25% SGST, or 0.5% IGST) of the NET value of taxable supplies made through the operator — reduced from 1% with effect from 10 July 2024 (s.52)."
+    },
+    {
+      "front": "Who is required to deduct TDS under s.51 (which persons are covered)?",
+      "back": "Specified persons notified under s.51 — e.g., Government departments, local authorities, government agencies and other notified entities must deduct TDS."
+    },
+    {
+      "front": "On what value is GST TDS/TCS computed — tax‑inclusive or tax‑exclusive?",
+      "back": "On taxable value (exclusive of GST): TDS 2% on taxable value (s.51); TCS 0.5% on net taxable value collected by the operator (s.52)."
+    },
+    {
+      "front": "By when must the deductor/operator deposit GST TDS/TCS to the government (time period and sections)?",
+      "back": "10 days from the end of the month in which tax was deducted/collected (s.51(3) / s.52(3))."
+    },
+    {
+      "front": "Which GST returns must be filed for TDS and TCS, and what is the due date?",
+      "back": "GSTR‑7 (TDS) and GSTR‑8 (TCS) — furnished by the 10th day of the month following the month of deduction/collection (s.51(2) / s.52(2))."
+    },
+    {
+      "front": "Where does the deductee/supplier get the credit of GST TDS or TCS?",
+      "back": "In the electronic CASH ledger, after the deductor/operator files GSTR-7 / GSTR-8. It is cash, not input tax credit."
+    },
+    {
+      "front": "Does TCS under s.52 apply to supplies made by the e‑commerce operator itself?",
+      "back": "No — s.52 applies only to taxable supplies made through the operator by other suppliers; not to supplies made by the operator as principal."
+    },
+    {
+      "front": "Is there any monetary threshold below which e‑commerce TCS doesn't apply?",
+      "back": "No threshold for TCS—applies on all taxable supplies through the operator. TDS alone has a threshold: ₹2.5 lakh (s.51)."
+    },
+    {
+      "front": "What is the rate of interest for late deposit of GST TDS/TCS?",
+      "back": "18% p.a. (statutory interest for delayed payment of tax) applies to late deposit of TDS/TCS under the GST interest provisions."
+    },
+    {
+      "front": "When is GST TDS NOT deducted even above ₹2.5 lakh?",
+      "back": "When the location of the supplier AND the place of supply are both in a State different from the State of registration of the deductor (proviso to s.51(1))."
+    }
+  ],
+  "Payment of Tax": [
+    {
+      "front": "Order of utilising input tax credit (s.49(5), 49A)?",
+      "back": "IGST credit FIRST: against IGST, then CGST and SGST in any order — and it must be exhausted before CGST/SGST credit is used. CGST credit: CGST, then IGST. SGST credit: SGST, then IGST. CGST and SGST never cross."
+    },
+    {
+      "front": "What can the electronic credit ledger NOT pay?",
+      "back": "Tax under reverse charge, interest, penalty, late fee and any other amount — all must be paid in cash. The credit ledger pays OUTPUT TAX only."
+    },
+    {
+      "front": "What is the statutory rate of interest for delayed GST payment and from when is it charged?",
+      "back": "18% p.a. (s.50 CGST Act); charged from the day after the due date until the date of actual payment."
+    },
+    {
+      "front": "Can Input Tax Credit be used to pay interest, penalty, fee or other non‑tax amounts under GST?",
+      "back": "No. ITC cannot be used for interest, penalty, fee or other non‑tax amounts; these must be paid from the electronic cash ledger. (s.49(2) CGST Act)"
+    },
+    {
+      "front": "Order of discharging dues (s.49(8))?",
+      "back": "(1) Self-assessed tax and dues of PREVIOUS periods; (2) self-assessed tax and dues of the CURRENT period; (3) any other amount, including demands u/s 73/74."
+    },
+    {
+      "front": "Over-the-counter payment limit and challan validity?",
+      "back": "OTC (cash, cheque, DD): up to ₹10,000 per challan per tax period. Challan GST PMT-06 is valid for 15 days."
+    },
+    {
+      "front": "Interest on wrongly availed ITC (s.50(3))?",
+      "back": "18% p.a. — but only where the credit is wrongly availed AND utilised. Availed but lying unused in the credit ledger: no interest."
+    },
+    {
+      "front": "Interest for late payment (s.50(1)) — on what amount?",
+      "back": "18% p.a. on the portion paid through the electronic CASH ledger (net cash liability), where the return is filed late but before proceedings begin."
+    }
+  ],
+  "Returns": [
+    {
+      "front": "Which section mandates who must furnish GST returns and what must be furnished in brief?",
+      "back": "Every registered person must furnish returns as prescribed, containing outward supplies, inward supplies/ITC and tax liability details (s.39). Returns/format/timelines are as prescribed by rules/forms."
+    },
+    {
+      "front": "By what date must the annual GST return for a financial year be filed?",
+      "back": "31 December following the end of the financial year — annual return as prescribed (s.44)."
+    },
+    {
+      "front": "GSTR-1 and GSTR-3B — monthly due dates?",
+      "back": "GSTR-1: 11th of the following month. GSTR-3B: 20th of the following month. GSTR-3B cannot be filed until GSTR-1 for the period is filed."
+    },
+    {
+      "front": "QRMP scheme — who, and when is tax paid?",
+      "back": "Aggregate turnover up to ₹5 crore. Returns quarterly (GSTR-1 by 13th, GSTR-3B by 22nd/24th of the month after the quarter); tax paid MONTHLY by the 25th. Optional IFF for B2B invoices by the 13th."
+    },
+    {
+      "front": "Composition taxpayer — payment and return?",
+      "back": "CMP-08 quarterly by the 18th of the month after the quarter. GSTR-4 annually by 30 JUNE following the financial year (was 30 April)."
+    },
+    {
+      "front": "What is the time limit to file a refund claim under GST?",
+      "back": "2 years from the relevant date specified in the Act — refund application time‑limit (s.54)."
+    },
+    {
+      "front": "Annual return and reconciliation statement?",
+      "back": "GSTR-9 by 31 December following the FY. GSTR-9C (self-certified) also, where aggregate turnover exceeds ₹5 crore."
+    },
+    {
+      "front": "Late fee for GSTR-3B/GSTR-1, and the outer time limit to file?",
+      "back": "₹50 a day (₹25 CGST + ₹25 SGST); ₹20 a day for a nil return. No return can be filed after 3 years from its due date."
+    },
+    {
+      "front": "What key condition must be satisfied for a recipient to legally avail Input Tax Credit regarding supplier returns/payments?",
+      "back": "ITC is available only if recipient holds valid tax invoice, tax is charged by supplier and supplier has furnished requisite return/payments as per section 16 conditions (s.16)."
+    }
+  ]
+}

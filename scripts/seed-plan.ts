@@ -1,14 +1,24 @@
-// Generates Mimansha's day-by-day plan: 22 Jul → exams.
-// Her constraints (21 Jul): finish Law (15 ch) + max DT before Aug;
-// Income Tax is her weakest → heaviest revision weight; exams per EXAM_DATES.
+// Generates Mimansha's day-by-day plan for the JANUARY 2027 attempt:
+// 23 Nov 2026 → exams on 2 / 4 / 6 Jan 2027.
+//
+// Why it is shaped this way — her September result was Accounts 55, Law 49,
+// Taxation 35 (139/300; needs 150 and 40 in each paper). Tax failed the paper
+// minimum by 5 and dragged the aggregate. Her own app history explains it:
+// she never attempted a single practice question on the five heads of income,
+// Computation, TDS, ITC, Registration or Returns, never opened either Tax mock,
+// and wrote two descriptive answers in the whole attempt — in a paper that is
+// 70% written. Where she DID practise, she scored 85%+. So this plan is not
+// "study harder"; it is: Tax every morning, written answers every week, and
+// real papers at 2 PM.
 //
 // Each item may declare the chapters it covers (`ch`). Those links let
 // lib/plan-sync.ts auto-tick the item when she logs a matching daily topic.
-// Multi-chapter grind days (AS sweeps, recaps) deliberately have no links —
-// they're ticked by hand, since one logged topic doesn't finish them.
+// Topics logged before this plan's first day are ignored by the sync, so last
+// attempt's history cannot tick anything here.
 //
 // Re-run safe, but note: re-seeding REBUILDS all items, so manual ticks are
 // lost. Auto-ticks are restored automatically by the sync at the end.
+// The September plan this replaces is in git history and backups/.
 import { config } from "dotenv";
 config({ path: ".env.local" });
 
@@ -16,14 +26,15 @@ import { eq } from "drizzle-orm";
 import * as schema from "../lib/db/schema";
 import { syncPlanProgress } from "../lib/plan-sync";
 import { db } from "../lib/db";
+import { EXAMS, DAILY_HABIT_TITLE } from "../lib/exam";
 const STUDENT_ID = 1;
 
-// ICAI Group I timetable for Sept 2026 (confirmed with Pranav)
-const EXAM_DATES = {
-  accounts: "2026-09-01",
-  law: "2026-09-03",
-  tax: "2026-09-06",
-};
+// exam dates live in lib/exam.ts so the home countdown reads the same ones
+const EXAM_DATES = Object.fromEntries(EXAMS.map((e) => [e.key, e.date])) as Record<
+  (typeof EXAMS)[number]["key"],
+  string
+>;
+const PLAN_START = "2026-11-23";
 
 type Kind = "study" | "revise" | "practice" | "test" | "exam";
 type Item = { d: string; t: string; s?: string; k: Kind; ch?: string[] };
@@ -93,11 +104,14 @@ const C = {
   as4: "AS 4 — Events occurring after Balance Sheet date",
   as5: "AS 5 — Net Profit or Loss for the Period, Prior Period Items and Changes in Accounting Policies",
   as7: "AS 7 — Construction Contracts",
+  as9: "AS 9 — Revenue Recognition",
   as10: "AS 10 — Property, Plant and Equipment",
   as11: "AS 11 — The Effects of Changes in Foreign Exchange Rates",
   as12: "AS 12 — Accounting for Government Grants",
   as15: "AS 15 — Employee Benefits",
   as16: "AS 16 — Borrowing Costs",
+  as17: "AS 17 — Segment Reporting",
+  as18: "AS 18 — Related Party Disclosures",
   as19: "AS 19 — Leases",
   as20: "AS 20 — Earnings per Share",
   as22: "AS 22 — Accounting for Taxes on Income",
@@ -108,158 +122,174 @@ const C = {
   as29: "AS 29 — Provisions, Contingent Liabilities and Contingent Assets",
 };
 
-// ---- Phase 1 · 22–31 Jul: Law complete + DT max (evening test daily) ----
-const lawDays: { a: [string, string[]]; b?: [string, string[]] }[] = [
-  { a: ["Preliminary Law (intro)", [C.prelim]], b: ["Incorporation of Companies", [C.incorp]] },
-  { a: ["Prospectus & Allotment of Shares", [C.prospectus]], b: ["Shares and Debentures", [C.shares]] },
-  { a: ["Acceptance of Deposits", [C.deposits]], b: ["Registration of Charge", [C.charge]] },
-  { a: ["Management & Administration", [C.mgmt]] }, // heavy chapter, alone
-  { a: ["Declaration of Dividends (quick revise — done 20 Jul)", [C.dividends]], b: ["Accounts of Companies", [C.accountsOfCo]] },
-  { a: ["Audit and Auditors", [C.audit]] },
-  { a: ["Companies Incorporated outside India", [C.foreignCo]], b: ["LLP Act, 2008", [C.llp]] },
-  { a: ["General Clauses Act, 1897", [C.genClauses]], b: ["Interpretation of Statutes", [C.interpretation]] },
-  { a: ["FEMA (quick revise — done 20 Jul)", [C.fema]], b: ["Weak-spot sweep of the 15", []] },
-  { a: ["Full-syllabus rapid recap day", []] },
-];
-const dtDaily: [string, string[]][] = [
-  ["DT: Salary (with ₹75k std deduction + new perquisite limits)", [C.salary]],
-  ["DT: House Property", [C.houseProp]],
-  ["DT: PGBP — part 1 (depreciation, 43B)", [C.pgbp]],
-  ["DT: PGBP — part 2 + presumptive (44AD/ADA)", []], // same chapter as part 1
-  ["DT: Capital Gains (54EC new bonds, all exemptions)", [C.capGains]],
-  ["DT: Other Sources + Clubbing", [C.otherSources, C.clubbing]],
-  ["DT: Set-off & Carry Forward", [C.setOff]],
-  ["DT: Basics + Residential Status (quick — you know this)", [C.basics, C.residential]],
-  ["DT: TDS/TCS + Advance Tax with NEW FA-2025 thresholds", [C.advanceTax]],
-  ["DT: Deductions + Return revisit (87A ₹12L/₹60k, 139(8A) 48 months)", [C.deductions, C.returnOfIncome]],
-];
-const jul = (n: number) => `2026-07-${String(n).padStart(2, "0")}`;
-for (let i = 0; i < 10; i++) {
-  const d = jul(22 + i);
-  const day = lawDays[i];
-  add(d, `Law: ${day.a[0]}`, "study", "morning block", day.a[1]);
-  if (day.b) add(d, `Law: ${day.b[0]}`, "study", "midday block", day.b[1]);
-  const [dtTitle, dtCh] = dtDaily[i];
-  add(d, dtTitle, "study", "afternoon block — weakest subject, don't skip", dtCh);
-  add(d, "Attempt tonight's test in the app", "test", "Pranav publishes it from your logged topics");
-}
-
-// ---- Phase 2 · 1–14 Aug: Income Tax deep revision + GST 2.0 pass ----
-const aug = (n: number) => `2026-08-${String(n).padStart(2, "0")}`;
-const itLoop: [string, string[]][] = [
-  ["IT revision: full computation drills — new regime slabs (₹4L steps)", [C.computation]],
-  ["IT revision: Salary + HP mixed problems", [C.salary, C.houseProp]],
-  ["IT revision: PGBP problem marathon", [C.pgbp]],
-  ["IT revision: Capital Gains + exemptions drills", [C.capGains]],
-  ["IT revision: OS, Clubbing, Set-off mixed MCQs", [C.otherSources, C.clubbing, C.setOff]],
-  ["IT revision: Deductions 80C→80U speed sheet", [C.deductions]],
-  ["IT revision: TDS/TCS thresholds memorise (NEW figures) + Returns", [C.advanceTax, C.returnOfIncome]],
-];
-const gstPairs: [string, string[]][] = [
-  ["GST: Intro + Supply", [C.gstIntro, C.supply]],
-  ["GST: Charge (new 5/18/40 rates!) + Composition/RCM", [C.charge2]],
-  ["GST: Place + Time of Supply", [C.placeOfSupply, C.timeOfSupply]],
-  ["GST: Value of Supply + Exemptions (insurance now exempt)", [C.valueOfSupply, C.exemptions]],
-  ["GST: ITC (full chapter — scoring)", [C.itc]],
-  ["GST: Registration + Invoice/Credit-Debit notes", [C.registration, C.invoice]],
-  ["GST: E-way bill, Accounts & Records, Payment, TDS/TCS, Returns", [C.eway, C.records, C.payment, C.gstTds, C.returns]],
-];
-// History stops at 9 Aug — from 10 Aug the plan is rebuilt below. Past items
-// are deliberately KEPT: syncPlanProgress assigns each logged topic to the
-// nearest-by-date item covering it, so deleting them would make July topics
-// jump onto September items and tick them green on day one.
-for (let i = 0; i < 9; i++) {
-  const d = aug(1 + i);
-  const [itTitle, itCh] = itLoop[i % 7];
-  add(d, itTitle, "revise", "Income Tax priority block", itCh);
-  if (i % 2 === 0) {
-    const [gTitle, gCh] = gstPairs[i / 2];
-    add(d, gTitle, "study", "GST with 2.0 rates", gCh);
-  } else {
-    add(d, "Practice: chapter quiz in app on today's topics", "practice");
-  }
-  if (i % 3 === 2) add(d, "Timed test in app (Tax mix)", "test");
-}
-
-// ---- REBUILT 10 Aug, around her own sequencing ----
-// She said: 4 Law chapters on 10 Aug and Law is done; DT+IDT in the next
-// ~10 days; Accounts from the 20th; revision/mocks alongside rather than
-// after. Physical past papers reach her on the 13th.
-//
-// Chapters are linked ONLY where she has no topic logged yet. Anything she
-// has already logged (Company Final Accounts, AS 9/17/18, the 10 Tax
-// chapters, 11 Law chapters) is scheduled as unlinked revision, otherwise
-// the nearest-date rule would tick the new item the moment it is seeded.
-//
-// The known risk, stated plainly: Accounts is the FIRST exam (1 Sept) and
-// under her sequencing it is learned last, 20–28 Aug, with no second pass.
-// Mitigation below = three Accounts anchors pulled into the Tax fortnight
-// (15, 17, 19 Aug) and the Accounts mock on the 29th. If she slips, the AS
-// sweep is the place to cut — not Part A.
 type Row = [string, string, Kind, string | null, string[]];
-const REBUILD: Row[] = [
-  // 10 Aug — Law's last 4 chapters
-  ["2026-08-10", "Law: Prospectus & Allotment of Shares", "study", "Law's last 4 — fast pass", [C.prospectus]],
-  ["2026-08-10", "Law: Shares and Debentures", "study", null, [C.shares]],
-  ["2026-08-10", "Law: Accounts of Companies + Interpretation of Statutes", "study", "Law first pass DONE after this ✅", [C.accountsOfCo, C.interpretation]],
-  ["2026-08-10", "Attempt tonight's test in the app", "test", null, []],
+const D = (mmdd: string) => (mmdd.startsWith("01-") ? `2027-${mmdd}` : `2026-${mmdd}`);
 
-  // 11–14 Aug — Direct Tax sweep
-  ["2026-08-11", "DT: Residential Status (fast — you know the frame)", "study", null, [C.residential]],
-  ["2026-08-11", "DT: Salary — ₹75k std deduction + new perquisite limits", "study", null, [C.salary]],
-  ["2026-08-11", "Attempt tonight's test in the app", "test", null, []],
-  ["2026-08-12", "DT: House Property", "study", null, [C.houseProp]],
-  ["2026-08-12", "DT: PGBP part 1 — depreciation, 43B", "study", null, [C.pgbp]],
-  ["2026-08-13", "DT: PGBP part 2 + presumptive (44AD/ADA)", "study", "same chapter, second sitting", []],
-  ["2026-08-13", "DT: Capital Gains — exemptions + 54EC bonds", "study", null, [C.capGains]],
-  ["2026-08-13", "Papers arrive: mark the 5 most-repeated questions per paper", "practice", "30 min, no solving — just see what gets asked", []],
-  ["2026-08-14", "DT: Other Sources + Computation of Total Income", "study", null, [C.otherSources, C.computation]],
-  ["2026-08-14", "Timed half-paper: Law (90 min, no notes)", "test", "your first real clock — Law is the only finished paper", []],
+// Tax papers set before May 2026 use the old slabs and the old GST rates —
+// they are worse than useless for her. Only May 2026, Sept 2026 and the
+// January 2027 MTPs are scheduled for Tax. Accounts and Law papers age fine.
+const ROWS: Row[] = [
+  // ============ PHASE 1 · 23 Nov – 13 Dec · Tax from zero ============
+  ["11-23", "Post-mortem: the Sept 2026 Tax paper with ICAI's MCQ key", "practice", "Mark every question you could not do in the hall. That list is the real syllabus — send it to Pranav.", []],
+  ["11-23", "DT: Basics + Residential Status", "study", "Warm-up — you know the frame. 6(1A) is Indian citizens only.", [C.basics, C.residential]],
 
-  // 15–19 Aug — GST sweep, with Accounts anchors
-  ["2026-08-15", "GST: Intro + Charge (5/18/40 rates, composition, RCM)", "study", null, [C.gstIntro, C.charge2]],
-  ["2026-08-15", "Accounts anchor: Buyback of Shares", "study", "Accounts is the FIRST exam — don't start it cold on the 20th", [C.buyback]],
-  ["2026-08-16", "GST: Exemptions + Input Tax Credit", "study", "ITC is the highest-scoring GST chapter", [C.exemptions, C.itc]],
-  ["2026-08-16", "Attempt tonight's test in the app", "test", null, []],
-  ["2026-08-17", "GST: Registration + Tax Invoice, Credit & Debit Notes", "study", null, [C.registration, C.invoice]],
-  ["2026-08-17", "Accounts anchor: Cash Flow Statement (AS 3)", "study", null, [C.cashFlow]],
-  ["2026-08-18", "GST: Payment of Tax + Returns + TDS/TCS under GST", "study", null, [C.payment, C.returns, C.gstTds]],
-  ["2026-08-18", "Attempt tonight's test in the app", "test", null, []],
-  ["2026-08-19", "GST: E-way Bill + Accounts and Records", "study", "Tax first sweep DONE after this ✅", [C.eway, C.records]],
-  ["2026-08-19", "Timed half-paper: Taxation — DT section (90 min)", "test", null, []],
-  ["2026-08-19", "One-page threshold sheet: TDS, 87A, slabs, GST rates", "revise", "write it by hand, keep it with you till the exam", []],
+  ["11-24", "DT: Salary — allowances, perquisites, retirement benefits", "study", "New limits: specified employee ₹4,00,000 (Rule 3C), medical travel ₹8,00,000 (Rule 3D)", [C.salary]],
+  ["11-24", "Accounts: Buyback + Internal Reconstruction", "study", "Both notes are in Explanations — read, then one sum each", [C.buyback, C.reconstruction]],
 
-  // 20–28 Aug — Accounts sprint
-  ["2026-08-20", "Accounts: Internal Reconstruction", "study", null, [C.reconstruction]],
-  ["2026-08-20", "Accounts: Investment Accounts (AS 13)", "study", null, [C.investment]],
-  ["2026-08-21", "Accounts: Company Final Accounts — formats + managerial remuneration", "revise", "you did this on 20 Jul — this is the second pass", []],
-  ["2026-08-21", "Accounts: Branch Accounts", "study", null, [C.branch]],
-  ["2026-08-22", "Accounts: Amalgamation", "study", null, [C.amalgamation]],
-  ["2026-08-22", "Attempt tonight's test in the app", "test", null, []],
-  ["2026-08-23", "Accounts: Consolidation — part 1", "study", "heaviest chapter in the paper", [C.consolidation]],
-  ["2026-08-24", "Accounts: Consolidation — part 2, problem drill", "practice", "no notes, full working", []],
-  ["2026-08-24", "30-min Tax problem set (keep it warm)", "practice", null, []],
-  ["2026-08-25", "AS sweep: AS 1, 2, 4, 5, 7", "study", null, [C.as1, C.as2, C.as4, C.as5, C.as7]],
-  ["2026-08-25", "Attempt tonight's test in the app", "test", null, []],
-  ["2026-08-26", "AS sweep: AS 10, 11, 12, 15, 16", "study", null, [C.as10, C.as11, C.as12, C.as15, C.as16]],
-  ["2026-08-27", "AS sweep: AS 19, 20, 22, 24", "study", null, [C.as19, C.as20, C.as22, C.as24]],
-  ["2026-08-27", "30-min Law recall drill (sections language)", "practice", null, []],
-  ["2026-08-28", "AS sweep: AS 25, 26, 28, 29 + quick recap of AS 9/17/18", "study", null, [C.as25, C.as26, C.as28, C.as29]],
+  ["11-25", "DT: Salary — three full problems, written out", "practice", "By hand, with working notes. This is where the marks are.", []],
+  ["11-25", "DT: House Property", "study", "Old regime: ₹2L / ₹30k interest. New regime: no interest on self-occupied.", [C.houseProp]],
+  ["11-25", "Law: Preliminary + Incorporation", "revise", "Small company is now ₹10 crore / ₹100 crore — unlearn 4/40", [C.prelim, C.incorp]],
 
-  // 29–31 Aug — mock, patch, taper
-  ["2026-08-29", "Full mock: Advanced Accounting (3 hrs, exam conditions)", "test", "2–5 PM, same slot as the real paper", []],
-  ["2026-08-30", "Mock review — patch only what you actually lost marks on", "revise", null, []],
-  ["2026-08-31", "Accounts final: formats + AS one-pager. Light day, sleep early.", "revise", "nothing new today — the exam is tomorrow", []],
+  ["11-26", "DT: PGBP part 1 — admissible, inadmissible, depreciation", "study", "The biggest chapter in the paper. Take the whole morning.", [C.pgbp]],
+  ["11-26", "Accounts: Amalgamation", "study", "Purchase consideration → goodwill or capital reserve", [C.amalgamation]],
 
-  // Exams and gap days
-  [EXAM_DATES.accounts, "📝 EXAM — Paper 1: Advanced Accounting (2–5 PM)", "exam", "reach by 1 PM, carry calculator", []],
-  ["2026-09-02", "Law high-yield recap: Dividends, Deposits, Audit, LLP, FEMA", "revise", null, []],
-  [EXAM_DATES.law, "📝 EXAM — Paper 2: Corporate & Other Laws (2–5 PM)", "exam", null, []],
-  ["2026-09-04", "DT: full computation drill + threshold sheet", "revise", null, []],
-  ["2026-09-05", "GST: rates (5/18/40) + ITC recheck. Light evening, sleep early.", "revise", null, []],
-  [EXAM_DATES.tax, "📝 EXAM — Paper 3: Taxation (2–5 PM)", "exam", "you've got this 💛", []],
+  ["11-27", "DT: PGBP part 2 — 40(a), 40A(3), 43B, presumptive 44AD/ADA/AE", "study", "40A(3): cash above ₹10,000 disallows the WHOLE expense", []],
+  ["11-27", "Law: Prospectus + Shares & Debentures", "revise", "Ch 4 rapid sheet in Explanations", [C.prospectus, C.shares]],
+
+  ["11-28", "DT: Capital Gains part 1 — computation, 50C, 111A / 112 / 112A", "study", "112A: 12.5% above ₹1.25 lakh. 111A: 20%.", [C.capGains]],
+  ["11-28", "Accounts: Consolidation part 1", "study", "Cost of control, minority interest, pre vs post-acquisition", [C.consolidation]],
+
+  ["11-29", "DT: Capital Gains part 2 — exemptions 54 to 54F", "study", "54EC: ₹50 lakh, land or building only", []],
+  ["11-29", "DT: Income from Other Sources", "study", "56(2)(x) gifts, 115BB winnings at 30%", [C.otherSources]],
+  ["11-29", "Written test: Salary + HP + PGBP — 3 answers by hand, 60 min", "test", "From the ICAI RTP. Mark against the suggested answer: provision → working → conclusion.", []],
+
+  ["11-30", "DT: Clubbing + Set-off & Carry Forward", "study", null, [C.clubbing, C.setOff]],
+  ["11-30", "Accounts: Consolidation part 2 — two full sums", "practice", "No notes, full working", []],
+
+  ["12-01", "DT: Deductions — 80C to 80U, and what the new regime switches off", "study", null, [C.deductions]],
+  ["12-01", "Law: Deposits + Registration of Charge", "revise", "10% / 25% / 35% limits · 30 / 60 / 120 days", [C.deposits, C.charge]],
+
+  ["12-02", "DT: Advance Tax, TDS and TCS — the new thresholds", "study", "194A ₹50k · 194 ₹10k · 194-I ₹6L · 194J ₹50k", [C.advanceTax]],
+  ["12-02", "Accounts: Branch Accounts", "study", "Stock & Debtors note is in Explanations", [C.branch]],
+
+  ["12-03", "DT: Return of Income + Computation of Total Income", "study", "One full computation in each regime", [C.returnOfIncome, C.computation]],
+  ["12-03", "Law: Management & Administration", "revise", "Ch 7 rapid sheet — AGM 9-6-15-3, EGM 10-21-45-90", [C.mgmt]],
+  ["12-03", "App test: Residential, Set-off, Return (12 Qs, 30 min)", "test", "Already in Tests — never attempted", []],
+
+  ["12-04", "DT: two full computations, timed — 25 min each", "practice", "By hand. Speed on computations is worth 10 marks.", []],
+  ["12-04", "App mock: Income Tax Part 1 & 2 (30 Qs, 90 min)", "test", "Already in Tests — all 13 DT chapters", []],
+  ["12-04", "Law: Dividends + Accounts of Companies", "revise", "CSR: any one of three triggers", [C.dividends, C.accountsOfCo]],
+
+  ["12-05", "GST: Introduction + Supply + Charge (composition, RCM)", "study", "Rates are 5 / 18 / 40 only", [C.gstIntro, C.supply, C.charge2]],
+  ["12-05", "Accounts: Company Final Accounts", "study", "Schedule III formats + managerial remuneration", [C.finalAccounts]],
+
+  ["12-06", "GST: Exemptions + Place of Supply", "study", null, [C.exemptions, C.placeOfSupply]],
+  ["12-06", "PYQ: Income-tax section of the ICAI May 2026 paper — 90 min", "test", "By hand, clock running. Then mark it honestly against ICAI's suggested answers.", []],
+  ["12-06", "Law: Audit and Auditors", "revise", null, [C.audit]],
+
+  ["12-07", "GST: Time of Supply + Value of Supply", "study", "Late invoice flips the time-of-supply test", [C.timeOfSupply, C.valueOfSupply]],
+  ["12-07", "Accounts: Cash Flow + Investment Accounts", "study", null, [C.cashFlow, C.investment]],
+
+  ["12-08", "GST: Input Tax Credit part 1 — conditions, 180 days, blocked credits", "study", "The highest-scoring GST chapter — never practised last time", [C.itc]],
+  ["12-08", "Law: Foreign Companies + LLP", "revise", null, [C.foreignCo, C.llp]],
+
+  ["12-09", "GST: ITC part 2 — apportionment and reversals + Registration", "study", "Thresholds: ₹40L goods / ₹20L services / ₹10L special category", [C.registration]],
+  ["12-09", "Accounts: AS 1, 2, 4, 5, 7", "study", "AS 5: no retrospective restatement — that is Ind AS", [C.as1, C.as2, C.as4, C.as5, C.as7]],
+
+  ["12-10", "GST: Tax Invoice + E-way Bill + Accounts & Records", "study", "Credit notes: 30 November, not the September return", [C.invoice, C.eway, C.records]],
+  ["12-10", "Law: General Clauses + Interpretation of Statutes", "revise", "Interpretation note is in Explanations", [C.genClauses, C.interpretation]],
+
+  ["12-11", "GST: Payment of Tax + Returns + TDS/TCS", "study", "TCS by e-commerce operators is 0.5%", [C.payment, C.returns, C.gstTds]],
+  ["12-11", "Accounts: AS 9, 10, 11, 12", "study", null, [C.as9, C.as10, C.as11, C.as12]],
+
+  ["12-12", "App mock: GST full syllabus (28 Qs, 75 min)", "test", "Already in Tests — all 15 GST chapters", []],
+  ["12-12", "PYQ: GST section of the ICAI May 2026 paper — 90 min", "test", "By hand, clock running", []],
+  ["12-12", "Law: FEMA", "revise", "Residence turns on PURPOSE of leaving, not day-count", [C.fema]],
+
+  ["12-13", "Morning: write your threshold sheet by hand — slabs, 87A, TDS, GST", "revise", "One page. It stays with you till 6 January.", []],
+  ["12-13", "FULL MOCK 1 — Taxation: ICAI MTP Series I (Jan 2027), 2–5 PM", "test", "Exam conditions, same slot as the real paper. First pass of all three papers ends today.", []],
+
+  // ============ PHASE 2 · 14 – 24 Dec · Second pass + papers ============
+  ["12-14", "Tax mock review — redo every question you lost marks on", "revise", "Send Pranav the marks. Under 45? We re-plan this week.", []],
+  ["12-14", "Accounts: AS 15, 16, 17, 18", "study", null, [C.as15, C.as16, C.as17, C.as18]],
+  ["12-14", "App: Speed Set 2 (15 Qs, 15 min)", "test", "Already in Tests", []],
+
+  ["12-15", "DT pass 2: Salary + House Property — four problems", "practice", null, []],
+  ["12-15", "Accounts: AS 19, 20, 22, 24", "study", "AS 22: timing differences only", [C.as19, C.as20, C.as22, C.as24]],
+  ["12-15", "Law: two answers by hand — chapters 1 to 4", "practice", "Provision → analysis → conclusion. Photograph and mark in the app.", []],
+
+  ["12-16", "DT pass 2: PGBP + Capital Gains — four problems", "practice", null, []],
+  ["12-16", "Accounts: AS 25, 26, 28, 29", "study", null, [C.as25, C.as26, C.as28, C.as29]],
+  ["12-16", "App: Speed Set 3 (15 Qs, 15 min)", "test", "Already in Tests", []],
+
+  ["12-17", "Morning: Accounts formats + AS one-pager", "revise", null, []],
+  ["12-17", "FULL MOCK — Accounts: ICAI May 2026 paper, 2–5 PM", "test", "Exam conditions", []],
+
+  ["12-18", "Accounts mock review", "revise", "Which sum ran out of time? That chapter gets a slot next week.", []],
+  ["12-18", "GST pass 2: ITC + Registration — problems", "practice", null, []],
+  ["12-18", "Law: two answers by hand — chapters 5 to 8", "practice", "Photograph and mark in the app", []],
+
+  ["12-19", "DT pass 2: Deductions, TDS, Set-off, Clubbing", "practice", "MCQs + two written problems", []],
+  ["12-19", "Accounts: Consolidation + Amalgamation — one full sum each", "practice", null, []],
+  ["12-19", "App: Speed Set 5 (15 Qs, 15 min)", "test", "Already in Tests", []],
+
+  ["12-20", "Morning: Law rapid sheets + flashcards", "revise", null, []],
+  ["12-20", "FULL MOCK — Law: the 100-mark paper in the app, 2–5 PM", "test", "Write every answer by hand, then photograph each one to get it marked", []],
+
+  ["12-21", "Law mock review — rewrite your three weakest answers", "revise", "Law was 49: the MCQs are fine, the written 70 is where it leaks", []],
+  ["12-21", "GST pass 2: Supply, Charge, Exemptions, Time / Place / Value", "practice", null, []],
+
+  ["12-22", "DT: two full computations, timed", "practice", null, []],
+  ["12-22", "GST pass 2: Invoice, Returns, Payment, E-way", "practice", null, []],
+  ["12-22", "Accounts: Internal Reconstruction + Branch — one full sum each", "practice", null, []],
+
+  ["12-23", "Morning: threshold sheet + ITC rules", "revise", null, []],
+  ["12-23", "FULL MOCK 2 — Taxation: ICAI MTP Series II (Jan 2027), 2–5 PM", "test", "Target: 50+. This is the one that tells us if January is on.", []],
+
+  ["12-24", "Tax mock review + patch", "revise", null, []],
+  ["12-24", "Accounts: Buyback, Cash Flow, Final Accounts — one sum each", "practice", null, []],
+  ["12-24", "Law: two answers by hand — chapters 9 to 12", "practice", "Photograph and mark in the app", []],
+
+  // ============ PHASE 3 · 25 Dec – 1 Jan · Exam rehearsal ============
+  ["12-25", "Law: FEMA, General Clauses, Interpretation — three answers by hand", "practice", null, []],
+  ["12-25", "DT rapid revision: all 13 chapters — flashcards + threshold sheet", "revise", null, []],
+
+  ["12-26", "Morning: AS recap", "revise", null, []],
+  ["12-26", "FULL MOCK — Accounts: ICAI MTP Series I (Jan 2027), 2–5 PM", "test", "From here the mocks fall on alternate days — the same rhythm as exam week", []],
+
+  ["12-27", "Accounts mock review", "revise", null, []],
+  ["12-27", "GST rapid revision: all 15 chapters — flashcards", "revise", null, []],
+  ["12-27", "Read ICAI's January 2027 Statutory Update — Papers 2 and 3", "revise", "The final word on amendments up to 30 June 2026", []],
+
+  ["12-28", "Morning: Law rapid sheets", "revise", null, []],
+  ["12-28", "FULL MOCK — Law: ICAI May 2026 paper, 2–5 PM", "test", "Exam conditions", []],
+
+  ["12-29", "Law mock review", "revise", null, []],
+  ["12-29", "Tax: your three weakest chapters from the mocks — redo", "practice", null, []],
+
+  ["12-30", "Morning: threshold sheet", "revise", null, []],
+  ["12-30", "FULL MOCK 3 — Taxation: the Sept 2026 paper, sat properly, 2–5 PM", "test", "The paper that beat you by 5 marks. Take it back.", []],
+
+  ["12-31", "Tax mock review — morning only", "revise", null, []],
+  ["12-31", "Accounts final: Part A — one sum per chapter, all formats", "revise", null, []],
+
+  ["01-01", "Accounts final: AS one-pager + formats", "revise", "Nothing new today. Stop by 6 PM, sleep early.", []],
+
+  // ============ Exams ============
+  ["01-02", "📝 EXAM — Paper 1: Advanced Accounting (2–5 PM)", "exam", "Reach by 1 PM. Calculator, admit card, ID.", []],
+  ["01-03", "Law: rapid sheets + flashcards — all 15 chapters", "revise", null, []],
+  ["01-03", "Law: reread your three mock scripts for structure", "revise", "Provision → analysis → conclusion, every single answer", []],
+  ["01-04", "📝 EXAM — Paper 2: Corporate & Other Laws (2–5 PM)", "exam", null, []],
+  ["01-05", "Tax: threshold sheet + one full computation + ITC rules", "revise", "Light. Stop by 6 PM.", []],
+  ["01-05", "Tax: flashcards — the five heads, then GST", "revise", null, []],
+  ["01-06", "📝 EXAM — Paper 3: Taxation (2–5 PM)", "exam", "The last one — and this time you have done the work 💛", []],
 ];
-for (const [d, t, k, s, ch] of REBUILD) add(d, t, k, s ?? undefined, ch);
+
+for (const [d, t, k, s, ch] of ROWS) add(D(d), t, k, s ?? undefined, ch);
+
+// The daily habit: five questions, five minutes, from that day's chapters —
+// plus the flashcards for the same chapters. Every study day, no exceptions.
+{
+  const end = Date.parse("2027-01-01T00:00:00+05:30");
+  for (
+    let t = Date.parse(`${PLAN_START}T00:00:00+05:30`);
+    t <= end;
+    t += 86_400_000
+  ) {
+    const d = new Date(t).toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" });
+    add(d, DAILY_HABIT_TITLE, "practice", "5 questions, 5 minutes — the button is on the home screen");
+  }
+}
 
 async function main() {
   const chapters = await db.select().from(schema.chapters);
@@ -272,6 +302,17 @@ async function main() {
   if (unknown.length > 0) {
     throw new Error(`Unknown chapter name(s):\n  ${unknown.join("\n  ")}`);
   }
+  // a resit plan that silently skips a chapter is how a paper gets failed twice
+  const planned = new Set(P.flatMap((p) => p.ch ?? []));
+  const skipped = chapters.map((c) => c.name).filter((n) => !planned.has(n));
+  if (skipped.length > 0) {
+    throw new Error(`Chapter(s) with no plan item:\n  ${skipped.join("\n  ")}`);
+  }
+
+  // stable sort by date so the daily-habit rows (appended last) sit at the end
+  // of each day rather than at the end of the plan
+  const order = new Map(P.map((p, i) => [p, i]));
+  P.sort((x, y) => x.d.localeCompare(y.d) || order.get(x)! - order.get(y)!);
 
   await db.delete(schema.planItems).where(eq(schema.planItems.userId, STUDENT_ID));
   await db.insert(schema.planItems).values(

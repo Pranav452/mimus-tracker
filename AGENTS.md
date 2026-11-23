@@ -6,7 +6,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 # Mimus — CA Inter tracker
 
-Mobile-only PWA for **Mimansha**'s CA Intermediate Sept 2026 attempt (Group I).
+Mobile-only PWA for **Mimansha**'s CA Intermediate **January 2027** attempt (Group I:
+Accounts 2 Jan, Law 4 Jan, Tax 6 Jan — dates live in `lib/exam.ts`). Sept 2026 result was
+Accounts 55, Law 49, Tax 35 (139/300, unsuccessful); Tax is the paper to fix.
 **Pranav** = admin/mentor, **Mimansha** = student. Everything is Asia/Kolkata time
 (`todayIST()` in `lib/auth.ts`).
 
@@ -64,3 +66,20 @@ syncs at the end.
 Seed logins are in `.env.local` (`SEED_*`): `mimansha@mimus.app` (student),
 `pranav@mimus.app` (admin). She has the PWA installed on iPhone with notifications
 enabled, so nudges genuinely reach her — treat them as outward-facing messages.
+
+## January 2027 attempt (added 23 Nov 2026)
+
+- **Daily 5** (`lib/daily-five.ts`): home-screen button builds a 5-question, 5-minute quiz
+  from today's plan chapters, drawing ONLY from reviewed bank questions (never generated on
+  the fly). Copies carry `source_question_id` so history follows the original.
+- **Question bank**: hand-written files in `scripts/bank/*.ts` (correct option FIRST; the
+  seeder shuffles) → `npx tsx scripts/seed-bank.ts --bank=tax-income`.
+- **Flashcards**: `scripts/gen-flashcards.ts` drafts to `scripts/flashcards/*.json`; review
+  by hand, then `npx tsx scripts/seed-flashcards.ts --paper=tax`. **Only `tax` is reviewed
+  and seeded. `law.json` and `accounts.json` are UNREVIEWED drafts — do not seed them until
+  checked** (the Tax drafts had ~1 in 5 cards wrong or stale).
+- **Plan sync ignores topics logged before the plan's first day**, so an old attempt's
+  history can't tick a new plan.
+- Tax past papers older than May 2026 use old slabs/GST rates — don't schedule them.
+- Verify any threshold against a primary source before asserting it: the small-company
+  limit (now ₹10cr/₹100cr) was taught wrongly for September from model memory.

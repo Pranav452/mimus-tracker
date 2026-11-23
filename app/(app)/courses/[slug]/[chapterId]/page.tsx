@@ -18,6 +18,8 @@ export default async function ChapterPage(
 ) {
   const user = await requireUser();
   const { slug, chapterId } = await props.params;
+  const { tab } = await props.searchParams;
+  const initialTab = tab === "cards" || tab === "quiz" ? tab : "learn";
   const id = Number(chapterId);
   if (!Number.isFinite(id)) notFound();
 
@@ -56,6 +58,7 @@ export default async function ChapterPage(
       <ChapterClient
         chapterId={id}
         chapterName={chapter.name}
+        initialTab={initialTab}
         note={
           note
             ? { title: note.title, blocks: note.content as NoteBlock[] }

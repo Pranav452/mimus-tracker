@@ -1,0 +1,1703 @@
+{
+  "note": "Snapshot taken before resetting for the January 2027 attempt. Sept 2026 result: Accounts 55, Law 49, Tax 35 = 139/300 (unsuccessful).",
+  "takenAt": "2026-11-23T08:28:47.768Z",
+  "planItems": [
+    {
+      "id": 424,
+      "userId": 1,
+      "onDate": "2026-07-22",
+      "title": "Law: Preliminary Law (intro)",
+      "subtitle": "morning block",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        30
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        29
+      ],
+      "sort": 0
+    },
+    {
+      "id": 425,
+      "userId": 1,
+      "onDate": "2026-07-22",
+      "title": "Law: Incorporation of Companies",
+      "subtitle": "midday block",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        31
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        30
+      ],
+      "sort": 1
+    },
+    {
+      "id": 426,
+      "userId": 1,
+      "onDate": "2026-07-22",
+      "title": "DT: Salary (with ₹75k std deduction + new perquisite limits)",
+      "subtitle": "afternoon block — weakest subject, don't skip",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        47
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 2
+    },
+    {
+      "id": 427,
+      "userId": 1,
+      "onDate": "2026-07-22",
+      "title": "Attempt tonight's test in the app",
+      "subtitle": "Pranav publishes it from your logged topics",
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 3
+    },
+    {
+      "id": 428,
+      "userId": 1,
+      "onDate": "2026-07-23",
+      "title": "Law: Prospectus & Allotment of Shares",
+      "subtitle": "morning block",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        32
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 4
+    },
+    {
+      "id": 429,
+      "userId": 1,
+      "onDate": "2026-07-23",
+      "title": "Law: Shares and Debentures",
+      "subtitle": "midday block",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        33
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 5
+    },
+    {
+      "id": 430,
+      "userId": 1,
+      "onDate": "2026-07-23",
+      "title": "DT: House Property",
+      "subtitle": "afternoon block — weakest subject, don't skip",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        48
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 6
+    },
+    {
+      "id": 431,
+      "userId": 1,
+      "onDate": "2026-07-23",
+      "title": "Attempt tonight's test in the app",
+      "subtitle": "Pranav publishes it from your logged topics",
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 7
+    },
+    {
+      "id": 471,
+      "userId": 1,
+      "onDate": "2026-08-05",
+      "title": "GST: Place + Time of Supply",
+      "subtitle": "GST with 2.0 rates",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        61,
+        62
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        18,
+        19,
+        39,
+        40
+      ],
+      "sort": 47
+    },
+    {
+      "id": 434,
+      "userId": 1,
+      "onDate": "2026-07-24",
+      "title": "DT: PGBP — part 1 (depreciation, 43B)",
+      "subtitle": "afternoon block — weakest subject, don't skip",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        49
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 10
+    },
+    {
+      "id": 435,
+      "userId": 1,
+      "onDate": "2026-07-24",
+      "title": "Attempt tonight's test in the app",
+      "subtitle": "Pranav publishes it from your logged topics",
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 11
+    },
+    {
+      "id": 437,
+      "userId": 1,
+      "onDate": "2026-07-25",
+      "title": "DT: PGBP — part 2 + presumptive (44AD/ADA)",
+      "subtitle": "afternoon block — weakest subject, don't skip",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 13
+    },
+    {
+      "id": 438,
+      "userId": 1,
+      "onDate": "2026-07-25",
+      "title": "Attempt tonight's test in the app",
+      "subtitle": "Pranav publishes it from your logged topics",
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 14
+    },
+    {
+      "id": 440,
+      "userId": 1,
+      "onDate": "2026-07-26",
+      "title": "Law: Accounts of Companies",
+      "subtitle": "midday block",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        38
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 16
+    },
+    {
+      "id": 441,
+      "userId": 1,
+      "onDate": "2026-07-26",
+      "title": "DT: Capital Gains (54EC new bonds, all exemptions)",
+      "subtitle": "afternoon block — weakest subject, don't skip",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        50
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 17
+    },
+    {
+      "id": 442,
+      "userId": 1,
+      "onDate": "2026-07-26",
+      "title": "Attempt tonight's test in the app",
+      "subtitle": "Pranav publishes it from your logged topics",
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 18
+    },
+    {
+      "id": 444,
+      "userId": 1,
+      "onDate": "2026-07-27",
+      "title": "DT: Other Sources + Clubbing",
+      "subtitle": "afternoon block — weakest subject, don't skip",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        51,
+        56
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 20
+    },
+    {
+      "id": 445,
+      "userId": 1,
+      "onDate": "2026-07-27",
+      "title": "Attempt tonight's test in the app",
+      "subtitle": "Pranav publishes it from your logged topics",
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 21
+    },
+    {
+      "id": 449,
+      "userId": 1,
+      "onDate": "2026-07-28",
+      "title": "Attempt tonight's test in the app",
+      "subtitle": "Pranav publishes it from your logged topics",
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 25
+    },
+    {
+      "id": 451,
+      "userId": 1,
+      "onDate": "2026-07-29",
+      "title": "Law: Interpretation of Statutes",
+      "subtitle": "midday block",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        44
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 27
+    },
+    {
+      "id": 452,
+      "userId": 1,
+      "onDate": "2026-07-29",
+      "title": "DT: Basics + Residential Status (quick — you know this)",
+      "subtitle": "afternoon block — weakest subject, don't skip",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        45,
+        46
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 28
+    },
+    {
+      "id": 453,
+      "userId": 1,
+      "onDate": "2026-07-29",
+      "title": "Attempt tonight's test in the app",
+      "subtitle": "Pranav publishes it from your logged topics",
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 29
+    },
+    {
+      "id": 455,
+      "userId": 1,
+      "onDate": "2026-07-30",
+      "title": "Law: Weak-spot sweep of the 15",
+      "subtitle": "midday block",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 31
+    },
+    {
+      "id": 457,
+      "userId": 1,
+      "onDate": "2026-07-30",
+      "title": "Attempt tonight's test in the app",
+      "subtitle": "Pranav publishes it from your logged topics",
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 33
+    },
+    {
+      "id": 458,
+      "userId": 1,
+      "onDate": "2026-07-31",
+      "title": "Law: Full-syllabus rapid recap day",
+      "subtitle": "morning block",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 34
+    },
+    {
+      "id": 460,
+      "userId": 1,
+      "onDate": "2026-07-31",
+      "title": "Attempt tonight's test in the app",
+      "subtitle": "Pranav publishes it from your logged topics",
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 36
+    },
+    {
+      "id": 461,
+      "userId": 1,
+      "onDate": "2026-08-01",
+      "title": "IT revision: full computation drills — new regime slabs (₹4L steps)",
+      "subtitle": "Income Tax priority block",
+      "kind": "revise",
+      "done": false,
+      "chapterIds": [
+        57
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 37
+    },
+    {
+      "id": 462,
+      "userId": 1,
+      "onDate": "2026-08-01",
+      "title": "GST: Intro + Supply",
+      "subtitle": "GST with 2.0 rates",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        58,
+        59
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 38
+    },
+    {
+      "id": 463,
+      "userId": 1,
+      "onDate": "2026-08-02",
+      "title": "IT revision: Salary + HP mixed problems",
+      "subtitle": "Income Tax priority block",
+      "kind": "revise",
+      "done": false,
+      "chapterIds": [
+        47,
+        48
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 39
+    },
+    {
+      "id": 464,
+      "userId": 1,
+      "onDate": "2026-08-02",
+      "title": "Practice: chapter quiz in app on today's topics",
+      "subtitle": null,
+      "kind": "practice",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 40
+    },
+    {
+      "id": 465,
+      "userId": 1,
+      "onDate": "2026-08-03",
+      "title": "IT revision: PGBP problem marathon",
+      "subtitle": "Income Tax priority block",
+      "kind": "revise",
+      "done": false,
+      "chapterIds": [
+        49
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 41
+    },
+    {
+      "id": 466,
+      "userId": 1,
+      "onDate": "2026-08-03",
+      "title": "GST: Charge (new 5/18/40 rates!) + Composition/RCM",
+      "subtitle": "GST with 2.0 rates",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        60
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 42
+    },
+    {
+      "id": 467,
+      "userId": 1,
+      "onDate": "2026-08-03",
+      "title": "Timed test in app (Tax mix)",
+      "subtitle": null,
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 43
+    },
+    {
+      "id": 468,
+      "userId": 1,
+      "onDate": "2026-08-04",
+      "title": "IT revision: Capital Gains + exemptions drills",
+      "subtitle": "Income Tax priority block",
+      "kind": "revise",
+      "done": false,
+      "chapterIds": [
+        50
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 44
+    },
+    {
+      "id": 469,
+      "userId": 1,
+      "onDate": "2026-08-04",
+      "title": "Practice: chapter quiz in app on today's topics",
+      "subtitle": null,
+      "kind": "practice",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 45
+    },
+    {
+      "id": 470,
+      "userId": 1,
+      "onDate": "2026-08-05",
+      "title": "IT revision: OS, Clubbing, Set-off mixed MCQs",
+      "subtitle": "Income Tax priority block",
+      "kind": "revise",
+      "done": false,
+      "chapterIds": [
+        51,
+        56,
+        52
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 46
+    },
+    {
+      "id": 472,
+      "userId": 1,
+      "onDate": "2026-08-06",
+      "title": "IT revision: Deductions 80C→80U speed sheet",
+      "subtitle": "Income Tax priority block",
+      "kind": "revise",
+      "done": false,
+      "chapterIds": [
+        53
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 48
+    },
+    {
+      "id": 473,
+      "userId": 1,
+      "onDate": "2026-08-06",
+      "title": "Practice: chapter quiz in app on today's topics",
+      "subtitle": null,
+      "kind": "practice",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 49
+    },
+    {
+      "id": 474,
+      "userId": 1,
+      "onDate": "2026-08-06",
+      "title": "Timed test in app (Tax mix)",
+      "subtitle": null,
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 50
+    },
+    {
+      "id": 475,
+      "userId": 1,
+      "onDate": "2026-08-07",
+      "title": "IT revision: TDS/TCS thresholds memorise (NEW figures) + Returns",
+      "subtitle": "Income Tax priority block",
+      "kind": "revise",
+      "done": false,
+      "chapterIds": [
+        54,
+        55
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 51
+    },
+    {
+      "id": 476,
+      "userId": 1,
+      "onDate": "2026-08-07",
+      "title": "GST: Value of Supply + Exemptions (insurance now exempt)",
+      "subtitle": "GST with 2.0 rates",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        63,
+        64
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 52
+    },
+    {
+      "id": 477,
+      "userId": 1,
+      "onDate": "2026-08-08",
+      "title": "IT revision: full computation drills — new regime slabs (₹4L steps)",
+      "subtitle": "Income Tax priority block",
+      "kind": "revise",
+      "done": false,
+      "chapterIds": [
+        57
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 53
+    },
+    {
+      "id": 478,
+      "userId": 1,
+      "onDate": "2026-08-08",
+      "title": "Practice: chapter quiz in app on today's topics",
+      "subtitle": null,
+      "kind": "practice",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 54
+    },
+    {
+      "id": 479,
+      "userId": 1,
+      "onDate": "2026-08-09",
+      "title": "IT revision: Salary + HP mixed problems",
+      "subtitle": "Income Tax priority block",
+      "kind": "revise",
+      "done": false,
+      "chapterIds": [
+        47,
+        48
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 55
+    },
+    {
+      "id": 433,
+      "userId": 1,
+      "onDate": "2026-07-24",
+      "title": "Law: Registration of Charge",
+      "subtitle": "midday block",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        35
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        15,
+        21
+      ],
+      "sort": 9
+    },
+    {
+      "id": 436,
+      "userId": 1,
+      "onDate": "2026-07-25",
+      "title": "Law: Management & Administration",
+      "subtitle": "morning block",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        36
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        22
+      ],
+      "sort": 12
+    },
+    {
+      "id": 443,
+      "userId": 1,
+      "onDate": "2026-07-27",
+      "title": "Law: Audit and Auditors",
+      "subtitle": "morning block",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        39
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        26
+      ],
+      "sort": 19
+    },
+    {
+      "id": 446,
+      "userId": 1,
+      "onDate": "2026-07-28",
+      "title": "Law: Companies Incorporated outside India",
+      "subtitle": "morning block",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        40
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        11,
+        24
+      ],
+      "sort": 22
+    },
+    {
+      "id": 447,
+      "userId": 1,
+      "onDate": "2026-07-28",
+      "title": "Law: LLP Act, 2008",
+      "subtitle": "midday block",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        41
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        27
+      ],
+      "sort": 23
+    },
+    {
+      "id": 448,
+      "userId": 1,
+      "onDate": "2026-07-28",
+      "title": "DT: Set-off & Carry Forward",
+      "subtitle": "afternoon block — weakest subject, don't skip",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        52
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        16
+      ],
+      "sort": 24
+    },
+    {
+      "id": 450,
+      "userId": 1,
+      "onDate": "2026-07-29",
+      "title": "Law: General Clauses Act, 1897",
+      "subtitle": "morning block",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        42
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        28
+      ],
+      "sort": 26
+    },
+    {
+      "id": 454,
+      "userId": 1,
+      "onDate": "2026-07-30",
+      "title": "Law: FEMA (quick revise — done 20 Jul)",
+      "subtitle": "morning block",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        43
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        3,
+        25
+      ],
+      "sort": 30
+    },
+    {
+      "id": 459,
+      "userId": 1,
+      "onDate": "2026-07-31",
+      "title": "DT: Deductions + Return revisit (87A ₹12L/₹60k, 139(8A) 48 months)",
+      "subtitle": "afternoon block — weakest subject, don't skip",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        53,
+        55
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        8,
+        9
+      ],
+      "sort": 35
+    },
+    {
+      "id": 480,
+      "userId": 1,
+      "onDate": "2026-08-09",
+      "title": "GST: ITC (full chapter — scoring)",
+      "subtitle": "GST with 2.0 rates",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        65
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 56
+    },
+    {
+      "id": 481,
+      "userId": 1,
+      "onDate": "2026-08-09",
+      "title": "Timed test in app (Tax mix)",
+      "subtitle": null,
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 57
+    },
+    {
+      "id": 485,
+      "userId": 1,
+      "onDate": "2026-08-10",
+      "title": "Attempt tonight's test in the app",
+      "subtitle": null,
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 61
+    },
+    {
+      "id": 487,
+      "userId": 1,
+      "onDate": "2026-08-11",
+      "title": "DT: Salary — ₹75k std deduction + new perquisite limits",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        47
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 63
+    },
+    {
+      "id": 488,
+      "userId": 1,
+      "onDate": "2026-08-11",
+      "title": "Attempt tonight's test in the app",
+      "subtitle": null,
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 64
+    },
+    {
+      "id": 489,
+      "userId": 1,
+      "onDate": "2026-08-12",
+      "title": "DT: House Property",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        48
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 65
+    },
+    {
+      "id": 490,
+      "userId": 1,
+      "onDate": "2026-08-12",
+      "title": "DT: PGBP part 1 — depreciation, 43B",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        49
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 66
+    },
+    {
+      "id": 491,
+      "userId": 1,
+      "onDate": "2026-08-13",
+      "title": "DT: PGBP part 2 + presumptive (44AD/ADA)",
+      "subtitle": "same chapter, second sitting",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 67
+    },
+    {
+      "id": 492,
+      "userId": 1,
+      "onDate": "2026-08-13",
+      "title": "DT: Capital Gains — exemptions + 54EC bonds",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        50
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 68
+    },
+    {
+      "id": 493,
+      "userId": 1,
+      "onDate": "2026-08-13",
+      "title": "Papers arrive: mark the 5 most-repeated questions per paper",
+      "subtitle": "30 min, no solving — just see what gets asked",
+      "kind": "practice",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 69
+    },
+    {
+      "id": 494,
+      "userId": 1,
+      "onDate": "2026-08-14",
+      "title": "DT: Other Sources + Computation of Total Income",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        51,
+        57
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 70
+    },
+    {
+      "id": 495,
+      "userId": 1,
+      "onDate": "2026-08-14",
+      "title": "Timed half-paper: Law (90 min, no notes)",
+      "subtitle": "your first real clock — Law is the only finished paper",
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 71
+    },
+    {
+      "id": 496,
+      "userId": 1,
+      "onDate": "2026-08-15",
+      "title": "GST: Intro + Charge (5/18/40 rates, composition, RCM)",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        58,
+        60
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 72
+    },
+    {
+      "id": 497,
+      "userId": 1,
+      "onDate": "2026-08-15",
+      "title": "Accounts anchor: Buyback of Shares",
+      "subtitle": "Accounts is the FIRST exam — don't start it cold on the 20th",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        1
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 73
+    },
+    {
+      "id": 498,
+      "userId": 1,
+      "onDate": "2026-08-16",
+      "title": "GST: Exemptions + Input Tax Credit",
+      "subtitle": "ITC is the highest-scoring GST chapter",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        64,
+        65
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 74
+    },
+    {
+      "id": 499,
+      "userId": 1,
+      "onDate": "2026-08-16",
+      "title": "Attempt tonight's test in the app",
+      "subtitle": null,
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 75
+    },
+    {
+      "id": 500,
+      "userId": 1,
+      "onDate": "2026-08-17",
+      "title": "GST: Registration + Tax Invoice, Credit & Debit Notes",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        66,
+        67
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 76
+    },
+    {
+      "id": 501,
+      "userId": 1,
+      "onDate": "2026-08-17",
+      "title": "Accounts anchor: Cash Flow Statement (AS 3)",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        4
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 77
+    },
+    {
+      "id": 502,
+      "userId": 1,
+      "onDate": "2026-08-18",
+      "title": "GST: Payment of Tax + Returns + TDS/TCS under GST",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        70,
+        72,
+        71
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 78
+    },
+    {
+      "id": 503,
+      "userId": 1,
+      "onDate": "2026-08-18",
+      "title": "Attempt tonight's test in the app",
+      "subtitle": null,
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 79
+    },
+    {
+      "id": 504,
+      "userId": 1,
+      "onDate": "2026-08-19",
+      "title": "GST: E-way Bill + Accounts and Records",
+      "subtitle": "Tax first sweep DONE after this ✅",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        69,
+        68
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 80
+    },
+    {
+      "id": 505,
+      "userId": 1,
+      "onDate": "2026-08-19",
+      "title": "Timed half-paper: Taxation — DT section (90 min)",
+      "subtitle": null,
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 81
+    },
+    {
+      "id": 506,
+      "userId": 1,
+      "onDate": "2026-08-19",
+      "title": "One-page threshold sheet: TDS, 87A, slabs, GST rates",
+      "subtitle": "write it by hand, keep it with you till the exam",
+      "kind": "revise",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 82
+    },
+    {
+      "id": 507,
+      "userId": 1,
+      "onDate": "2026-08-20",
+      "title": "Accounts: Internal Reconstruction",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        7
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 83
+    },
+    {
+      "id": 508,
+      "userId": 1,
+      "onDate": "2026-08-20",
+      "title": "Accounts: Investment Accounts (AS 13)",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        3
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 84
+    },
+    {
+      "id": 509,
+      "userId": 1,
+      "onDate": "2026-08-21",
+      "title": "Accounts: Company Final Accounts — formats + managerial remuneration",
+      "subtitle": "you did this on 20 Jul — this is the second pass",
+      "kind": "revise",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 85
+    },
+    {
+      "id": 510,
+      "userId": 1,
+      "onDate": "2026-08-21",
+      "title": "Accounts: Branch Accounts",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        8
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 86
+    },
+    {
+      "id": 511,
+      "userId": 1,
+      "onDate": "2026-08-22",
+      "title": "Accounts: Amalgamation",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        6
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 87
+    },
+    {
+      "id": 512,
+      "userId": 1,
+      "onDate": "2026-08-22",
+      "title": "Attempt tonight's test in the app",
+      "subtitle": null,
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 88
+    },
+    {
+      "id": 513,
+      "userId": 1,
+      "onDate": "2026-08-23",
+      "title": "Accounts: Consolidation — part 1",
+      "subtitle": "heaviest chapter in the paper",
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        5
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 89
+    },
+    {
+      "id": 514,
+      "userId": 1,
+      "onDate": "2026-08-24",
+      "title": "Accounts: Consolidation — part 2, problem drill",
+      "subtitle": "no notes, full working",
+      "kind": "practice",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 90
+    },
+    {
+      "id": 515,
+      "userId": 1,
+      "onDate": "2026-08-24",
+      "title": "30-min Tax problem set (keep it warm)",
+      "subtitle": null,
+      "kind": "practice",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 91
+    },
+    {
+      "id": 516,
+      "userId": 1,
+      "onDate": "2026-08-25",
+      "title": "AS sweep: AS 1, 2, 4, 5, 7",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 92
+    },
+    {
+      "id": 517,
+      "userId": 1,
+      "onDate": "2026-08-25",
+      "title": "Attempt tonight's test in the app",
+      "subtitle": null,
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 93
+    },
+    {
+      "id": 518,
+      "userId": 1,
+      "onDate": "2026-08-26",
+      "title": "AS sweep: AS 10, 11, 12, 15, 16",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 94
+    },
+    {
+      "id": 519,
+      "userId": 1,
+      "onDate": "2026-08-27",
+      "title": "AS sweep: AS 19, 20, 22, 24",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 95
+    },
+    {
+      "id": 520,
+      "userId": 1,
+      "onDate": "2026-08-27",
+      "title": "30-min Law recall drill (sections language)",
+      "subtitle": null,
+      "kind": "practice",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 96
+    },
+    {
+      "id": 521,
+      "userId": 1,
+      "onDate": "2026-08-28",
+      "title": "AS sweep: AS 25, 26, 28, 29 + quick recap of AS 9/17/18",
+      "subtitle": null,
+      "kind": "study",
+      "done": false,
+      "chapterIds": [
+        26,
+        27,
+        28,
+        29
+      ],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 97
+    },
+    {
+      "id": 522,
+      "userId": 1,
+      "onDate": "2026-08-29",
+      "title": "Full mock: Advanced Accounting (3 hrs, exam conditions)",
+      "subtitle": "2–5 PM, same slot as the real paper",
+      "kind": "test",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 98
+    },
+    {
+      "id": 523,
+      "userId": 1,
+      "onDate": "2026-08-30",
+      "title": "Mock review — patch only what you actually lost marks on",
+      "subtitle": null,
+      "kind": "revise",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 99
+    },
+    {
+      "id": 524,
+      "userId": 1,
+      "onDate": "2026-08-31",
+      "title": "Accounts final: formats + AS one-pager. Light day, sleep early.",
+      "subtitle": "nothing new today — the exam is tomorrow",
+      "kind": "revise",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 100
+    },
+    {
+      "id": 525,
+      "userId": 1,
+      "onDate": "2026-09-01",
+      "title": "📝 EXAM — Paper 1: Advanced Accounting (2–5 PM)",
+      "subtitle": "reach by 1 PM, carry calculator",
+      "kind": "exam",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 101
+    },
+    {
+      "id": 526,
+      "userId": 1,
+      "onDate": "2026-09-02",
+      "title": "Law high-yield recap: Dividends, Deposits, Audit, LLP, FEMA",
+      "subtitle": null,
+      "kind": "revise",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 102
+    },
+    {
+      "id": 527,
+      "userId": 1,
+      "onDate": "2026-09-03",
+      "title": "📝 EXAM — Paper 2: Corporate & Other Laws (2–5 PM)",
+      "subtitle": null,
+      "kind": "exam",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 103
+    },
+    {
+      "id": 528,
+      "userId": 1,
+      "onDate": "2026-09-04",
+      "title": "DT: full computation drill + threshold sheet",
+      "subtitle": null,
+      "kind": "revise",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 104
+    },
+    {
+      "id": 529,
+      "userId": 1,
+      "onDate": "2026-09-05",
+      "title": "GST: rates (5/18/40) + ITC recheck. Light evening, sleep early.",
+      "subtitle": null,
+      "kind": "revise",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 105
+    },
+    {
+      "id": 530,
+      "userId": 1,
+      "onDate": "2026-09-06",
+      "title": "📝 EXAM — Paper 3: Taxation (2–5 PM)",
+      "subtitle": "you've got this 💛",
+      "kind": "exam",
+      "done": false,
+      "chapterIds": [],
+      "manual": false,
+      "sourceTopicIds": [],
+      "sort": 106
+    },
+    {
+      "id": 432,
+      "userId": 1,
+      "onDate": "2026-07-24",
+      "title": "Law: Acceptance of Deposits",
+      "subtitle": "morning block",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        34
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        31
+      ],
+      "sort": 8
+    },
+    {
+      "id": 439,
+      "userId": 1,
+      "onDate": "2026-07-26",
+      "title": "Law: Declaration of Dividends (quick revise — done 20 Jul)",
+      "subtitle": "morning block",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        37
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        4,
+        23
+      ],
+      "sort": 15
+    },
+    {
+      "id": 456,
+      "userId": 1,
+      "onDate": "2026-07-30",
+      "title": "DT: TDS/TCS + Advance Tax with NEW FA-2025 thresholds",
+      "subtitle": "afternoon block — weakest subject, don't skip",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        54
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        2
+      ],
+      "sort": 32
+    },
+    {
+      "id": 482,
+      "userId": 1,
+      "onDate": "2026-08-10",
+      "title": "Law: Prospectus & Allotment of Shares",
+      "subtitle": "Law's last 4 — fast pass",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        32
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        32
+      ],
+      "sort": 58
+    },
+    {
+      "id": 483,
+      "userId": 1,
+      "onDate": "2026-08-10",
+      "title": "Law: Shares and Debentures",
+      "subtitle": null,
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        33
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        33
+      ],
+      "sort": 59
+    },
+    {
+      "id": 484,
+      "userId": 1,
+      "onDate": "2026-08-10",
+      "title": "Law: Accounts of Companies + Interpretation of Statutes",
+      "subtitle": "Law first pass DONE after this ✅",
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        38,
+        44
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        34,
+        35
+      ],
+      "sort": 60
+    },
+    {
+      "id": 486,
+      "userId": 1,
+      "onDate": "2026-08-11",
+      "title": "DT: Residential Status (fast — you know the frame)",
+      "subtitle": null,
+      "kind": "study",
+      "done": true,
+      "chapterIds": [
+        46
+      ],
+      "manual": false,
+      "sourceTopicIds": [
+        36
+      ],
+      "sort": 62
+    }
+  ],
+  "chapterProgress": [
+    {
+      "id": 2,
+      "userId": 1,
+      "chapterId": 1,
+      "status": "not_started",
+      "updatedAt": "2026-07-22T15:41:14.682Z"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "chapterId": 54,
+      "status": "in_progress",
+      "updatedAt": "2026-07-21T14:02:25.164Z"
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "chapterId": 2,
+      "status": "done",
+      "updatedAt": "2026-07-22T15:41:21.904Z"
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "chapterId": 56,
+      "status": "in_progress",
+      "updatedAt": "2026-07-23T04:47:44.562Z"
+    },
+    {
+      "id": 8,
+      "userId": 1,
+      "chapterId": 40,
+      "status": "in_progress",
+      "updatedAt": "2026-07-23T04:49:08.473Z"
+    },
+    {
+      "id": 9,
+      "userId": 1,
+      "chapterId": 45,
+      "status": "in_progress",
+      "updatedAt": "2026-07-26T07:47:46.978Z"
+    },
+    {
+      "id": 10,
+      "userId": 1,
+      "chapterId": 59,
+      "status": "in_progress",
+      "updatedAt": "2026-07-26T07:47:46.978Z"
+    },
+    {
+      "id": 11,
+      "userId": 1,
+      "chapterId": 46,
+      "status": "in_progress",
+      "updatedAt": "2026-07-26T08:02:44.586Z"
+    },
+    {
+      "id": 12,
+      "userId": 1,
+      "chapterId": 35,
+      "status": "in_progress",
+      "updatedAt": "2026-07-27T06:31:18.096Z"
+    },
+    {
+      "id": 13,
+      "userId": 1,
+      "chapterId": 52,
+      "status": "in_progress",
+      "updatedAt": "2026-07-27T06:32:32.255Z"
+    },
+    {
+      "id": 14,
+      "userId": 1,
+      "chapterId": 63,
+      "status": "in_progress",
+      "updatedAt": "2026-07-27T06:32:55.803Z"
+    },
+    {
+      "id": 15,
+      "userId": 1,
+      "chapterId": 61,
+      "status": "in_progress",
+      "updatedAt": "2026-07-27T06:33:09.075Z"
+    },
+    {
+      "id": 16,
+      "userId": 1,
+      "chapterId": 62,
+      "status": "in_progress",
+      "updatedAt": "2026-07-27T06:33:20.111Z"
+    },
+    {
+      "id": 17,
+      "userId": 1,
+      "chapterId": 14,
+      "status": "in_progress",
+      "updatedAt": "2026-07-27T06:33:46.943Z"
+    }
+  ]
+}

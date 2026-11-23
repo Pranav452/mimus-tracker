@@ -122,6 +122,10 @@ export const questions = pgTable("questions", {
   // breakdown the examiner would award on
   modelAnswer: text("model_answer"),
   keyPoints: jsonb("key_points").$type<string[]>(),
+  // Set on the copies a Daily 5 serves: points at the bank question it was
+  // copied from, so her history on a question follows it across quizzes and
+  // the picker can tell "never seen" from "got wrong last time".
+  sourceQuestionId: integer("source_question_id"),
 });
 
 export const attempts = pgTable("attempts", {

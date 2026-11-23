@@ -1,0 +1,620 @@
+{
+  "Incorporation of Companies": [
+    {
+      "front": "Minimum number of subscribers required to form an OPC, a private company and a public company at incorporation?",
+      "back": "1 OPC; 2 private company; 7 public company. (Minimum subscribers required to sign the Memorandum.)"
+    },
+    {
+      "front": "Within how many days must a newly formed company notify its registered office and which form/section?",
+      "back": "30 days — file INC‑22 notifying registered office; s.12 Companies Act, 2013."
+    },
+    {
+      "front": "Within how many days must a public company file commencement of business and which form/section applies?",
+      "back": "180 days — file INC‑20A declaration of commencement of business; s.10A Companies Act, 2013."
+    },
+    {
+      "front": "What are the numeric thresholds that define a 'Small Company' under the Act?",
+      "back": "Paid‑up capital ≤ ₹10 crore AND turnover ≤ ₹100 crore. (Definition: s.2(85).)"
+    },
+    {
+      "front": "State the nationality and residency requirements for the member/nominee of an OPC, and any ceiling on capital/turnover.",
+      "back": "Member/nominee must be a natural person, Indian citizen and resident (stayed in India ≥120 days). No capital or turnover ceiling for OPC."
+    },
+    {
+      "front": "Which clauses must the Memorandum of Association compulsorily contain at incorporation?",
+      "back": "Name clause; registered office clause; object clause; liability clause — and capital clause if company has share capital. (Memorandum contents: s.4.)"
+    },
+    {
+      "front": "Who signs/adopts the Articles on incorporation and what's their legal effect?",
+      "back": "Subscribers sign and adopt the Articles; Articles form a contract between the company and its members. (Articles: s.5.)"
+    },
+    {
+      "front": "Is any minimum paid‑up capital required to incorporate a company under the Companies Act, 2013?",
+      "back": "None — there is no statutory minimum paid‑up capital required for incorporation under the Companies Act, 2013."
+    },
+    {
+      "front": "What declaration must accompany incorporation filings (Form INC‑9) and who must make it?",
+      "back": "A declaration (INC‑9) by subscribers and first directors stating compliance with law and identity; filed at incorporation (can be certified by professional)."
+    },
+    {
+      "front": "If a company has share capital, how many shares must each subscriber to the Memorandum take?",
+      "back": "At least 1 share each — each subscriber must take and subscribe to the shares stated against their name in the Memorandum."
+    }
+  ],
+  "Introduction — Preliminary Law": [
+    {
+      "front": "State the paid-up capital and turnover limits that qualify a company as a 'Small company' (section)?",
+      "back": "₹10 crore paid‑up capital and ₹100 crore turnover; s.2(85). G.S.R. 880(E) effective 1‑Dec‑2025."
+    },
+    {
+      "front": "Within how many days must a company notify its registered office after incorporation and which form is used?",
+      "back": "30 days; s.12. File Form INC‑22 within 30 days of incorporation to furnish registered office particulars."
+    },
+    {
+      "front": "By when must a company file the declaration of commencement of business (except where exempt) and which form/section governs it?",
+      "back": "180 days; s.10A. File Form INC‑20A (declaration of commencement of business) within 180 days of incorporation."
+    },
+    {
+      "front": "Give the member/nominee, nationality and residence requirements for a One Person Company (OPC).",
+      "back": "1 person; member/nominee must be a natural person, Indian citizen and resident in India for ≥120 days; s.2(62) and Companies (Incorporation) Rules."
+    },
+    {
+      "front": "What are the minimum numbers of members required for a public company, a private company and an OPC?",
+      "back": "7 (public), 2 (private), 1 (OPC); see the definitions of public, private and OPC in s.2."
+    },
+    {
+      "front": "What are the statutory minimum numbers of directors for a public company, a private company and an OPC? Cite the section.",
+      "back": "3 (public), 2 (private), 1 (OPC); s.149(1) (minimum number of directors)."
+    },
+    {
+      "front": "List the mandatory clauses that must appear in the Memorandum of Association (name the number of clauses).",
+      "back": "6 clauses: Name, Registered office (state), Objects, Liability, Capital, Subscription; s.4 (contents of memorandum)."
+    },
+    {
+      "front": "What is the maximum number of members permitted in a private company (section)?",
+      "back": "200 members maximum; s.2(68) (definition of private company)."
+    },
+    {
+      "front": "How does the Act define 'company' (give the section and the exact frame of definition)?",
+      "back": "1 definition: 'company' means a company incorporated under this Act or under any previous company law; s.2(20)."
+    },
+    {
+      "front": "State briefly the legal effect of Articles of Association and cite the section.",
+      "back": "1 rule: Articles are the company’s internal regulations binding the company and its members; s.5."
+    },
+    {
+      "front": "What is required of subscribers in the subscription clause of the Memorandum at incorporation?",
+      "back": "Each subscriber must take at least one share; subscription clause is part of memorandum (s.4) and subscribers must sign and state number of shares taken."
+    }
+  ],
+  "Prospectus and Allotment of Shares": [
+    {
+      "front": "Which section of the Companies Act defines 'prospectus' exam-correctly?",
+      "back": "Section 2(70): 'prospectus' = any document inviting offers from the public to subscribe for securities (includes red‑herring and shelf prospectuses)."
+    },
+    {
+      "front": "What is the validity period of a shelf prospectus and where is it authorised?",
+      "back": "1 year — shelf prospectus permitted under Section 31; valid for one year from date of filing (Companies Act read with Prospectus & Allotment Rules)."
+    },
+    {
+      "front": "What crucial detail is omitted from a red‑herring prospectus (RHP)?",
+      "back": "Excludes price and quantum of securities — RHP contains all other disclosures but omits final price/number; used in book‑building until price fixed."
+    },
+    {
+      "front": "What is the maximum number of persons to whom securities can be offered by private placement in a financial year?",
+      "back": "200 persons — aggregate limit per financial year for private placement (Section 42); excludes qualified institutional buyers and employees."
+    },
+    {
+      "front": "What is the time limit to complete allotment after receipt of application money?",
+      "back": "60 days — allotment must be completed within 60 days of receipt of application money (Companies (Prospectus & Allotment of Securities) Rules)."
+    },
+    {
+      "front": "If allotment is not made within 60 days, what is the refund timing and consequence for delay?",
+      "back": "15 days — refund must be made within 15 days after the 60‑day period; if delayed, company pays interest (statutory rate widely applied as 12% p.a. for late refunds)."
+    },
+    {
+      "front": "Which form and time limit apply for filing the Return of Allotment with ROC?",
+      "back": "PAS‑3 — file Return of Allotment with Registrar within 30 days of allotment (Companies (Prospectus & Allotment of Securities) Rules, 2014)."
+    },
+    {
+      "front": "What is the statutory cap on persons and who is excluded in private placement offers — short recall?",
+      "back": "200 persons cap per financial year (Section 42); excludes qualified institutional buyers and employees, and offers must be made via private placement procedure."
+    }
+  ],
+  "Shares and Debentures": [
+    {
+      "front": "What is the maximum number of persons to whom securities can be offered on private placement in one financial year, and who is excluded from this count?",
+      "back": "200 persons per financial year; qualified institutional buyers and employees under ESOPs are excluded. (Section 42)"
+    },
+    {
+      "front": "Within how many days must allotment be completed after receipt of application money, and what happens if allotment is not made?",
+      "back": "60 days to allot; if not allotted, refund within 15 days of expiry, otherwise repay with interest at 12% p.a. (Companies (Prospectus & Allotment of Securities) Rules, 2014)"
+    },
+    {
+      "front": "What are the quantitative limits and key eligibility conditions for issuing sweat equity shares?",
+      "back": "15% of existing paid‑up equity or ₹5,00,000 per year, whichever is higher; company must have completed 1 year. (Section 54 and Rules)"
+    },
+    {
+      "front": "State the statutory numerical limits and essential conditions for a company buyback of shares.",
+      "back": "25% of aggregate of paid‑up capital and free reserves and ≤25% of paid‑up equity in a year; maintain ≤2:1 debt‑equity; board-only buyback ≤10%; one‑year gap between buybacks. (Section 68)"
+    },
+    {
+      "front": "Within what maximum period must redeemable preference shares be redeemed?",
+      "back": "Within 20 years from date of issue. (Section 55)"
+    },
+    {
+      "front": "Within how many days must a company register a charge created on its property, and what are the legal consequences if not registered timely?",
+      "back": "30 days from creation; ROC may extend (fees) up to 300 days; unregistered charge cannot be enforced against liquidator/receiver and attracts penalties. (Section 77)"
+    },
+    {
+      "front": "When is appointment of a debenture trustee mandatory and where must the debenture trust deed/trustee particulars appear?",
+      "back": "Mandatory for a public issue of debentures; trustee and trust‑deed particulars must be disclosed in the prospectus and filed as required. (Section 71)"
+    },
+    {
+      "front": "By when must a company file the return of allotment (Form PAS‑3) with the Registrar of Companies?",
+      "back": "30 days from the date of allotment — file Form PAS‑3 under Companies (Share Capital & Debentures) Rules."
+    }
+  ],
+  "Acceptance of Deposits by Companies": [
+    {
+      "front": "Which sections of the Companies Act, 2013 govern acceptance of deposits by companies?",
+      "back": "3: Sections 73 to 76 (Chapter V) deal with acceptance of deposits, repayment, application of provisions and penalties."
+    },
+    {
+      "front": "What is the statutory maximum a company may accept as deposits from its members (aggregate limit)?",
+      "back": "35%: of paid‑up share capital + free reserves + securities premium account (Companies (Acceptance of Deposits) Rules, 2014, Rule 3)."
+    },
+    {
+      "front": "What interest must a company pay on deposits if it defaults in repayment on due date?",
+      "back": "2× rate or 18%: interest at twice the contracted rate or 18% p.a., whichever is higher (Section 74)."
+    },
+    {
+      "front": "Within what period must a company file the annual return of deposits and in which form?",
+      "back": "90 days: file annual return of deposits in Form DPT‑3 within 90 days of the financial year‑end (Companies (Acceptance of Deposits) Rules)."
+    },
+    {
+      "front": "What minimum transfer to a Deposit Repayment Reserve (DRR) must a company make for maturing deposits?",
+      "back": "15%: transfer not less than 15% of amount of deposits maturing during the year to the Deposit Repayment Reserve Account (Companies (Acceptance of Deposits) Rules)."
+    },
+    {
+      "front": "Which common classes of companies are explicitly excluded from Chapter V deposit rules (i.e., exempt)?",
+      "back": "Some exempt classes: Government companies, banking companies and NBFCs, insurance companies and Nidhi companies (exemptions specified in the Rules)."
+    },
+    {
+      "front": "If a company rejects or doesn’t accept a deposit application, by when must it refund the application money?",
+      "back": "30 days: refund application money (or excess) to the applicant within 30 days from rejection/non‑acceptance (Companies (Acceptance of Deposits) Rules)."
+    },
+    {
+      "front": "What mandatory corporate action must a public company take before accepting deposits from persons other than its members?",
+      "back": "Special resolution + prescribed circular: public company must pass a special resolution and circulate the prescribed offer/circular (Form DPT‑1) before accepting deposits from non‑members (Rules)."
+    }
+  ],
+  "Registration of Charge": [
+    {
+      "front": "Within how many days must a company register a charge with the Registrar after its creation?",
+      "back": "30 days — deliver particulars to Registrar within 30 days of creation; failing registration renders the charge void against the liquidator and creditors (but valid inter se)."
+    },
+    {
+      "front": "What is the legal effect of non‑registration of a company’s charge?",
+      "back": "Void against liquidator and creditors; remains valid between company and charge‑holder; no enforceable priority against third parties until registered."
+    },
+    {
+      "front": "Which date determines priority of a charge against other creditors — date of creation or date of registration?",
+      "back": "Date of registration — priority against third parties and in liquidation is determined by the date of registration, not the date of creation."
+    },
+    {
+      "front": "How long after full satisfaction must a company file particulars of satisfaction of a charge with the Registrar?",
+      "back": "30 days — file particulars of satisfaction with the Registrar within 30 days of full satisfaction, attaching the instrument/certificate as required."
+    },
+    {
+      "front": "Which types of charges must be registered to be effective against third parties?",
+      "back": "Any charge on company assets or undertaking — fixed, floating, mortgage, hypothecation, etc.; registration required to be effective against creditors and liquidator."
+    },
+    {
+      "front": "Does a floating charge require a fresh registration when it crystallises?",
+      "back": "No — crystallisation of a floating charge does not require fresh registration; the original registered charge governs priority and enforceability."
+    },
+    {
+      "front": "What statutory records must a company keep at its registered office about charges?",
+      "back": "A register of charges with particulars (date, amount, creditor, property, instrument reference) and copies of charge instruments; open for inspection on payment of prescribed fee."
+    },
+    {
+      "front": "If a company misses the 30‑day deadline, can it still register the charge later?",
+      "back": "Yes — Registrar may permit delayed registration on application subject to conditions and additional fees; once registered, the registration date governs priority."
+    }
+  ],
+  "Management and Administration": [
+    {
+      "front": "Within how many days must a company notify the RoC of its registered office after incorporation (which form)?",
+      "back": "30 days — notify situation of registered office to RoC in Form INC‑22 within 30 days of incorporation (s.12)."
+    },
+    {
+      "front": "By when must a company with share capital file the commencement‑of‑business declaration and in which form?",
+      "back": "180 days — file declaration of commencement of business in Form INC‑20A within 180 days of incorporation (s.10A / Incorporation rules)."
+    },
+    {
+      "front": "What are the paid‑up capital and turnover thresholds for a 'Small Company' (current law and section)?",
+      "back": "₹10 crore & ₹100 crore — 'Small company' = paid‑up capital ≤ ₹10 crore AND turnover ≤ ₹100 crore (s.2(85), G.S.R. 880(E), effective 1‑Dec‑2025)."
+    },
+    {
+      "front": "What are the residency and citizenship requirements for an OPC’s member/nominee? Any capital/turnover ceiling?",
+      "back": "120 days — OPC member/nominee must be a natural person, Indian citizen and resident in India for at least 120 days (Incorporation Rules); OPC has no paid‑up/turnover ceilings."
+    },
+    {
+      "front": "State the numeric limits and conditions for a company buyback (section).",
+      "back": "25% & 25% — buyback limited to 25% of paid‑up capital + free reserves or 25% of paid‑up equity in a year; debt‑equity ratio 2:1; board buyback limit 10%; one‑year gap between buybacks (s.68)."
+    },
+    {
+      "front": "How many board meetings are required yearly and what is the maximum gap allowed between two meetings?",
+      "back": "4 meetings & 120 days — board must meet at least four times a year; maximum gap between consecutive meetings is 120 days (s.173)."
+    },
+    {
+      "front": "What is the minimum notice period for a board meeting and when can it be shortened?",
+      "back": "7 days — notice for a board meeting must be at least 7 days in writing; it can be shortened only with the consent of all directors (s.173)."
+    },
+    {
+      "front": "What is the quorum for a board meeting?",
+      "back": "One‑third or two — quorum is one‑third of total strength or two directors, whichever is higher (s.174)."
+    },
+    {
+      "front": "How many days’ notice is required for a general meeting and how can shorter notice be validly given?",
+      "back": "21 days & 95% — general meeting notice at least 21 days; shorter notice valid only with consent of members holding at least 95% of voting power (s.101)."
+    },
+    {
+      "front": "What is the quorum for a general meeting: public company, private company, and OPC?",
+      "back": "5 / 2 / 1 — quorum: public companies 5 members, private companies 2 members, OPC 1 member (s.103)."
+    },
+    {
+      "front": "Within what time must minutes of meetings be signed and by whom?",
+      "back": "30 days — minutes of board and general meetings to be signed by the chairperson of the meeting (or of the next meeting) within 30 days (s.118)."
+    },
+    {
+      "front": "What is the residency requirement for the 'resident director' that every company must have?",
+      "back": "182 days — at least one director must have stayed in India for at least 182 days in the previous calendar year (s.149(3))."
+    },
+    {
+      "front": "When is a whole‑time company secretary mandatory (numeric threshold and section)?",
+      "back": "₹10 crore & listed — whole‑time company secretary mandatory for listed companies and public companies with paid‑up capital ≥ ₹10 crore (s.203)."
+    },
+    {
+      "front": "What is the statutory cap on number of directors and how can it be increased?",
+      "back": "15 (max) — board size capped at 15 directors; can be increased beyond 15 (up to 20) by passing a special resolution (s.149(1))."
+    }
+  ],
+  "Audit and Auditors": [
+    {
+      "front": "Within how many days must a company file the auditor’s appointment with the Registrar (Form ADT‑1)?",
+      "back": "15 days — file Form ADT‑1 with the Registrar after appointment of auditor. (Companies (Audit and Auditors) Rules; s.139 context.)"
+    },
+    {
+      "front": "Within how many days must a resigning auditor file his statement of resignation with the Registrar (Form ADT‑3)?",
+      "back": "30 days — auditor files Form ADT‑3 with the Registrar giving reasons for resignation. (Companies (Audit and Auditors) Rules; s.140 context.)"
+    },
+    {
+      "front": "What are the maximum continuous terms for an individual auditor and for an audit firm (rotation rule)?",
+      "back": "Individual: 5 consecutive years; Firm: 10 consecutive years (two terms of 5). Cooling‑off period after expiry: 5 years. (Section 139(2) — rotation provisions.)"
+    },
+    {
+      "front": "Within what period must the Board fill a casual vacancy of auditor caused by resignation?",
+      "back": "30 days — Board to appoint another auditor to fill casual vacancy within 30 days; appointment holds till conclusion of next AGM and is ratifiable by members. (s.139(8).)"
+    },
+    {
+      "front": "What statutory rights does an auditor have to obtain information and inspect company records?",
+      "back": "Unrestricted access to books, vouchers and records; right to require information/explanations and attendance of officers. (Section 143(1).)"
+    },
+    {
+      "front": "State the key matters an auditor must report on under Section 143(3).",
+      "back": "Whether F/S give true & fair view and comply with accounting standards; proper books maintained; adequacy and operating effectiveness of internal financial controls. (Section 143(3).)"
+    },
+    {
+      "front": "What is the monetary threshold and time limit for an auditor to report a fraud to the Central Government?",
+      "back": "₹1 crore — if fraud exceeds ₹1 crore, auditor must report to the Central Government within 60 days. (Section 143(12).)"
+    },
+    {
+      "front": "How must an auditor’s tenure be described once appointed at an AGM?",
+      "back": "Until conclusion of next AGM — auditor holds office from conclusion of the AGM at which appointed until conclusion of the next AGM (one‑year term). (Section 139(1) context.)"
+    },
+    {
+      "front": "What must the principal auditor do when a branch is audited by a branch auditor?",
+      "back": "Disclose in the main audit report reliance on the branch auditor’s work, consider the branch auditor’s findings and state that branch was separately audited. (Section 143(8).)"
+    },
+    {
+      "front": "Who appoints the first auditor and within what basic time frame after incorporation?",
+      "back": "30 days — Board to appoint the first auditor within 30 days of incorporation; if the Board fails, members at the first general meeting appoint. (Section 139(6) context.)"
+    }
+  ],
+  "Declaration of Dividends": [
+    {
+      "front": "From what source may a company declare dividend? Quote the limit and section.",
+      "back": "Only out of profits of the company for that year or previous years (after providing depreciation); not out of capital except as permitted — Section 123(1)."
+    },
+    {
+      "front": "When is a company prohibited from declaring any dividend despite having profits? Give the exceptions.",
+      "back": "If it has defaulted in repayment of deposits, debentures, redemption of preference shares or repayment of term loans, dividend cannot be declared — proviso to Section 123(1)."
+    },
+    {
+      "front": "Who can declare an interim dividend and under which section?",
+      "back": "The Board of Directors may declare an interim dividend during a financial year — Section 123(3)."
+    },
+    {
+      "front": "What is the time-limit to pay/dispatch a declared dividend to shareholders?",
+      "back": "30 days — dividend must be paid/posted within 30 days from the date of its declaration (Companies (Declaration and Payment of Dividend) Rules and practice)."
+    },
+    {
+      "front": "If declared dividend remains unpaid after 30 days, what must the company do and by when? Give the section.",
+      "back": "Transfer unpaid/unclaimed dividend to a separate Unpaid Dividend Account in a scheduled bank within 7 days of expiry of the 30‑day payment period — Section 124(1)."
+    },
+    {
+      "front": "After how long must unpaid/unclaimed dividend be transferred to the Investor Education and Protection Fund (IEPF) and by when must the transfer be completed?",
+      "back": "7 years — unpaid/unclaimed dividend not paid/claimed for seven consecutive years must be transferred to IEPF; transfer to be made within 30 days of the completion of seven years — Section 124(5)."
+    },
+    {
+      "front": "Who is entitled to receive a dividend when a company declares it — give the precise determining date and section.",
+      "back": "The person registered as the member on the date of declaration is entitled to the dividend — right vests on the record date (date of declaration) — Section 126."
+    },
+    {
+      "front": "If shares are transferred after the date of declaration but before payment, who gets the dividend? Cite the section.",
+      "back": "The registered holder on the date of declaration gets the dividend; a transfer after the declaration does not entitle the transferee — Section 126 (classic examiner trap)."
+    },
+    {
+      "front": "In what form may dividend be paid? Give the restriction and section.",
+      "back": "Dividend must be paid in cash (by cheque, warrant, electronic transfer etc.) unless Articles provide otherwise — no non‑cash payment of dividend — Section 123(4)."
+    },
+    {
+      "front": "If a dividend already transferred to IEPF is claimed later by the shareholder, where and how is the refund claim made?",
+      "back": "The shareholder/nominee can claim refund from the IEPF Authority under the prescribed procedure; IEPF rules provide for refund of such amounts to entitled persons — Section 125 (IEPF refund mechanism)."
+    }
+  ],
+  "Accounts of Companies": [
+    {
+      "front": "Where must a company keep its books of account and for how long must they be preserved?",
+      "back": "8 years — Books of account to be kept at registered office (or at other place as Board authorises) and preserved for 8 financial years (Section 128)."
+    },
+    {
+      "front": "What is the statutory test for company financial statements and which sections mandate accounting‑standard compliance?",
+      "back": "True & fair view — Financial statements must give a true and fair view and comply with accounting standards notified under Section 133 (requirement in Section 129; see s.133 for AS power)."
+    },
+    {
+      "front": "Which companies are exempt from preparing a cash flow statement?",
+      "back": "OPC and Small Company — Cash flow statement not required for One Person Company and Small Company (Section 129(3)). Small Company per s.2(85): paid‑up ≤ ₹10 crore and turnover ≤ ₹100 crore."
+    },
+    {
+      "front": "When must a company prepare consolidated financial statements and which AS govern them?",
+      "back": "Holding with subsidiary/associate/joint venture — Holding company must prepare consolidated financial statements per AS 21/23/27, as required under Section 129(3)."
+    },
+    {
+      "front": "Who must sign the company’s financial statements before circulation or AGM?",
+      "back": "At least two directors — Financial statements must be approved by the Board and signed on behalf of the Board by at least two directors (one MD if any); CEO/CFO/Company Secretary must sign if appointed (Section 134)."
+    },
+    {
+      "front": "What must the Directors’ Responsibility Statement in the Board’s Report contain?",
+      "back": "Statutory confirmation — Board’s Report must include a Directors’ Responsibility Statement confirming true & fair view, accounting standards compliance and adequacy of internal controls (Section 134)."
+    },
+    {
+      "front": "What is a member’s statutory right to obtain company financial statements?",
+      "back": "Free copy — Any member or debenture‑holder entitled under Section 136 can obtain a copy of the audited financial statements, auditor’s and Board’s reports; company must furnish copies (Section 136)."
+    },
+    {
+      "front": "Within what time must financial statements, auditor’s report and Board’s report be filed with the Registrar?",
+      "back": "30 days — File financial statements, auditor’s report and Board’s report with the Registrar within 30 days of the AGM (Section 137)."
+    },
+    {
+      "front": "Which e‑form is used to file annual financial statements with the ROC and what is the deadline?",
+      "back": "AOC‑4 — Audited financial statements are filed with the ROC in e‑form AOC‑4 within 30 days of the AGM; consolidated FS (if any) filed in AOC‑4 CFS as applicable (Section 137 and Rules)."
+    }
+  ],
+  "Companies Incorporated outside India": [
+    {
+      "front": "Give the statutory definition of a 'foreign company' that makes Chapter XXII provisions applicable.",
+      "back": "A company incorporated outside India which has a place of business in India (by itself, through an agent, physically or electronically) or conducts any business activity in India — i.e., a foreign company with an Indian place of business."
+    },
+    {
+      "front": "Within how many days must a foreign company furnish documents to the Registrar after opening a place of business in India?",
+      "back": "30 days — deliver required particulars and documents to the Registrar from the date of opening any place of business in India."
+    },
+    {
+      "front": "Name the core documents a foreign company must deliver to the Registrar on registration (five essentials).",
+      "back": "Five: certified copy of its charter/constitutional documents, list of directors with addresses, particulars of principal place(s) of business in India, name/address of person authorised for service in India, English translations where necessary."
+    },
+    {
+      "front": "Within what period must changes in directors, principal Indian office or authorised agent be notified to the Registrar?",
+      "back": "30 days — intimate the Registrar of any change in directors, change of principal place(s) of business in India, or change of authorised person for service, within 30 days of the change."
+    },
+    {
+      "front": "Who should be appointed as agent for service of process in India and what happens if none is appointed?",
+      "back": "One person resident in India must be appointed and his address filed with the Registrar; if none is appointed, service of process may be effected through the Registrar on the company’s behalf."
+    },
+    {
+      "front": "Where must a foreign company keep statutory books and financial records relating to its Indian business?",
+      "back": "At its principal place of business in India (the registered Indian office) — books, accounts and records must be maintained there and made available for inspection as required."
+    },
+    {
+      "front": "Which annual documents must a foreign company file in respect of its Indian place of business?",
+      "back": "Copies of its balance-sheet, profit & loss account, auditors’ report and list of directors/managers concerned with the Indian operations — filed annually in the prescribed form and manner."
+    },
+    {
+      "front": "What is the immediate practical consequence if a foreign company does not register or file required particulars in India?",
+      "back": "Non-registration/non-filing disables statutory compliance: Registrar may take action, the company risks penalties/prosecution and practical difficulties in enforcing rights or transacting through Indian place(s) of business."
+    }
+  ],
+  "Limited Liability Partnership Act, 2008": [
+    {
+      "front": "Give the numeric minimums and residency rule to form a valid LLP (partners and designated partners).",
+      "back": "2 partners minimum; 2 designated partners minimum; at least one designated partner must be an Indian resident (must satisfy residency requirement)."
+    },
+    {
+      "front": "Is there a maximum limit on number of partners in an LLP?",
+      "back": "No maximum — unlimited number of partners permitted; partners governed by LLP agreement (no statutory cap)."
+    },
+    {
+      "front": "State the statutory due-dates for the two annual LLP filings and their calendar equivalents.",
+      "back": "Form 11 (Annual Return): within 60 days of FY-end (by 30 May). Form 8 (Statement of Accounts & Solvency): within 30 days from end of six months after FY-end (by 30 October)."
+    },
+    {
+      "front": "When is an LLP required to get its accounts audited? Give the numeric thresholds.",
+      "back": "Audit mandatory if turnover in a financial year exceeds ₹40 lakh OR contribution (capital) exceeds ₹25 lakh in that year."
+    },
+    {
+      "front": "Describe the extent of partners' liability in an LLP (numeric/qualitative rule).",
+      "back": "Liability limited to the agreed contribution; partners are not personally liable for LLP debts except for their own wrongful acts, fraud or as provided in the LLP agreement."
+    },
+    {
+      "front": "What happens to LLP’s existence when partners change? (succession rule)",
+      "back": "Perpetual succession — LLP is a separate legal entity; changes in partners/designated partners do not affect the LLP’s existence or continuity."
+    },
+    {
+      "front": "Within what time must change in partners or designated partners be intimated to the Registrar?",
+      "back": "30 days — any appointment, cessation or change in partners/designated partners must be filed with the Registrar within 30 days of the change."
+    },
+    {
+      "front": "State the rules on capital contribution — minimum amount, form, and recording requirement.",
+      "back": "No statutory minimum contribution; can be cash, kind or service as agreed. Contribution particulars must be recorded in the LLP agreement and Statement of Account (annual filing)."
+    },
+    {
+      "front": "Can a partnership firm or a private company convert into an LLP? Give the basic condition(s).",
+      "back": "Yes — conversion permitted by filing prescribed documents and executing an LLP agreement; conversion requires compliance with creditor protections and statutory filing requirements."
+    },
+    {
+      "front": "Who bears primary legal responsibility for statutory compliance of the LLP (designation/role)?",
+      "back": "Designated partners — they are responsible for regulatory filings and compliance; failure can attract personal liability and penalties for designated partners."
+    }
+  ],
+  "General Clauses Act, 1897": [
+    {
+      "front": "How long is a 'month' under the General Clauses Act for statutory time computation?",
+      "back": "1 calendar month; 'month' means calendar month (definition) — count by calendar months, not fixed number of days."
+    },
+    {
+      "front": "Who does the word 'person' include when used in a statute?",
+      "back": "Includes every company, association or body of persons, natural or artificial — whether incorporated or not (general definition rule)."
+    },
+    {
+      "front": "How must singular/plural and masculine/feminine words be read in statutory language?",
+      "back": "Singular includes plural and vice‑versa; masculine includes feminine — words import the other gender/number unless context forbids."
+    },
+    {
+      "front": "When a period is expressed in months and the corresponding date next month does not exist, when does it end?",
+      "back": "End on the last day of the last month — if no corresponding date exists, use the month's final day."
+    },
+    {
+      "front": "If a statutory time‑limit expires on a public holiday, what happens to the deadline?",
+      "back": "Extends to the next day that is not a public holiday — period runs until the next working day."
+    },
+    {
+      "front": "What is the legal effect of repeal of an enactment on acts done before repeal?",
+      "back": "Repeal does not affect previous acts, rights, liabilities or penalties incurred before repeal — saved unless express contrary provision."
+    },
+    {
+      "front": "How are the words 'may' and 'shall' generally construed in statutes?",
+      "back": "'Shall' is ordinarily mandatory; 'may' is ordinarily directory/discretionary — context may alter the construction."
+    },
+    {
+      "front": "Does the General Clauses Act treat 'writing' to include printed material?",
+      "back": "Yes — 'writing' includes printing, lithography and other modes of representing words in visible form (inclusive definition)."
+    },
+    {
+      "front": "How are references to a government department/office treated if its name or organisation changes?",
+      "back": "Reference applies to the successor authority or new name — reorganisation or renaming does not defeat statutory reference unless contrary intent."
+    },
+    {
+      "front": "Can different provisions of an Act be brought into force on different days?",
+      "back": "Yes — different days may be appointed for different provisions; commencement can be staggered by notification under the Act."
+    }
+  ],
+  "Foreign Exchange Management Act, 1999": [
+    {
+      "front": "Resident status for FEMA — how many days and where is it defined?",
+      "back": "182 days — 'resident' means a person residing in India for more than 182 days in the preceding financial year (FEMA definition, sec 2(v))."
+    },
+    {
+      "front": "Liberalised Remittance Scheme (LRS) limit and who can use it?",
+      "back": "USD 250,000 per financial year — available to every resident individual (including minors via guardian) for education, travel, medical, gifts, investments and purchase of foreign assets (RBI LRS rules)."
+    },
+    {
+      "front": "Which authorities administer and regulate foreign exchange under FEMA?",
+      "back": "2 authorities — Central Government frames rules; Reserve Bank of India regulates/authorises persons, issues directions and implements FEMA/forex policy (RBI is the operational regulator)."
+    },
+    {
+      "front": "Short checklist: what is a 'current account transaction' under FEMA?",
+      "back": "Payments for goods, services, short‑term remittances, interest, dividends, maintenance — current account covers flow of income and consumptive transactions (distinguished from capital account transactions)."
+    },
+    {
+      "front": "Short checklist: what is a 'capital account transaction' under FEMA?",
+      "back": "Transactions altering assets/liabilities (acquisition/transfer of immovable property abroad/India, investments, loans, guarantees) — capital account changes financial position, not routine payments."
+    },
+    {
+      "front": "Who may legally deal in foreign exchange or foreign securities?",
+      "back": "Only RBI‑authorised persons — banks and entities authorised by RBI (Authorised Dealers/Money‑chang ers/Authorised Persons) can buy/sell foreign exchange or deal in foreign securities."
+    },
+    {
+      "front": "Nature of contraventions and penalties under FEMA — civil or criminal?",
+      "back": "Civil — contraventions are civil offences; adjudicated by Adjudicating Authority with monetary penalties and enforcement actions (not criminal prosecution under FEMA's regular scheme)."
+    },
+    {
+      "front": "Can FEMA contraventions be compounded and by whom?",
+      "back": "Compounding allowed — RBI/competent authority may compound contraventions on application, reducing/settling liability as per compounding scheme and RBI/HEAA guidelines."
+    },
+    {
+      "front": "Export/import of Indian currency — what is permitted?",
+      "back": "Prohibited except with RBI permission — export or import of Indian currency notes/coins requires RBI authorisation; rules govern permitted foreign currency carriage (RBI/Customs rules apply)."
+    },
+    {
+      "front": "How is foreign investment (FDI) routed under FEMA/FDI policy?",
+      "back": "2 routes — Automatic Route (no prior government approval) and Government Route (prior approval required); sectoral caps/conditions are governed by FEMA regulations and FDI policy notifications."
+    }
+  ],
+  "Interpretation of Statutes": [
+    {
+      "front": "Which interpretative rule is applied first and requires words be given their ordinary meaning?",
+      "back": "1. Literal (grammatical) rule — give words their plain, ordinary meaning; applied first; do not import extraneous intent beyond the text."
+    },
+    {
+      "front": "When is the golden rule used and what does it permit the court to do?",
+      "back": "2. Golden rule — modify literal meaning to avoid absurdity or repugnance; used only if literal meaning produces absurd or impossible result."
+    },
+    {
+      "front": "What four questions form the mischief rule (Heydon's case) test?",
+      "back": "3. Mischief rule (Heydon) — ask: (i) common law before Act, (ii) defect/mischief, (iii) remedy Parliament intended, (iv) true reason; interpret to suppress mischief."
+    },
+    {
+      "front": "When is the purposive approach employed instead of strict literalism?",
+      "back": "4. Purposive rule — ascertain legislative purpose and interpret contextually; used for ambiguous provisions or modern social/economic statutes to effect legislative intent."
+    },
+    {
+      "front": "How does ejusdem generis limit general words that follow specific words?",
+      "back": "5. Ejusdem generis — general words following specifics are limited to the same kind/quality as the specific items."
+    },
+    {
+      "front": "What does expressio unius exclusio alterius mean and when is it applied?",
+      "back": "6. Expressio unius — naming one or more things implies exclusion of others; used only where the statutory scheme suggests an exhaustive list."
+    },
+    {
+      "front": "How does noscitur a sociis help interpret a lone word in a list?",
+      "back": "7. Noscitur a sociis — a word gets meaning from its surrounding words; prevents isolated, out-of-context interpretations."
+    },
+    {
+      "front": "Name three presumptions courts apply when interpreting statutes (retrospectivity, constitutionality, penal/tax).",
+      "back": "8. Presumptions: (i) statutes not retrospective unless clearly stated; (ii) constitutionality presumed; (iii) penal/tax statutes construed strictly against state."
+    },
+    {
+      "front": "How must a proviso or a non obstante clause be treated when reading a statute?",
+      "back": "9. Proviso/non obstante — proviso qualifies the main enactment; non obstante overrides inconsistent laws; read together; proviso cannot expand the enacting provision beyond intent."
+    },
+    {
+      "front": "What test decides whether a statutory provision is mandatory or directory?",
+      "back": "10. Mandatory vs directory — examine language, purpose and consequences; if breach voids object/result, it's mandatory; if merely procedural with no fatal consequence, directory."
+    },
+    {
+      "front": "Give three internal aids and three external aids used in statutory interpretation.",
+      "back": "11. Internal/external aids — internal: long title, preamble, definitions; external: legislative history/reports, prior statutes, authoritative dictionaries."
+    },
+    {
+      "front": "What does in pari materia mean and when do you apply it?",
+      "back": "12. In pari materia — statutes on the same subject are read together for harmonious construction; avoid conflict; later or specific enactment may prevail."
+    },
+    {
+      "front": "What is the practical order courts follow among literal, golden, mischief and purposive rules?",
+      "back": "13. Order of approach — apply literal rule first; if absurd, apply golden; if still unclear, apply mischief (Heydon) and purposive/contextual rules; stop when meaning is settled."
+    }
+  ]
+}

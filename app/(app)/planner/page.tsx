@@ -7,29 +7,24 @@ import PlannerClient from "./PlannerClient";
 
 const PHASES = [
   {
-    range: "22 – 31 Jul",
-    title: "The sprint",
-    detail: "Law — all 15 chapters + one DT block daily. Test every night.",
+    range: "23 Nov – 13 Dec",
+    title: "Tax from zero",
+    detail: "Income tax, then GST — a block every morning. Accounts and Law alternate after lunch.",
   },
   {
-    range: "1 – 14 Aug",
-    title: "Income Tax deep-dive",
-    detail: "Your weakest paper gets the biggest block, + full GST 2.0 pass.",
+    range: "14 – 24 Dec",
+    title: "Second pass + papers",
+    detail: "Problems, handwritten answers, and the first full mocks in the 2 PM slot.",
   },
   {
-    range: "15 – 24 Aug",
-    title: "Accounts + AS sweep",
-    detail: "Revision of Part A + all 21 AS, with daily IT practice to stay warm.",
+    range: "25 Dec – 1 Jan",
+    title: "Exam rehearsal",
+    detail: "A mock on alternate days — the same rhythm as the real week.",
   },
   {
-    range: "25 – 31 Aug",
-    title: "Mocks",
-    detail: "One full 3-hr mock per paper under exam conditions, then patch weak spots.",
-  },
-  {
-    range: "1 / 3 / 5 Sep",
+    range: "2 / 4 / 6 Jan",
     title: "Exams",
-    detail: "Accounts → Law → Tax, with gap-day recaps in between.",
+    detail: "Accounts → Law → Tax, one gap day between each.",
   },
 ];
 
@@ -58,7 +53,7 @@ export default async function PlannerPage() {
         <h2 className="font-display text-4xl leading-tight">
           Road to
           <br />
-          <span className="italic text-muted">September</span>
+          <span className="italic text-muted">January</span>
         </h2>
       </div>
 

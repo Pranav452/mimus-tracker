@@ -10,6 +10,9 @@
 //     assigned to it — so logging just "Supply" doesn't complete an
 //     "Intro + Supply" day.
 //  3. Items she has ticked or unticked by hand (`manual`) are left alone.
+//  4. A topic logged BEFORE the plan's first day never ticks anything. Without
+//     this, rebuilding the plan for a new attempt would let last attempt's
+//     topics land on the new items and mark them done on day one.
 //
 // NOT server-only: the seed/CLI scripts import this too.
 import { db } from "./db";
@@ -33,11 +36,15 @@ export async function syncPlanProgress(userId: number): Promise<number> {
   ]);
 
   const eligible = items.filter((i) => !i.manual && (i.chapterIds?.length ?? 0) > 0);
+  const planStart = items.length
+    ? Math.min(...items.map((i) => dayNumber(String(i.onDate))))
+    : Infinity;
   // itemId -> chapterId -> topicIds that covered it
   const coverage = new Map<number, Map<number, number[]>>();
 
   for (const topic of topics) {
     const topicDay = dayNumber(String(topic.forDate));
+    if (topicDay < planStart) continue; // belongs to an earlier attempt
     let best: { id: number; distance: number; day: number } | null = null;
 
     for (const item of eligible) {

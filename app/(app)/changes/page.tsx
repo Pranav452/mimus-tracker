@@ -28,7 +28,7 @@ export default async function ChangesPage() {
         <h2 className="font-display text-4xl leading-tight">
           2025 attempt
           <br />
-          <span className="italic text-muted">vs Sept 2026</span>
+          <span className="italic text-muted">for January 2027</span>
         </h2>
         <p className="mt-2 text-sm text-muted">
           Only the deltas — everything else you studied last time still stands.
@@ -66,7 +66,7 @@ export default async function ChangesPage() {
                     </div>
                     <div className="rounded-2xl bg-green-soft px-4 py-3">
                       <p className="text-[10px] font-bold uppercase tracking-wide text-green mb-0.5">
-                        Now (Sept 2026)
+                        Now (Jan 2027)
                       </p>
                       {item.now}
                     </div>
@@ -86,7 +86,7 @@ export default async function ChangesPage() {
         ))}
 
         <p className="text-xs text-muted text-center leading-relaxed">
-          Cross-check with ICAI&apos;s Statutory Update / RTP for Sept 2026 one week
+          Cross-check with ICAI&apos;s Statutory Update / RTP for January 2027 one week
           before the exam — Pranav keeps this page updated. 💛
         </p>
       </div>

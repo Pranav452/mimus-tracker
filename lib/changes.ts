@@ -1,12 +1,18 @@
-// What changed between Mimansha's last attempt (2025, Finance (No.2) Act 2024)
-// and the Sept 2026 attempt (Finance Act 2025 + GST 2.0).
-// Researched 21 Jul 2026 — ICAI applicability: Income-tax Act 1961 as amended
-// by FA 2025 (AY 2026-27); Income-tax Act 2025 applies only from May 2027 exams.
+// The law that applies to Mimansha's JANUARY 2027 attempt (Group I: 2, 4, 6 Jan).
+// Same Finance Act as September 2026 (FA 2025, AY 2026-27) — but the amendment
+// cut-off moves from 28 Feb 2026 to 30 June 2026, and January 2027 is the LAST
+// attempt under the Income-tax Act, 1961 (the 2025 Act is examined from May 2027).
+//
+// Re-verified 23 Nov 2026 against ICAI's January 2027 exam guide and the MCA
+// gazette. One figure here was WRONG for the September attempt and is corrected:
+// small company limits are ₹10 crore / ₹100 crore (G.S.R. 880(E), 1 Dec 2025),
+// not ₹4 crore / ₹40 crore. Lesson: never assert a threshold from memory —
+// check it against a primary source dated after the model's knowledge cut-off.
 
 export type ChangeItem = {
   topic: string;
-  was: string; // last attempt (2025)
-  now: string; // this attempt (Sept 2026)
+  was: string; // the older position
+  now: string; // what applies in January 2027
   note?: string; // exam angle
   priority: "high" | "medium" | "low";
 };
@@ -19,7 +25,7 @@ export type ChangeSection = {
   items: ChangeItem[];
 };
 
-export const CHANGES_UPDATED = "21 July 2026";
+export const CHANGES_UPDATED = "23 November 2026";
 
 export const CHANGE_SECTIONS: ChangeSection[] = [
   {
@@ -27,8 +33,22 @@ export const CHANGE_SECTIONS: ChangeSection[] = [
     title: "The big picture",
     emoji: "🧭",
     intro:
-      "What law applies to your Sept 2026 attempt — read this first so you don't over-study.",
+      "What law applies in January 2027 — almost exactly what you studied for September, with three things to fix.",
     items: [
+      {
+        topic: "January vs September — what actually moved",
+        was: "Sept 2026: amendments notified up to 28 February 2026",
+        now: "Jan 2027: amendments notified up to 30 June 2026 — four more months of notifications are examinable",
+        note: "The Finance Act is the SAME (FA 2025, AY 2026-27), so every slab, rebate and TDS figure you learnt still stands. Read ICAI's January 2027 Statutory Update for Papers 2 and 3 once it is on the BoS site — that PDF is the final word on the extra four months.",
+        priority: "high",
+      },
+      {
+        topic: "Last attempt under the 1961 Act",
+        was: "—",
+        now: "From May 2027, ICAI examines the new Income-tax Act, 2025. January 2027 is the final attempt on the Act you already know.",
+        note: "A real reason to finish it this time: clearing in January means never having to relearn income tax under new section numbers.",
+        priority: "medium",
+      },
       {
         topic: "Which Income-tax law?",
         was: "Income-tax Act, 1961 (as amended by Finance (No. 2) Act, 2024) — AY 2025-26",
@@ -38,9 +58,9 @@ export const CHANGE_SECTIONS: ChangeSection[] = [
       },
       {
         topic: "Exam pattern",
-        was: "30% MCQs + 70% descriptive in Law and Tax; same in Sept 2026",
-        now: "Unchanged — pattern and syllabus structure are the same as your last attempt",
-        note: "Your prep carries over. Focus energy on amendments + practice, not re-learning.",
+        was: "30 marks MCQ + 70 marks descriptive in every paper",
+        now: "Unchanged for January 2027 — MCQs of 1 or 2 marks, no negative marking, no reasoning needed",
+        note: "70 of every 100 marks are WRITTEN. Scoring well on MCQs and still missing the paper means the written 70 is where the marks are being lost.",
         priority: "medium",
       },
     ],
@@ -118,10 +138,10 @@ export const CHANGE_SECTIONS: ChangeSection[] = [
         priority: "low",
       },
       {
-        topic: "Perquisite limits (specified employee)",
-        was: "Salary threshold ₹50,000 for specified-employee perquisites",
-        now: "Thresholds raised (specified employee limit hiked)",
-        note: "Check the amended figures in the ICAI Statutory Update for salary perquisites.",
+        topic: "Perquisite limits — Rules 3C and 3D",
+        was: "Specified employee: salary above ₹50,000 · Medical travel abroad exempt only if gross total income up to ₹2,00,000",
+        now: "Specified employee: salary above ₹4,00,000 (Rule 3C) · Medical travel abroad: gross total income up to ₹8,00,000 (Rule 3D)",
+        note: "CBDT Notification 133/2025 (18 Aug 2025). Both old figures had stood for decades, so every older question bank and most notes still carry them.",
         priority: "medium",
       },
     ],
@@ -151,7 +171,7 @@ export const CHANGE_SECTIONS: ChangeSection[] = [
         topic: "Amendment cutoff",
         was: "—",
         now: "ICAI examines CGST/IGST as amended by FA 2025, incl. notifications in force for the attempt",
-        note: "Do one pass of ICAI's Statutory Update PDF for Sept 2026 the week before exams.",
+        note: "For January 2027 the GST cut-off is 30 June 2026. Do one pass of ICAI's January 2027 Statutory Update the week before the exam.",
         priority: "medium",
       },
     ],
@@ -161,8 +181,15 @@ export const CHANGE_SECTIONS: ChangeSection[] = [
     title: "Corporate & Other Laws",
     emoji: "⚖️",
     intro:
-      "Law changed the least — your last-attempt prep mostly stands. Watch these.",
+      "Law changed the least — but one headline figure moved, and our September notes had it wrong.",
     items: [
+      {
+        topic: "Small company — section 2(85)",
+        was: "Paid-up capital up to ₹4 crore AND turnover up to ₹40 crore",
+        now: "Paid-up capital up to ₹10 CRORE AND turnover up to ₹100 CRORE",
+        note: "MCA G.S.R. 880(E), in force from 1 December 2025 — so this already applied in September. Unlearn 4/40. Both limits must be met, and a holding company, subsidiary, section 8 company or company under a special Act can never be a small company.",
+        priority: "high",
+      },
       {
         topic: "Decriminalisation trend",
         was: "Several Companies Act defaults = fine/imprisonment",
@@ -173,7 +200,7 @@ export const CHANGE_SECTIONS: ChangeSection[] = [
       {
         topic: "Corporate Laws (Amendment) Bill, 2026",
         was: "—",
-        now: "Still a BILL (proposed: small-company limits ₹20cr/₹200cr, LLP changes) — NOT law, NOT examinable for Sept 2026",
+        now: "Still a BILL — not law, not examinable in January 2027. Do not confuse it with the small-company change above, which IS in force.",
         note: "Don't waste time on it. Only enacted law as at the ICAI cutoff is tested.",
         priority: "low",
       },
@@ -182,12 +209,15 @@ export const CHANGE_SECTIONS: ChangeSection[] = [
 ];
 
 // Compact one-string brief injected into AI prompts (chat + question generation)
-export const AMENDMENTS_BRIEF = `Applicable law for her Sept 2026 CA Inter attempt (her 2nd attempt; last one was under 2025 law):
-- Income-tax Act 1961 as amended by FINANCE ACT 2025 (AY 2026-27). The new Income-tax Act 2025 is NOT applicable (only from May 2027 exams).
-- New regime slabs (115BAC): 0-4L nil, 4-8L 5%, 8-12L 10%, 12-16L 15%, 16-20L 20%, 20-24L 25%, >24L 30%. Rebate 87A: up to ₹12L income, max ₹60,000, with marginal relief (old regime unchanged: ₹5L/₹12,500). Standard deduction ₹75,000 new regime / ₹50,000 old.
-- TDS thresholds raised: 194A interest ₹50k (₹1L senior), 194 dividend ₹10k, 194I rent ₹6L/yr, 194J professional fees ₹50k. Updated return 139(8A): 48 months.
-- 80CCD(1B): NPS Vatsalya (minor child) now eligible within ₹50k limit.
-- GST 2.0 effective 22-Sep-2025 and examinable: slabs now 5% / 18% / 40% only (12% & 28% abolished); individual health/life insurance exempted/nil.
-- Corporate Laws (Amendment) Bill 2026 is NOT examinable (still a bill). In particular its proposed small-company limits of ₹20cr/₹200cr are NOT law.
-- Companies Act figures currently in force (use these, they are commonly got wrong): small company u/s 2(85) = paid-up capital up to ₹4 CRORE and turnover up to ₹40 CRORE (raised w.e.f. 15-Sep-2022; the older ₹2cr/₹20cr and ₹50L/₹2cr figures are stale). Registered office u/s 12 = within 30 DAYS of incorporation (not the pre-2017 figure of 15 days), verified in Form INC-22. Declaration of commencement of business u/s 10A = Form INC-20A within 180 days. One Person Company: no paid-up capital or turnover ceiling since the 2021 rules, and a nominee/member must be a natural person who is an Indian citizen resident in India for 120 days.
-Always use these amended figures in answers and questions. If she references old figures (₹7L rebate, 12%/28% GST), gently correct with the new ones.`;
+export const AMENDMENTS_BRIEF = `Applicable law for her JANUARY 2027 CA Inter attempt (Group I: Advanced Accounting 2 Jan, Corporate & Other Laws 4 Jan, Taxation 6 Jan 2027). Amendments notified up to 30 June 2026 are examinable.
+- Income-tax Act 1961 as amended by FINANCE ACT 2025 (AY 2026-27). The new Income-tax Act 2025 is NOT applicable (only from May 2027 exams) — never use its section numbers.
+- New regime slabs (115BAC): 0-4L nil, 4-8L 5%, 8-12L 10%, 12-16L 15%, 16-20L 20%, 20-24L 25%, >24L 30%. Rebate 87A: up to ₹12L income, max ₹60,000, with marginal relief (old regime unchanged: ₹5L/₹12,500). Standard deduction ₹75,000 new regime / ₹50,000 old. HRA, 80C-80U (except 80CCD(2), 80JJAA) and self-occupied house interest are NOT available in the new regime.
+- TDS thresholds raised: 194A interest ₹50k (₹1L senior), 194 dividend ₹10k, 194I rent ₹6L/yr, 194J professional fees ₹50k. Updated return 139(8A): 48 months from the end of the relevant ASSESSMENT year. Belated return 139(4) and revised return 139(5): by 31 December of the assessment year.
+- Perquisites: 'specified employee' salary limit ₹4,00,000 (Rule 3C) and gross total income limit ₹8,00,000 for medical travel abroad (Rule 3D) — the old ₹50,000 / ₹2,00,000 figures are superseded.
+- Capital gains: s.112A LTCG on STT-paid equity taxed at 12.5% above ₹1.25 lakh; s.111A STCG at 20%; other LTCG 12.5% without indexation. s.54EC cap ₹50 lakh, land or building only.
+- 80CCD(1B): NPS Vatsalya (minor child) eligible within the ₹50k limit. s.40A(3): a cash payment above ₹10,000 disallows the WHOLE expense, not the excess. s.6(1A) deemed residency applies to Indian CITIZENS only (not PIOs) with non-foreign income above ₹15 lakh.
+- GST 2.0 effective 22-Sep-2025 and examinable: slabs now 5% / 18% / 40% only (12% & 28% abolished); individual health/life insurance exempt. Credit notes s.34 and ITC s.16(4): 30 NOVEMBER following the financial year (not the September return). TCS by e-commerce operators s.52: 0.5% (not 1%). TDS s.51: 2% where the contract value exceeds ₹2.5 lakh.
+- Companies Act: SMALL COMPANY u/s 2(85) = paid-up capital up to ₹10 CRORE and turnover up to ₹100 CRORE (G.S.R. 880(E), in force 1-Dec-2025). The ₹4cr/₹40cr, ₹2cr/₹20cr and ₹50L/₹2cr figures are all superseded — never use them. Registered office u/s 12 within 30 DAYS of incorporation (INC-22). Commencement declaration u/s 10A in INC-20A within 180 days. OPC: no capital or turnover ceiling; member/nominee a natural person, Indian citizen, resident 120 days. Buyback s.68: 25% of capital+free reserves AND 25% of paid-up equity per year, 2:1 debt-equity, 10% by board alone, one-year gap.
+- Corporate Laws (Amendment) Bill 2026 is NOT examinable (still a bill).
+- Paper 1 uses ICAI Accounting Standards (AS 1-29), NOT Ind AS. Where they diverge the AS answer is correct: AS 5 policy changes are not restated retrospectively; AS 22 works on timing differences (no deferred tax on a revaluation surplus); AS 24 is a disclosure standard (no single net-of-tax line).
+Always use these figures in answers and questions. If she quotes an old figure, correct it gently and say which notification changed it.`;

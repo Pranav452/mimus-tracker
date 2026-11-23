@@ -22,14 +22,14 @@ export const PAPER: Paper = {
       marks: 2,
       text: `${S1}\n\nIs Sunvale a "small company" under section 2(85)?`,
       options: [
-        "Yes — paid-up capital is within ₹4 crore and turnover within ₹40 crore",
+        "Yes — paid-up capital is within ₹10 crore and turnover within ₹100 crore",
         "No — paid-up share capital exceeds the ceiling of ₹2 crore",
         "No — turnover exceeds the ceiling of ₹20 crore",
         "No — small company status is available only to a One Person Company",
       ],
       correctIndex: 0,
       explanation:
-        "Section 2(85) with the Companies (Specification of Definitions Details) Rules as amended w.e.f. 15 Sept 2022: paid-up capital up to ₹4 crore AND turnover up to ₹40 crore. The ₹2 crore / ₹20 crore figures are superseded.",
+        "Section 2(85) read with the Companies (Specification of Definition Details) Rules, as amended by G.S.R. 880(E) with effect from 1 December 2025: paid-up capital up to ₹10 crore AND turnover up to ₹100 crore. The earlier ₹4 crore / ₹40 crore and ₹2 crore / ₹20 crore figures are superseded.",
     },
     {
       kind: "mcq",

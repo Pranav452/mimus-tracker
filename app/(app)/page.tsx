@@ -6,7 +6,14 @@ import {
   getPapersWithProgress,
   getRecentAttempts,
   getTopicsForDate,
+  getAllChapters,
 } from "@/lib/queries";
+import { db } from "@/lib/db";
+import { attempts as attemptsTable, planItems } from "@/lib/db/schema";
+import { and, asc, eq, isNotNull } from "drizzle-orm";
+import { findDailyFive } from "@/lib/daily-five";
+import { nextExam, DAILY_HABIT_TITLE } from "@/lib/exam";
+import DailyFiveButton from "@/components/DailyFiveButton";
 import { BookIcon, ChevronRightIcon, SparkleIcon, PlusIcon } from "@/components/icons";
 
 const soft: Record<string, string> = {
@@ -26,11 +33,46 @@ function fmtDate(d: string | Date | null) {
 
 export default async function HomePage() {
   const user = await requireUser();
-  const [papers, attempts, topics] = await Promise.all([
+  const today = todayIST();
+  const [papers, attempts, topics, todaysPlan, dailyId, chapters] = await Promise.all([
     getPapersWithProgress(user.id),
     getRecentAttempts(user.id, 3),
-    getTopicsForDate(user.id, todayIST()),
+    getTopicsForDate(user.id, today),
+    db
+      .select()
+      .from(planItems)
+      .where(and(eq(planItems.userId, user.id), eq(planItems.onDate, today)))
+      .orderBy(asc(planItems.sort)),
+    findDailyFive(today),
+    getAllChapters(),
   ]);
+
+  // has she already taken today's five?
+  const [dailyAttempt] = dailyId
+    ? await db
+        .select()
+        .from(attemptsTable)
+        .where(
+          and(
+            eq(attemptsTable.testId, dailyId),
+            eq(attemptsTable.userId, user.id),
+            isNotNull(attemptsTable.submittedAt)
+          )
+        )
+        .limit(1)
+    : [];
+
+  const exam = nextExam(today);
+  const planRows = todaysPlan.filter((i) => i.title !== DAILY_HABIT_TITLE);
+  const todaysChapters = [...new Set(todaysPlan.flatMap((i) => i.chapterIds ?? []))]
+    .map((id) => chapters.find((c) => c.id === id))
+    .filter((c): c is NonNullable<typeof c> => !!c);
+  const todayLabel = new Date(`${today}T00:00:00+05:30`).toLocaleDateString("en-IN", {
+    weekday: "short",
+    day: "numeric",
+    month: "short",
+    timeZone: "Asia/Kolkata",
+  });
 
   return (
     <main className="fade-up">
@@ -43,9 +85,98 @@ export default async function HomePage() {
           <span className="italic text-muted">{user.name}</span>
         </h1>
 
+        <div className="mt-6 rounded-3xl bg-surface border border-line p-5">
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-xs font-bold uppercase tracking-wide text-muted">
+              Today · {todayLabel}
+            </p>
+            {exam && (
+              <span className="text-[11px] font-bold bg-accent-soft text-accent rounded-full px-2.5 py-1 whitespace-nowrap">
+                {exam.days === 0
+                  ? `${exam.paper} today`
+                  : `${exam.days} day${exam.days === 1 ? "" : "s"} to ${exam.paper}`}
+              </span>
+            )}
+          </div>
+
+          {planRows.length > 0 ? (
+            <ul className="mt-3 space-y-2.5">
+              {planRows.map((i) => (
+                <li key={i.id} className="flex gap-2.5">
+                  <span
+                    className={`mt-[7px] w-2 h-2 rounded-full shrink-0 ${
+                      i.done ? "bg-green" : "bg-line"
+                    }`}
+                  />
+                  <div className="min-w-0">
+                    <p
+                      className={`text-[15px] font-semibold leading-snug ${
+                        i.done ? "line-through text-muted" : ""
+                      }`}
+                    >
+                      {i.title}
+                    </p>
+                    {i.subtitle && !i.done && (
+                      <p className="text-xs text-muted leading-snug mt-0.5">
+                        {i.subtitle}
+                      </p>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="mt-3 text-sm text-muted">Nothing planned for today.</p>
+          )}
+
+          <div className="mt-4">
+            {dailyAttempt ? (
+              <Link
+                href={`/results/${dailyAttempt.id}`}
+                className="flex items-center justify-between rounded-2xl bg-green-soft border border-green/30 px-4 py-3.5"
+              >
+                <span className="font-semibold text-[15px]">
+                  Daily 5 done — {dailyAttempt.score}/{dailyAttempt.maxScore}
+                </span>
+                <span className="text-sm font-semibold underline underline-offset-4">
+                  Review
+                </span>
+              </Link>
+            ) : (
+              <DailyFiveButton />
+            )}
+          </div>
+
+          {todaysChapters.length > 0 && (
+            <div className="mt-4">
+              <p className="text-xs font-bold uppercase tracking-wide text-muted mb-2">
+                Flashcards for today
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {todaysChapters.map((c) => (
+                  <Link
+                    key={c.id}
+                    href={`/courses/${c.paperSlug}/${c.id}?tab=cards`}
+                    className="text-xs font-semibold bg-lav-soft text-lav rounded-full px-3 py-1.5"
+                  >
+                    {c.name.split("—")[0].trim()}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <Link
+            href="/planner"
+            className="mt-4 block text-center text-sm font-semibold text-muted underline underline-offset-4"
+          >
+            Open the full plan
+          </Link>
+        </div>
+
         <Link
           href="/explanations"
-          className="mt-6 flex items-center justify-center gap-2 h-14 rounded-full bg-foreground text-background font-semibold text-[15px]"
+          className="mt-3 flex items-center justify-center gap-2 h-14 rounded-full bg-surface-2 border border-line font-semibold text-[15px]"
         >
           <BookIcon className="w-5 h-5" strokeWidth={2} />
           Explanations
@@ -97,7 +228,7 @@ export default async function HomePage() {
           >
             <p className="text-xl">🗓️</p>
             <p className="font-semibold mt-1.5">Planner</p>
-            <p className="text-xs text-muted mt-0.5">Road to September</p>
+            <p className="text-xs text-muted mt-0.5">Road to January</p>
           </Link>
           <Link
             href="/changes"
@@ -105,7 +236,7 @@ export default async function HomePage() {
           >
             <p className="text-xl">🔁</p>
             <p className="font-semibold mt-1.5">What changed</p>
-            <p className="text-xs text-muted mt-0.5">2025 vs your attempt</p>
+            <p className="text-xs text-muted mt-0.5">The law for January</p>
           </Link>
         </div>
       </section>
