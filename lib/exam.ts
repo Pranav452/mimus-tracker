@@ -9,6 +9,22 @@ export const EXAMS = [
   { key: "tax", paper: "Tax", date: "2027-01-06" },
 ] as const;
 
+// First day of the plan. Topics logged before it never tick a plan row.
+export const PLAN_START = "2026-12-01";
+
+// Days with nothing scheduled. The home screen swaps the plan for the message.
+export const DAYS_OFF: Record<string, { title: string; body: string }> = {
+  "2026-12-09": {
+    title: "Happy Birthday, Mimansha 🎂",
+    body: "Day off. No plan, no test — go and enjoy it.",
+  },
+};
+
+// A line shown at the top of the home screen on a given day.
+export const DAY_NOTES: Record<string, string> = {
+  "2026-12-08": "Tomorrow is your birthday 🎂 mwah 💋",
+};
+
 // the row that closes every study day: log what was done, then the night test
 export const DAILY_HABIT_TITLE = "Log the day + night test";
 export const NIGHT_TEST_PREFIX = "Night test";

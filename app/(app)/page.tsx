@@ -12,7 +12,14 @@ import { db } from "@/lib/db";
 import { dailyTopics, planItems } from "@/lib/db/schema";
 import { and, asc, eq } from "drizzle-orm";
 import { findNightTest } from "@/lib/night-test";
-import { nextExam, DAILY_HABIT_TITLE, NIGHT_TEST_SIZE } from "@/lib/exam";
+import {
+  nextExam,
+  DAILY_HABIT_TITLE,
+  NIGHT_TEST_SIZE,
+  PLAN_START,
+  DAYS_OFF,
+  DAY_NOTES,
+} from "@/lib/exam";
 import NightTestButton from "@/components/NightTestButton";
 import TodayLog from "@/components/TodayLog";
 import { ChevronRightIcon, SparkleIcon } from "@/components/icons";
@@ -29,6 +36,7 @@ const kindTag: Record<string, { label: string; cls: string }> = {
   practice: { label: "Practice", cls: "bg-green-soft text-green" },
   test: { label: "Test", cls: "bg-accent-soft text-accent" },
   exam: { label: "EXAM", cls: "bg-red-soft text-red" },
+  holiday: { label: "Day off", cls: "bg-accent-soft text-accent" },
 };
 
 // plan rows with no chapter of their own ("DT rapid revision: all 13 chapters")
@@ -85,6 +93,17 @@ export default async function HomePage() {
   const nightAttempt = nightId ? attemptByTest.get(nightId) : undefined;
 
   const exam = nextExam(today);
+  const dayOff = DAYS_OFF[today];
+  const dayNote = DAY_NOTES[today];
+  const planStartLabel =
+    today < PLAN_START
+      ? new Date(`${PLAN_START}T00:00:00+05:30`).toLocaleDateString("en-IN", {
+          weekday: "long",
+          day: "numeric",
+          month: "long",
+          timeZone: "Asia/Kolkata",
+        })
+      : null;
   const planRows = todaysPlan
     .filter((i) => i.title !== DAILY_HABIT_TITLE)
     .map((i) => ({
@@ -129,7 +148,25 @@ export default async function HomePage() {
           )}
         </div>
 
+        {dayNote && (
+          <div className="mt-4 rounded-3xl p-5 bg-gradient-to-br from-[#f3c98f] to-[#d9b8e8] border border-line">
+            <p className="font-display text-[24px] leading-snug text-white drop-shadow-sm">
+              {dayNote}
+            </p>
+          </div>
+        )}
+
+        {dayOff && (
+          <div className="mt-4 rounded-3xl p-6 text-center bg-gradient-to-br from-[#f3c98f] to-[#d9b8e8] border border-line">
+            <p className="font-display text-[30px] leading-tight text-white drop-shadow-sm">
+              {dayOff.title}
+            </p>
+            <p className="mt-2 text-sm text-white/95">{dayOff.body}</p>
+          </div>
+        )}
+
         {/* 1 — what to study today, with something to study it from */}
+        {!dayOff && (
         <div className="mt-4 rounded-3xl bg-surface border border-line p-5">
           <p className="text-xs font-bold uppercase tracking-wide text-muted">
             Today&apos;s plan · {todayLabel}
@@ -232,7 +269,11 @@ export default async function HomePage() {
               })}
             </ul>
           ) : (
-            <p className="mt-3 text-sm text-muted">Nothing planned for today.</p>
+            <p className="mt-3 text-sm text-muted">
+              {planStartLabel
+                ? `Your plan starts on ${planStartLabel}.`
+                : "Nothing planned for today."}
+            </p>
           )}
 
           <div className="mt-4 flex items-center justify-between text-sm font-semibold text-muted">
@@ -247,7 +288,10 @@ export default async function HomePage() {
           </div>
         </div>
 
+        )}
+
         {/* 2 — tonight: log the day, then the test on it */}
+        {!dayOff && (
         <div className="mt-3 rounded-3xl bg-surface border border-line p-5">
           <p className="text-xs font-bold uppercase tracking-wide text-muted">Tonight</p>
 
@@ -286,6 +330,7 @@ export default async function HomePage() {
             <NightTestButton size={NIGHT_TEST_SIZE} />
           )}
         </div>
+        )}
 
         <div className="mt-3 grid grid-cols-2 gap-3">
           {[

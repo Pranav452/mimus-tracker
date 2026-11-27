@@ -10,7 +10,7 @@ type Item = {
   onDate: string;
   title: string;
   subtitle: string | null;
-  kind: "study" | "revise" | "practice" | "test" | "exam";
+  kind: "study" | "revise" | "practice" | "test" | "exam" | "holiday";
   done: boolean;
   auto: boolean;
 };
@@ -21,6 +21,7 @@ const kindStyle: Record<Item["kind"], { label: string; cls: string }> = {
   practice: { label: "Practice", cls: "bg-green-soft text-green" },
   test: { label: "Test", cls: "bg-accent-soft text-accent" },
   exam: { label: "EXAM", cls: "bg-red-soft text-red" },
+  holiday: { label: "Day off", cls: "bg-accent-soft text-accent" },
 };
 
 function fmt(d: string) {

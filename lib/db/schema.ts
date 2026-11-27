@@ -223,7 +223,7 @@ export const planItems = pgTable("plan_items", {
   title: text("title").notNull(),
   subtitle: text("subtitle"),
   kind: text("kind", {
-    enum: ["study", "revise", "practice", "test", "exam"],
+    enum: ["study", "revise", "practice", "test", "exam", "holiday"],
   })
     .notNull()
     .default("study"),

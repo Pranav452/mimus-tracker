@@ -7,19 +7,19 @@ import PlannerClient from "./PlannerClient";
 
 const PHASES = [
   {
-    range: "23 Nov – 13 Dec",
-    title: "Tax from zero",
-    detail: "Income tax, then GST — a block every morning. Accounts and Law alternate after lunch.",
+    range: "1 – 13 Dec",
+    title: "Brush up everything",
+    detail: "All 72 chapters in three sittings a day — Tax every morning. 9 Dec is your birthday: off.",
   },
   {
-    range: "14 – 24 Dec",
+    range: "14 – 23 Dec",
     title: "Second pass + papers",
-    detail: "Problems, handwritten answers, and the first full mocks in the 2 PM slot.",
+    detail: "Problems, handwritten answers, and one full mock per paper in the 2 PM slot.",
   },
   {
-    range: "25 Dec – 1 Jan",
+    range: "24 Dec – 1 Jan",
     title: "Exam rehearsal",
-    detail: "A mock on alternate days — the same rhythm as the real week.",
+    detail: "A full mock on alternate days — the same rhythm as the real week.",
   },
   {
     range: "2 / 4 / 6 Jan",

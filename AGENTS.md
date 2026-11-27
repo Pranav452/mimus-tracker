@@ -74,6 +74,12 @@ enabled, so nudges genuinely reach her — treat them as outward-facing messages
 
 ## January 2027 attempt (added 23 Nov 2026)
 
+- **The plan runs 1 Dec 2026 → 6 Jan 2027** (`PLAN_START` in `lib/exam.ts`; revised 27 Nov
+  at Pranav's request — she has sat these papers before, so phase 1 is a three-sittings-a-day
+  brush-up of all 72 chapters, then papers). **9 Dec is her birthday: a day off** — it is in
+  `DAYS_OFF`, which gives the day a `holiday` plan row, no log/test row, and a banner instead
+  of the plan on the home screen. `DAY_NOTES` puts a one-line banner on a date (8 Dec).
+
 - **Home screen is the day's flow**: today's plan rows, each with its reference material
   (notes / flashcards / practice questions per chapter, or a button to the in-app test) →
   **Tonight**: one-tap log of the planned chapters (`components/TodayLog.tsx`, writes
